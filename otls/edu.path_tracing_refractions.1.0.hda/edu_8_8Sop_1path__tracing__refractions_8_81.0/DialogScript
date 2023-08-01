@@ -1,0 +1,167 @@
+# Dialog script for edu::path_tracing_refractions::1.0 automatically generated
+
+{
+    name	edu::path_tracing_refractions::1.0
+    script	edu::pathtracing_refractions::1.0
+    label	"EDU Path Tracing Refractions"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+    outputlabel	1	Render
+    outputlabel	2	Scene
+
+    groupsimple {
+        name    "tab"
+        label   "Camera"
+        grouptag { "visibletabs" "11110" }
+
+        parm {
+            name    "camera"
+            label   "Camera"
+            type    oppath
+            default { "/obj/cam1" }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "oprelative" "." }
+        }
+        parm {
+            name    "zpos"
+            label   "Render plane position"
+            type    float
+            default { "1" }
+            range   { 0 20 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "definition"
+            label   "Pixel definition"
+            type    integer
+            default { "60" }
+            range   { 1! 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "res"
+            label   "Resolution"
+            type    intvector2
+            size    2
+            default { [ "ch(chs(\"camera\")+\"/resx\")" hscript-expr ] [ "ch(chs(\"camera\")+\"/resy\")" hscript-expr ] }
+            range   { 0 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "camera_focal"
+            label   "Camera Focal"
+            type    float
+            default { [ "ch(chs(\"camera\")+\"/focal\")" hscript-expr ] }
+            range   { 0 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "camera_aperture"
+            label   "Camera Aperture"
+            type    float
+            default { [ "ch(chs(\"camera\")+\"/aperture\")" hscript-expr ] }
+            range   { 0 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+    groupsimple {
+        name    "tab_camera_1"
+        label   "Render"
+        grouptag { "visibletabs" "11110" }
+
+        parm {
+            name    "debug_mode"
+            label   "debug_mode"
+            type    toggle
+            default { "off" }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "ray_type"
+            label   "Ray type"
+            type    ordinal
+            default { "2" }
+            menu {
+                "0" "reflection"
+                "1" "refraction"
+                "2" "both"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "bias"
+            label   "Raytracing Bias"
+            type    float
+            default { "0.001" }
+            range   { 0 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "refr_limit"
+            label   "Refract Limit"
+            type    integer
+            default { "10" }
+            range   { 0 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "refl_limit"
+            label   "Reflect Limit"
+            type    integer
+            default { "10" }
+            range   { 0 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "exit_color"
+            label   "Exit Color"
+            type    color
+            size    3
+            default { "0" "0" "0" }
+            range   { 0 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "output"
+            label   "Output"
+            type    ordinal
+            default { "0" }
+            menu {
+                "0" "color"
+                "1" "uv"
+                "2" "hdri"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "map"
+            label   "Map"
+            type    image
+            default { "$HFS/houdini/pic/hdri/HDRIHaven_kiara_5_noon_2k.rat" }
+            hidewhen "{ output != 2 }"
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+}

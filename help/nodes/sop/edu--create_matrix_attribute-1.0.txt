@@ -1,0 +1,46 @@
+#type:     node
+#context:  sop
+#internal: edu::create_matrix_attribute::1.0
+#icon:     SOP/edu::create_matrix_attribute::1.0
+#tags:     sidefxedu math utility
+
+= EDU Create Matrix Attribute =
+
+"""This node creates a matrix detail attribute that you can use then to experiment and learn matrix transformations."""
+
+WARNING:
+    This node is made for education purposes only. 
+    You can use it for other things, but at your own risks.
+
+@parameters
+
+    Run Over:
+        #id: class
+        This parameter is disabled because it's meant to create a detail attribute only.
+        But it's still visible on the parameter interface as a reminder.
+            
+    Attribute Name:
+        #id: name
+        Name of the matrix attribute you want to create.
+        
+    Type:
+        #id: type
+        Choose between a 3x3 or 4x4 matrix.
+        
+    Mat3:
+        #id: mat3
+        The values of your 3x3 transformation matrix.
+        
+    Mat4:
+        #id: mat4
+        The values of your 4x4 transformation matrix.
+    
+    Invert:
+        #id: invert
+        Inverts the tranformation matrix.
+
+@related
+- [EDU Base Vector | /nodes/sop/edu--base_vector-1.0 ]
+- [EDU Gnomon | /nodes/sop/edu--gnomon-1.0 ]
+- [EDU Matrix Visualizer | /nodes/sop/edu--matrix_visualizer-1.0 ]
+- [EDU Transform by Matrix | /nodes/sop/edu--transform_by_matrix-1.0 ]

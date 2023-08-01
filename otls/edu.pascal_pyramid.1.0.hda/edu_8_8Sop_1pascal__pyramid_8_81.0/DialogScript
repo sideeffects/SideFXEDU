@@ -1,0 +1,288 @@
+# Dialog script for edu::pascal_pyramid::1.0 automatically generated
+
+{
+    name	edu::pascal_pyramid::1.0
+    script	edu::pascal_pyramid::1.0
+    label	"EDU Pascal Pyramid"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    groupsimple {
+        name    "folder1"
+        label   "General"
+
+        parm {
+            name    "type"
+            label   "Type"
+            type    ordinal
+            default { "0" }
+            menu {
+                "0" "triangle"
+                "1" "pyramid"
+            }
+            range   { 0 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "nblayers"
+            label   "Layers"
+            type    integer
+            default { "4" }
+            range   { 0 10 }
+            parmtag { "autoscope" "1000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "seed"
+            label   "Color Seed"
+            type    float
+            default { "0.86" }
+            range   { 0 10 }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "input"
+            label   "Show wires"
+            type    toggle
+            default { "0" }
+            range   { 0! 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+    groupsimple {
+        name    "folder2"
+        label   "Matching"
+        grouptag { "group_type" "simple" }
+        grouptag { "visibletabs" "1" }
+
+        parm {
+            name    "dotranslate"
+            label   "Translate"
+            type    toggle
+            invisible
+            default { "on" }
+            range   { 0 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "justify_x"
+            label   "Justify X"
+            type    ordinal
+            joinnext
+            default { "center" }
+            disablewhen "{ dotranslate == 0 }"
+            menu {
+                "none"      "None"
+                "min"       "Min"
+                "center"    "Center"
+                "max"       "Max"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "goal_x"
+            label   "to"
+            type    ordinal
+            joinnext
+            default { "same" }
+            disablewhen "{ dotranslate == 0 } { justify_x == none }"
+            menu {
+                "same"      "Same"
+                "min"       "Min"
+                "center"    "Center"
+                "max"       "Max"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "offset_x"
+            label   "Offset by"
+            type    float
+            default { "0" }
+            disablewhen "{ dotranslate == 0 } { justify_x == none }"
+            range   { -1 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "justify_y"
+            label   "Justify Y"
+            type    ordinal
+            joinnext
+            default { "min" }
+            disablewhen "{ dotranslate == 0 }"
+            menu {
+                "none"      "None"
+                "min"       "Min"
+                "center"    "Center"
+                "max"       "Max"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "goal_y"
+            label   "to"
+            type    ordinal
+            joinnext
+            default { "same" }
+            disablewhen "{ dotranslate == 0 } { justify_y == none }"
+            menu {
+                "same"      "Same"
+                "min"       "Min"
+                "center"    "Center"
+                "max"       "Max"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "offset_y"
+            label   "Offset by"
+            type    float
+            default { "0" }
+            disablewhen "{ dotranslate == 0 } { justify_y == none }"
+            range   { -1 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "justify_z"
+            label   "Justify Z"
+            type    ordinal
+            joinnext
+            default { "None" }
+            disablewhen "{ dotranslate == 0 }"
+            menu {
+                "none"      "None"
+                "min"       "Min"
+                "center"    "Center"
+                "max"       "Max"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "goal_z"
+            label   "to"
+            type    ordinal
+            joinnext
+            default { "same" }
+            disablewhen "{ dotranslate == 0 } { justify_z == none }"
+            menu {
+                "same"      "Same"
+                "min"       "Min"
+                "center"    "Center"
+                "max"       "Max"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "offset_z"
+            label   "Offset by"
+            type    float
+            default { "0" }
+            disablewhen "{ dotranslate == 0 } { justify_z == none }"
+            range   { -1 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "doscale"
+            label   "Scale to Fit"
+            type    toggle
+            invisible
+            default { "off" }
+            range   { 0 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "uniformscale"
+            label   "Uniform Scale"
+            type    toggle
+            invisible
+            default { "on" }
+            disablewhen "{ doscale == 0 }"
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "scale_axis"
+            label   "Scale Axis"
+            type    ordinal
+            invisible
+            default { "min" }
+            hidewhen "{ uniformscale == 0 } { doscale == 0 }"
+            menu {
+                "x"         "X"
+                "y"         "Y"
+                "z"         "Z"
+                "min"       "Best Fit"
+                "perimeter" "Perimeter"
+                "area"      "Area"
+                "volume"    "Volume"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "scale_x"
+            label   "Scale X"
+            type    toggle
+            invisible
+            default { "on" }
+            hidewhen "{ doscale == 0 } { uniformscale == 1 }"
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "scale_y"
+            label   "Scale Y"
+            type    toggle
+            invisible
+            default { "on" }
+            hidewhen "{ doscale == 0 } { uniformscale == 1 }"
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "scale_z"
+            label   "Scale Z"
+            type    toggle
+            invisible
+            default { "on" }
+            hidewhen "{ doscale == 0 } { uniformscale == 1 }"
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+    groupsimple {
+        name    "folder0"
+        label   "Information"
+
+        parm {
+            name    "labelparm3"
+            label   "Message"
+            type    label
+            default { "For more information about Pascal's Pyramid visit:\nhttps://en.wikipedia.org/wiki/Pascal%27s_pyramid" }
+            parmtag { "sidefx::look" "block" }
+        }
+    }
+
+}

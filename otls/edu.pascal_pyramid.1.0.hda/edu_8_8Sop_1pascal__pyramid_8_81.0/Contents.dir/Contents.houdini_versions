@@ -1,0 +1,17 @@
+{
+	"values":["19.5.689","2"
+	],
+	"indexes":{
+		"hdaroot/null1.userdata":0,
+		"hdaroot/SHOW_WIRES.userdata":0,
+		"hdaroot/output0.userdata":0,
+		"hdaroot/foreach_end2.userdata":0,
+		"hdaroot/copytopoints2.userdata":0,
+		"hdaroot/foreach_begin2.userdata":0,
+		"hdaroot/polyextrude3.userdata":0,
+		"hdaroot/connectadjacentpieces1.userdata":1,
+		"hdaroot/polywire1.userdata":0,
+		"hdaroot/font3.userdata":0,
+		"hdaroot/merge1.userdata":0
+	}
+}

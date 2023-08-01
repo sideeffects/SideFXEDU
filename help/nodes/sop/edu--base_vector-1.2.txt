@@ -1,0 +1,70 @@
+#type:     node
+#context:  sop
+#internal: edu::base_vector::1.0
+#icon:     SOP/edu::base_vector::1.0
+#tags:     sidefxedu utility visualizer
+
+= EDU Base Vector =
+
+"""This node creates a vector geometry to represent a vector value."""
+
+WARNING:
+    This node is made for education purposes only. 
+    You can use it for other things, but at your own risks.
+
+@parameters
+
+    Use Attribute:
+        #id: useattribute
+        Whether to use a vector attribute or not.
+        
+    Attribute:
+        #id: attribute
+        Name of the vector attribute you want to visualize.
+        
+    Vector:
+        #id: vector
+        If the node is set to not use a vector attribute, visualize this vector instead.
+        
+    Scale:
+        #id: scale
+        Scale uniformly the vector geometry.
+        
+    Override color:
+        #id: override_color
+        Whether to override or not the color of the vector geometry.
+        
+    Color:
+        #id: color
+        Change the color of the vector geometry if set to override.
+        
+    Output vector as packed primitive:
+        #id: pack
+        Pack the vector geometry.
+        
+    Merge with input:
+        #id: merge
+        Whether or not to merge the vector to the input geometry.
+    
+    Show label:
+        #id: show_label
+        Whether or not to display a label.
+        
+    Label:
+        #id: label
+        If 'Show label' is on, what label to show.
+        
+    Fit label to arrow:
+        #id: doscale
+        Whether or not to fit the label text to the arrow.
+        
+    Uniform scale:
+        #id: scale2
+        A uniform scale applied to the label text object.
+        
+@related
+- [EDU Create Matrix Attribute | /nodes/sop/edu--create_matrix_attribute-1.0 ]
+- [EDU Gnomon | /nodes/sop/edu--gnomon-1.0 ]
+- [EDU Matrix Visualizer | /nodes/sop/edu--matrix_visualizer-1.0 ]
+- [EDU Transform by Matrix | /nodes/sop/edu--transform_by_matrix-1.0 ]
+        

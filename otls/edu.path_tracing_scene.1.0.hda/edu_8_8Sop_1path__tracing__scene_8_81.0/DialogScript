@@ -1,0 +1,54 @@
+# Dialog script for edu::path_tracing_scene::1.0 automatically generated
+
+{
+    name	edu::path_tracing_scene::1.0
+    script	edu::path_tracing_scene::1.0
+    label	"EDU Path Tracing Scene"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+    outputlabel	1	"Scene setup for the EDU Path Tracing Simulator"
+
+    parm {
+        name    "intensity"
+        label   "Intensity"
+        type    float
+        default { "1.4" }
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "intensity2"
+        label   "Intensity"
+        type    float
+        default { "1.2" }
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "intensity3"
+        label   "Intensity"
+        type    float
+        default { "1" }
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "intensity4"
+        label   "Intensity"
+        type    float
+        default { "0" }
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+}

@@ -1,0 +1,185 @@
+# Dialog script for edu::path_tracing_simulator::1.0 automatically generated
+
+{
+    name	edu::path_tracing_simulator::1.0
+    script	brunoe::dev::eduRaytracer::1.0
+    label	"EDU Path Tracing Simulator"
+
+    help {
+	""
+    }
+
+    inputlabel	1	Scene
+    inputlabel	2	Scene
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+    outputlabel	1	Out
+    outputlabel	2	"Primary Rays"
+    outputlabel	3	"Primary Hits"
+    outputlabel	4	"Direct Rays (Lights)"
+    outputlabel	5	"Direct Samples (Lights)"
+    outputlabel	6	"Indirect Rays (Scene)"
+    outputlabel	7	"Indirect Samples (Scene)"
+
+    parm {
+        name    "node_vis_enabled"
+        label   "Visualization Enabled"
+        type    toggle
+        invisible
+        default { "1" }
+    }
+    multiparm {
+        name    "num_visualizers"
+        label    "Visualizers"
+        invisible
+        default 0
+        parmtag { "multistartoffset" "0" }
+
+        parm {
+            name    "vis_active#_6"
+            label   "Active #"
+            type    toggle
+            invisible
+            default { "0" }
+        }
+        parm {
+            name    "vis_data#_6"
+            label   "Raw Data #"
+            type    string
+            invisible
+            nolabel
+            default { "" }
+            parmtag { "editor" "1" }
+        }
+    }
+
+    parm {
+        name    "camera"
+        label   "Camera"
+        type    oppath
+        default { "/obj/cam1" }
+        parmtag { "oprelative" "." }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "zpos"
+        label   "Render plane position"
+        type    float
+        default { "10" }
+        range   { 0 20 }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "definition"
+        label   "Pixel definition"
+        type    integer
+        default { "6" }
+        range   { 1 10 }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "sepparm"
+        label   "Separator"
+        type    separator
+        default { "" }
+    }
+    parm {
+        name    "primrays"
+        label   "Primary Rays"
+        type    integer
+        default { "9" }
+        range   { 1! 20 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "secrays"
+        label   "Secondary Rays"
+        type    integer
+        default { "2" }
+        range   { 1! 10 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "lightSamplingQuality"
+        label   "Light Sampling Quality"
+        type    float
+        default { "1" }
+        range   { 0! 1 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    group {
+        name    "folder0"
+        label   "Visualization"
+
+        parm {
+            name    "computesinglepixel"
+            label   "Compute single pixel"
+            type    toggle
+            default { "0" }
+            range   { 0! 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "viz_singlepath"
+            label   "Vizualise single pixel path"
+            type    toggle
+            default { "1" }
+            range   { 0! 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "pixellist"
+            label   "Pixel list"
+            type    ordinal
+            invisible
+            default { "ch(\"definition\")-1" }
+            menu {
+                "88"    "88"
+                "278"   "278"
+                "691"   "691"
+                "928"   "928"
+                "928"   "928"
+                "2178"  "2178"
+                "2178"  "2178"
+                "4178"  "4178"
+                "6288"  "6288"
+                "7568"  "7568"
+                "10000" "10000"
+                "11000" "11000"
+            }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "manual"
+            label   "Define pixel to compute manually"
+            type    toggle
+            default { "0" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "computepixelid2"
+            label   "Pixel to compute"
+            type    integer
+            default { "0" }
+            disablewhen "{ manual == 0 }"
+            hidewhen "{ manual == 0 }"
+            range   { 0 10000 }
+        }
+        parm {
+            name    "computepixelid"
+            label   "Pixel to compute"
+            type    integer
+            default { "if(ch(\"manual\"), ch(\"computepixelid2\"), chs(\"pixellist\"))" }
+            disablewhen "{ manual == 0 }"
+            hidewhen "{ manual == 1 }"
+            range   { 0 10 }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+    }
+
+}

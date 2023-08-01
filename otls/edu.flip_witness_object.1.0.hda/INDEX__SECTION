@@ -1,0 +1,14 @@
+Operator:     edu::flip_witness_object::1.0
+Label:        EDU Flip Witness Object
+Path:         oplib:/edu::Object/flip_witness_object::1.0?edu::Object/flip_witness_object::1.0
+Icon:         opdef:/edu::Object/flip_witness_object::1.0?IconSVG
+Table:        Object
+License:      
+Extra:        
+User:         
+Inputs:       0 to 0
+Subnet:       false
+Python:       false
+Empty:        false
+Modified:     Fri Jul 28 16:23:42 2023
+

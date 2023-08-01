@@ -1,0 +1,131 @@
+# Dialog script for edu::portal_mis_bias_simulator::1.0 automatically generated
+
+{
+    name	edu::portal_mis_bias_simulator::1.0
+    script	labs::portal_mis_bias_simulator::1.0
+    label	"EDU Portal MIS Bias Simulator"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Dome Light Geometry"
+    inputlabel	2	"Portal Geometry"
+    inputlabel	3	"Primary Hit Points"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "filename"
+        label   "Texture Map"
+        type    image
+        default { "$HFS/houdini/pic/hdri/HDRIHaven_kiara_5_noon_2k.rat" }
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "filechooser_mode" "read" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "sepparm"
+        label   "Spacer"
+        type    separator
+        default { "" }
+        parmtag { "sidefx::layout_height" "small" }
+        parmtag { "sidefx::look" "blank" }
+    }
+    parm {
+        name    "switchif_use_internal_domelight"
+        label   "Use HDA Dome Light"
+        type    toggle
+        default { "1" }
+        disablewhen "{ hasinput(0) == 0 }"
+        range   { 0! 1! }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "switchif_use_internal_portal"
+        label   "Use HDA Portal"
+        type    toggle
+        default { "1" }
+        disablewhen "{ hasinput(1) == 0 }"
+        range   { 0! 1! }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "switchif_use_internal_primhits"
+        label   "Use HDA Prim Hits"
+        type    toggle
+        default { "1" }
+        disablewhen "{ hasinput(2) == 0 }"
+        range   { 0! 1! }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "sepparm2"
+        label   "Spacer"
+        type    separator
+        default { "" }
+        parmtag { "sidefx::layout_height" "small" }
+        parmtag { "sidefx::look" "blank" }
+    }
+    parm {
+        name    "select1"
+        label   "Prim hits to keep (%)"
+        type    float
+        default { "100" }
+        range   { 1! 100! }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "dosingleprimhit"
+        label   "Do Single Prim Hit"
+        type    toggle
+        nolabel
+        joinnext
+        default { "on" }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "singleprimhit"
+        label   "Use Single Prim Hit"
+        type    integer
+        default { "0" }
+        disablewhen "{ dosingleprimhit == 0 }"
+        range   { 0! 500 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "portalmisbias"
+        label   "Portal MIS Bias"
+        type    float
+        default { "0" }
+        range   { -1! 1! }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "show_dome"
+        label   "Show Dome Light"
+        type    toggle
+        joinnext
+        default { "1" }
+        range   { 0! 1! }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "show_dome_behind_portal"
+        label   "Show behing portal"
+        type    toggle
+        default { "1" }
+        disablewhen "{ show_dome == 0 }"
+        range   { 0! 1! }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+}

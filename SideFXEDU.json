@@ -1,0 +1,11 @@
+{
+    "path": "$SIDEFXEDU",
+    "load_package_once": true,
+    "enable": "houdini_version >= '19.0' and houdini_version <= '20.0'",
+    "version": "19.5",
+    "env": [
+        {
+            "SIDEFXEDU": "$HOUDINI_PACKAGE_PATH/SideFXEDU19.5"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+#type:     node
+#context:  obj
+#internal: edu::flip_witness_object::1.0
+#icon:     OBJ/edu::flip_witness_object::1.0
+#tags:     sidefxedu utility visualizer
+
+= EDU Flip Witness Object =
+
+"""This nodes creates a sphere and cube each representing the voxel size and particle separation of a FLIP object."""
+
+WARNING:
+    This node is made for education purposes only. 
+    You can use it for other things, but at your own risks.
+
+@parameters
+
+    Renderable:
+        #id: renderable
+        Whether this object can appear in render.
+        
+    FLIP Object Path:
+        #id: flipobjectpath
+        The path to the FLIP object.
+        

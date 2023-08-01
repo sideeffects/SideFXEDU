@@ -1,0 +1,285 @@
+# Dialog script for edu::matrix_visualizer::1.0 automatically generated
+
+{
+    name	edu::matrix_visualizer::1.0
+    script	ebeMatrixVisualizer
+    label	"EDU Matrix Visualizer"
+
+    help {
+	""
+    }
+    bindhandle rx xform "Transformer" rx ""
+    bindhandle ry xform "Transformer" ry ""
+    bindhandle rz xform "Transformer" rz ""
+    bindhandle scale xform "Transformer" sz ""
+    bindhandle tx xform "Transformer" tx ""
+    bindhandle ty xform "Transformer" ty ""
+    bindhandle tz xform "Transformer" tz ""
+
+    inputlabel	1	"Geometry with Matrix Detail Attribute"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    groupsimple {
+        name    "folder0"
+        label   "General"
+
+        parm {
+            name    "attribute"
+            label   "Attribute name"
+            type    string
+            default { "xform" }
+            menureplace {
+                [ "r = []" ]
+                [ "node = kwargs['node']" ]
+                [ "inputs = node.inputs()" ]
+                [ "" ]
+                [ "if inputs and inputs[0]:" ]
+                [ "" ]
+                [ "    geo = inputs[0].geometry()" ]
+                [ "    " ]
+                [ "    if geo:" ]
+                [ "        attrs = geo.globalAttribs()" ]
+                [ "        for a in attrs:" ]
+                [ "            r.extend([a.name(), a.name()])" ]
+                [ "  " ]
+                [ "return r" ]
+                language python
+            }
+        }
+    }
+
+    groupsimple {
+        name    "folder1"
+        label   "Geometry"
+
+        parm {
+            name    "labels_size"
+            label   "Labels Size"
+            type    float
+            default { "1" }
+            range   { 0! 100 }
+            export  all
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "values_size"
+            label   "Values Size"
+            type    float
+            default { "1" }
+            range   { 0! 100 }
+            export  all
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "digits"
+            label   "Values Digits"
+            type    integer
+            default { "4" }
+            range   { 0! 10 }
+            export  all
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "size"
+            label   "Grid Size"
+            type    vector2
+            size    2
+            default { "10" "10" }
+            range   { 0 10 }
+            export  all
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "color_labels"
+            label   "Labels"
+            type    color
+            size    3
+            default { "1" "0.5" "0" }
+            range   { 0 1 }
+            export  all
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "color_decimals"
+            label   "Decimals"
+            type    color
+            size    3
+            default { "1" "1" "1" }
+            range   { 0 1 }
+            export  all
+            parmtag { "autoscope" "0000000000000000" }
+        }
+    }
+
+    groupsimple {
+        name    "folder1_1"
+        label   "Transform"
+
+        parm {
+            name    "group"
+            label   "Group"
+            type    string
+            invisible
+            default { "" }
+            menutoggle {
+                [ "opmenu -l transform1 group" ]
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_action" "import soputils\nkwargs['geometrytype'] = kwargs['node'].parmTuple('grouptype')\nkwargs['inputindex'] = 0\nsoputils.selectGroupParm(kwargs)" }
+            parmtag { "script_action_help" "Select geometry from an available viewport.\nShift-click to turn on Select Groups." }
+            parmtag { "script_action_icon" "BUTTONS_reselect" }
+        }
+        parm {
+            name    "grouptype"
+            label   "Group Type"
+            type    ordinal
+            invisible
+            default { "guess" }
+            menu {
+                "guess"         "Guess from Group"
+                "breakpoints"   "Breakpoints"
+                "edges"         "Edges"
+                "points"        "Points"
+                "prims"         "Primitives"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "xOrd"
+            label   "Transform Order"
+            type    ordinal
+            invisible
+            joinnext
+            default { "srt" }
+            menu {
+                "srt"   "Scale Rot Trans"
+                "str"   "Scale Trans Rot"
+                "rst"   "Rot Scale Trans"
+                "rts"   "Rot Trans Scale"
+                "tsr"   "Trans Scale Rot"
+                "trs"   "Trans Rot Scale"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "rOrd"
+            label   "Rotate Order"
+            type    ordinal
+            invisible
+            nolabel
+            default { "xyz" }
+            menu {
+                "xyz"   "Rx Ry Rz"
+                "xzy"   "Rx Rz Ry"
+                "yxz"   "Ry Rx Rz"
+                "yzx"   "Ry Rz Rx"
+                "zxy"   "Rz Rx Ry"
+                "zyx"   "Rz Ry Rx"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "t"
+            label   "Translate"
+            type    vector
+            size    3
+            default { "0" "0" "0" }
+            range   { -1 1 }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "r"
+            label   "Rotate"
+            type    vector
+            size    3
+            default { "0" "0" "0" }
+            range   { 0 360 }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "s"
+            label   "Scale"
+            type    vector
+            invisible
+            size    3
+            default { "1" "1" "1" }
+            range   { -1 1 }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "shear"
+            label   "Shear"
+            type    float
+            invisible
+            size    3
+            default { "0" "0" "0" }
+            range   { 0 10 }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "scale"
+            label   "Uniform Scale"
+            type    float
+            default { "1" }
+            range   { 0 10 }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "movecentroid"
+            label   "Move Centroid to Origin"
+            type    button
+            invisible
+            default { "0" }
+            range   { 0 1 }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "attribs"
+            label   "Attributes"
+            type    string
+            invisible
+            default { "*" }
+            menutoggle {
+                [ "opmenu -l transform1 attribs" ]
+            }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "updatenmls"
+            label   "Recompute Point Normals"
+            type    toggle
+            invisible
+            default { "off" }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "updateaffectednmls"
+            label   "Recompute Affected Normals"
+            type    toggle
+            invisible
+            default { "on" }
+            disablewhen "{ updatenmls == 1 }"
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "vlength"
+            label   "Preserve Normal Length"
+            type    toggle
+            invisible
+            default { "on" }
+            disablewhen "{ updatenmls == 1 }"
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "invertxform"
+            label   "Invert Transformation"
+            type    toggle
+            invisible
+            default { "off" }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+    }
+
+}

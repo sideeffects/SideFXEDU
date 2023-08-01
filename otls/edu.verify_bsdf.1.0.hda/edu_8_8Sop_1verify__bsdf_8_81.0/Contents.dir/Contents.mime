@@ -1,0 +1,5103 @@
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY"
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename=".OPfallbacks"
+Content-Type: application/external-reference
+
+.OPfallbacks
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename=".OPdummydefs"
+Content-Type: application/external-reference
+
+.OPdummydefs
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="node_type"
+Content-Type: text/plain
+
+Sop
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.init"
+Content-Type: text/plain
+
+type = edu::verify_bsdf::1.0
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment "Education tool"
+position 0 2.3885
+connectornextid 0
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.local
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/sticky3.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/sticky3.postitdef"
+Content-Type: text/plain
+
+text "BSDF Evalution Function Verification
+
+This SOP network uses uniformly distributed points on the sphere to verify that the bsdf evaluation function integrates correctly for all reflection directions.
+
+Open the geometry spreadsheet for verify_eval_func and change to view detail attributes. You should see these 3 attributes:
+- alb: The bsdf albedo for the incoming direction
+- u_eval_eval: The average bsdf evaluation value over the sphere
+- u_eval_pdf: The average evaluation pdf over the sphere
+
+VERIFY:
+1. alb is the desired albedo
+2. u_eval_eval is half alb
+3. u_eval_pdf equals u_eval_eval"
+position -7.96177 -12.0592
+size 7.48276 5.1684
+flags = minimize off
+stat
+{
+  create 1685541346
+  modify 1685541347
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 1 0.969 0.522 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/sticky2.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/sticky2.postitdef"
+Content-Type: text/plain
+
+text "BSDF Sample Function Verification
+
+This SOP network uses the sampled reflection directions to verify that the sampling function corresponds correctly with the evaluation function. To determine the evaluation function that the sample function implies, an approximate density estimation is performed using pcopen() / pcfarthest to determine the density of direction vectors in the neighbourhood of each sampled direction.
+
+VERIFY:
+1. Visually inspect the red and green point clouds, making sure that they are roughly overlapping
+2. Open the details view for verify_sample_func and inspect the value for eval_to_sample_pdf. Verify that it is 2.0."
+position 5.24427 -14.3851
+size 6.1726 7.4943
+flags = minimize off
+stat
+{
+  create 1685541346
+  modify 1685541347
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 1 0.8 0.8 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/sticky1.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/sticky1.postitdef"
+Content-Type: text/plain
+
+text "BSDF Function definition
+
+The verify_bsdf node internally defines the bsdf to verify. To change the bsdf, enter the verify_bsdf VOP network and modify the connection to the 'f' input to the sample_and_eval inline VOP."
+position -3.33705 -4.16654
+size 5.40059 2.03364
+flags = minimize off
+stat
+{
+  create 1685541346
+  modify 1685541347
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 1 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf.init"
+Content-Type: text/plain
+
+type = attribvop
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 2.44401 -3.3374
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	switch2 2 1 "input1"
+}
+inputs
+{
+0 	switch2 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf.spareparmdef"
+Content-Type: text/plain
+
+    parm {
+        name    "bindgroup"
+        baseparm
+        label   "Group"
+        export  none
+        bindselector uvselect "Modify Points"
+            "Select the points to affect and press Enter to complete."
+            0 1 0xffffffff 0 bindgrouptype 0
+    }
+    parm {
+        name    "bindgrouptype"
+        baseparm
+        label   "Group Type"
+        export  none
+    }
+    parm {
+        name    "bindclass"
+        baseparm
+        label   "Run Over"
+        export  none
+    }
+    parm {
+        name    "vex_numcount"
+        baseparm
+        label   "Number Count"
+        export  none
+    }
+    parm {
+        name    "vex_threadjobsize"
+        baseparm
+        label   "Thread Job Size"
+        export  none
+    }
+    group {
+        name    "stdswitcher3"
+        label   "Vex Setup"
+
+        parm {
+            name    "vexsrc"
+            baseparm
+            label   "Vex Source"
+            export  all
+        }
+        parm {
+            name    "shoppath"
+            baseparm
+            label   "Shop Path"
+            export  all
+        }
+        parm {
+            name    "script"
+            baseparm
+            label   "Script"
+            export  all
+        }
+        parm {
+            name    "clear"
+            baseparm
+            label   "Re-load VEX Functions"
+            export  all
+        }
+        parm {
+            name    "vop_compiler"
+            baseparm
+            label   "Compiler"
+            export  none
+        }
+        parm {
+            name    "vop_forcecompile"
+            baseparm
+            label   "Force Compile"
+            export  none
+        }
+        parm {
+            name    "vex_cwdpath"
+            baseparm
+            label   "Evaluation Node Path"
+            export  none
+        }
+        parm {
+            name    "vex_outputmask"
+            baseparm
+            label   "Export Parameters"
+            export  none
+        }
+        parm {
+            name    "vex_multithread"
+            baseparm
+            label   "Enable Multithreading"
+            export  none
+        }
+    }
+
+    group {
+        name    "stdswitcher3_1"
+        label   "Attribute Bindings"
+
+        parm {
+            name    "autobind"
+            baseparm
+            label   "Autobind by Name"
+            export  none
+        }
+        multiparm {
+            name    "bindings"
+            label    "Number of Bindings"
+            baseparm
+            default 0
+            parmtag { "multistartoffset" "1" }
+
+            parm {
+                name    "bindname#"
+                baseparm
+                label   "Attribute Name"
+                export  none
+            }
+            parm {
+                name    "bindparm#"
+                baseparm
+                label   "VEX Parameter"
+                export  none
+            }
+        }
+
+        parm {
+            name    "groupautobind"
+            baseparm
+            label   "Autobind Groups by Name"
+            export  none
+        }
+        multiparm {
+            name    "groupbindings"
+            label    "Group Bindings"
+            baseparm
+            default 0
+            parmtag { "multistartoffset" "1" }
+
+            parm {
+                name    "bindgroupname#"
+                baseparm
+                label   "Group Name"
+                export  none
+            }
+            parm {
+                name    "bindgroupparm#"
+                baseparm
+                label   "VEX Parameter"
+                export  none
+            }
+        }
+
+        parm {
+            name    "vex_updatenmls"
+            baseparm
+            label   "Update Normals If Displaced"
+            export  none
+        }
+        parm {
+            name    "vex_matchattrib"
+            baseparm
+            label   "Attribute to Match"
+            export  none
+        }
+        parm {
+            name    "vex_inplace"
+            baseparm
+            label   "Compute Results In Place"
+            export  none
+        }
+        parm {
+            name    "vex_selectiongroup"
+            baseparm
+            label   "Output Selection Group"
+            export  none
+        }
+    }
+
+    parm {
+        name    "dir"
+        label   "Incident Direction"
+        type    float
+        size    3
+        default { "0" "0" "0" }
+        range   { 0 10 }
+        parmtag { "parmvop" "1" }
+        parmtag { "shaderparmcontexts" "cvex" }
+    }
+    parm {
+        name    "dir_light"
+        label   "To light"
+        type    float
+        size    3
+        default { "0" "0" "0" }
+        range   { 0 10 }
+        parmtag { "parmvop" "1" }
+        parmtag { "shaderparmcontexts" "cvex" }
+    }
+    parm {
+        name    "r_size"
+        label   "Reflection Size"
+        type    float
+        default { "0.6" }
+        range   { 0 1 }
+        parmtag { "parmvop" "1" }
+        parmtag { "shaderparmcontexts" "cvex" }
+    }
+    parm {
+        name    "r_shift"
+        label   "Reflection Shift"
+        type    float
+        default { "0" }
+        range   { -1 1 }
+        parmtag { "parmvop" "1" }
+        parmtag { "shaderparmcontexts" "cvex" }
+    }
+    parm {
+        name    "vexsnippet"
+        baseparm
+        label   "Snippet"
+        export  none
+    }
+    parm {
+        name    "vex_strict"
+        baseparm
+        label   "Enforce Prototypes"
+        export  none
+    }
+    parm {
+        name    "vex_exportlist"
+        baseparm
+        label   "Attributes to Create"
+        export  none
+    }
+    parm {
+        name    "vex_precision"
+        baseparm
+        label   "VEX Precision"
+        export  none
+    }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf.chn"
+Content-Type: text/plain
+
+{
+    channel dir1 {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../dir_viewerx\") }
+    }
+    channel dir2 {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../dir_viewery\") }
+    }
+    channel dir3 {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../dir_viewerz\") }
+    }
+    channel dir_light1 {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../dir_lightx\") }
+    }
+    channel dir_light2 {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../dir_lighty\") }
+    }
+    channel dir_light3 {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../dir_lightz\") }
+    }
+  }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+bindgroup	[ 0	locks=0	autoscope=0 ]	(	""	)
+bindgrouptype	[ 0	locks=0	autoscope=0 ]	(	"guess"	)
+bindclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+vex_numcount	[ 0	locks=0	autoscope=0 ]	(	10	)
+vex_threadjobsize	[ 0	locks=0	autoscope=0 ]	(	1024	)
+stdswitcher	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+vexsrc	[ 0	locks=0	autoscope=0 ]	(	"myself"	)
+shoppath	[ 0	locks=0	autoscope=0 ]	(	""	)
+script	[ 0	locks=0	autoscope=0 ]	(	null	)
+clear	[ 0	locks=0 ]	(	0	)
+vexsnippet	[ 0	locks=0	autoscope=0 ]	(	""	)
+vex_strict	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+vex_exportlist	[ 0	locks=0	autoscope=0 ]	(	*	)
+vop_compiler	[ 0	locks=0	autoscope=0 ]	(	"vcc -q $VOP_INCLUDEPATH -o $VOP_OBJECTFILE -e $VOP_ERRORFILE $VOP_SOURCEFILE"	)
+vop_forcecompile	[ 0	locks=0 ]	(	0	)
+vex_cwdpath	[ 0	locks=0	autoscope=0 ]	(	""	)
+vex_outputmask	[ 0	locks=0	autoscope=0 ]	(	*	)
+vex_multithread	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+vex_precision	[ 0	locks=0	autoscope=0 ]	(	auto	)
+autobind	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings	[ 0	locks=0	autoscope=0 ]	(	0	)
+groupautobind	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+groupbindings	[ 0	locks=0	autoscope=0 ]	(	0	)
+vex_updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+vex_matchattrib	[ 0	locks=0	autoscope=0 ]	(	id	)
+vex_inplace	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+vex_selectiongroup	[ 0	locks=0	autoscope=0 ]	(	""	)
+stdswitcher3	[ 0	locks=0 ]	(	0	0	)
+dir	[ 0	locks=0	autoscope=0 ]	(	[ dir1	0 ] 	[ dir2	0 ] 	[ dir3	0 ] 	)
+dir_light	[ 0	locks=0 ]	(	[ dir_light1	0 ] 	[ dir_light2	0 ] 	[ dir_light3	0 ] 	)
+r_size	[ 0	locks=0	autoscope=0 ]	(	0.219	)
+r_shift	[ 0	locks=0 ]	(	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/__netbox1.netboxinit"
+Content-Type: text/plain
+
+2
+2
+{
+	autofit := 0;
+	color := "UT_Color RGB 0.52 0.52 0.52 ";
+	comment := "";
+	height := 1.7093394106868804;
+	minimized := 0;
+	width := 14.09787917599445;
+	x_position := -10.256479217717702;
+	y_position := -4.1482245422768687;
+}
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/__stickynote1.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/__stickynote1.postitdef"
+Content-Type: text/plain
+
+text "dir_light is setup but not currently used 
+The plan is to use it in eval_bsdf() to see if vary with light direction.
+Currently eval_bsdf() is using the same vector (nvec)"
+position -9.85648 -3.94822
+size 7.15452 1.08434
+flags = minimize off
+stat
+{
+  create 1685542894
+  modify 1685542975
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 1 0.969 0.522 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/__stickynote1.postitnetbox"
+Content-Type: text/plain
+
+__netbox1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/pbrhair_PRIMARY_REFLECTION.init"
+Content-Type: text/plain
+
+type = pbrhair_r
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/pbrhair_PRIMARY_REFLECTION.def"
+Content-Type: text/plain
+
+comment ""
+position -2.75794 3.76764
+connectornextid 7
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+6 "f"
+}
+inputsNamed3
+{
+0 	"" "" 1 "label"
+1 	"" "" 1 "nN"
+2 	"" "" 1 "tip"
+3 	"" "" 1 "r_clr"
+4 	r_size 0 1 "r_size"
+5 	r_shift 0 1 "r_shift"
+}
+inputs
+{
+0 	"" 0 1
+1 	"" 0 1
+2 	"" 0 1
+3 	"" 0 1
+4 	r_size 0 1
+5 	r_shift 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/pbrhair_PRIMARY_REFLECTION.chn"
+Content-Type: text/plain
+
+{
+    channel r_size {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 value = 0.59999999999999998 0.59999999999999998 expr = ch('../r_size/floatdef') }
+    }
+    channel r_shift {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch('../r_shift/floatdef') }
+    }
+  }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/pbrhair_PRIMARY_REFLECTION.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+label	[ 0	locks=0	autoscope=0 ]	(	""	)
+r_clr	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
+r_size	[ 0	locks=0	autoscope=0 ]	(	[ r_size	0.59999999999999998 ] 	)
+r_shift	[ 0	locks=0	autoscope=0 ]	(	[ r_shift	0 ] 	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/pbrhair_PRIMARY_REFLECTION.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/sample_and_eval.init"
+Content-Type: text/plain
+
+type = inline
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/sample_and_eval.def"
+Content-Type: text/plain
+
+comment ""
+position 4.3914 1.22566
+connectornextid 15
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+3 "w_v"
+4 "w_sample_eval"
+5 "w_sample_pdf"
+6 "w_eval_eval"
+7 "w_eval_pdf"
+8 "u_v"
+9 "u_sample_eval"
+10 "u_sample_pdf"
+11 "u_eval_eval"
+12 "u_eval_pdf"
+13 "alb"
+}
+inputsNamed3
+{
+0 	pbrhair_SECONDARY_REFLECTION 9 1 "f"
+1 	normalize1 1 1 "nvec"
+14 	normalize2 1 1 "nvec_tolight"
+2 	bind2 0 1 "P"
+}
+inputs
+{
+0 	pbrhair_SECONDARY_REFLECTION 0 1
+1 	normalize1 0 1
+2 	normalize2 0 1
+3 	bind2 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/sample_and_eval.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+code	[ 0	locks=0	autoscope=0 ]	(	"vector  eval;
+int     state;
+
+// Store the albedo
+$alb = luminance(albedo($f, $nvec));
+
+// Weighted bsdf sampling (w_ prefix):
+// w_v
+// w_sample_eval
+// w_sample_pdf
+// w_eval_eval
+// w_eval_pdf
+sample_bsdf($f, $nvec, $w_v, eval, $w_sample_pdf, state, $P.x, $P.z);
+$w_sample_eval = luminance(eval);
+$w_eval_eval = luminance(eval_bsdf($f, $nvec, $w_v, $nvec, $w_eval_pdf, PBR_ALL_MASK));
+
+// Isotropic bsdf sampling (u_ prefix)
+// u_v
+// u_sample_eval
+// u_sample_pdf
+// u_eval_eval
+// u_eval_pdf
+bsdf iso = isotropic();
+sample_bsdf(iso, $nvec, $u_v, eval, $u_sample_pdf, state, $P.x, $P.z);
+$u_sample_eval = luminance(eval);
+$u_eval_eval = luminance(eval_bsdf($f, $nvec, $u_v, $nvec, $u_eval_pdf, PBR_ALL_MASK));
+"	)
+includes	[ 0	locks=0	autoscope=0 ]	(	pbr.h	)
+outercode	[ 0	locks=0	autoscope=0 ]	(	""	)
+expandcode	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+name1	[ 0	locks=0	autoscope=0 ]	(	""	)
+label1	[ 0	locks=0	autoscope=0 ]	(	""	)
+name2	[ 0	locks=0	autoscope=0 ]	(	""	)
+label2	[ 0	locks=0	autoscope=0 ]	(	""	)
+name3	[ 0	locks=0	autoscope=0 ]	(	nvec_tolight	)
+label3	[ 0	locks=0	autoscope=0 ]	(	""	)
+name4	[ 0	locks=0	autoscope=0 ]	(	P	)
+label4	[ 0	locks=0	autoscope=0 ]	(	""	)
+name5	[ 0	locks=0	autoscope=0 ]	(	""	)
+label5	[ 0	locks=0	autoscope=0 ]	(	""	)
+name6	[ 0	locks=0	autoscope=0 ]	(	""	)
+label6	[ 0	locks=0	autoscope=0 ]	(	""	)
+name7	[ 0	locks=0	autoscope=0 ]	(	""	)
+label7	[ 0	locks=0	autoscope=0 ]	(	""	)
+name8	[ 0	locks=0	autoscope=0 ]	(	""	)
+label8	[ 0	locks=0	autoscope=0 ]	(	""	)
+name9	[ 0	locks=0	autoscope=0 ]	(	""	)
+label9	[ 0	locks=0	autoscope=0 ]	(	""	)
+name10	[ 0	locks=0	autoscope=0 ]	(	""	)
+label10	[ 0	locks=0	autoscope=0 ]	(	""	)
+name11	[ 0	locks=0	autoscope=0 ]	(	""	)
+label11	[ 0	locks=0	autoscope=0 ]	(	""	)
+name12	[ 0	locks=0	autoscope=0 ]	(	""	)
+label12	[ 0	locks=0	autoscope=0 ]	(	""	)
+name13	[ 0	locks=0	autoscope=0 ]	(	""	)
+label13	[ 0	locks=0	autoscope=0 ]	(	""	)
+name14	[ 0	locks=0	autoscope=0 ]	(	""	)
+label14	[ 0	locks=0	autoscope=0 ]	(	""	)
+name15	[ 0	locks=0	autoscope=0 ]	(	""	)
+label15	[ 0	locks=0	autoscope=0 ]	(	""	)
+name16	[ 0	locks=0	autoscope=0 ]	(	""	)
+label16	[ 0	locks=0	autoscope=0 ]	(	""	)
+name17	[ 0	locks=0	autoscope=0 ]	(	""	)
+label17	[ 0	locks=0	autoscope=0 ]	(	""	)
+name18	[ 0	locks=0	autoscope=0 ]	(	""	)
+label18	[ 0	locks=0	autoscope=0 ]	(	""	)
+name19	[ 0	locks=0	autoscope=0 ]	(	""	)
+label19	[ 0	locks=0	autoscope=0 ]	(	""	)
+name20	[ 0	locks=0	autoscope=0 ]	(	""	)
+label20	[ 0	locks=0	autoscope=0 ]	(	""	)
+name21	[ 0	locks=0	autoscope=0 ]	(	""	)
+label21	[ 0	locks=0	autoscope=0 ]	(	""	)
+name22	[ 0	locks=0	autoscope=0 ]	(	""	)
+label22	[ 0	locks=0	autoscope=0 ]	(	""	)
+name23	[ 0	locks=0	autoscope=0 ]	(	""	)
+label23	[ 0	locks=0	autoscope=0 ]	(	""	)
+name24	[ 0	locks=0	autoscope=0 ]	(	""	)
+label24	[ 0	locks=0	autoscope=0 ]	(	""	)
+name25	[ 0	locks=0	autoscope=0 ]	(	""	)
+label25	[ 0	locks=0	autoscope=0 ]	(	""	)
+name26	[ 0	locks=0	autoscope=0 ]	(	""	)
+label26	[ 0	locks=0	autoscope=0 ]	(	""	)
+name27	[ 0	locks=0	autoscope=0 ]	(	""	)
+label27	[ 0	locks=0	autoscope=0 ]	(	""	)
+name28	[ 0	locks=0	autoscope=0 ]	(	""	)
+label28	[ 0	locks=0	autoscope=0 ]	(	""	)
+name29	[ 0	locks=0	autoscope=0 ]	(	""	)
+label29	[ 0	locks=0	autoscope=0 ]	(	""	)
+name30	[ 0	locks=0	autoscope=0 ]	(	""	)
+label30	[ 0	locks=0	autoscope=0 ]	(	""	)
+name31	[ 0	locks=0	autoscope=0 ]	(	""	)
+label31	[ 0	locks=0	autoscope=0 ]	(	""	)
+name32	[ 0	locks=0	autoscope=0 ]	(	""	)
+label32	[ 0	locks=0	autoscope=0 ]	(	""	)
+name33	[ 0	locks=0	autoscope=0 ]	(	""	)
+label33	[ 0	locks=0	autoscope=0 ]	(	""	)
+name34	[ 0	locks=0	autoscope=0 ]	(	""	)
+label34	[ 0	locks=0	autoscope=0 ]	(	""	)
+name35	[ 0	locks=0	autoscope=0 ]	(	""	)
+label35	[ 0	locks=0	autoscope=0 ]	(	""	)
+name36	[ 0	locks=0	autoscope=0 ]	(	""	)
+label36	[ 0	locks=0	autoscope=0 ]	(	""	)
+name37	[ 0	locks=0	autoscope=0 ]	(	""	)
+label37	[ 0	locks=0	autoscope=0 ]	(	""	)
+name38	[ 0	locks=0	autoscope=0 ]	(	""	)
+label38	[ 0	locks=0	autoscope=0 ]	(	""	)
+name39	[ 0	locks=0	autoscope=0 ]	(	""	)
+label39	[ 0	locks=0	autoscope=0 ]	(	""	)
+name40	[ 0	locks=0	autoscope=0 ]	(	""	)
+label40	[ 0	locks=0	autoscope=0 ]	(	""	)
+name41	[ 0	locks=0	autoscope=0 ]	(	""	)
+label41	[ 0	locks=0	autoscope=0 ]	(	""	)
+name42	[ 0	locks=0	autoscope=0 ]	(	""	)
+label42	[ 0	locks=0	autoscope=0 ]	(	""	)
+name43	[ 0	locks=0	autoscope=0 ]	(	""	)
+label43	[ 0	locks=0	autoscope=0 ]	(	""	)
+name44	[ 0	locks=0	autoscope=0 ]	(	""	)
+label44	[ 0	locks=0	autoscope=0 ]	(	""	)
+name45	[ 0	locks=0	autoscope=0 ]	(	""	)
+label45	[ 0	locks=0	autoscope=0 ]	(	""	)
+name46	[ 0	locks=0	autoscope=0 ]	(	""	)
+label46	[ 0	locks=0	autoscope=0 ]	(	""	)
+name47	[ 0	locks=0	autoscope=0 ]	(	""	)
+label47	[ 0	locks=0	autoscope=0 ]	(	""	)
+name48	[ 0	locks=0	autoscope=0 ]	(	""	)
+label48	[ 0	locks=0	autoscope=0 ]	(	""	)
+name49	[ 0	locks=0	autoscope=0 ]	(	""	)
+label49	[ 0	locks=0	autoscope=0 ]	(	""	)
+name50	[ 0	locks=0	autoscope=0 ]	(	""	)
+label50	[ 0	locks=0	autoscope=0 ]	(	""	)
+name51	[ 0	locks=0	autoscope=0 ]	(	""	)
+label51	[ 0	locks=0	autoscope=0 ]	(	""	)
+name52	[ 0	locks=0	autoscope=0 ]	(	""	)
+label52	[ 0	locks=0	autoscope=0 ]	(	""	)
+name53	[ 0	locks=0	autoscope=0 ]	(	""	)
+label53	[ 0	locks=0	autoscope=0 ]	(	""	)
+name54	[ 0	locks=0	autoscope=0 ]	(	""	)
+label54	[ 0	locks=0	autoscope=0 ]	(	""	)
+name55	[ 0	locks=0	autoscope=0 ]	(	""	)
+label55	[ 0	locks=0	autoscope=0 ]	(	""	)
+name56	[ 0	locks=0	autoscope=0 ]	(	""	)
+label56	[ 0	locks=0	autoscope=0 ]	(	""	)
+name57	[ 0	locks=0	autoscope=0 ]	(	""	)
+label57	[ 0	locks=0	autoscope=0 ]	(	""	)
+name58	[ 0	locks=0	autoscope=0 ]	(	""	)
+label58	[ 0	locks=0	autoscope=0 ]	(	""	)
+name59	[ 0	locks=0	autoscope=0 ]	(	""	)
+label59	[ 0	locks=0	autoscope=0 ]	(	""	)
+name60	[ 0	locks=0	autoscope=0 ]	(	""	)
+label60	[ 0	locks=0	autoscope=0 ]	(	""	)
+name61	[ 0	locks=0	autoscope=0 ]	(	""	)
+label61	[ 0	locks=0	autoscope=0 ]	(	""	)
+name62	[ 0	locks=0	autoscope=0 ]	(	""	)
+label62	[ 0	locks=0	autoscope=0 ]	(	""	)
+name63	[ 0	locks=0	autoscope=0 ]	(	""	)
+label63	[ 0	locks=0	autoscope=0 ]	(	""	)
+name64	[ 0	locks=0	autoscope=0 ]	(	""	)
+label64	[ 0	locks=0	autoscope=0 ]	(	""	)
+stdswitcher	[ 0	locks=0	autoscope=0 ]	(	1	1	1	1	1	1	1	1	)
+outtype1	[ 0	locks=0	autoscope=0 ]	(	vector	)
+outname1	[ 0	locks=0	autoscope=0 ]	(	w_v	)
+outlabel1	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype2	[ 0	locks=0	autoscope=0 ]	(	float	)
+outname2	[ 0	locks=0	autoscope=0 ]	(	w_sample_eval	)
+outlabel2	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype3	[ 0	locks=0	autoscope=0 ]	(	float	)
+outname3	[ 0	locks=0	autoscope=0 ]	(	w_sample_pdf	)
+outlabel3	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype4	[ 0	locks=0	autoscope=0 ]	(	float	)
+outname4	[ 0	locks=0	autoscope=0 ]	(	w_eval_eval	)
+outlabel4	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype5	[ 0	locks=0	autoscope=0 ]	(	float	)
+outname5	[ 0	locks=0	autoscope=0 ]	(	w_eval_pdf	)
+outlabel5	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype6	[ 0	locks=0	autoscope=0 ]	(	vector	)
+outname6	[ 0	locks=0	autoscope=0 ]	(	u_v	)
+outlabel6	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype7	[ 0	locks=0	autoscope=0 ]	(	float	)
+outname7	[ 0	locks=0	autoscope=0 ]	(	u_sample_eval	)
+outlabel7	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype8	[ 0	locks=0	autoscope=0 ]	(	float	)
+outname8	[ 0	locks=0	autoscope=0 ]	(	u_sample_pdf	)
+outlabel8	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype9	[ 0	locks=0	autoscope=0 ]	(	float	)
+outname9	[ 0	locks=0	autoscope=0 ]	(	u_eval_eval	)
+outlabel9	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype10	[ 0	locks=0	autoscope=0 ]	(	float	)
+outname10	[ 0	locks=0	autoscope=0 ]	(	u_eval_pdf	)
+outlabel10	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype11	[ 0	locks=0	autoscope=0 ]	(	float	)
+outname11	[ 0	locks=0	autoscope=0 ]	(	alb	)
+outlabel11	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype12	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname12	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel12	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype13	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname13	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel13	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype14	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname14	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel14	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype15	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname15	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel15	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype16	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname16	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel16	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype17	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname17	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel17	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype18	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname18	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel18	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype19	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname19	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel19	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype20	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname20	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel20	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype21	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname21	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel21	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype22	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname22	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel22	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype23	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname23	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel23	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype24	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname24	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel24	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype25	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname25	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel25	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype26	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname26	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel26	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype27	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname27	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel27	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype28	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname28	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel28	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype29	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname29	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel29	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype30	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname30	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel30	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype31	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname31	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel31	[ 0	locks=0	autoscope=0 ]	(	""	)
+outtype32	[ 0	locks=0	autoscope=0 ]	(	undef	)
+outname32	[ 0	locks=0	autoscope=0 ]	(	""	)
+outlabel32	[ 0	locks=0	autoscope=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/sample_and_eval.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/parm1.init"
+Content-Type: text/plain
+
+type = parameter
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/parm1.def"
+Content-Type: text/plain
+
+comment ""
+position -1.6086 -0.88934
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+0 "dir"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 1 1 0.4 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/parm1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmscope	[ 0	locks=0	autoscope=0 ]	(	shaderparm	)
+parmaccess	[ 0	locks=0	autoscope=0 ]	(	""	)
+parmname	[ 0	locks=0	autoscope=0 ]	(	dir	)
+parmprefix	[ 0	locks=0	autoscope=0 ]	(	""	)
+parmpostfix	[ 0	locks=0	autoscope=0 ]	(	""	)
+parmlabel	[ 0	locks=0	autoscope=0 ]	(	"Incident Direction"	)
+showlabel	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float3"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+rangeflt	[ 0	locks=0	autoscope=0 ]	(	0	1	)
+rangeint	[ 0	locks=0	autoscope=0 ]	(	0	10	)
+stringtype	[ 0	locks=0	autoscope=0 ]	(	off	)
+opfilter	[ 0	locks=0	autoscope=0 ]	(	!!OBJ/LIGHT!!	)
+parmcomment	[ 0	locks=0	autoscope=0 ]	(	""	)
+separator1	[ 0	locks=0 ]	(	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+hasconnector	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+providemenu	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+menuchoices	[ 0	locks=0	autoscope=0 ]	(	""	)
+menuscript	[ 0	locks=0	autoscope=0 ]	(	""	)
+menuscriptlanguage	[ 0	locks=0	autoscope=0 ]	(	"hscript"	)
+separator2	[ 0	locks=0 ]	(	)
+invisible	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+joinnext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+disablewhen	[ 0	locks=0	autoscope=0 ]	(	""	)
+hidewhen	[ 0	locks=0	autoscope=0 ]	(	""	)
+callback	[ 0	locks=0	autoscope=0 ]	(	""	)
+tags	[ 0	locks=0	autoscope=0 ]	(	""	)
+help	[ 0	locks=0	autoscope=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/parm1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/normalize1.init"
+Content-Type: text/plain
+
+type = normalize
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/normalize1.def"
+Content-Type: text/plain
+
+comment ""
+position 1.3914 -0.88934
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+1 "nvec"
+}
+inputsNamed3
+{
+0 	parm1 0 1 "vec"
+}
+inputs
+{
+0 	parm1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/normalize1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+signature	[ 0	locks=0	autoscope=0 ]	(	default	)
+vec	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+vec_u	[ 0	locks=0	autoscope=0 ]	(	1	0	)
+vec_p	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+vec_v	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+vec_v4	[ 0	locks=0	autoscope=0 ]	(	0	0	0	1	)
+vec_un	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+vec_up	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+vec_uv	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/normalize1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/r_size.init"
+Content-Type: text/plain
+
+type = parameter
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/r_size.def"
+Content-Type: text/plain
+
+comment ""
+position -1.6086 3.52066
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed off lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+0 "r_size"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 1 1 0.4 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/r_size.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmscope	[ 0	locks=0	autoscope=0 ]	(	shaderparm	)
+parmaccess	[ 0	locks=0	autoscope=0 ]	(	""	)
+parmname	[ 0	locks=0	autoscope=0 ]	(	r_size	)
+parmprefix	[ 0	locks=0	autoscope=0 ]	(	""	)
+parmpostfix	[ 0	locks=0	autoscope=0 ]	(	""	)
+parmlabel	[ 0	locks=0	autoscope=0 ]	(	"Reflection Size"	)
+showlabel	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0.59999999999999998	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+rangeflt	[ 0	locks=0	autoscope=0 ]	(	0	1	)
+rangeint	[ 0	locks=0	autoscope=0 ]	(	0	10	)
+stringtype	[ 0	locks=0	autoscope=0 ]	(	off	)
+opfilter	[ 0	locks=0	autoscope=0 ]	(	!!OBJ/LIGHT!!	)
+parmcomment	[ 0	locks=0	autoscope=0 ]	(	""	)
+separator1	[ 0	locks=0 ]	(	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+hasconnector	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+providemenu	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+menuchoices	[ 0	locks=0	autoscope=0 ]	(	""	)
+menuscript	[ 0	locks=0	autoscope=0 ]	(	""	)
+menuscriptlanguage	[ 0	locks=0	autoscope=0 ]	(	"hscript"	)
+separator2	[ 0	locks=0 ]	(	)
+invisible	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+joinnext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+disablewhen	[ 0	locks=0	autoscope=0 ]	(	""	)
+hidewhen	[ 0	locks=0	autoscope=0 ]	(	""	)
+callback	[ 0	locks=0	autoscope=0 ]	(	""	)
+tags	[ 0	locks=0	autoscope=0 ]	(	""	)
+help	[ 0	locks=0	autoscope=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/r_size.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/r_shift.init"
+Content-Type: text/plain
+
+type = parameter
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/r_shift.def"
+Content-Type: text/plain
+
+comment ""
+position -1.6086 0.64066
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed off lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+0 "r_shift"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 1 1 0.4 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/r_shift.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmscope	[ 0	locks=0	autoscope=0 ]	(	shaderparm	)
+parmaccess	[ 0	locks=0	autoscope=0 ]	(	""	)
+parmname	[ 0	locks=0	autoscope=0 ]	(	r_shift	)
+parmprefix	[ 0	locks=0	autoscope=0 ]	(	""	)
+parmpostfix	[ 0	locks=0	autoscope=0 ]	(	""	)
+parmlabel	[ 0	locks=0	autoscope=0 ]	(	"Reflection Shift"	)
+showlabel	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+rangeflt	[ 0	locks=0	autoscope=0 ]	(	-1	1	)
+rangeint	[ 0	locks=0	autoscope=0 ]	(	0	10	)
+stringtype	[ 0	locks=0	autoscope=0 ]	(	off	)
+opfilter	[ 0	locks=0	autoscope=0 ]	(	!!OBJ/LIGHT!!	)
+parmcomment	[ 0	locks=0	autoscope=0 ]	(	""	)
+separator1	[ 0	locks=0 ]	(	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+hasconnector	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+providemenu	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+menuchoices	[ 0	locks=0	autoscope=0 ]	(	""	)
+menuscript	[ 0	locks=0	autoscope=0 ]	(	""	)
+menuscriptlanguage	[ 0	locks=0	autoscope=0 ]	(	"hscript"	)
+separator2	[ 0	locks=0 ]	(	)
+invisible	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+joinnext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+disablewhen	[ 0	locks=0	autoscope=0 ]	(	""	)
+hidewhen	[ 0	locks=0	autoscope=0 ]	(	""	)
+callback	[ 0	locks=0	autoscope=0 ]	(	""	)
+tags	[ 0	locks=0	autoscope=0 ]	(	""	)
+help	[ 0	locks=0	autoscope=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/r_shift.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_v.init"
+Content-Type: text/plain
+
+type = bind
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_v.def"
+Content-Type: text/plain
+
+comment ""
+position 7.7215 0.379571
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	sample_and_eval 3 1 "input"
+}
+inputs
+{
+0 	sample_and_eval 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.6 0.6 1 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_v.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmname	[ 0	locks=0	autoscope=0 ]	(	w_v	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float3"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+overridetype	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_v.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_sample_eval.init"
+Content-Type: text/plain
+
+type = bind
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_sample_eval.def"
+Content-Type: text/plain
+
+comment ""
+position 7.8215 0.179571
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	sample_and_eval 4 1 "input"
+}
+inputs
+{
+0 	sample_and_eval 1 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.6 0.6 1 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_sample_eval.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmname	[ 0	locks=0	autoscope=0 ]	(	w_sample_eval	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+overridetype	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_sample_eval.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_sample_pdf.init"
+Content-Type: text/plain
+
+type = bind
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_sample_pdf.def"
+Content-Type: text/plain
+
+comment ""
+position 7.9215 -0.0204287
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	sample_and_eval 5 1 "input"
+}
+inputs
+{
+0 	sample_and_eval 2 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.6 0.6 1 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_sample_pdf.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmname	[ 0	locks=0	autoscope=0 ]	(	w_sample_pdf	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+overridetype	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_sample_pdf.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_eval_eval.init"
+Content-Type: text/plain
+
+type = bind
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_eval_eval.def"
+Content-Type: text/plain
+
+comment ""
+position 8.0215 -0.220429
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	sample_and_eval 6 1 "input"
+}
+inputs
+{
+0 	sample_and_eval 3 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.6 0.6 1 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_eval_eval.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmname	[ 0	locks=0	autoscope=0 ]	(	w_eval_eval	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+overridetype	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_eval_eval.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_eval_pdf.init"
+Content-Type: text/plain
+
+type = bind
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_eval_pdf.def"
+Content-Type: text/plain
+
+comment ""
+position 8.1215 -0.420426
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	sample_and_eval 7 1 "input"
+}
+inputs
+{
+0 	sample_and_eval 4 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.6 0.6 1 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_eval_pdf.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmname	[ 0	locks=0	autoscope=0 ]	(	w_eval_pdf	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+overridetype	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/w_eval_pdf.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_v.init"
+Content-Type: text/plain
+
+type = bind
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_v.def"
+Content-Type: text/plain
+
+comment ""
+position 8.2215 -0.620426
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	sample_and_eval 8 1 "input"
+}
+inputs
+{
+0 	sample_and_eval 5 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.6 0.6 1 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_v.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmname	[ 0	locks=0	autoscope=0 ]	(	u_v	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float3"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+overridetype	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_v.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_sample_eval.init"
+Content-Type: text/plain
+
+type = bind
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_sample_eval.def"
+Content-Type: text/plain
+
+comment ""
+position 8.3215 -0.820426
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	sample_and_eval 9 1 "input"
+}
+inputs
+{
+0 	sample_and_eval 6 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.6 0.6 1 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_sample_eval.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmname	[ 0	locks=0	autoscope=0 ]	(	u_sample_eval	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+overridetype	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_sample_eval.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_sample_pdf.init"
+Content-Type: text/plain
+
+type = bind
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_sample_pdf.def"
+Content-Type: text/plain
+
+comment ""
+position 8.4215 -1.02043
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	sample_and_eval 10 1 "input"
+}
+inputs
+{
+0 	sample_and_eval 7 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.6 0.6 1 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_sample_pdf.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmname	[ 0	locks=0	autoscope=0 ]	(	u_sample_pdf	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+overridetype	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_sample_pdf.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_eval_eval.init"
+Content-Type: text/plain
+
+type = bind
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_eval_eval.def"
+Content-Type: text/plain
+
+comment ""
+position 8.5215 -1.22043
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	sample_and_eval 11 1 "input"
+}
+inputs
+{
+0 	sample_and_eval 8 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.6 0.6 1 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_eval_eval.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmname	[ 0	locks=0	autoscope=0 ]	(	u_eval_eval	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+overridetype	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_eval_eval.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_eval_pdf.init"
+Content-Type: text/plain
+
+type = bind
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_eval_pdf.def"
+Content-Type: text/plain
+
+comment ""
+position 8.6215 -1.42043
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	sample_and_eval 12 1 "input"
+}
+inputs
+{
+0 	sample_and_eval 9 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.6 0.6 1 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_eval_pdf.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmname	[ 0	locks=0	autoscope=0 ]	(	u_eval_pdf	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+overridetype	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/u_eval_pdf.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/alb.init"
+Content-Type: text/plain
+
+type = bind
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/alb.def"
+Content-Type: text/plain
+
+comment ""
+position 8.7215 -1.62043
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	sample_and_eval 13 1 "input"
+}
+inputs
+{
+0 	sample_and_eval 10 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.6 0.6 1 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/alb.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmname	[ 0	locks=0	autoscope=0 ]	(	alb	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+overridetype	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/alb.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/bind1.init"
+Content-Type: text/plain
+
+type = bind
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/bind1.def"
+Content-Type: text/plain
+
+comment ""
+position 6.88992 2.96357
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	sample_and_eval 3 1 "input"
+}
+inputs
+{
+0 	sample_and_eval 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.6 0.6 1 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/bind1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmname	[ 0	locks=0	autoscope=0 ]	(	P	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float3"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+overridetype	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"whenconnected"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	cvex	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/bind1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/bind2.init"
+Content-Type: text/plain
+
+type = bind
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/bind2.def"
+Content-Type: text/plain
+
+comment ""
+position 1.3914 -5.24854
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+0 "P"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.6 0.6 1 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/bind2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmname	[ 0	locks=0	autoscope=0 ]	(	P	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+overridetype	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	cvex	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/bind2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/pbrhair_TRANSMISSION.init"
+Content-Type: text/plain
+
+type = pbrhair_tt
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/pbrhair_TRANSMISSION.def"
+Content-Type: text/plain
+
+comment ""
+position -2.24289 7.01904
+connectornextid 7
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+6 "f"
+}
+inputsNamed3
+{
+0 	"" "" 1 "label"
+1 	"" "" 1 "nN"
+2 	"" "" 1 "tip"
+3 	"" "" 1 "tt_clr"
+4 	"" "" 1 "tt_size"
+5 	"" "" 1 "tt_shift"
+}
+inputs
+{
+0 	"" 0 1
+1 	"" 0 1
+2 	"" 0 1
+3 	"" 0 1
+4 	"" 0 1
+5 	"" 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/pbrhair_TRANSMISSION.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+label	[ 0	locks=0	autoscope=0 ]	(	""	)
+tt_clr	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
+tt_size	[ 0	locks=0	autoscope=0 ]	(	0.050000000000000003	)
+tt_shift	[ 0	locks=0	autoscope=0 ]	(	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/pbrhair_TRANSMISSION.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/pbrhair_SECONDARY_REFLECTION.init"
+Content-Type: text/plain
+
+type = pbrhair_trt
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/pbrhair_SECONDARY_REFLECTION.def"
+Content-Type: text/plain
+
+comment ""
+position 0.922755 7.01904
+connectornextid 10
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+9 "f"
+}
+inputsNamed3
+{
+0 	"" "" 1 "label"
+1 	"" "" 1 "nN"
+2 	"" "" 1 "tip"
+3 	"" "" 1 "trt_clr"
+4 	"" "" 1 "trt_size"
+5 	"" "" 1 "trt_shift"
+6 	"" "" 1 "g_intensity"
+7 	"" "" 1 "g_size"
+8 	"" "" 1 "g_shift"
+}
+inputs
+{
+0 	"" 0 1
+1 	"" 0 1
+2 	"" 0 1
+3 	"" 0 1
+4 	"" 0 1
+5 	"" 0 1
+6 	"" 0 1
+7 	"" 0 1
+8 	"" 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/pbrhair_SECONDARY_REFLECTION.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+label	[ 0	locks=0	autoscope=0 ]	(	""	)
+trt_clr	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
+trt_size	[ 0	locks=0	autoscope=0 ]	(	0.050000000000000003	)
+trt_shift	[ 0	locks=0	autoscope=0 ]	(	0	)
+g_intensity	[ 0	locks=0	autoscope=0 ]	(	1	)
+g_size	[ 0	locks=0	autoscope=0 ]	(	0.10000000000000001	)
+g_shift	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/pbrhair_SECONDARY_REFLECTION.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/parm2.init"
+Content-Type: text/plain
+
+type = parameter
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/parm2.def"
+Content-Type: text/plain
+
+comment ""
+position -1.6086 -3.17855
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+0 "dir_light"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 1 1 0.4 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/parm2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+parmscope	[ 0	locks=0	autoscope=0 ]	(	shaderparm	)
+parmaccess	[ 0	locks=0	autoscope=0 ]	(	""	)
+parmname	[ 0	locks=0	autoscope=0 ]	(	dir_light	)
+parmprefix	[ 0	locks=0	autoscope=0 ]	(	""	)
+parmpostfix	[ 0	locks=0	autoscope=0 ]	(	""	)
+parmlabel	[ 0	locks=0	autoscope=0 ]	(	"To light"	)
+showlabel	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+parmtype	[ 0	locks=0	autoscope=0 ]	(	"float3"	)
+parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
+logfloatdef	[ 0	locks=0	autoscope=0 ]	(	0	)
+float2def	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+float3def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+vectordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+normaldef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+pointdef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+directiondef	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+float4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+floatm2def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	1	)
+float9def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	1	0	0	0	1	)
+float16def	[ 0	locks=0	autoscope=0 ]	(	1	0	0	0	0	1	0	0	0	0	1	0	0	0	0	1	)
+stringdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+filedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+imagedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+geometrydef	[ 0	locks=0	autoscope=0 ]	(	""	)
+colordef	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+color4def	[ 0	locks=0	autoscope=0 ]	(	0	0	0	0	)
+bsdfdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+dictdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+coshaderdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+surfacedef	[ 0	locks=0	autoscope=0 ]	(	""	)
+displacementdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+atmospheredef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+lightfilterdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+floatadef	[ 0	locks=0 ]	(	)
+intadef	[ 0	locks=0 ]	(	)
+vector2adef	[ 0	locks=0 ]	(	)
+vectoradef	[ 0	locks=0 ]	(	)
+pointadef	[ 0	locks=0 ]	(	)
+normaladef	[ 0	locks=0 ]	(	)
+coloradef	[ 0	locks=0 ]	(	)
+floatm2adef	[ 0	locks=0 ]	(	)
+float4adef	[ 0	locks=0 ]	(	)
+float9adef	[ 0	locks=0 ]	(	)
+float16adef	[ 0	locks=0 ]	(	)
+stringadef	[ 0	locks=0 ]	(	)
+dictadef	[ 0	locks=0 ]	(	)
+coshaderadef	[ 0	locks=0	autoscope=0 ]	(	""	)
+structdef	[ 0	locks=0	autoscope=0 ]	(	""	)
+rangeflt	[ 0	locks=0	autoscope=0 ]	(	0	1	)
+rangeint	[ 0	locks=0	autoscope=0 ]	(	0	10	)
+stringtype	[ 0	locks=0	autoscope=0 ]	(	off	)
+opfilter	[ 0	locks=0	autoscope=0 ]	(	!!OBJ/LIGHT!!	)
+parmcomment	[ 0	locks=0	autoscope=0 ]	(	""	)
+separator1	[ 0	locks=0 ]	(	)
+useasparmdefiner	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+useownexportcontext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+parmuniform	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+usebound	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+hasconnector	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+exportparm	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exportcontext	[ 0	locks=0	autoscope=0 ]	(	sop	)
+providemenu	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+menuchoices	[ 0	locks=0	autoscope=0 ]	(	""	)
+menuscript	[ 0	locks=0	autoscope=0 ]	(	""	)
+menuscriptlanguage	[ 0	locks=0	autoscope=0 ]	(	"hscript"	)
+separator2	[ 0	locks=0 ]	(	)
+invisible	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+joinnext	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+disablewhen	[ 0	locks=0	autoscope=0 ]	(	""	)
+hidewhen	[ 0	locks=0	autoscope=0 ]	(	""	)
+callback	[ 0	locks=0	autoscope=0 ]	(	""	)
+tags	[ 0	locks=0	autoscope=0 ]	(	""	)
+help	[ 0	locks=0	autoscope=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/parm2.netbox"
+Content-Type: text/plain
+
+__netbox1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/parm2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/normalize2.init"
+Content-Type: text/plain
+
+type = normalize
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/normalize2.def"
+Content-Type: text/plain
+
+comment ""
+position 1.3914 -3.17855
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
+outputsNamed3
+{
+1 "nvec"
+}
+inputsNamed3
+{
+0 	parm2 0 1 "vec"
+}
+inputs
+{
+0 	parm2 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/normalize2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+signature	[ 0	locks=0	autoscope=0 ]	(	default	)
+vec	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+vec_u	[ 0	locks=0	autoscope=0 ]	(	1	0	)
+vec_p	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+vec_v	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+vec_v4	[ 0	locks=0	autoscope=0 ]	(	0	0	0	1	)
+vec_un	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+vec_up	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+vec_uv	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/normalize2.netbox"
+Content-Type: text/plain
+
+__netbox1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf/normalize2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf.order"
+Content-Type: text/plain
+
+23
+pbrhair_PRIMARY_REFLECTION
+sample_and_eval
+parm1
+normalize1
+r_size
+r_shift
+w_v
+w_sample_eval
+w_sample_pdf
+w_eval_eval
+w_eval_pdf
+u_v
+u_sample_eval
+u_sample_pdf
+u_eval_eval
+u_eval_pdf
+alb
+bind1
+bind2
+pbrhair_TRANSMISSION
+pbrhair_SECONDARY_REFLECTION
+parm2
+normalize2
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_bsdf.net"
+Content-Type: text/plain
+
+1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/color1.init"
+Content-Type: text/plain
+
+type = color
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/color1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 12.453 -10.3942
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	attribwrangle4 0 1 "input1"
+}
+inputs
+{
+0 	attribwrangle4 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/color1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+group	[ 0	locks=0	autoscope=0 ]	(	""	)
+grouptype	[ 0	locks=0	autoscope=0 ]	(	"guess"	)
+deleteallcolorattribs	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+enable	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+class	[ 0	locks=0	autoscope=0 ]	(	2	)
+colortype	[ 0	locks=0	autoscope=0 ]	(	0	)
+color	[ 0	locks=0	autoscope=0 ]	(	1	0	0	)
+seed	[ 0	locks=0	autoscope=0 ]	(	0	)
+rampattribute	[ 0	locks=0	autoscope=0 ]	(	""	)
+ramprange	[ 0	locks=0	autoscope=0 ]	(	0	1	)
+ramp	[ 0	locks=0	autoscope=0 ]	(	2	)
+ramp1pos	[ 0	locks=0	autoscope=0 ]	(	0	)
+ramp1c	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+ramp1interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+ramp2pos	[ 0	locks=0	autoscope=0 ]	(	1	)
+ramp2c	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
+ramp2interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/color1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/color2.init"
+Content-Type: text/plain
+
+type = color
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/color2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 15.277 -10.846
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	attribwrangle3 0 1 "input1"
+}
+inputs
+{
+0 	attribwrangle3 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/color2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+group	[ 0	locks=0	autoscope=0 ]	(	""	)
+grouptype	[ 0	locks=0	autoscope=0 ]	(	"guess"	)
+deleteallcolorattribs	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+enable	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+class	[ 0	locks=0	autoscope=0 ]	(	2	)
+colortype	[ 0	locks=0	autoscope=0 ]	(	0	)
+color	[ 0	locks=0	autoscope=0 ]	(	0.26666668057441711	1	0	)
+seed	[ 0	locks=0	autoscope=0 ]	(	0	)
+rampattribute	[ 0	locks=0	autoscope=0 ]	(	""	)
+ramprange	[ 0	locks=0	autoscope=0 ]	(	0	1	)
+ramp	[ 0	locks=0	autoscope=0 ]	(	2	)
+ramp1pos	[ 0	locks=0	autoscope=0 ]	(	0	)
+ramp1c	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+ramp1interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+ramp2pos	[ 0	locks=0	autoscope=0 ]	(	1	)
+ramp2c	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
+ramp2interp	[ 0	locks=0	autoscope=0 ]	(	"linear"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/color2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/grid1.init"
+Content-Type: text/plain
+
+type = grid
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/grid1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 0 5.2176
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/grid1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
+surftype	[ 0	locks=0	autoscope=0 ]	(	"quads"	)
+orient	[ 0	locks=0	autoscope=0 ]	(	"zx"	)
+size	[ 0	locks=0	autoscope=0 ]	(	1	1	)
+t	[ 0	locks=0	autoscope=0 ]	(	0.5	0	0.5	)
+r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+rows	[ 0	locks=0	autoscope=0 ]	(	2	)
+cols	[ 0	locks=0	autoscope=0 ]	(	2	)
+orderu	[ 0	locks=0	autoscope=0 ]	(	4	)
+orderv	[ 0	locks=0	autoscope=0 ]	(	4	)
+interpu	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+interpv	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/grid1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_sample_func.init"
+Content-Type: text/plain
+
+type = merge
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_sample_func.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 13.865 -11.8249
+connectornextid 3
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on
+outputsNamed3
+{
+2 "output1"
+}
+inputsNamed3
+{
+0 	color1 1 1 "input1"
+1 	color2 1 1 "input2"
+}
+inputs
+{
+0 	color1 0 1
+1 	color2 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_sample_func.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_sample_func.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/eval_eval.init"
+Content-Type: text/plain
+
+type = attribpromote
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/eval_eval.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 0.060477 -8.04363
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	attribwrangle1 1 1 "input1"
+}
+inputs
+{
+0 	attribwrangle1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/eval_eval.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+inname	[ 0	locks=0	autoscope=0 ]	(	u_eval_eval	)
+inclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+outclass	[ 0	locks=0	autoscope=0 ]	(	"detail"	)
+usepieceattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+pieceattrib	[ 0	locks=0	autoscope=0 ]	(	name	)
+method	[ 0	locks=0	autoscope=0 ]	(	"mean"	)
+useoutname	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+outname	[ 0	locks=0	autoscope=0 ]	(	""	)
+deletein	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/eval_eval.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/alb.init"
+Content-Type: text/plain
+
+type = attribpromote
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/alb.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 0.060477 -9.04363
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	eval_eval 1 1 "input1"
+}
+inputs
+{
+0 	eval_eval 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/alb.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+inname	[ 0	locks=0	autoscope=0 ]	(	alb	)
+inclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+outclass	[ 0	locks=0	autoscope=0 ]	(	"detail"	)
+usepieceattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+pieceattrib	[ 0	locks=0	autoscope=0 ]	(	name	)
+method	[ 0	locks=0	autoscope=0 ]	(	"mean"	)
+useoutname	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+outname	[ 0	locks=0	autoscope=0 ]	(	""	)
+deletein	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/alb.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_eval_func.init"
+Content-Type: text/plain
+
+type = attribpromote
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_eval_func.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 0.060477 -10.0436
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	alb 1 1 "input1"
+}
+inputs
+{
+0 	alb 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_eval_func.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+inname	[ 0	locks=0	autoscope=0 ]	(	u_eval_pdf	)
+inclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+outclass	[ 0	locks=0	autoscope=0 ]	(	"detail"	)
+usepieceattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+pieceattrib	[ 0	locks=0	autoscope=0 ]	(	name	)
+method	[ 0	locks=0	autoscope=0 ]	(	"mean"	)
+useoutname	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+outname	[ 0	locks=0	autoscope=0 ]	(	""	)
+deletein	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/verify_eval_func.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/eval_to_sample_pdf.init"
+Content-Type: text/plain
+
+type = attribpromote
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/eval_to_sample_pdf.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 12.453 -8.13523
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress off colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	attribwrangle2 1 1 "input1"
+}
+inputs
+{
+0 	attribwrangle2 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/eval_to_sample_pdf.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+inname	[ 0	locks=0	autoscope=0 ]	(	eval_to_sample_pdf	)
+inclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+outclass	[ 0	locks=0	autoscope=0 ]	(	"detail"	)
+usepieceattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+pieceattrib	[ 0	locks=0	autoscope=0 ]	(	name	)
+method	[ 0	locks=0	autoscope=0 ]	(	"mean"	)
+useoutname	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+outname	[ 0	locks=0	autoscope=0 ]	(	""	)
+deletein	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/eval_to_sample_pdf.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle1.init"
+Content-Type: text/plain
+
+type = attribwrangle
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 0.060927 -7.00573
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	verify_bsdf 1 1 "input1"
+}
+inputs
+{
+0 	verify_bsdf 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder0	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+group	[ 0	locks=0	autoscope=0 ]	(	""	)
+grouptype	[ 0	locks=0	autoscope=0 ]	(	"guess"	)
+class	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+vex_numcount	[ 0	locks=0	autoscope=0 ]	(	10	)
+vex_threadjobsize	[ 0	locks=0	autoscope=0 ]	(	1024	)
+snippet	[ 0	locks=0	autoscope=0 ]	(	"@P = v@u_v;
+@P *= @u_eval_eval;
+@P -= chv(\"../t\");"	)
+exportlist	[ 0	locks=0	autoscope=0 ]	(	*	)
+vex_strict	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+autobind	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings	[ 0	locks=0	autoscope=0 ]	(	0	)
+groupautobind	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+groupbindings	[ 0	locks=0	autoscope=0 ]	(	0	)
+vex_cwdpath	[ 0	locks=0	autoscope=0 ]	(	.	)
+vex_outputmask	[ 0	locks=0	autoscope=0 ]	(	*	)
+vex_updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+vex_matchattrib	[ 0	locks=0	autoscope=0 ]	(	id	)
+vex_inplace	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+vex_selectiongroup	[ 0	locks=0	autoscope=0 ]	(	""	)
+vex_precision	[ 0	locks=0	autoscope=0 ]	(	auto	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle2.init"
+Content-Type: text/plain
+
+type = attribwrangle
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 12.453 -7.00573
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	verify_bsdf 1 1 "input1"
+}
+inputs
+{
+0 	verify_bsdf 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder0	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+group	[ 0	locks=0	autoscope=0 ]	(	""	)
+grouptype	[ 0	locks=0	autoscope=0 ]	(	"guess"	)
+class	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+vex_numcount	[ 0	locks=0	autoscope=0 ]	(	10	)
+vex_threadjobsize	[ 0	locks=0	autoscope=0 ]	(	1024	)
+snippet	[ 0	locks=0	autoscope=0 ]	(	"@eval_to_sample_pdf = @w_eval_pdf / @w_sample_pdf / @alb;"	)
+exportlist	[ 0	locks=0	autoscope=0 ]	(	*	)
+vex_strict	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+autobind	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings	[ 0	locks=0	autoscope=0 ]	(	0	)
+groupautobind	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+groupbindings	[ 0	locks=0	autoscope=0 ]	(	0	)
+vex_cwdpath	[ 0	locks=0	autoscope=0 ]	(	.	)
+vex_outputmask	[ 0	locks=0	autoscope=0 ]	(	*	)
+vex_updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+vex_matchattrib	[ 0	locks=0	autoscope=0 ]	(	id	)
+vex_inplace	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+vex_selectiongroup	[ 0	locks=0	autoscope=0 ]	(	""	)
+vex_precision	[ 0	locks=0	autoscope=0 ]	(	auto	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle3.init"
+Content-Type: text/plain
+
+type = attribwrangle
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle3.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 15.277 -9.71653
+connectornextid 3
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+1 	eval_to_sample_pdf 1 1 "input1"
+2 	verify_bsdf 1 1 "input2"
+}
+inputs
+{
+0 	eval_to_sample_pdf 0 1
+1 	verify_bsdf 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle3.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder0	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+group	[ 0	locks=0	autoscope=0 ]	(	""	)
+grouptype	[ 0	locks=0	autoscope=0 ]	(	"guess"	)
+class	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+vex_numcount	[ 0	locks=0	autoscope=0 ]	(	10	)
+vex_threadjobsize	[ 0	locks=0	autoscope=0 ]	(	1024	)
+snippet	[ 0	locks=0	autoscope=0 ]	(	"#include \"math.h\"
+
+int npoints = chi(\"../samples\");
+int nfilter = 100;
+int handle = pcopen(1, \"P\", @P, 1000, nfilter);
+float area = pcfarthest(handle);
+area *= area * PI;
+@P *= 2*PI*nfilter / (npoints*area);
+@P *= @w_sample_eval;
+"	)
+exportlist	[ 0	locks=0	autoscope=0 ]	(	*	)
+vex_strict	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+autobind	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings	[ 0	locks=0	autoscope=0 ]	(	0	)
+groupautobind	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+groupbindings	[ 0	locks=0	autoscope=0 ]	(	0	)
+vex_cwdpath	[ 0	locks=0	autoscope=0 ]	(	.	)
+vex_outputmask	[ 0	locks=0	autoscope=0 ]	(	*	)
+vex_updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+vex_matchattrib	[ 0	locks=0	autoscope=0 ]	(	id	)
+vex_inplace	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+vex_selectiongroup	[ 0	locks=0	autoscope=0 ]	(	""	)
+vex_precision	[ 0	locks=0	autoscope=0 ]	(	auto	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle3.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle4.init"
+Content-Type: text/plain
+
+type = attribwrangle
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle4.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 12.453 -9.26473
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+1 	eval_to_sample_pdf 1 1 "input1"
+}
+inputs
+{
+0 	eval_to_sample_pdf 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle4.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+folder0	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+group	[ 0	locks=0	autoscope=0 ]	(	""	)
+grouptype	[ 0	locks=0	autoscope=0 ]	(	"guess"	)
+class	[ 0	locks=0	autoscope=0 ]	(	"point"	)
+vex_numcount	[ 0	locks=0	autoscope=0 ]	(	10	)
+vex_threadjobsize	[ 0	locks=0	autoscope=0 ]	(	1024	)
+snippet	[ 0	locks=0	autoscope=0 ]	(	"@P *= @w_eval_eval;"	)
+exportlist	[ 0	locks=0	autoscope=0 ]	(	*	)
+vex_strict	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+autobind	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+bindings	[ 0	locks=0	autoscope=0 ]	(	0	)
+groupautobind	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+groupbindings	[ 0	locks=0	autoscope=0 ]	(	0	)
+vex_cwdpath	[ 0	locks=0	autoscope=0 ]	(	.	)
+vex_outputmask	[ 0	locks=0	autoscope=0 ]	(	*	)
+vex_updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+vex_matchattrib	[ 0	locks=0	autoscope=0 ]	(	id	)
+vex_inplace	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+vex_selectiongroup	[ 0	locks=0	autoscope=0 ]	(	""	)
+vex_precision	[ 0	locks=0	autoscope=0 ]	(	auto	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribwrangle4.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/samples.init"
+Content-Type: text/plain
+
+type = scatter::2.0
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/samples.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 2.44746 1.07613
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	switch1 3 1 "input1"
+}
+inputs
+{
+0 	switch1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/samples.chn"
+Content-Type: text/plain
+
+{
+    channel npts {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 value = 10000 10000 expr = ch(\"../samples\") }
+    }
+  }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/samples.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+group	[ 0	locks=0	autoscope=0 ]	(	""	)
+stdswitcher	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+generateby	[ 0	locks=0	autoscope=0 ]	(	"bydensity"	)
+indepvoxel	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+forcetotal	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+npts	[ 8	locks=0	autoscope=0 ]	(	[ npts	1000 ] 	)
+densityscale	[ 0	locks=0	autoscope=0 ]	(	10	)
+usedensityattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+densityattrib	[ 0	locks=0	autoscope=0 ]	(	density	)
+useareaattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+areaattrib	[ 0	locks=0	autoscope=0 ]	(	area	)
+useareaforvolumes	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+usedensitytexture	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+densitytexture	[ 0	locks=0	autoscope=0 ]	(	default.pic	)
+uvattrib	[ 0	locks=0	autoscope=0 ]	(	uv	)
+primcountattrib	[ 0	locks=0	autoscope=0 ]	(	count	)
+useemergencylimit	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+emergencylimit	[ 0	locks=0	autoscope=0 ]	(	1000000	)
+seed	[ 0	locks=0	autoscope=0 ]	(	0	)
+overrideprimseed	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+primseedattrib	[ 0	locks=0	autoscope=0 ]	(	primid	)
+randomizeorder	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+relaxpoints	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+relaxiterations	[ 0	locks=0	autoscope=0 ]	(	10	)
+scaleradiiby	[ 0	locks=0	autoscope=0 ]	(	1	)
+usemaxradius	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+maxradius	[ 0	locks=0	autoscope=0 ]	(	10	)
+useprimnumattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+primnumattrib	[ 0	locks=0	autoscope=0 ]	(	sourceprim	)
+useprimuvwattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+primuvwattrib	[ 0	locks=0	autoscope=0 ]	(	sourceprimuv	)
+useoutputdensityattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+outputdensityattrib	[ 0	locks=0	autoscope=0 ]	(	density	)
+useoutputradiusattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+outputradiusattrib	[ 0	locks=0	autoscope=0 ]	(	pscale	)
+radiusintexturespace	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+pointattribs	[ 0	locks=0	autoscope=0 ]	(	*	)
+vertattribs	[ 0	locks=0	autoscope=0 ]	(	""	)
+primattribs	[ 0	locks=0	autoscope=0 ]	(	""	)
+detailattribs	[ 0	locks=0	autoscope=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/samples.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output1.init"
+Content-Type: text/plain
+
+type = output
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 15.983 -14.3851
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+}
+inputsNamed3
+{
+0 	merge1 2 1 "input1"
+}
+inputs
+{
+0 	merge1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+outputidx	[ 0	locks=0	autoscope=0 ]	(	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/output1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/matchsize1.init"
+Content-Type: text/plain
+
+type = matchsize
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/matchsize1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 2.25919 3.6363
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	grid1 0 1 "input1"
+}
+inputs
+{
+0 	grid1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/matchsize1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+group	[ 0	locks=0	autoscope=0 ]	(	""	)
+grouptype	[ 0	locks=0	autoscope=0 ]	(	"guess"	)
+sepparm	[ 0	locks=0 ]	(	)
+justifytarget	[ 0	locks=0	autoscope=0 ]	(	"auto"	)
+doboundgroup	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+folder2	[ 0	locks=0	autoscope=0 ]	(	0	)
+sourcegroup	[ 0	locks=0	autoscope=0 ]	(	""	)
+sourcegrouptype	[ 0	locks=0	autoscope=0 ]	(	"guess"	)
+refgroup	[ 0	locks=0	autoscope=0 ]	(	""	)
+refgrouptype	[ 0	locks=0	autoscope=0 ]	(	"guess"	)
+folder1	[ 0	locks=0	autoscope=0 ]	(	0	)
+t	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+size	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
+folder0	[ 0	locks=0	autoscope=0 ]	(	0	)
+dotranslate	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+justify_x	[ 0	locks=0	autoscope=0 ]	(	"center"	)
+goal_x	[ 0	locks=0	autoscope=0 ]	(	"same"	)
+offset_x	[ 0	locks=0	autoscope=0 ]	(	0	)
+justify_y	[ 0	locks=0	autoscope=0 ]	(	"center"	)
+goal_y	[ 0	locks=0	autoscope=0 ]	(	"same"	)
+offset_y	[ 0	locks=0	autoscope=0 ]	(	0	)
+justify_z	[ 0	locks=0	autoscope=0 ]	(	"center"	)
+goal_z	[ 0	locks=0	autoscope=0 ]	(	"same"	)
+offset_z	[ 0	locks=0	autoscope=0 ]	(	0	)
+doscale	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+uniformscale	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+scale_axis	[ 0	locks=0	autoscope=0 ]	(	"min"	)
+scale_x	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+scale_y	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+scale_z	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+restorexform	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+restoreattrib	[ 0	locks=0	autoscope=0 ]	(	xform	)
+stashxform	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+stashattrib	[ 0	locks=0	autoscope=0 ]	(	xform	)
+stashmerge	[ 0	locks=0	autoscope=0 ]	(	"replace"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/matchsize1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/box1.init"
+Content-Type: text/plain
+
+type = box
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/box1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 5.08319 4.314
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/box1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+type	[ 0	locks=0	autoscope=0 ]	(	"polymesh"	)
+surftype	[ 0	locks=0	autoscope=0 ]	(	"quads"	)
+consolidatepts	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+size	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
+t	[ 0	locks=0	autoscope=0 ]	(	0.5	0.5	0.5	)
+r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+scale	[ 0	locks=0	autoscope=0 ]	(	1	)
+divrate	[ 0	locks=0	autoscope=0 ]	(	2	2	2	)
+orderrate	[ 0	locks=0	autoscope=0 ]	(	4	4	4	)
+dodivs	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+divs	[ 0	locks=0	autoscope=0 ]	(	3	3	3	)
+rebar	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+orientedbbox	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+vertexnormals	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/box1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/vdbfrompolygons1.init"
+Content-Type: text/plain
+
+type = vdbfrompolygons
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/vdbfrompolygons1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 5.08319 3.1845
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	box1 0 1 "input1"
+}
+inputs
+{
+0 	box1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/vdbfrompolygons1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+voxelsize	[ 0	locks=0	autoscope=0 ]	(	0.02	)
+group	[ 0	locks=0	autoscope=0 ]	(	""	)
+builddistance	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+distancename	[ 0	locks=0	autoscope=0 ]	(	surface	)
+buildfog	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+fogname	[ 0	locks=0	autoscope=0 ]	(	density	)
+useworldspaceunits	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+exteriorbandvoxels	[ 0	locks=0	autoscope=0 ]	(	3	)
+interiorbandvoxels	[ 0	locks=0	autoscope=0 ]	(	3	)
+exteriorband	[ 0	locks=0	autoscope=0 ]	(	1	)
+interiorband	[ 0	locks=0	autoscope=0 ]	(	1	)
+fillinterior	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+unsigneddist	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+numattrib	[ 0	locks=0	autoscope=0 ]	(	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/vdbfrompolygons1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/single_point.init"
+Content-Type: text/plain
+
+type = add
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/single_point.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 5.08444 0.668741
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/single_point.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+stdswitcher	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+keep	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+points	[ 0	locks=0	autoscope=0 ]	(	1	)
+remove	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+switcher	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+prims	[ 0	locks=0	autoscope=0 ]	(	1	)
+group	[ 0	locks=0	autoscope=0 ]	(	""	)
+add	[ 0	locks=0	autoscope=0 ]	(	"all"	)
+inc	[ 0	locks=0	autoscope=0 ]	(	2	)
+attrname	[ 0	locks=0	autoscope=0 ]	(	""	)
+closedall	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+addparticlesystem	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+particlegroup	[ 0	locks=0	autoscope=0 ]	(	""	)
+appendunusedtoparticlesystem	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+prim0	[ 0	locks=0	autoscope=0 ]	(	""	)
+closed0	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+usept0	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+pt0	[ 0	locks=0	autoscope=0 ]	(	0.34199577894175337	0	0.056160766728182709	)
+weight0	[ 0	locks=0	autoscope=0 ]	(	1	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/single_point.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/edu_base_vector1.init"
+Content-Type: text/plain
+
+type = edu::base_vector::1.1
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/edu_base_vector1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment "Education tool"
+position 18.101 -12.2767
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	add2 0 1 "input1"
+}
+inputs
+{
+0 	add2 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/edu_base_vector1.chn"
+Content-Type: text/plain
+
+{
+    channel vectorx {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../dir_viewerx\") }
+    }
+    channel vectory {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../dir_viewery\") }
+    }
+    channel vectorz {
+      lefttype = extend
+      righttype = extend
+      flags = 0
+      segment { length = 0 expr = ch(\"../dir_viewerz\") }
+    }
+  }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/edu_base_vector1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+useattribute	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+attribute	[ 0	locks=0 ]	(	""	)
+vector	[ 0	locks=0	autoscope=0 ]	(	[ vectorx	1 ] 	[ vectory	0 ] 	[ vectorz	0 ] 	)
+scale	[ 0	locks=0 ]	(	1	)
+override_color	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+color	[ 0	locks=0 ]	(	1	0	0	)
+pack	[ 0	locks=0 ]	(	"off"	)
+merge	[ 0	locks=0 ]	(	"off"	)
+sepparm	[ 0	locks=0 ]	(	)
+show_label	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+folder0	[ 0	locks=0	autoscope=0 ]	(	1	)
+label	[ 0	locks=0	autoscope=0 ]	(	"to viewer"	)
+doscale	[ 0	locks=0 ]	(	"on"	)
+scale2	[ 0	locks=0	autoscope=0 ]	(	0.75	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/edu_base_vector1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	},
+	"___toolcount___":{
+		"type":"string",
+		"value":"5"
+	},
+	"___toolid___":{
+		"type":"string",
+		"value":"createEDUTools"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/add2.init"
+Content-Type: text/plain
+
+type = add
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/add2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 18.101 -11.1472
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/add2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+stdswitcher	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+keep	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+points	[ 0	locks=0	autoscope=0 ]	(	1	)
+remove	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+switcher	[ 0	locks=0	autoscope=0 ]	(	0	0	)
+prims	[ 0	locks=0	autoscope=0 ]	(	1	)
+group	[ 0	locks=0	autoscope=0 ]	(	""	)
+add	[ 0	locks=0	autoscope=0 ]	(	"all"	)
+inc	[ 0	locks=0	autoscope=0 ]	(	2	)
+attrname	[ 0	locks=0	autoscope=0 ]	(	""	)
+closedall	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+addparticlesystem	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+particlegroup	[ 0	locks=0	autoscope=0 ]	(	""	)
+appendunusedtoparticlesystem	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+prim0	[ 0	locks=0	autoscope=0 ]	(	""	)
+closed0	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+usept0	[ 0	locks=0	autoscope=0 ]	(	"on"	)
+pt0	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
+weight0	[ 0	locks=0	autoscope=0 ]	(	1	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/add2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge1.init"
+Content-Type: text/plain
+
+type = merge
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 15.983 -13.2556
+connectornextid 3
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+2 "output1"
+}
+inputsNamed3
+{
+0 	verify_sample_func 2 1 "input1"
+1 	edu_base_vector1 1 1 "input2"
+}
+inputs
+{
+0 	verify_sample_func 0 1
+1 	edu_base_vector1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch1.init"
+Content-Type: text/plain
+
+type = switch
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 2.44746 2.20563
+connectornextid 4
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+3 "output1"
+}
+inputsNamed3
+{
+0 	grid1 0 1 "input1"
+1 	matchsize1 1 1 "input2"
+2 	vdbfrompolygons1 1 1 "input3"
+}
+inputs
+{
+0 	grid1 0 1
+1 	matchsize1 0 1
+2 	vdbfrompolygons1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 1 0.7 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+input	[ 0	locks=0	autoscope=0 ]	(	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch2.init"
+Content-Type: text/plain
+
+type = switch
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 2.44746 -0.354569
+connectornextid 3
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+2 "output1"
+}
+inputsNamed3
+{
+0 	samples 1 1 "input1"
+1 	single_point 0 1 "input2"
+}
+inputs
+{
+0 	samples 0 1
+1 	single_point 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.lan
+  access 0777
+}
+color UT_Color RGB 0.8 1 0.7 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+input	[ 0	locks=0	autoscope=0 ]	(	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/switch2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.order"
+Content-Type: text/plain
+
+24
+verify_bsdf
+color1
+color2
+grid1
+verify_sample_func
+eval_eval
+alb
+verify_eval_func
+eval_to_sample_pdf
+attribwrangle1
+attribwrangle2
+attribwrangle3
+attribwrangle4
+samples
+output1
+matchsize1
+box1
+vdbfrompolygons1
+single_point
+edu_base_vector1
+add2
+merge1
+switch1
+switch2
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot.net"
+Content-Type: text/plain
+
+1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY--

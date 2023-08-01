@@ -1,0 +1,19 @@
+{
+	"values":["19.5.689"
+	],
+	"indexes":{
+		"hdaroot/output0.userdata":0,
+		"hdaroot/null1.userdata":0,
+		"hdaroot/pack1.userdata":0,
+		"hdaroot/IN1.userdata":0,
+		"hdaroot/transform1.userdata":0,
+		"hdaroot/merge1.userdata":0,
+		"hdaroot/normal1.userdata":0,
+		"hdaroot/arrow.userdata":0,
+		"hdaroot/merge2.userdata":0,
+		"hdaroot/transform2.userdata":0,
+		"hdaroot/tube.userdata":0,
+		"hdaroot/switch1.userdata":0,
+		"hdaroot/packed_or_not.userdata":0
+	}
+}

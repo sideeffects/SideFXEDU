@@ -1,0 +1,40 @@
+#type:     node
+#context:  sop
+#internal: edu::path_tracing_scene::1.0
+#icon:     SOP/edu::path_tracing_scene::1.0
+#tags:     sidefxedu rendering
+
+= EDU Path Tracing Scene =
+
+"""This node outputs a scene to use with the EDU Path Tracing Simulator HDA."""
+
+WARNING:
+    This node is made for education purposes only.  
+    You can use it for other things, but at your own risks.  
+
+This node outputs a scene to use with the [EDU Path Tracing Simulator | edu--path_tracing_simulator-1.0] HDA. Objects are setup with needed attributes, names and groups especially for the EDU Path Tracing Simulator.
+
+You can use this scene as is, or as a boiler plate to build you own scene.
+
+@parameters
+
+    Intensity:
+        #id: intensity
+        Intensity of the first light.
+        
+    Intensity:
+        #id: intensity2
+        Intensity of the second light.
+        
+    Intensity:
+        #id: intensity3
+        Intensity of the third light.
+        
+    Intensity:
+        #id: intensity4
+        Intensity of the fourth light.    
+    
+@related
+- [EDU Path Tracing Refractions | edu--path_tracing_refractions-1.0]
+- [EDU Path Tracing Simulator | edu--path_tracing_simulator-1.0]
+- [EDU Portal MIS Bias Simulator | edu--portal_mis_bias_simulator-1.0]

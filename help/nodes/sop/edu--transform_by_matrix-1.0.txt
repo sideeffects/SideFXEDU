@@ -1,0 +1,41 @@
+#type:     node
+#context:  sop
+#internal: edu::transform_by_matrix::1.0
+#icon:     SOP/edu::transform_by_matrix::1.0
+#tags:     sidefxedu math utility 
+
+= EDU Transform By Matrix =
+
+"""This node uses a matrix detail attribute to transform some geometry."""
+
+WARNING:
+    This node is made for education purposes only. 
+    You can use it for other things, but at your own risks.
+
+@inputs
+
+Input 1:
+    The geometry to transform with the chosen matrix attribute. 
+
+Input 2:
+    If this input is plugged, and the chosen matrix detail attribute is available on this input, then this node will use it to transform the geometry.
+
+@outputs
+
+    The geometry transformed using the matrix
+
+@parameters
+
+    Matrix Attribute:
+        #id: matrix_attribute
+        Name of the matrix attribute you want to use for transforming the geometry on input 1.
+        
+    Invert:
+        #id: invert
+        Inverts the tranformation, but keeps the matrix untouched.
+    
+@related
+- [EDU Base Vector | /nodes/sop/edu--base_vector-1.0 ]
+- [EDU Create Matrix Attribute | /nodes/sop/edu--create_matrix_attribute-1.0 ]
+- [EDU Gnomon | /nodes/sop/edu--gnomon-1.0 ]
+- [EDU Matrix Visualizer | /nodes/sop/edu--matrix_visualizer-1.0 ]

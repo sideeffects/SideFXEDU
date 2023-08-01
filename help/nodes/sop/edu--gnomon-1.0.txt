@@ -1,0 +1,37 @@
+#type:     node
+#context:  sop
+#internal: edu::gnomon::1.0
+#icon:     SOP/edu::gnomon::1.0
+#tags:     sidefxedu utility visualizer
+
+= EDU Gnomon =
+
+"""This node creates xyz gnomon geometry to display the orthonormal basis of a transformation matrix detail attribute."""
+
+WARNING:
+    This node is made for education purposes only. 
+    You can use it for other things, but at your own risks.
+
+@parameters
+
+    Matrix attribute:
+        #id: matrix
+        Name of the matrix attribute you want the gnomon to represent.
+        
+    Unit:
+        #id: unit
+        How many Houdini unit each vector axis represents.
+        
+    Axis Scale:
+        #id: axis_scale
+        The uniform scale of the axis.
+        
+    Pack:
+        #id: pack
+        Pack the gnomon geometry.
+    
+@related
+- [EDU Base Vector | /nodes/sop/edu--base_vector-1.0 ]
+- [EDU Create Matrix Attribute | /nodes/sop/edu--create_matrix_attribute-1.0 ]
+- [EDU Matrix Visualizer | /nodes/sop/edu--matrix_visualizer-1.0 ]
+- [EDU Transform by Matrix | /nodes/sop/edu--transform_by_matrix-1.0 ]

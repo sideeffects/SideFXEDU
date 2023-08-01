@@ -1,0 +1,15 @@
+Operator:     edu::path_tracing_simulator::1.0
+Label:        EDU Path Tracing Simulator
+Path:         oplib:/edu::Sop/path_tracing_simulator::1.0?edu::Sop/path_tracing_simulator::1.0
+Icon:         opdef:/edu::Sop/path_tracing_simulator::1.0?IconSVG
+Table:        Sop
+License:      
+Extra:        inputcolors='1 "RGB 0.700195 0.700195 0.700195" ' outputcolors='7 "RGB 0.29 0.565 0.886" "RGB 0.29 0.565 0.886" "RGB 0.29 0.565 0.886" "RGB 0.29 0.565 0.886" "RGB 0.29 0.565 0.886" "RGB 0.29 0.565 0.886" "RGB 0.29 0.565 0.886" ' visibleoutputs=7 
+User:         
+Inputs:       0 to 1
+Outputs:      7
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Fri Jul 28 16:24:07 2023
+

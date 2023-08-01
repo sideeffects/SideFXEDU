@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <toolshelf name="edu_toolset" label="SideFX EDU">
+    <memberTool name="edu::sticky_notes"/>
+    <memberTool name="edu::number_items"/>
+    <memberTool name="labs::parameter_diff"/>
+    <memberTool name="labs::sticker_placer"/>
+    <memberTool name="sidefxedu_create_archive_topnet"/>
+  </toolshelf>
+
+  <tool name="edu::sticky_notes" label="Sticky Notes" icon="$SIDEFXEDU/help/icons/stickynote.svg">
+    <helpURL>tool:edu--sticky_notes</helpURL>
+    <script scriptType="python"><![CDATA[import sidefxedu as module
+
+try:
+  reload(module)
+except NameError:
+  from importlib import reload
+  reload(module)
+
+module.createNotes(kwargs)]]></script>
+  </tool>
+
+  <tool name="edu::number_items" label="Number Items" icon="$SIDEFXEDU/help/icons/number_items.svg">
+    <helpURL>tool:edu--number_items</helpURL>
+    <script scriptType="python"><![CDATA[import sidefxedu as module
+
+try:
+  reload(module)
+except NameError:
+  from importlib import reload
+  reload(module)
+
+try:
+    eduqm = hou.session.eduqm
+except:
+    hou.session.eduqm = module.Quickmarks()
+    eduqm = hou.session.eduqm
+
+
+message = """You have not selected any item to add numbers to. 
+This will delete all current numbers. 
+
+Are you sure you want to proceed?
+
+"""
+buttons = ('OK', 'Cancel')
+severity=hou.severityType.Message
+default_choice = 0
+close_choice = -1
+help = None
+title = "Number Items: Warning"
+details = """
+Jump to Next: click
+Jump to Prev: ALT + click
+Jump to Last: SHIFT + click        
+Jump to First: ALT + SHIFT + click
+Set numbers (or clear everything if nothing is selected): CTRL + click      
+Appends numbers to the current set: CTRL + SHIFT + click
+"""
+details_label = "Shortcuts"
+details_expanded = False
+
+if (not kwargs["altclick"] and not kwargs["ctrlclick"] and kwargs["shiftclick"]):
+    eduqm.jumpToLast()
+# ALT + click
+elif (kwargs["altclick"] and not kwargs["ctrlclick"] and not kwargs["shiftclick"]):
+    eduqm.jumpToPrev()
+# ALT + SHIFT + click
+elif (kwargs["altclick"] and not kwargs["ctrlclick"] and kwargs["shiftclick"]):
+    eduqm.jumpToFirst()
+
+# CTRL + click
+elif (not kwargs["altclick"] and kwargs["ctrlclick"] and not kwargs["shiftclick"]):
+    if hou.selectedItems():
+        eduqm.numberItems()
+        eduqm.reset()
+    else:
+        if not hou.ui.displayMessage(message, buttons, severity, default_choice, close_choice, help, title, details, details_label, details_expanded):
+          eduqm.clearQuickmarks()
+# CTRL + SHIFT + click
+elif (not kwargs["altclick"] and kwargs["ctrlclick"] and kwargs["shiftclick"]):
+    if hou.selectedItems():
+        eduqm.numberItems(append=True)
+    else:
+        pass
+# click
+elif (not kwargs["altclick"] and not kwargs["ctrlclick"] and not kwargs["shiftclick"]):
+    eduqm.jumpToNext()
+
+]]></script>
+  </tool>
+
+  <tool name="sidefxedu_create_archive_topnet" label="Archive Project" icon="opdef:/labs::Top/archive_project::1.0?IconSVG">
+    <toolMenuContext name="network">
+      <contextOpType>Object/topnet</contextOpType>
+    </toolMenuContext>
+    <script scriptType="python"><![CDATA[
+pane = hou.ui.paneTabOfType(hou.paneTabType.NetworkEditor)
+
+n = hou.node("/obj").createNode('topnet', 'ARCHIVE')
+n.setPosition(pane.visibleBounds().center())
+
+scheduler = n.children()[0]
+
+archive_top = n.createNode('labs::archive_project')
+archive_top.setPosition(scheduler.position() + hou.Vector2(0, -1))]]></script>
+    <keywordList>
+      <keyword>/nodes/top/labs--archive_project-1.0.txt</keyword>
+    </keywordList>
+  </tool>
+</shelfDocument>

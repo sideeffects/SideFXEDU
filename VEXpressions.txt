@@ -1,0 +1,68 @@
+# Lines starting with # are comments and ignored
+#
+# Each entry starts with no indentation and gives the key used
+# by the menu callback.  By convention, this is nodename/parmname.
+# Multiple keys can be given for the same entry.
+#
+# The next line gives the name of the expression.  Its indentation
+# level is then used for the remainder of the text.  All the
+# code until the next parameter are appended together to make
+# the snippet.  All preceeding indentation is removed.
+# Note that tabs == 8 is assumed.
+
+attribwrangle/snippet
+	EDU | Packed to origin
+	matrix trans = primintrinsic(0, "packedfulltransform", @ptnum);
+	trans = invert(trans);
+	matrix3 rot = (matrix3)trans;
+	v@P *= trans;
+	setprimintrinsic(0, "transform", @ptnum, rot, "mult");
+
+attribwrangle/snippet
+	EDU | Packed origin to world
+	matrix trans = primintrinsic(3, "packedfulltransform", @ptnum);
+	matrix3 rot = (matrix3)trans;
+	v@P *= trans;
+	setprimintrinsic(0, "transform", @ptnum, rot, "mult");
+
+attribwrangle/snippet
+	EDU | Create rotation matrix
+	// creates 3x3 identity matrix (X,Y,Z) rotation matrix
+	3@transform = ident();
+
+	// apply 'pscale' scale to our matrix
+	float pscale = 1;
+	scale(3@transform, pscale);
+
+	// apply 45 degrees rotation along the Y axis to our matrix
+	float angle_degrees = 45;
+	vector axis = normalize(set(0, 1, 0));
+	rotate(3@transform, radians(angle_degrees), axis);
+
+	//Apply rotation direction onto our points 
+	//@P *= 3@transform
+
+attribwrangle/snippet
+	EDU | Turbulence Alligator Noise
+	vector pos = v@P;
+	vector frequency = chv("Frequency");//(1,1,1)
+	vector offset = chv("Offset"); //(0,0,0)
+	int turbulence = chi("Turbulence"); //5
+	float rough = chf("Roughness");//0.5
+	float atten = chf("Attenuation");//1
+	float amplitude = chf("Amplitude");//1
+
+	vector mynoise = anoise((pos*frequency)-offset, turbulence,  rough, atten);
+
+	v@P += mynoise;
+
+attribwrangle/snippet
+	EDU | Pixel size pscale
+	// set pscale to a pixel size
+	string cam = chs("camera");
+	float focal = ch(cam+"/focal");
+	float aperture = ch(cam+"/aperture");
+	float resx = ch(cam+"/resx");
+	vector camP = ptransform(cam, v@P);
+	float z = abs(camP.z);
+	f@pscale = 0.5 * (aperture/focal) * (z/resx);

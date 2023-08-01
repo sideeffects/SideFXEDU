@@ -1,0 +1,14 @@
+Operator:     edu::pascal_pyramid::1.0
+Label:        EDU Pascal Pyramid
+Path:         oplib:/edu::Sop/pascal_pyramid::1.0?edu::Sop/pascal_pyramid::1.0
+Icon:         opdef:/edu::Sop/pascal_pyramid::1.0?IconSVG
+Table:        Sop
+License:      
+Extra:        inputcolors='0 ' outputcolors='1 "RGB 0.700195 0.700195 0.700195" ' 
+User:         
+Inputs:       0 to 0
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Fri Jul 28 16:26:53 2023
+

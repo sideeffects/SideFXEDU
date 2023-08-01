@@ -1,0 +1,14 @@
+Operator:     edu::path_tracing_scene::1.0
+Label:        EDU Path Tracing Scene
+Path:         oplib:/edu::Sop/path_tracing_scene::1.0?edu::Sop/path_tracing_scene::1.0
+Icon:         opdef:/edu::Sop/path_tracing_scene::1.0?IconSVG
+Table:        Sop
+License:      
+Extra:        inputcolors='0 ' outputcolors='1 "RGB 0.29 0.565 0.886" ' 
+User:         
+Inputs:       0 to 0
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Fri Jul 28 16:24:54 2023
+

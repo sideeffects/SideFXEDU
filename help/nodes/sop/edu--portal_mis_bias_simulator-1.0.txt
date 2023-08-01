@@ -1,0 +1,65 @@
+#type:     node
+#context:  sop
+#internal: edu::portal_mis_bias_simulator::1.0
+#icon:     SOP/edu::portal_mis_bias_simulator::1.0
+#tags:     sidefxedu rendering
+
+= EDU Portal MIS Bias Simulator =
+
+"""This node illustrates how the Portal Multiple Importance Sampling (MIS) Bias works."""
+
+WARNING:
+    This node is made for education purposes only. 
+    You can use it for other things, but at your own risks.
+
+The Portal MIS Bias controls whether the dome light is more likely to sample from the environment map or the portal geometry.
+
+[Image:/images/portal_mis_bias_simulator.jpg]
+
+@parameters
+
+    Texture Map:
+        #id: filename
+        The HDRI file map
+        
+    Use HDA Dome Light:
+        #id: switchif_use_internal_domelight
+        Use the dome light geometry shipped with the HDA instead of input 1.
+        
+    Use HDA Portal:
+        #id: switchif_use_internal_portal
+        Use the portal geometry shipped with the HDA instead of input 2.
+        
+    Use HDA Prim Hits:
+        #id: switchif_use_internal_primhits
+        Use the primary hit points geometry shipped with the HDA instead of input 3.
+        
+    Prim hits to keep (%):
+        #id: select1
+        Percentage of primary hit points to keep. Saves computation time when "Do Single Prim Hit" is OFF.
+        
+    Do Single Prim Hit:
+        #id: dosingleprimhit
+        When ON, use only one primary hit point (which you can chose with the next parameter: singleprimhit)
+        
+    Use Single Prim Hit:
+        #id: singleprimhit
+        Chose which of the primary point for which to simulate the rays.
+        
+    Portal MIS Bias:
+        #id: portalmisbias
+        Controls whether the dome light is more likely to sample from the environment map or the portal geometry.
+        This simulates the Portal MIS Bias available on the Dome Light LOP, but it's not using the same mathematical model as Karma. This is an example whose sole purpose is to illustrate how the ray distribution is balanced when adjusting this parameter.
+        
+    Show Dome Light:
+        #id: show_dome
+        Show/hide the dome light geometry.
+        
+    Show behing portal:
+        #id: show_dome_behind_portal
+        Show/hide the part of the dome light geometry that is not seen through the portal geometry.
+    
+@related
+- [EDU Path Tracing Refractions | edu--path_tracing_refractions-1.0]
+- [EDU Path Tracing Scene | edu--path_tracing_scene-1.0]
+- [EDU Path Tracing Simulator | edu--path_tracing_simulator-1.0]

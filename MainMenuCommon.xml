@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+-->
+<mainMenu>
+    <!-- menuDocument can only contain 1 menu element, whose id is 
+         implicitly "root_menu"
+      -->
+    <menuBar>
+        <!-- Education -->
+        <subMenu id="edu_menu">
+            <modifyItem>
+                <insertBefore>help_menu</insertBefore>
+            </modifyItem>
+            <label>Education</label>
+            <scriptItem id="h.sidefxedu.eduhelppage">
+                <label>Education Help Page</label>
+                <scriptCode><![CDATA[
+import sys, webbrowser
+webbrowser.open(str(sys.argv[1]))]]>
+                </scriptCode>
+                <scriptArgs>'https://www.sidefx.com/docs/houdini20.0/education'</scriptArgs>
+            </scriptItem>
+
+            <scriptItem id="h.sidefxedu.labsquicktip">
+                <label>Labs Quick Tips</label>
+                <scriptCode>
+                    <![CDATA[
+from labsopui import quicktip
+quicktip.ShowQuickTip()
+                    ]]>
+                </scriptCode>
+            </scriptItem>
+
+            <separatorItem id="separator_01"/>
+
+            <scriptItem id="h.sidefxedu.parmdiff">
+                <label>Parameter Diff</label>
+                <scriptCode>
+                    <![CDATA[
+import pyper.widgets.diff as diffmodule
+
+try:
+  reload(diffmodule)
+except NameError:
+  from importlib import reload
+  reload(diffmodule)
+
+win = diffmodule.run()
+hou.session.dummy = win
+                    ]]>
+                </scriptCode>
+            </scriptItem>
+        </subMenu>
+    </menuBar>
+</mainMenu>

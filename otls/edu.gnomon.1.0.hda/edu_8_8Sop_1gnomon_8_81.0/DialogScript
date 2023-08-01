@@ -1,0 +1,58 @@
+# Dialog script for edu::gnomon::1.0 automatically generated
+
+{
+    name	edu::gnomon::1.0
+    script	ebeGnomon
+    label	"EDU Gnomon"
+
+    help {
+	""
+    }
+    bindhandle axis_scale hudslider "Axis scale" value ""
+    bindhandle unit hudslider "Unit" value "hudh(16) hudharbourx(60) hudharboury(67) hudlocked(0) hudlockhigh(0) hudlocklow(1) hudnameside(3) hudrangehigh(10) hudrangelow(0.001) hudslipx(-1) hudslipy(-1) hudvalueside(2) hudw(170) hudx(60) hudy(67) hudharbourname('AutoHarbour_0x6000052ebe20_644A8535')"
+
+    inputlabel	1	Geometry
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "matrix_attribute"
+        label   "Matrix Attribute"
+        type    string
+        default { "xform" }
+        menureplace {
+            [ "opmenu -l -a transform_by_matrix2 matrix_attribute" ]
+        }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "unit"
+        label   "Unit"
+        type    integer
+        default { "1" }
+        range   { 0 10 }
+        export  all
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "axis_scale"
+        label   "Axis Scale"
+        type    float
+        default { "1" }
+        range   { 0 10 }
+        export  all
+    }
+    parm {
+        name    "pack"
+        label   "Pack"
+        type    toggle
+        default { "0" }
+        range   { 0! 10 }
+        export  all
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+}

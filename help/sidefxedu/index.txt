@@ -1,0 +1,28 @@
+= SideFX EDU | Education Driven Utilities =
+#icon: /images/sidefxedu.svg
+
+"""SideFX EDU are tools designed to assist Houdini instructors in building pedagogical contents and teach Houdini."""
+
+== Overview ==
+SideFX EDU tools are tools designed to assist Houdini instructors in building pedagogical contents and teach Houdini.
+
+== Requirements ==
+This toolset requires *SideFX Labs* to be installed. You can do this directly from inside Houdini 18 and above. Just add the existing SideFX Labs shelf to your desktop and click on the _Update Toolset_ button. You can also install it manually using the [packages system| /ref/plugins].
+For more information please visit [the SideFX Labs documentation page | https://www.sidefx.com/docs/houdini/labs/].
+
+TIP:
+    [SideFX Labs Installation Video|https://www.sidefx.com/tutorials/sidefx-labs-installation/].
+
+== Installation ==
+Please head to the [EDU Github page|https://github.com/sideeffects/SideFXEdu] and follow the installation instructions.
+
+== Contribution ==
+The SideFX EDU toolset receives a lot of contributions from the very active Houdini instructors community.
+If you want to contribute, please send us an email at *education@sidefx.com*.
+
+@subtopics Nodes
+
+#display: show-icons
+:list:
+    #query: type:node tags:sidefxedu
+    #sortedby: title

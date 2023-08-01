@@ -1,0 +1,83 @@
+#type:     node
+#context:  sop
+#internal: edu::quaternion_interpolation::1.0
+#icon:     SOP/edu::quaternion_interpolation::1.0
+#tags:     sidefxedu math
+
+= EDU Quaternion Interpolation =
+
+"""This node visualizes the interpolation between two quaternions, as well as their effect on the input objects."""
+
+WARNING:
+    This node is made for education purposes only. 
+    You can use it for other things, but at your own risks.
+
+NOTE:
+    This HDA is a support tool for a quaternion course to be release in a near future on Houdini Insight.
+
+Visualize a plane containing the quaternion and origin from the 4D quaternion space to help illustrate interplation.
+
+For any rotation and scale there are two quaternions that can describe it, q, and -q.  These are represented by orange and gray dots respectively.
+
+The green dot represents the quaternion generated from interpolating the two input quaternions and ultimately used to rotate the geometry.
+
+
+@parameters
+
+    == Create Quaternion ==
+
+    Axis:
+        #id: axis
+        Axis used to build the quaternion.
+        
+    === Quaternion 1 ===
+
+    Angle:
+        #id: angle1
+        Angle used to build the first quaternion.
+        
+    Scale:
+        #id: scale1
+        Scale used to build the first quaternion.
+        
+    Negate:
+        #id: negate1
+        Use this checkbox to negate the first quaternion.
+        
+    Interpolation:
+        #id: interpolation
+        How to interpolate between the two quaternions.
+        
+        None: No interpolation. In this mode, quaternion 2 parameters are deactivated.
+            
+        Linear: Interpolates linearly between the two quaternions.
+            
+        Spherical: Interpolates spherically between the two quaternions.
+            
+    Bias:
+        #id: bias
+        The bias of the interpolation.
+        
+    === Quaternion 2 ===
+
+    Shortest Path:
+        #id: shortestpath
+        Whether to use the closest or farthest quaternion to interpolate with.
+        
+    Angle:
+        #id: angle2
+        Angle used to build the second quaternion.
+        
+    Scale:
+        #id: scale2
+        Scale used to build the second quaternion.
+        
+    Negate:
+        #id: negate2
+        Use this checkbox to negate the second quaternion.
+        
+    === Output ===
+
+    Quaternion:
+        #id: quaternion
+        This parameter is used to visualize the resulting quaternion values.

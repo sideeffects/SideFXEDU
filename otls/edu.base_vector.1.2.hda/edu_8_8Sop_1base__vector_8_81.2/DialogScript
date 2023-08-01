@@ -1,0 +1,132 @@
+# Dialog script for edu::base_vector::1.2 automatically generated
+
+{
+    name	edu::base_vector::1.2
+    script	ebeBaseVector
+    label	"EDU Base Vector"
+
+    help {
+	""
+    }
+
+    inputlabel	1	Geometry
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "useattribute"
+        label   "Use Attribute"
+        type    toggle
+        default { "1" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "attribute"
+        label   "Attribute"
+        type    string
+        default { "" }
+        disablewhen "{ useattribute == 0 }"
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "vector"
+        label   "Vector"
+        type    direction
+        size    3
+        default { "1" "0" "0" }
+        disablewhen "{ useattribute == 1 }"
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+    }
+    parm {
+        name    "scale"
+        label   "Scale"
+        type    float
+        default { "1" }
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+    }
+    parm {
+        name    "override_color"
+        label   "Override color"
+        type    toggle
+        default { "off" }
+        parmtag { "autoscope" "0000000000000000" }
+    }
+    parm {
+        name    "color"
+        label   "Color"
+        type    color
+        size    3
+        default { "1" "0" "0" }
+        disablewhen "{ override_color == 0 }"
+        hidewhen "{ override_color == 0 }"
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+    }
+    parm {
+        name    "pack"
+        label   "Output vector as packed primitive"
+        type    toggle
+        default { "off" }
+        parmtag { "autoscope" "0000000000000000" }
+    }
+    parm {
+        name    "merge"
+        label   "Merge with input"
+        type    toggle
+        default { "off" }
+        parmtag { "autoscope" "0000000000000000" }
+    }
+    parm {
+        name    "sepparm"
+        label   "Spacer"
+        type    separator
+        default { "" }
+        parmtag { "sidefx::layout_height" "small" }
+        parmtag { "sidefx::look" "blank" }
+    }
+    parm {
+        name    "show_label"
+        label   "Show label"
+        type    toggle
+        default { "0" }
+        parmtag { "script_callback_language" "python" }
+    }
+    groupsimple {
+        name    "folder0"
+        label   "Folder Name"
+        disablewhen "{ show_label == 0 }"
+        grouptag { "sidefx::look" "blank" }
+
+        parm {
+            name    "label"
+            label   "Label"
+            type    string
+            default { "label" }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "editor" "0" }
+            parmtag { "editorlines" "8-40" }
+        }
+        parm {
+            name    "doscale"
+            label   "Fit label to arrow"
+            type    toggle
+            default { "on" }
+            range   { 0 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "scale2"
+            label   "Uniform scale"
+            type    float
+            default { "0.9" }
+            range   { 0 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+}

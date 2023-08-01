@@ -1,0 +1,59 @@
+#type:     node
+#context:  sop
+#internal: edu::pascal_pyramid::1.0
+#icon:     SOP/edu::pascal_pyramid::1.0
+#tags:     sidefxedu math
+
+= EDU Pascal Pyramid =
+
+"""This node helps visualizing the various layers of Pascal's Pyramid."""
+
+[Image:/images/edu_pascal_pyramid.jpg]
+
+
+@parameters
+
+    == General ==
+
+    Layers:
+        #id: nblayers
+        The number of layers of the pyramid.
+        
+    Color Seed:
+        #id: seed
+        Change the color seed used to randomize the numbers' colors.
+        
+    Show wires:
+        #id: input
+        Show/Hide the wires of the pyramid.
+        
+    == Matching ==
+
+    Justify X/Y/Z:
+        Controls how the each axis is translated to match the
+        reference box.
+        
+        None:
+            No movement on the x-axis
+        Min:
+            The minimum of the object's bounding box is aligned to the minimum of the reference's bounding box.
+        Center:
+            The center of the object's bounding box is aligned to the center of the reference's bounding box.
+        Max:
+            The maximum of the object's bounding box is aligned to the maximum of the reference's bounding box.
+
+    To:
+        Controls which axis of the reference box the object is justified to.
+        
+        Same:
+            Matches the justification of reference: so the minimum will match minimum, or center match center.
+        Min:
+            The justification side of the object's bounding box is aligned to the minimum of the reference's bounding box.
+        Center:
+            The justification side of the object's bounding box is aligned to the center of the reference's bounding box.
+        Max:
+            The justification side of the object's bounding box is aligned to the maximum of the reference's bounding box.
+
+    Offset by:
+        Additional offset to apply to the justification.  This allows for a
+        fixed-size gap, or fixed-size overlap to be specified.

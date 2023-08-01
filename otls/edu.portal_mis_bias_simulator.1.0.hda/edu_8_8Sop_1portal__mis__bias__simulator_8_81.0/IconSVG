@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-99774f9b-54b1-41e2-964f-e1e026dcc6f9" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500.37 500.27">
+  <defs>
+    <style>
+      .uuid-23007b04-906b-40d7-bcfb-d73bc2ad2091, .uuid-9cc37467-d4c5-4fa7-9b33-7fdf48e0504e, .uuid-5093d9aa-1531-452e-b920-4d222781c206, .uuid-f81c3ad5-5731-4312-a978-4d230291998e, .uuid-d60ebbe0-56f5-4cfe-8c63-b6893e59cfd8 {
+        fill: none;
+      }
+
+      .uuid-01e55029-98f1-464e-b98b-79b388b0dda7, .uuid-2055d637-b0cc-4888-a54e-5a7097a2f364 {
+        fill: #fff;
+      }
+
+      .uuid-2055d637-b0cc-4888-a54e-5a7097a2f364, .uuid-45d98688-0085-4ffb-a947-c43077bc2984 {
+        stroke-width: 2px;
+      }
+
+      .uuid-2055d637-b0cc-4888-a54e-5a7097a2f364, .uuid-45d98688-0085-4ffb-a947-c43077bc2984, .uuid-9cce41c3-0db8-449e-b4c0-7e9e24ed30bf, .uuid-d60ebbe0-56f5-4cfe-8c63-b6893e59cfd8 {
+        stroke: #000;
+      }
+
+      .uuid-2055d637-b0cc-4888-a54e-5a7097a2f364, .uuid-2f6d543b-18af-43dd-b77d-c8a5e1b360a6 {
+        fill-rule: evenodd;
+      }
+
+      .uuid-29d25895-5faf-48c3-b897-800548e7e2dd {
+        clip-path: url(#uuid-7547f44f-849f-4d5c-afd7-f2b0ca67b8a6);
+      }
+
+      .uuid-a7c2c0c6-25a5-47f0-818f-9f699ffa6336 {
+        opacity: .2;
+      }
+
+      .uuid-a7c2c0c6-25a5-47f0-818f-9f699ffa6336, .uuid-91eeed4f-864c-4a40-88e4-fa0c87d4dcea, .uuid-02c6f196-b371-44e5-b9ed-68c106d1bd92, .uuid-df7f2940-5453-4a57-9446-7fa8fefbe118 {
+        isolation: isolate;
+      }
+
+      .uuid-a7c2c0c6-25a5-47f0-818f-9f699ffa6336, .uuid-02c6f196-b371-44e5-b9ed-68c106d1bd92, .uuid-df7f2940-5453-4a57-9446-7fa8fefbe118 {
+        fill: #e0e31c;
+      }
+
+      .uuid-91eeed4f-864c-4a40-88e4-fa0c87d4dcea {
+        fill: #4797d2;
+        opacity: .3;
+      }
+
+      .uuid-02c6f196-b371-44e5-b9ed-68c106d1bd92 {
+        opacity: .15;
+      }
+
+      .uuid-808c8d20-3ba2-49f4-8f57-53f2740fa756 {
+        fill: #cab39f;
+        stroke-miterlimit: 5.54;
+        stroke-width: .04px;
+      }
+
+      .uuid-808c8d20-3ba2-49f4-8f57-53f2740fa756, .uuid-9cc37467-d4c5-4fa7-9b33-7fdf48e0504e, .uuid-5093d9aa-1531-452e-b920-4d222781c206, .uuid-f81c3ad5-5731-4312-a978-4d230291998e {
+        stroke: #fff;
+      }
+
+      .uuid-45d98688-0085-4ffb-a947-c43077bc2984 {
+        fill: url(#uuid-879e3785-8e14-465a-98c6-aaaee2a00949);
+      }
+
+      .uuid-9cce41c3-0db8-449e-b4c0-7e9e24ed30bf {
+        fill: #f60;
+      }
+
+      .uuid-9cce41c3-0db8-449e-b4c0-7e9e24ed30bf, .uuid-5093d9aa-1531-452e-b920-4d222781c206, .uuid-d60ebbe0-56f5-4cfe-8c63-b6893e59cfd8 {
+        stroke-miterlimit: 10;
+      }
+
+      .uuid-9cce41c3-0db8-449e-b4c0-7e9e24ed30bf, .uuid-d60ebbe0-56f5-4cfe-8c63-b6893e59cfd8 {
+        stroke-width: .5px;
+      }
+
+      .uuid-df7f2940-5453-4a57-9446-7fa8fefbe118 {
+        opacity: .25;
+      }
+
+      .uuid-2f6d543b-18af-43dd-b77d-c8a5e1b360a6 {
+        fill: url(#uuid-84b36340-050b-49c9-bb1a-fce5429d7174);
+        stroke: #8b6f00;
+        stroke-width: 1px;
+      }
+
+      .uuid-5093d9aa-1531-452e-b920-4d222781c206 {
+        stroke-width: .04px;
+      }
+
+      .uuid-f81c3ad5-5731-4312-a978-4d230291998e {
+        stroke-miterlimit: 10.89;
+        stroke-width: .04px;
+      }
+    </style>
+    <clipPath id="uuid-7547f44f-849f-4d5c-afd7-f2b0ca67b8a6">
+      <rect class="uuid-23007b04-906b-40d7-bcfb-d73bc2ad2091" x=".37" y=".27" width="500" height="500"/>
+    </clipPath>
+    <radialGradient id="uuid-84b36340-050b-49c9-bb1a-fce5429d7174" cx="-887.36" cy="662.05" fx="-887.36" fy="662.05" r="151.56" gradientTransform="translate(415.05 -1056.94) rotate(-106.66) scale(1.53 -.78) skewX(-1.44)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fcce1b"/>
+    </radialGradient>
+    <linearGradient id="uuid-879e3785-8e14-465a-98c6-aaaee2a00949" x1="-238.98" y1="383.7" x2="-83.1" y2="383.7" gradientTransform="translate(573.36 22.61) scale(1.05 1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+  </defs>
+  <g id="uuid-ad145137-3a89-45d7-90d2-3e584b1f1ca0" data-name="portal MIS bias">
+    <g class="uuid-29d25895-5faf-48c3-b897-800548e7e2dd">
+      <g>
+        <polygon id="uuid-b2441bfd-d0ec-4de3-8127-9d96107c3e7d" data-name="polygon4566" class="uuid-f81c3ad5-5731-4312-a978-4d230291998e" points="147.7 644.81 374.84 539.07 374.84 216.47 147.7 210.95 147.7 644.81"/>
+        <rect id="uuid-1b7b35e8-557b-44e2-a0f5-8338b68d424d" data-name="rect4568" class="uuid-5093d9aa-1531-452e-b920-4d222781c206" x="335.69" y="216.32" width="38.11" height="323.25"/>
+        <polygon id="uuid-0a0d953c-5fcf-4336-9514-8bfc1c945ecc" data-name="polygon4578" class="uuid-808c8d20-3ba2-49f4-8f57-53f2740fa756" points="191.35 146.25 184.88 147.66 184.88 212.53 191.35 212.53 191.35 146.25"/>
+        <polygon id="uuid-8c1ff66f-68ac-46eb-bf95-e2fea0a500a9" data-name="polygon4594" class="uuid-808c8d20-3ba2-49f4-8f57-53f2740fa756" points="191.35 212.65 97.94 251.89 98.08 248.18 184.95 212.53 191.35 212.65"/>
+        <polygon id="uuid-190e4701-4633-4b3d-bde1-0e343a740c59" data-name="polygon4606" class="uuid-91eeed4f-864c-4a40-88e4-fa0c87d4dcea" points="191.09 212.53 191.09 146.72 98.22 167.69 98.22 251.77 191.09 212.53"/>
+        <polygon id="uuid-595cf4f0-78c5-48ab-8719-ae6d9ad7ef49" data-name="polygon4620" class="uuid-91eeed4f-864c-4a40-88e4-fa0c87d4dcea" points="273.57 356.77 413.23 386.33 337.82 496.62 158.81 453.51 273.57 356.77"/>
+        <polygon id="uuid-f3a81dbc-3c80-45af-995b-7b4133cd99b7" data-name="polygon4634" class="uuid-02c6f196-b371-44e5-b9ed-68c106d1bd92" points="191.91 212.34 191.91 146.14 412.89 386.65 274.19 357.12 191.91 212.34"/>
+        <polygon id="uuid-a77a0b0b-ebae-48aa-938c-16780db150ba" data-name="polygon4656" class="uuid-df7f2940-5453-4a57-9446-7fa8fefbe118" points="96.85 251.37 96.85 166.72 336.81 497.81 158.01 454.68 96.85 251.37"/>
+        <polygon id="uuid-5ad1bea8-11ab-4b75-9f0c-ac21ccda6f14" data-name="polygon4658" class="uuid-a7c2c0c6-25a5-47f0-818f-9f699ffa6336" points="97.88 252.55 191.24 212.99 273.92 356.58 159.19 453.91 97.88 252.55"/>
+        <polygon id="uuid-0daf5d19-dee7-42e1-9199-aa4e93977206" data-name="polygon4660" class="uuid-02c6f196-b371-44e5-b9ed-68c106d1bd92" points="97.49 166.72 190.06 146.14 412.35 386.65 336.42 495.82 97.49 166.72"/>
+      </g>
+      <g id="uuid-21cac68a-c39e-4f13-af18-1b1249973ed8" data-name="layer1">
+        <path id="uuid-b0af1850-5bd0-4ecb-9933-ebd863b59687" data-name="path2393" class="uuid-2f6d543b-18af-43dd-b77d-c8a5e1b360a6" d="m129.52,172.31l138.91,65.97c1.77.6,2.85,4.7,1.57,5.97l-92.3,119.54,64.9,15.75,5.67-25.57,68.05,74.06-88.03,23.83,5.94-30.43-80.22-36.39c-6.98-2.91-16.72-11.22-5.9-23.77l97.87-114.74-116.46-74.2"/>
+      </g>
+      <g id="uuid-4c718ed3-f6a5-4cfb-97e2-dbc72e06869c" data-name="layer2">
+        <rect id="uuid-a29bdfdd-d815-4885-afde-eaf0404144f1" data-name="rect23079" class="uuid-45d98688-0085-4ffb-a947-c43077bc2984" x="318.48" y="355.32" width="171.88" height="101.99"/>
+        <path id="uuid-05c326ee-d449-4263-a59d-b8cda48fbe2a" data-name="path23195" class="uuid-9cc37467-d4c5-4fa7-9b33-7fdf48e0504e" d="m405.85,453.74v-94.14"/>
+        <path id="uuid-5e106acf-4a98-4586-b479-279d0b7fcc2f" data-name="path23191" class="uuid-2055d637-b0cc-4888-a54e-5a7097a2f364" d="m377.92,318.86h55.87l-27.93,48.38-27.93-48.38Z"/>
+        <path id="uuid-f364348c-c49a-48a4-9d67-3a380bdb1d77" data-name="path23219" class="uuid-2055d637-b0cc-4888-a54e-5a7097a2f364" d="m377.92,490.27h55.87l-27.93-48.38-27.93,48.38Z"/>
+      </g>
+    </g>
+  </g>
+  <g id="uuid-31c8aa1f-a225-4022-9894-51480f821e2e" data-name="EDU HAT">
+    <g id="uuid-b380443a-bb9d-4355-9527-2bf15eeccbe9" data-name="orange">
+      <g>
+        <path class="uuid-9cce41c3-0db8-449e-b4c0-7e9e24ed30bf" d="m32.44,66.68l-.42,58c-1.18.11-2.94,1.75-3.18,3.08l-2.24,12.43c-.17.94-.68,1.78-1.42,2.37l-.77.61c-1.02.8-.74,2.43.48,2.84l9.5,3.2c1.14.38,2.38-.2,2.83-1.33h0c1.38-3.48,1.82-7,2.08-10.93v-4.52c0-2.78-.99-6.48-2.88-7.25l.52-57.81c-.93-.86-3.38-1.26-4.51-.69Z"/>
+        <ellipse class="uuid-9cce41c3-0db8-449e-b4c0-7e9e24ed30bf" cx="33.89" cy="124.53" rx="3.82" ry="3.86"/>
+      </g>
+      <path class="uuid-9cce41c3-0db8-449e-b4c0-7e9e24ed30bf" d="m48.09,54.74l70.45,30.36,70.45-30.36v43.28c0,2.25-.88,4.43-2.49,6.19h0c-34.65,37.95-101.27,37.95-135.93,0h0c-1.61-1.76-2.49-3.94-2.49-6.19v-43.28Z"/>
+      <path class="uuid-9cce41c3-0db8-449e-b4c0-7e9e24ed30bf" d="m237.6,50.48L121.69.71c-1.44-.62-3.07-.62-4.5,0L1.27,50.48c-1.36.58-1.36,2.5,0,3.08l115.91,49.77c1.44.62,3.07.62,4.5,0l115.91-49.77c1.36-.58,1.36-2.5,0-3.08Z"/>
+      <path class="uuid-01e55029-98f1-464e-b98b-79b388b0dda7" d="m159.76,67.16c7.78-8.37,7.43-19.91-4.6-29.63-7.61-6.16-20.37-16.7-53.55-20.65-.32-.03-7.62-1.03-18.38-1.38l-15.73,6.76c11.16-.13,20.8.69,26.51,1.21,19.54,1.75,29.52,6.1,41.26,13.96,11.26,7.57,9.66,19.46-.09,25.91-13.03,8.61-29.1,12.32-53.82,12.07-22.74-.23-40.76-9.97-43.95-16.76-3.22-6.8-3.86-12.15,11.93-17.65,16.68-5.81,39.49-2.49,48.8,2.25,11.14,5.64,7.24,12.06-2.15,13.88-10.75,2.08-23.24.19-23.24-3.62-.04-5.48,9.92-5.36,9.92-5.36,0,0-22.5-7.21-30.96,3.96-7.78,10.28,25.77,18.49,49.58,14.44,13.24-2.25,41.38-9.73,16.41-27.52-14.62-10.43-45.44-12.14-69.25-8.57l-30.71,13.18c-3.13,4.92-2.33,10.31-.23,14.8.41.86.98,1.8,1.67,2.77l52.02,22.34c1.53.18,3.05.36,4.66.5,38.52,3.34,74.87-7.13,83.91-16.88Z"/>
+      <path class="uuid-d60ebbe0-56f5-4cfe-8c63-b6893e59cfd8" d="m237.6,50.48L121.69.71c-1.44-.62-3.07-.62-4.5,0L1.27,50.48c-1.36.58-1.36,2.5,0,3.08l115.91,49.77c1.44.62,3.07.62,4.5,0l115.91-49.77c1.36-.58,1.36-2.5,0-3.08Z"/>
+    </g>
+  </g>
+</svg>

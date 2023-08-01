@@ -1,0 +1,55 @@
+# Dialog script for edu::transform_by_matrix::1.0 automatically generated
+
+{
+    name	edu::transform_by_matrix::1.0
+    script	ebeTransformbymatrix
+    label	"EDU Transform By Matrix"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Object to transform"
+    inputlabel	2	"Target with Matrix Attribute"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+    outputlabel	1	"Transformed object: using Transformed by Attribute SOP"
+    outputlabel	2	"Transformed object: using Copy to Points SOP"
+    outputlabel	3	"Transformed object: using Transform Pieces SOP"
+
+    parm {
+        name    "matrix_attribute"
+        label   "Matrix Attribute"
+        type    string
+        default { "xform" }
+        menureplace {
+            [ "r = []" ]
+            [ "node = kwargs['node']" ]
+            [ "inputs = node.inputs()" ]
+            [ "" ]
+            [ "if inputs and len(inputs) > 1:" ]
+            [ "" ]
+            [ "    geo = inputs[1].geometry()" ]
+            [ "    " ]
+            [ "    if geo:" ]
+            [ "        attrs = geo.globalAttribs()" ]
+            [ "        for a in attrs:" ]
+            [ "            r.extend([a.name(), a.name()])" ]
+            [ "  " ]
+            [ "return r" ]
+            language python
+        }
+        export  all
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "invert"
+        label   "Invert Transformation"
+        type    toggle
+        default { "off" }
+        range   { 0 10 }
+        export  all
+        parmtag { "autoscope" "0000000000000000" }
+    }
+}

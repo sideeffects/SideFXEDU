@@ -1,0 +1,18 @@
+{
+	"hdaroot/build_pyramid.def":1689244845,
+	"hdaroot/null1.def":1687803132,
+	"hdaroot/polywire1.def":1687803132,
+	"hdaroot/connectadjacentpieces1.def":1687803132,
+	"hdaroot/foreach_begin2.def":1690209169,
+	"hdaroot/SHOW_WIRES.def":1689244845,
+	"hdaroot/foreach_end2.def":1689244845,
+	"hdaroot/matchsize3.def":1689244845,
+	"hdaroot/output0.def":1687803132,
+	"hdaroot/polyextrude3.def":1687803132,
+	"hdaroot/merge1.def":1687803132,
+	"hdaroot/random_color1.def":1689244845,
+	"hdaroot/copytopoints2.def":1687803132,
+	"hdaroot/font3.def":1689244845,
+	"hdaroot/matchsize4.def":1689244845,
+	"hdaroot.def":1690554231
+}

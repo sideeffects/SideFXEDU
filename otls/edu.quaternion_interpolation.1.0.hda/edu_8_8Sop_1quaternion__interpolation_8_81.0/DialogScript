@@ -1,0 +1,158 @@
+# Dialog script for edu::quaternion_interpolation::1.0 automatically generated
+
+{
+    name	edu::quaternion_interpolation::1.0
+    script	edu::quaternion_visualizer::1.0
+    label	"EDU Quaternion Interpolation"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Object to rotate with quaternion"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    group {
+        name    "folder1"
+        label   "Create Quaternion"
+        grouptag { "group_type:2" "simple" }
+        grouptag { "visibletabs" "111" }
+
+        parm {
+            name    "axis"
+            label   "Axis"
+            type    vector
+            size    3
+            default { "0" "0" "1" }
+            range   { -1 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        groupsimple {
+            name    "folder2"
+            label   "Quaternion 1"
+            grouptag { "group_type" "simple" }
+            grouptag { "visibletabs" "1" }
+
+            parm {
+                name    "angle1"
+                label   "Angle"
+                type    angle
+                default { "0" }
+                range   { 0 360 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "scale1"
+                label   "Scale"
+                type    float
+                default { "1" }
+                range   { 0 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "negate1"
+                label   "Negate"
+                type    toggle
+                default { "off" }
+                range   { 0 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+        parm {
+            name    "interpolation"
+            label   "Interpolation"
+            type    ordinal
+            default { "none" }
+            menu {
+                "none"  "None"
+                "lerp"  "Linear"
+                "slerp" "Spherical"
+            }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "bias"
+            label   "Bias"
+            type    float
+            default { "0" }
+            disablewhen "{ interpolation == none }"
+            range   { 0 1 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        groupsimple {
+            name    "folder3"
+            label   "Quaternion 2"
+            grouptag { "group_type" "simple" }
+            grouptag { "visibletabs" "1" }
+
+            parm {
+                name    "shortestpath"
+                label   "Shortest Path"
+                type    toggle
+                default { "off" }
+                disablewhen "{ interpolation == none }"
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "angle2"
+                label   "Angle"
+                type    angle
+                default { "0" }
+                disablewhen "{ interpolation == none }"
+                range   { 0 360 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "scale2"
+                label   "Scale"
+                type    float
+                default { "1" }
+                disablewhen "{ interpolation == none }"
+                range   { 0 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "negate2"
+                label   "Negate"
+                type    toggle
+                default { "off" }
+                disablewhen "{ interpolation == none }"
+                range   { 0 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+        groupsimple {
+            name    "outputfolder"
+            label   "Output"
+            grouptag { "group_type" "simple" }
+            grouptag { "visibletabs" "1" }
+
+            parm {
+                name    "quaternion"
+                label   "Quaternion"
+                type    vector4
+                size    4
+                default { [ "ch(\"create_quaternion/quaternionx\")" hscript-expr ] [ "ch(\"create_quaternion/quaterniony\")" hscript-expr ] [ "ch(\"create_quaternion/quaternionz\")" hscript-expr ] [ "ch(\"create_quaternion/quaternionw\")" hscript-expr ] }
+                range   { -1 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+    }
+
+}

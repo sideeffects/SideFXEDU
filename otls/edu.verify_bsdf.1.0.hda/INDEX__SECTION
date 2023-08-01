@@ -1,0 +1,14 @@
+Operator:     edu::verify_bsdf::1.0
+Label:        EDU Verify Bsdf
+Path:         oplib:/edu::Sop/verify_bsdf::1.0?edu::Sop/verify_bsdf::1.0
+Icon:         opdef:/edu::Sop/verify_bsdf::1.0?IconSVG
+Table:        Sop
+License:      
+Extra:        inputcolors='0 ' outputcolors='1 "RGB 0.700195 0.700195 0.700195" ' 
+User:         
+Inputs:       0 to 0
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Fri Jul 28 16:24:43 2023
+

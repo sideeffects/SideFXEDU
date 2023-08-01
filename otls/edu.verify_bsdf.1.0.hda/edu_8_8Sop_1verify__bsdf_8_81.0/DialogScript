@@ -1,0 +1,51 @@
+# Dialog script for edu::verify_bsdf::1.0 automatically generated
+
+{
+    name	edu::verify_bsdf::1.0
+    script	edu::verify_bsdf::1.0
+    label	"EDU Verify Bsdf"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "dir_viewer"
+        label   "To viewer"
+        type    vector
+        size    3
+        default { "1" "1" "1" }
+        range   { -1 1 }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "dir_light"
+        label   "To light"
+        type    vector
+        size    3
+        default { "0" "1" "-1" }
+        range   { -1 1 }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "sepparm"
+        label   "Spacer"
+        type    separator
+        default { "" }
+        parmtag { "sidefx::layout_height" "small" }
+        parmtag { "sidefx::look" "blank" }
+    }
+    parm {
+        name    "samples"
+        label   "Samples"
+        type    intlog
+        default { "10000" }
+        range   { 1 1000 }
+        parmtag { "script_callback_language" "python" }
+    }
+}

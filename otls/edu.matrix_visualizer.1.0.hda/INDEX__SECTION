@@ -1,0 +1,14 @@
+Operator:     edu::matrix_visualizer::1.0
+Label:        EDU Matrix Visualizer
+Path:         oplib:/edu::Sop/matrix_visualizer::1.0?edu::Sop/matrix_visualizer::1.0
+Icon:         opdef:/edu::Sop/matrix_visualizer::1.0?IconSVG
+Table:        Sop
+License:      
+Extra:        inputcolors='1 "RGB 0.700195 0.700195 0.700195" ' outputcolors='1 "RGB 0.616 0.871 0.769" ' 
+User:         
+Inputs:       1 to 1
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Fri Jul 28 16:24:25 2023
+

@@ -1,0 +1,22 @@
+{
+	"hdaroot/output0.def":1690214710,
+	"hdaroot/reference_axes/output0.def":1663817066,
+	"hdaroot/reference_axes/color2.def":1663625133,
+	"hdaroot/reference_axes/merge2.def":1663615932,
+	"hdaroot/reference_axes/copytopoints2.def":1663615855,
+	"hdaroot/reference_axes/merge1.def":1663615869,
+	"hdaroot/reference_axes/copytopoints1.def":1663615855,
+	"hdaroot/reference_axes/line2.def":1663615700,
+	"hdaroot/reference_axes/tube2.def":1663615803,
+	"hdaroot/reference_axes.def":1663817066,
+	"hdaroot/merge4.def":1663617456,
+	"hdaroot/reference_axes/line1.def":1663615700,
+	"hdaroot/copytopoints4.def":1663617374,
+	"hdaroot/reference_axes/tube1.def":1663615748,
+	"hdaroot/apply_rotation.def":1663616325,
+	"hdaroot/reference_axes/tube3.def":1663615803,
+	"hdaroot/reference_axes/transform1.def":1663615921,
+	"hdaroot/create_quaternion.def":1663616107,
+	"hdaroot/sphere2.def":1663616048,
+	"hdaroot.def":1690554187
+}

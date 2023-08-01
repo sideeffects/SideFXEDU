@@ -1,0 +1,123 @@
+#type:     node
+#context:  sop
+#internal: edu::path_tracing_simulator::1.0
+#icon:     SOP/edu::path_tracing_simulator::1.0
+#tags:     sidefxedu rendering
+
+= EDU Path Tracing Simulator =
+
+"""This node simulates path tracing rendering method, generating primary and secondary rays and samples."""
+
+WARNING:
+    This node is made for education purposes only.  
+    You can use it for other things, but at your own risks.  
+
+== Overview ==
+This node takes objects with special formatting and attributes as an input (see the [EDU Path Tracing Scene|edu--path_tracing_scene-1.0] as an example) and outputs primary and secondary rays and samples. This is useful to illustrate how a path tracer is working.
+
+
+TIP:
+    Please refer to the file `$SIDEFXEDU/hip/path_tracing_simulator.hip` as an example on how to use this HDA.
+
+Note that this simulator is only an illustration, it does not use any of the code and algorithms from our Karma renderengine. 
+Rays are built with viewport reactivity in mind, not accuracy. When increasing the parameters, the exponential increase in the amount of rays is roughly similar to the one you would get in Karma, but not the same. This is useful to get a feeling of how much butterfly effect a tiny change in a parameter can have on the render time, but *it is NOT* a correct estimation of the amount of rays you would get in Karma with the same parameter values.
+
+@inputs
+
+Input 1 |
+    The scene to render. 
+    
+    NOTE:
+        It requires special formatting and attributes. 
+        Use the [EDU Path Tracing Scene|edu--path_tracing_scene-1.0] as an example.
+
+@outputs
+
+Output 1 |
+    Rendered pixels.
+
+Output 2 |
+    Primary rays.
+
+Output 3 |
+    Primary hits.
+
+Output 4 |
+    Direct rays (Lights).
+
+Output 5 |
+    Direct samples (Lights).
+
+Output 6 |
+    Indirect rays (Scene).
+
+Output 7 |
+    Indirect samples (Scene).
+
+
+@parameters
+
+    Camera:
+        #id: camera
+        Path to the camera you want to render the scene through.
+        
+    Render plane position:
+        #id: zpos
+        The z position of the render plane inside the camera frustum.
+        
+    Pixel definition:
+        #id: definition
+        Controls the number of pixels used to render the scene with the formula:  
+        {{{
+        nb pixel width  = definition * 16  
+        nb pixel height = definition * 9  
+        }}}
+
+    Primary Rays:
+        #id: primrays
+        The number of Primary Rays to send into the scene through each pixel.
+        More rays, mean more samples, which will result in a less noisy image. 
+        Note: Primary Rays are also known as “Primary Samples”, "Pixel Samples", "Ray-Samples".
+
+        [See also: Karma User Guide / Primary samples | https://www.sidefx.com/docs/houdini/solaris/kug/sampling.html#primary_samples]
+        
+    Secondary Rays:
+        #id: secrays
+        The number of Secondary Rays to send into the scene, for each Primary Ray's hit location.
+        For every hit position, Karma will send direct and indirect secondary samples. In Karma, Direct samples are sent towards lights, and Indirect Rays are sent along directions determined by the geometry and shader at the hit position. 
+        Here, this simulator uses a much simpler method: it sends rays randomly in a 180˚ cone angle around the normal at the hit position. This is for ease of use and better reactivity in the viewport.
+
+        [See also: Karma User Guide / Secondary samples | https://www.sidefx.com/docs/houdini/solaris/kug/sampling.html#secondary_samples]
+
+        NOTE: Currently this setup does not feature Indirect Sampling quality parameters; only Direct Sampling (see Light Sampling Quality below).
+        
+    Light Sampling Quality:
+        #id: lightSamplingQuality
+        This is a global control to improve sampling quality for all lights. This acts as a multiplier on the individual light quality controls. Increasing the quality will improve direct light sampling as well as shadows/occlusion.
+
+        For each primary hit, each light will be sent `[Secondary Samples] * [Light Sample Quality]` number of rays.
+        
+    == Visualization ==
+
+    Compute single pixel:
+        #id: computesinglepixel
+        When checking this box, the simulator will compute only one pixel, the one defined in *Pixel to compute* parameter below.
+        
+    Vizualise single pixel path:
+        #id: viz_singlepath
+        When checking this box, the simulator will compute rays for only one pixel, the one defined in *Pixel to compute* parameter below.
+        
+    Define pixel to compute manually:
+        #id: manual
+        Whether to define the *Pixel to compute* parameter below manualy or automatically, using a list of presets.
+        The predefined list contains relevant pixels to compute for each *Pixel Definition* (see parameter above).
+        When using the manual mode, you can chose the pixel you want. You could, for instance, set the parameter to `$F` and play the timeline to see primary rays scanning the scene.
+        
+    Pixel to compute:
+        #id: computepixelid
+        The pixel to compute or visualize when *Compute single pixel* or *Visualize single pixel* are checked on.    
+    
+@related
+- [EDU Path Tracing Refractions | edu--path_tracing_refractions-1.0]
+- [EDU Path Tracing Scene | edu--path_tracing_scene-1.0]
+- [EDU Portal MIS Bias Simulator | edu--portal_mis_bias_simulator-1.0]

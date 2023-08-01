@@ -1,0 +1,117 @@
+#type:     node
+#context:  sop
+#internal: edu::pathtracing_refractions::1.0
+#icon:     SOP/edu::pathtracing_refractions::1.0
+#tags:     sidefxedu rendering
+
+= EDU Path Tracing Refractions =
+
+"""This node simulates refractions and reflections rays when using a path tracing rendering method."""
+
+WARNING:
+    This node is made for education purposes only.  
+    You can use it for other things, but at your own risks.  
+
+@outputs
+
+Output 1 |
+    Rendered pixels.
+
+Output 2 |
+    The scene used when rendering.
+
+@parameters
+
+    == Camera ==
+
+    Camera:
+        #id: camera
+        Path to the camera you want to render the scene through.
+        
+    Render plane position:
+        #id: zpos
+        The z position of the render plane inside the camera frustum.
+        
+    Pixel definition:
+        #id: definition
+        Controls the number of pixels used to render the scene with the formula:  
+        {{{
+        nb pixel width  = definition * 16  
+        nb pixel height = definition * 9  
+        }}}
+
+    Camera Focal:
+        #id: camera_focal
+        The camera focal length. 
+        By default the parameter is linked to the focal length of the camera object you specify in the 'camera' parameter. 
+        Hance changing the value here, will change it as well on the camera object.
+        This is useful for instance if you want to use the Camera Frustum object to visualize your camera frustum while changing the values here.
+        You can of course break this dependency.
+        
+    Camera Aperture:
+        #id: camera_aperture
+        The camera aperture.
+        By default the parameter is linked to the aperture of the camera object you specify in the 'camera' parameter. 
+        Hance changing the value here, will change it as well on the camera object.
+        This is useful for instance if you want to use the Camera Frustum object to visualize your camera frustum while changing the values here.
+        You can of course break this dependency.
+
+    == Render ==
+
+    debug_mode:
+        #id: debug_mode
+        Toggle this parameter to show/hide the path tracing rays.
+        
+    Ray type:
+        #id: ray_type
+        
+        *Reflection*: 
+            Render only reflections (show only reflection rays if debug mode is on).
+            
+        *Refraction*: 
+            Render only refractions (show only refraction rays if debug mode is on).
+            
+        *Both*: 
+            Render both reflections and refractions (show both rays if debug mode is on).
+            
+    Resolution:
+        #id: res
+        The resolution of the render plane. Set up automatically according to your camera. You can break the dependency if you need.
+        
+    Raytracing Bias:
+        #id: bias
+        Simulates Karma's Ray Bias.
+        It's the minimum distance used when testing if secondary rays from a surface intersect with other objects in the scene. The distance is measure from surface along the direction of the ray. Objects within the ray bias distance are ignored.
+        
+    Refract Limit:
+        #id: refr_limit
+        The number of times a ray can be refracted in your scene.
+        
+    Reflect Limit:
+        #id: refl_limit
+        The number of times a ray can be reflected in your scene.
+        
+    Exit Color:
+        #id: exit_color
+        The color the ray will pick when the last sample does not hitting anything.
+        
+    Output:
+        #id: output
+        
+        *Color*:
+            Outputs the color of the background plane.
+            
+        *UV*:
+            Outputs the uv as color
+            
+        *HDRI*:
+            Outputs the HDRI map below.
+            
+    Map:
+        #id: map
+        HDRI map to sample when `output` parameter is set to `hdri`
+
+@related
+- [EDU Path Tracing Scene | edu--path_tracing_scene-1.0]
+- [EDU Path Tracing Simulator | edu--path_tracing_simulator-1.0]
+- [EDU Portal MIS Bias Simulator | edu--portal_mis_bias_simulator-1.0]

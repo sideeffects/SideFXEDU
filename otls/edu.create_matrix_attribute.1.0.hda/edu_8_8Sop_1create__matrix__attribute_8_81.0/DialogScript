@@ -1,0 +1,116 @@
+# Dialog script for edu::create_matrix_attribute::1.0 automatically generated
+
+{
+    name	edu::create_matrix_attribute::1.0
+    script	ebeMatrix
+    label	"EDU Create Matrix Attribute"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+    outputlabel	1	"Matrix as detail attribute"
+
+    parm {
+        name    "class"
+        label   "Run Over"
+        type    ordinal
+        default { "detail" }
+        disablewhen "{ hide == 1 }"
+        menu {
+            "detail"    "Detail (only once)"
+            "primitive" "Primitives"
+            "point"     "Points"
+            "vertex"    "Vertices"
+            "number"    "Numbers"
+        }
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+    }
+    parm {
+        name    "hide"
+        label   "Hide"
+        type    toggle
+        invisible
+        default { "1" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "sepparm3"
+        label   "Spacer"
+        type    separator
+        default { "" }
+        parmtag { "sidefx::layout_height" "small" }
+        parmtag { "sidefx::look" "blank" }
+    }
+    parm {
+        name    "name"
+        label   "Attribute Name"
+        type    string
+        default { "xform" }
+        parmtag { "autoscope" "0000000000000000" }
+    }
+    parm {
+        name    "sepparm2"
+        label   "Spacer"
+        type    separator
+        default { "" }
+        parmtag { "sidefx::layout_height" "small" }
+        parmtag { "sidefx::look" "blank" }
+    }
+    parm {
+        name    "type"
+        label   "Type"
+        type    integer
+        default { "0" }
+        menu {
+            "0" "3x3 (Rotation and scale only)"
+            "1" "4x4 (Full transformation)"
+        }
+        range   { 0 10 }
+        export  all
+        parmtag { "autoscope" "0000000000000000" }
+    }
+    parm {
+        name    "mat3"
+        label   " "
+        type    float
+        size    9
+        default { "1" "0" "0" "0" "1" "0" "0" "0" "1" }
+        hidewhen "{ type == 1 }"
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+    }
+    parm {
+        name    "mat4"
+        label   "  "
+        type    float
+        size    16
+        default { "1" "0" "0" "0" "0" "1" "0" "0" "0" "0" "1" "0" "0" "0" "0" "1" }
+        hidewhen "{ type == 0 }"
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+    }
+    parm {
+        name    "sepparm"
+        label   "Spacer"
+        type    separator
+        default { "" }
+        parmtag { "sidefx::layout_height" "small" }
+        parmtag { "sidefx::look" "blank" }
+    }
+    parm {
+        name    "invert"
+        label   "Invert matrix"
+        type    toggle
+        default { "0" }
+        range   { 0 10 }
+        export  all
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+}

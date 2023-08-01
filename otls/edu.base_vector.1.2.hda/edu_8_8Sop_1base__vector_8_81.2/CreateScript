@@ -1,0 +1,16 @@
+# Automatically generated script
+\set noalias = 1
+#
+#  Creation script for edu::base_vector::1.2 operator
+#
+
+if ( "$arg1" == "" ) then
+    echo This script is intended as a creation script
+    exit
+endif
+
+# Node $arg1 (edu::Sop/base_vector::1.2)
+opexprlanguage -s hscript $arg1
+opuserdata -n '___Version___' -v '' $arg1
+opuserdata -n '___toolcount___' -v '5' $arg1
+opuserdata -n '___toolid___' -v 'createEDUTools' $arg1
