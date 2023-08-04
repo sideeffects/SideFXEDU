@@ -1,0 +1,184 @@
+#type:     node
+#context:  sop
+#internal: edu::what_is_vector
+#icon:     SOP/edu::what_is_vector
+#tags:     sidefxedu math utility visualizer
+
+= EDU What is vector =
+
+"""This node visualizes the basic math operations of vectors."""
+
+WARNING:
+    This node is made for education purposes only. 
+    You can use it for other things, but at your own risks.
+
+@parameters
+
+    == What is Vector ==
+
+    === Vector A ===
+
+    vector A:
+        #id: va
+	Defines vector A
+        
+    Multiply:
+        #id: va_mul
+	Multiply vector A by this value.
+        
+    Color:
+        #id: va_color
+	Change the color of the vector A arrow.
+        
+    Radius Scale:
+        #id: va_radscale
+	Adjust the radius of the vector A arrow.
+        
+    === Vector B ===
+
+    Vector B:
+        #id: vb_toggle
+	Enable vector B
+        
+    Vector B:
+        #id: vb
+	Defines vector B
+        
+    Multiply:
+        #id: vb_mul
+	Multiply vector B by this value.
+        
+    Color:
+        #id: vb_color
+	Change the color of the vector B arrow.
+        
+    Radius Scale:
+        #id: vb_radscale
+	Adjust the radius of the vector B arrow.
+        
+    === Vector Math ===
+
+    Operation:
+        #id: op
+	Visualize the result vector of addition or subtraction between vector A and B.        
+
+        None:
+            
+        A + B:
+            
+        A - B:
+            
+    Color:
+        #id: vc_color
+	Change the color of the result vector C arrow.
+        
+    Radius Scale:
+        #id: vc_radscale
+	Adjust the radius of the result vector C arrow.
+        
+    == Guides ==
+
+    === Vector A ===
+
+    Coordinate:
+        #id: va_cor
+	Visualize the corrdinates of vector A.
+        
+    Offset:
+        #id: va_cor_offset
+	Offset the coodinate text position.
+        
+    Rotate:
+        #id: va_cor_r
+	Rotate the coodinate text.
+        
+    View Triangle:
+        #id: va_triangle
+	Visualize the triangle created by the vector.
+        
+    Reverse Face:
+        #id: reverse_va_tri
+	Reverse the normal of the triangle visualizer.
+        
+    === Vector B ===
+
+    Coordinate:
+        #id: vb_cor
+	Visualize the corrdinates of vector B.
+        
+    Offset:
+        #id: vb_cor_offset
+	Offset the coodinate text position.
+        
+    Rotate:
+        #id: vb_cor_r
+	Rotate the coodinate text.
+        
+    View Triangle:
+        #id: vb_triangle
+	Visualize the triangle created by the vector.
+        
+    Reverse Face:
+        #id: reverse_vb_tri
+	Reverse the normal of the triangle visualizer.
+        
+    === Vector Math  ===
+
+    Coordinate:
+        #id: vc_cor
+	Visualize the corrdinates of the result vector C.
+        
+    Offset:
+        #id: offset
+	Offset the coodinate text position.
+        
+    Rotate:
+        #id: vc_cor_r
+	Rotate the coodinate text.
+        
+    View Parallelogram:
+        #id: para
+	Visualize the parallelogram created by vector A and B based on the math operation.
+        
+    Reverse Face:
+        #id: reverse_para
+	Reverse the normal of the triangle visualizer.
+        
+    === Formula ===
+
+    Formula:
+        #id: formula
+	Display the formula of different vector math operation.        
+
+        None:
+            
+        Magnitude:
+            
+        A + B:
+            
+        A - B:
+            
+        A * float:
+            
+    Color:
+        #id: color
+	Change the color of the formula text.
+        
+    Font Size:
+        #id: fontsize
+	Adjust the size of the formula text.
+        
+    Translate:
+        #id: t
+	Adjust the position of the formula text.
+        
+    Rotate:
+        #id: r
+	Rotate the formula text.
+        
+@related
+- [EDU Base Vector | /nodes/sop/edu--base_vector-1.2]
+- [EDU Create Matrix Attribute | /nodes/sop/edu--create_matrix_attribute-1.0]
+- [EDU Gnomon | /nodes/sop/edu--gnomon-1.0]
+- [EDU Matrix Visualizer | /nodes/sop/edu--matrix_visualizer-1.0]
+- [EDU Transform by Matrix | /nodes/sop/edu--transform_by_matrix-1.0]

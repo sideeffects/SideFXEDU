@@ -1,0 +1,412 @@
+# Dialog script for edu::what_is_vector::1.0 automatically generated
+
+{
+    name	edu::what_is_vector::1.0
+    script	what_is_vector
+    label	"EDU What is vector"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    group {
+        name    "folder0"
+        label   "What is Vector"
+
+        group {
+            name    "folder1"
+            label   "Vector A"
+
+            parm {
+                name    "va"
+                label   "vector A"
+                type    vector
+                size    3
+                default { "3" "3" "0" }
+                range   { -1 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "va_mul"
+                label   "Multiply"
+                type    float
+                default { "1" }
+                range   { 0 10 }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "va_color"
+                label   "Color"
+                type    color
+                size    3
+                default { "1" "0" "0" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+            }
+            parm {
+                name    "va_radscale"
+                label   "Radius Scale"
+                type    float
+                default { "1" }
+                range   { 0! 2 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+        parm {
+            name    "sepparm4"
+            label   "Spacer"
+            type    separator
+            default { "" }
+            parmtag { "sidefx::layout_height" "small" }
+            parmtag { "sidefx::look" "blank" }
+        }
+        group {
+            name    "folder2"
+            label   "Vector B"
+
+            parm {
+                name    "vb_toggle"
+                label   "Vector B"
+                type    toggle
+                default { "0" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "vb"
+                label   "Vector B"
+                type    vector
+                size    3
+                default { "-3" "3" "0" }
+                disablewhen "{ vb_toggle == 0 }"
+                range   { -1 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "vb_mul"
+                label   "Multiply"
+                type    float
+                default { "1" }
+                disablewhen "{ vb_toggle == 0 }"
+                range   { 0 10 }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "vb_color"
+                label   "Color"
+                type    color
+                size    3
+                default { "0" "1" "0" }
+                disablewhen "{ vb_toggle == 0 }"
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+            }
+            parm {
+                name    "vb_radscale"
+                label   "Radius Scale"
+                type    float
+                default { "1" }
+                disablewhen "{ vb_toggle == 0 }"
+                range   { 0! 2 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+        parm {
+            name    "sepparm7"
+            label   "Spacer"
+            type    separator
+            default { "" }
+            parmtag { "sidefx::layout_height" "small" }
+            parmtag { "sidefx::look" "blank" }
+        }
+        group {
+            name    "folder3"
+            label   "Vector Math"
+            tabbreak
+            disablewhen "{ vb_toggle == 0 }"
+
+            parm {
+                name    "op"
+                label   "Operation"
+                type    ordinal
+                default { "0" }
+                menu {
+                    "0" "None"
+                    "1" "A + B"
+                    "2" "A - B"
+                }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "vc_color"
+                label   "Color"
+                type    color
+                size    3
+                default { "0" "0" "1" }
+                disablewhen "{ op == 0 }"
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+            }
+            parm {
+                name    "vc_radscale"
+                label   "Radius Scale"
+                type    float
+                default { "1" }
+                range   { 0! 2 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+    }
+
+    group {
+        name    "folder0_1"
+        label   "Guides"
+
+        group {
+            name    "folder6"
+            label   "Vector A"
+
+            parm {
+                name    "va_cor"
+                label   "Coordinate"
+                type    toggle
+                default { "1" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "va_cor_offset"
+                label   "Offset"
+                type    float
+                default { "0" }
+                hidewhen "{ va_cor == 0 }"
+                range   { -1 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "va_cor_r"
+                label   "Rotate"
+                type    vector
+                size    3
+                default { "0" "0" "0" }
+                hidewhen "{ va_cor == 0 }"
+                range   { 0 360 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "va_triangle"
+                label   "View Triangle"
+                type    toggle
+                default { "0" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "reverse_va_tri"
+                label   "Reverse Face"
+                type    toggle
+                default { "0" }
+                hidewhen "{ va_triangle == 0 }"
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+        parm {
+            name    "sepparm"
+            label   "Spacer"
+            type    separator
+            default { "" }
+            parmtag { "sidefx::layout_height" "small" }
+            parmtag { "sidefx::look" "blank" }
+        }
+        group {
+            name    "folder7"
+            label   "Vector B"
+            disablewhen "{ vb_toggle == 0 }"
+
+            parm {
+                name    "vb_cor"
+                label   "Coordinate"
+                type    toggle
+                default { "1" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "vb_cor_offset"
+                label   "Offset"
+                type    float
+                default { "0" }
+                hidewhen "{ vb_cor == 0 }"
+                range   { -1 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "vb_cor_r"
+                label   "Rotate"
+                type    vector
+                size    3
+                default { "0" "0" "0" }
+                hidewhen "{ vb_cor == 0 }"
+                range   { 0 360 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "vb_triangle"
+                label   "View Triangle"
+                type    toggle
+                default { "0" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "reverse_vb_tri"
+                label   "Reverse Face"
+                type    toggle
+                default { "0" }
+                hidewhen "{ vb_triangle == 0 }"
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+        parm {
+            name    "sepparm5"
+            label   "Spacer"
+            type    separator
+            default { "" }
+            parmtag { "sidefx::layout_height" "small" }
+            parmtag { "sidefx::look" "blank" }
+        }
+        group {
+            name    "folder8"
+            label   "Vector Math "
+            disablewhen "{ op == 0 }"
+
+            parm {
+                name    "vc_cor"
+                label   "Coordinate"
+                type    toggle
+                default { "1" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "offset"
+                label   "Offset"
+                type    float
+                default { "0" }
+                hidewhen "{ vc_cor == 0 }"
+                range   { -1 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "vc_cor_r"
+                label   "Rotate"
+                type    vector
+                size    3
+                default { "0" "0" "0" }
+                hidewhen "{ vc_cor == 0 }"
+                range   { 0 360 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "para"
+                label   "View Parallelogram"
+                type    toggle
+                default { "0" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "reverse_para"
+                label   "Reverse Face"
+                type    toggle
+                default { "0" }
+                hidewhen "{ para == 0 }"
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+        parm {
+            name    "sepparm6"
+            label   "Spacer"
+            type    separator
+            default { "" }
+            parmtag { "sidefx::layout_height" "small" }
+            parmtag { "sidefx::look" "blank" }
+        }
+        group {
+            name    "folder4"
+            label   "Formula"
+
+            parm {
+                name    "formula"
+                label   "Formula"
+                type    ordinal
+                default { "0" }
+                menu {
+                    "0" "None"
+                    "1" "Magnitude"
+                    "2" "A + B"
+                    "3" "A - B"
+                    "4" "A * float"
+                }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "color"
+                label   "Color"
+                type    color
+                size    3
+                default { "1" "1" "1" }
+                disablewhen "{ formula == 0 }"
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+            }
+            parm {
+                name    "fontsize"
+                label   "Font Size"
+                type    float
+                default { "0.5" }
+                disablewhen "{ formula == 0 }"
+                range   { 0! 100 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "t"
+                label   "Translate"
+                type    vector
+                size    3
+                default { "0" "0" "0" }
+                disablewhen "{ formula == 0 }"
+                range   { -1 1 }
+                parmtag { "autoscope" "1110000000000000" }
+            }
+            parm {
+                name    "r"
+                label   "Rotate"
+                type    vector
+                size    3
+                default { "0" "0" "0" }
+                disablewhen "{ formula == 0 }"
+                range   { 0 360 }
+                parmtag { "autoscope" "1110000000000000" }
+            }
+        }
+
+    }
+
+}
