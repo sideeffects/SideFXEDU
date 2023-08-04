@@ -1,7 +1,3 @@
 // EDUCATION 
-ophide Sop edu::transform_by_matrix
-ophide Sop edu::portal_mis_bias_simulator
-ophide Sop edu::matrix_visualizer
-ophide Sop edu::gnomon
-ophide Sop edu::create_matrix_attribute
-ophide Sop edu::base_vector
+
+ophide Sop edu::verify_bsdf::1.0 // not ready yet
