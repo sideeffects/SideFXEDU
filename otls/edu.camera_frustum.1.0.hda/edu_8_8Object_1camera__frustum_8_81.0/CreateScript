@@ -14,4 +14,5 @@ opexprlanguage -s hscript $arg1
 opuserdata -n '___Version___' -v '' $arg1
 opuserdata -n '___toolcount___' -v '4' $arg1
 opuserdata -n '___toolid___' -v 'labs::object_camera_frustum::1.1' $arg1
+opuserdata -n 'sidefx::parm_filter_text_pattern' -v 'frustum_scale' $arg1
 opuserdata -n 'wirestyle' -v 'rounded' $arg1

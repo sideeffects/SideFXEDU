@@ -42,6 +42,7 @@
         groupsimple {
             name    "folder1"
             label   "Padding Options"
+            invisibletab
 
             parm {
                 name    "minpad"
@@ -73,6 +74,7 @@
                 name    "frustum_output"
                 label   "Output"
                 type    ordinal
+                invisible
                 default { "2" }
                 menu {
                     "0" "Frustum"
@@ -132,6 +134,7 @@
                 name    "padded_frustum_color"
                 label   "Padded Frustum Color"
                 type    color
+                invisible
                 size    3
                 default { "0" "1" "1" }
                 range   { 0 1 }
