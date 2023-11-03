@@ -1,10 +1,10 @@
 #type:     node
 #context:  sop
-#internal: edu::what_is_vector
-#icon:     SOP/edu::what_is_vector
+#internal: edu::what_is_a_vector
+#icon:     SOP/edu::what_is_a_vector
 #tags:     sidefxedu math utility visualizer
 
-= EDU What is vector =
+= EDU What is a Vector =
 
 """This node visualizes the basic math operations of vectors."""
 
@@ -14,7 +14,7 @@ WARNING:
 
 @parameters
 
-    == What is Vector ==
+    == What is a Vector ==
 
     === Vector A ===
 

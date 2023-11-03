@@ -23,7 +23,7 @@ Sop
 Content-Disposition: attachment; filename="hdaroot.init"
 Content-Type: text/plain
 
-type = edu::what_is_vector::1.0
+type = edu::what_is_a_vector::1.0
 matchesdef = 0
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -32,7 +32,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment "Education tool"
-position -6.83266 5.09618
+position 0.505882 1.88824
 connectornextid 0
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
@@ -48,7 +48,7 @@ stat
 {
   create -1
   modify -1
-  author kyle@xps1_SM
+  author sidefx@asterix
   access 0777
 }
 color UT_Color RGB 0.8 0.8 0.8 
@@ -81,7 +81,7 @@ Content-Type: text/plain
 	minimized := 0;
 	width := 11.983745128796897;
 	x_position := 11.662013414580938;
-	y_position := 0.35752358572448451;
+	y_position := 0.3575235857244845;
 }
 {
   create -1
@@ -100,11 +100,11 @@ Content-Type: text/plain
 	autofit := 0;
 	color := "UT_Color RGB 0.52 0.52 0.52 ";
 	comment := "";
-	height := 20.526842568885861;
+	height := 20.52684256888586;
 	minimized := 0;
 	width := 12.979269053476528;
 	x_position := 25.742674421859185;
-	y_position := 0.35752358572448451;
+	y_position := 0.3575235857244845;
 }
 {
   create -1
@@ -125,9 +125,9 @@ Content-Type: text/plain
 	comment := "";
 	height := 25.744916211984396;
 	minimized := 0;
-	width := 21.956178898028561;
-	x_position := 40.752092064084813;
-	y_position := 0.35752358572448451;
+	width := 21.95617889802856;
+	x_position := 40.75209206408481;
+	y_position := 0.3575235857244845;
 }
 {
   create -1
@@ -146,11 +146,11 @@ Content-Type: text/plain
 	autofit := 0;
 	color := "UT_Color RGB 0.52 0.52 0.52 ";
 	comment := "";
-	height := 6.9133090867091056;
+	height := 6.913309086709106;
 	minimized := 0;
-	width := 9.6494104531866647;
-	x_position := 53.058860508926713;
-	y_position := -7.9963861996700487;
+	width := 9.649410453186665;
+	x_position := 53.05886050892671;
+	y_position := -7.996386199670049;
 }
 {
   create -1
@@ -536,7 +536,7 @@ deleteallcolorattribs	[ 0	locks=0 ]	(	"off"	)
 enable	[ 0	locks=0 ]	(	"on"	)
 class	[ 0	locks=0 ]	(	2	)
 colortype	[ 0	locks=0 ]	(	0	)
-color	[ 0	locks=0 ]	(	0.33300000429153442	0.33300000429153442	0.33300000429153442	)
+color	[ 0	locks=0 ]	(	0.3330000042915344	0.3330000042915344	0.3330000042915344	)
 seed	[ 0	locks=0 ]	(	0	)
 rampattribute	[ 0	locks=0 ]	(	""	)
 ramprange	[ 0	locks=0 ]	(	0	1	)
@@ -1850,6 +1850,7 @@ prexform_r	[ 0	locks=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0 ]	(	*	)
 updatenmls	[ 0	locks=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0 ]	(	"on"	)
@@ -3181,7 +3182,7 @@ Content-Type: text/plain
 {
 version 0.8
 group	[ 0	locks=0 ]	(	""	)
-radius	[ 0	locks=0 ]	(	0.012500000000000001	)
+radius	[ 0	locks=0 ]	(	0.0125	)
 usescaleattrib	[ 0	locks=0 ]	(	"constant"	)
 scaleattrib	[ 0	locks=0 ]	(	pscale	)
 jointcorrect	[ 0	locks=0 ]	(	"on"	)
@@ -6537,6 +6538,7 @@ targetptattrib	[ 0	locks=0 ]	(	snap_to	)
 targetclass	[ 0	locks=0 ]	(	"point"	)
 usepositionsnapmethod	[ 0	locks=0 ]	(	"on"	)
 positionsnapmethod	[ 0	locks=0 ]	(	"average"	)
+positionsnapweightname	[ 0	locks=0 ]	(	weight	)
 useradiusattrib	[ 0	locks=0 ]	(	"off"	)
 radiusattrib	[ 0	locks=0 ]	(	pscale	)
 usematchattrib	[ 0	locks=0 ]	(	"off"	)
@@ -6544,7 +6546,7 @@ matchattrib	[ 0	locks=0 ]	(	name	)
 matchtype	[ 0	locks=0 ]	(	"match"	)
 matchtol	[ 0	locks=0 ]	(	0	)
 gridtype	[ 0	locks=0 ]	(	"spacing"	)
-gridspacing	[ 0	locks=0 ]	(	0.10000000000000001	0.10000000000000001	0.10000000000000001	)
+gridspacing	[ 0	locks=0 ]	(	0.1	0.1	0.1	)
 gridlines	[ 0	locks=0 ]	(	10	10	10	)
 gridpow2	[ 0	locks=0 ]	(	3	3	3	)
 gridoffset	[ 0	locks=0 ]	(	0	0	0	)
@@ -7465,8 +7467,8 @@ spacing	[ 0	locks=0 ]	(	"arclengthuniform"	)
 externalspinesection	[ 0	locks=0 ]	(	0	)
 reversespinedirection	[ 0	locks=0 ]	(	"off"	)
 axialrotation	[ 0	locks=0 ]	(	0	)
-frontblend	[ 0	locks=0 ]	(	0.10000000000000001	)
-backblend	[ 0	locks=0 ]	(	0.10000000000000001	)
+frontblend	[ 0	locks=0 ]	(	0.1	)
+backblend	[ 0	locks=0 ]	(	0.1	)
 thicknesssection	[ 0	locks=0 ]	(	0	)
 thicknessscale	[ 0	locks=0 ]	(	1	)
 usethicknessattrib	[ 0	locks=0 ]	(	"on"	)
@@ -7596,6 +7598,7 @@ nonplanar	[ 0	locks=0 ]	(	"off"	)
 nonplanartol	[ 0	locks=0 ]	(	0.001	)
 dir	[ 0	locks=0 ]	(	0	0	1	)
 angle	[ 0	locks=0 ]	(	180	)
+oppositenormals	[ 0	locks=0 ]	(	"off"	)
 switcher5	[ 0	locks=0 ]	(	0	)
 groupedges	[ 0	locks=0 ]	(	"off"	)
 dominedgeangle	[ 0	locks=0 ]	(	"off"	)
@@ -7766,8 +7769,8 @@ spacing	[ 0	locks=0 ]	(	"arclengthuniform"	)
 externalspinesection	[ 0	locks=0 ]	(	0	)
 reversespinedirection	[ 0	locks=0 ]	(	"off"	)
 axialrotation	[ 0	locks=0 ]	(	0	)
-frontblend	[ 0	locks=0 ]	(	0.10000000000000001	)
-backblend	[ 0	locks=0 ]	(	0.10000000000000001	)
+frontblend	[ 0	locks=0 ]	(	0.1	)
+backblend	[ 0	locks=0 ]	(	0.1	)
 thicknesssection	[ 0	locks=0 ]	(	0	)
 thicknessscale	[ 0	locks=0 ]	(	1	)
 usethicknessattrib	[ 0	locks=0 ]	(	"on"	)
@@ -8197,6 +8200,7 @@ targetptattrib	[ 0	locks=0 ]	(	snap_to	)
 targetclass	[ 0	locks=0 ]	(	"point"	)
 usepositionsnapmethod	[ 0	locks=0 ]	(	"on"	)
 positionsnapmethod	[ 0	locks=0 ]	(	"average"	)
+positionsnapweightname	[ 0	locks=0 ]	(	weight	)
 useradiusattrib	[ 0	locks=0 ]	(	"off"	)
 radiusattrib	[ 0	locks=0 ]	(	pscale	)
 usematchattrib	[ 0	locks=0 ]	(	"off"	)
@@ -8204,7 +8208,7 @@ matchattrib	[ 0	locks=0 ]	(	name	)
 matchtype	[ 0	locks=0 ]	(	"match"	)
 matchtol	[ 0	locks=0 ]	(	0	)
 gridtype	[ 0	locks=0 ]	(	"spacing"	)
-gridspacing	[ 0	locks=0 ]	(	0.10000000000000001	0.10000000000000001	0.10000000000000001	)
+gridspacing	[ 0	locks=0 ]	(	0.1	0.1	0.1	)
 gridlines	[ 0	locks=0 ]	(	10	10	10	)
 gridpow2	[ 0	locks=0 ]	(	3	3	3	)
 gridoffset	[ 0	locks=0 ]	(	0	0	0	)
@@ -9125,8 +9129,8 @@ spacing	[ 0	locks=0 ]	(	"arclengthuniform"	)
 externalspinesection	[ 0	locks=0 ]	(	0	)
 reversespinedirection	[ 0	locks=0 ]	(	"off"	)
 axialrotation	[ 0	locks=0 ]	(	0	)
-frontblend	[ 0	locks=0 ]	(	0.10000000000000001	)
-backblend	[ 0	locks=0 ]	(	0.10000000000000001	)
+frontblend	[ 0	locks=0 ]	(	0.1	)
+backblend	[ 0	locks=0 ]	(	0.1	)
 thicknesssection	[ 0	locks=0 ]	(	0	)
 thicknessscale	[ 0	locks=0 ]	(	1	)
 usethicknessattrib	[ 0	locks=0 ]	(	"on"	)
@@ -9256,6 +9260,7 @@ nonplanar	[ 0	locks=0 ]	(	"off"	)
 nonplanartol	[ 0	locks=0 ]	(	0.001	)
 dir	[ 0	locks=0 ]	(	0	0	1	)
 angle	[ 0	locks=0 ]	(	180	)
+oppositenormals	[ 0	locks=0 ]	(	"off"	)
 switcher5	[ 0	locks=0 ]	(	0	)
 groupedges	[ 0	locks=0 ]	(	"off"	)
 dominedgeangle	[ 0	locks=0 ]	(	"off"	)
@@ -9426,8 +9431,8 @@ spacing	[ 0	locks=0 ]	(	"arclengthuniform"	)
 externalspinesection	[ 0	locks=0 ]	(	0	)
 reversespinedirection	[ 0	locks=0 ]	(	"off"	)
 axialrotation	[ 0	locks=0 ]	(	0	)
-frontblend	[ 0	locks=0 ]	(	0.10000000000000001	)
-backblend	[ 0	locks=0 ]	(	0.10000000000000001	)
+frontblend	[ 0	locks=0 ]	(	0.1	)
+backblend	[ 0	locks=0 ]	(	0.1	)
 thicknesssection	[ 0	locks=0 ]	(	0	)
 thicknessscale	[ 0	locks=0 ]	(	1	)
 usethicknessattrib	[ 0	locks=0 ]	(	"on"	)
@@ -9857,6 +9862,7 @@ targetptattrib	[ 0	locks=0 ]	(	snap_to	)
 targetclass	[ 0	locks=0 ]	(	"point"	)
 usepositionsnapmethod	[ 0	locks=0 ]	(	"on"	)
 positionsnapmethod	[ 0	locks=0 ]	(	"average"	)
+positionsnapweightname	[ 0	locks=0 ]	(	weight	)
 useradiusattrib	[ 0	locks=0 ]	(	"off"	)
 radiusattrib	[ 0	locks=0 ]	(	pscale	)
 usematchattrib	[ 0	locks=0 ]	(	"off"	)
@@ -9864,7 +9870,7 @@ matchattrib	[ 0	locks=0 ]	(	name	)
 matchtype	[ 0	locks=0 ]	(	"match"	)
 matchtol	[ 0	locks=0 ]	(	0	)
 gridtype	[ 0	locks=0 ]	(	"spacing"	)
-gridspacing	[ 0	locks=0 ]	(	0.10000000000000001	0.10000000000000001	0.10000000000000001	)
+gridspacing	[ 0	locks=0 ]	(	0.1	0.1	0.1	)
 gridlines	[ 0	locks=0 ]	(	10	10	10	)
 gridpow2	[ 0	locks=0 ]	(	3	3	3	)
 gridoffset	[ 0	locks=0 ]	(	0	0	0	)
@@ -10785,8 +10791,8 @@ spacing	[ 0	locks=0 ]	(	"arclengthuniform"	)
 externalspinesection	[ 0	locks=0 ]	(	0	)
 reversespinedirection	[ 0	locks=0 ]	(	"off"	)
 axialrotation	[ 0	locks=0 ]	(	0	)
-frontblend	[ 0	locks=0 ]	(	0.10000000000000001	)
-backblend	[ 0	locks=0 ]	(	0.10000000000000001	)
+frontblend	[ 0	locks=0 ]	(	0.1	)
+backblend	[ 0	locks=0 ]	(	0.1	)
 thicknesssection	[ 0	locks=0 ]	(	0	)
 thicknessscale	[ 0	locks=0 ]	(	1	)
 usethicknessattrib	[ 0	locks=0 ]	(	"on"	)
@@ -10916,6 +10922,7 @@ nonplanar	[ 0	locks=0 ]	(	"off"	)
 nonplanartol	[ 0	locks=0 ]	(	0.001	)
 dir	[ 0	locks=0 ]	(	0	0	1	)
 angle	[ 0	locks=0 ]	(	180	)
+oppositenormals	[ 0	locks=0 ]	(	"off"	)
 switcher5	[ 0	locks=0 ]	(	0	)
 groupedges	[ 0	locks=0 ]	(	"off"	)
 dominedgeangle	[ 0	locks=0 ]	(	"off"	)
@@ -11086,8 +11093,8 @@ spacing	[ 0	locks=0 ]	(	"arclengthuniform"	)
 externalspinesection	[ 0	locks=0 ]	(	0	)
 reversespinedirection	[ 0	locks=0 ]	(	"off"	)
 axialrotation	[ 0	locks=0 ]	(	0	)
-frontblend	[ 0	locks=0 ]	(	0.10000000000000001	)
-backblend	[ 0	locks=0 ]	(	0.10000000000000001	)
+frontblend	[ 0	locks=0 ]	(	0.1	)
+backblend	[ 0	locks=0 ]	(	0.1	)
 thicknesssection	[ 0	locks=0 ]	(	0	)
 thicknessscale	[ 0	locks=0 ]	(	1	)
 usethicknessattrib	[ 0	locks=0 ]	(	"on"	)

@@ -63,7 +63,7 @@ WARNING:
         A uniform scale applied to the label text object.
         
 @related
-- [EDU What is vector | /nodes/sop/edu--what_is_vector-1.0]
+- [EDU What is a Vector | /nodes/sop/edu--what_is_vector-1.0]
 - [EDU Create Matrix Attribute | /nodes/sop/edu--create_matrix_attribute-1.0 ]
 - [EDU Gnomon | /nodes/sop/edu--gnomon-1.0 ]
 - [EDU Matrix Visualizer | /nodes/sop/edu--matrix_visualizer-1.0 ]
