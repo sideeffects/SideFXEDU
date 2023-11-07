@@ -1,0 +1,3 @@
+from viewerstate.utils import findSceneViewer
+scene_viewer = findSceneViewer()
+scene_viewer.setCurrentState("edu::what_is_a_sinusoidal::1.0")

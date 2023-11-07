@@ -1,0 +1,354 @@
+# Dialog script for edu::what_is_a_sinusoidal::1.0 automatically generated
+
+{
+    name	edu::what_is_a_sinusoidal::1.0
+    script	edu::edu_wave_visualizer::1.0
+    label	"EDU What is a Sinusoidal"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "waveType"
+        label   "Wave Type"
+        type    ordinal
+        default { "0" }
+        menu {
+            "0" "Sine"
+            "1" "Cosine"
+        }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "units"
+        label   "Units"
+        type    ordinal
+        default { "1" }
+        menu {
+            "0" "Radians"
+            "1" "Degrees"
+        }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "visLenth"
+        label   "Visualization Length"
+        type    float
+        default { "1" }
+        range   { 0.001! 10 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+        parmtag { "units" "" }
+    }
+    parm {
+        name    "sepparm6"
+        label   "Spacer"
+        type    separator
+        default { "" }
+        parmtag { "sidefx::layout_height" "small" }
+        parmtag { "sidefx::look" "blank" }
+    }
+    groupcollapsible {
+        name    "waveParms"
+        label   "Wave Controls"
+        parmtag { "group_default" "1" }
+
+        parm {
+            name    "sepparm9"
+            label   "Spacer"
+            type    separator
+            default { "" }
+            parmtag { "sidefx::layout_height" "small" }
+            parmtag { "sidefx::look" "blank" }
+        }
+        parm {
+            name    "phase"
+            label   "Phase"
+            type    float
+            default { "0" }
+            range   { -2 2 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "waveAmp"
+            label   "Amplitude"
+            type    float
+            default { "1" }
+            range   { -1 3 }
+            export  all
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "export_disable" "1" }
+        }
+        parm {
+            name    "waveFreq"
+            label   "Frequency"
+            type    float
+            default { "1" }
+            range   { 0.0001! 5 }
+            export  all
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "yOff"
+            label   "Y Offset"
+            type    float
+            default { "0" }
+            range   { -2.5 2.5 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "sepparm"
+            label   "Separator"
+            type    separator
+            default { "" }
+        }
+        parm {
+            name    "waveRad"
+            label   "Wave Thickness"
+            type    float
+            default { "0.0075" }
+            range   { 0.001 0.04 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "units" "m1" }
+        }
+        parm {
+            name    "waveColor"
+            label   "Wave Color"
+            type    color
+            size    3
+            default { "0" "0" "0" }
+            range   { 0 1 }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+        parm {
+            name    "sepparm2"
+            label   "Separator"
+            type    separator
+            default { "" }
+        }
+        groupcollapsible {
+            name    "animFolder"
+            label   "Animation"
+            parmtag { "group_default" "0" }
+            parmtag { "sidefx::header_parm" "animSpeed" }
+            parmtag { "sidefx::header_toggle" "animToggle" }
+
+            parm {
+                name    "animToggle"
+                label   "Animate"
+                type    toggle
+                default { "off" }
+                export  all
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "animSpeed"
+                label   "Animation Speed"
+                type    float
+                default { "1" }
+                disablewhen "{ animToggle == 0 }"
+                range   { 0 9 }
+                export  all
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+    }
+
+    parm {
+        name    "sepparm3"
+        label   "Spacer"
+        type    separator
+        default { "" }
+        parmtag { "sidefx::layout_height" "small" }
+        parmtag { "sidefx::look" "blank" }
+    }
+    groupcollapsible {
+        name    "ptVisFolder"
+        label   "Point Visualization"
+        parmtag { "group_default" "0" }
+        parmtag { "sidefx::header_toggle" "visOn" }
+
+        parm {
+            name    "visOn"
+            label   "On"
+            type    toggle
+            default { "1" }
+            range   { 0! 1! }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "sepparm8"
+            label   "Spacer"
+            type    separator
+            default { "" }
+            parmtag { "sidefx::layout_height" "small" }
+            parmtag { "sidefx::look" "blank" }
+        }
+        parm {
+            name    "visStyle"
+            label   "Visualization Style"
+            type    ordinal
+            default { "0" }
+            disablewhen "{ visOn == 0 }"
+            menu {
+                "0" "Even Spacing"
+                "1" "Single Point"
+            }
+            range   { 0! 10 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "valStyle"
+            label   "Value Style"
+            type    ordinal
+            default { "1" }
+            hidewhen "{ visStyle == 0 }"
+            menu {
+                "0" "Explicit Value"
+                "1" "Normalized Value"
+            }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "normPtPos"
+            label   "Normalized Position"
+            type    float
+            default { "0.05" }
+            disablewhen "{ visStyle == 0 } { visOn == 0 }"
+            hidewhen "{ valStyle == 0 } { visStyle == 0 }"
+            range   { 0! 1! }
+            parmtag { "script_callback" "" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "radVal"
+            label   "Value (Rad)"
+            type    float
+            default { "0.628" }
+            disablewhen "{ visStyle == 0 } { visOn == 0 }"
+            hidewhen "{ visStyle == 0 } { units == 1 } { valStyle == 1 }"
+            range   { 0 12.567 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback" "hou.pwd().hm().rad_convert(kwargs, hou.pwd())" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "degVal"
+            label   "Value (Deg)"
+            type    float
+            default { "35.9817" }
+            disablewhen "{ visStyle == 0 } { visOn == 0 }"
+            hidewhen "{ visStyle == 0 } { units == 0 } { valStyle == 1 }"
+            range   { 0 720 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback" "hou.pwd().hm().deg_convert(kwargs, hou.pwd())" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "segPerWave"
+            label   "Segments/Wavelength"
+            type    integer
+            default { "5" }
+            disablewhen "{ visStyle == 1 } { visOn == 0 }"
+            hidewhen "{ visStyle == 1 }"
+            range   { 1! 25 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "sepparm5"
+            label   "Separator"
+            type    separator
+            default { "" }
+        }
+        parm {
+            name    "sphereOn"
+            label   "Spheres"
+            type    toggle
+            default { "1" }
+            disablewhen "{ visOn == 0 }"
+            range   { 0! 1! }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "sphereScale"
+            label   "Sphere Scale"
+            type    float
+            default { "0.05" }
+            disablewhen "{ visOn == 0 } { sphereOn == 0 }"
+            range   { 0.001 0.25 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "spherescolor"
+            label   "Sphere Color"
+            type    color
+            size    3
+            default { "1" "0.283333" "0" }
+            disablewhen "{ visOn == 0 } { sphereOn == 0 }"
+            range   { 0 1 }
+            parmtag { "autoscope" "0000000000000000" }
+        }
+    }
+
+    parm {
+        name    "sepparm4"
+        label   "Spacer"
+        type    separator
+        default { "" }
+        parmtag { "sidefx::layout_height" "small" }
+        parmtag { "sidefx::look" "blank" }
+    }
+    groupcollapsible {
+        name    "digitFolder"
+        label   "Digit Settings"
+        parmtag { "group_default" "1" }
+        parmtag { "sidefx::header_toggle" "digitOn" }
+
+        parm {
+            name    "digitOn"
+            label   "Digit On"
+            type    toggle
+            default { "1" }
+            range   { 0! 1! }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "decPlaces"
+            label   "Decimal Places"
+            type    integer
+            default { "2" }
+            range   { 1! 4! }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "Font_Size"
+            label   "Font Size"
+            type    float
+            default { "0.075" }
+            range   { 0.001 0.2 }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+}

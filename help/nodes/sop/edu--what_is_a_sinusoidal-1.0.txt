@@ -1,0 +1,183 @@
+#type:     node
+#context:  sop
+#internal: edu::what_is_a_sinusoidal::1.0
+#icon:     SOP/edu::what_is_a_sinusoidal::1.0
+#tags:     sidefxedu, math
+
+= EDU What is a Sinusoidal =
+
+"""This node helps to better understand the basic properties of a sinusoidal wave."""
+
+
+WARNING:
+    This node is made for education purposes only. You can use it for other things, but at your own risk.
+
+
+@parameters
+
+    Wave Type: 
+        #id: waveType
+	
+	Sets the type of sinusoidal that the node will visualize.        
+
+        Sine:
+		Outputs a sine wave.
+            
+        Cosine:
+		Outputs a cosine wave.
+            
+    Units:
+        #id: units
+	
+	Sets the units that the x-axis values will be displayed as.
+        
+        Radians:
+		Sets the visualized values to radians.
+            
+        Degrees:
+		Sets the visualized values to degrees.
+            
+    Visualization Length:
+        #id: visLenth
+	
+	The length of the wave along the x-axis.
+        
+    == Wave Controls ==
+
+    Phase:
+        #id: phase
+	
+	Offsets the phase of the sinusoidal along the x-axis.
+        
+    Amplitude:
+        #id: waveAmp
+	
+	Changes the scale of the sinusoidal in the y-axis.
+        
+    Frequency:
+        #id: waveFreq
+	
+	Sets the number of complete sinusoidal waves that will occur withing the 0-1 range on the x-axis.
+        
+    Y Offset:
+        #id: yOff
+	
+	Offsets the position of the sinusoidal along the y-axis.
+        
+    Wave Thickness:
+        #id: waveRad
+	
+	Sets the thickness of the geometry that represents the base sinusoidal wave.
+        
+    Wave Color:
+        #id: waveColor
+	
+	Sets the color of the geometry that represents the base sinusoidal wave.
+        
+    === Animation ===
+
+    Animate:
+        #id: animToggle
+	
+	Toggles on/off the animation of the value range that the sinusoidal is being calculated over.
+        
+    Animation Speed:
+        #id: animSpeed
+	
+	A multiplier for the animation speed of the sinusoidal.
+	
+	NOTE:
+    		By default, the value used for the start of the visualized wave range (in degrees) will match up to the current frame number. As a result, one complete wavelength will be animated through from frame 0-360. Setting the animation speed to 2 will animate the same values from 0-180.
+	
+        
+    == Point Visualization ==
+
+    On:
+        #id: visOn
+	
+	Turns on/off the visualization of the x and y values of the sinusoidal.
+        
+    Visualization Style:
+        #id: visStyle
+	
+	Controls how many points will be created that will display the x and y values for the sinusoidal.
+        
+        Even Spacing:
+		Creates this number of points that are evenly spaced along each wavelength of the sinusoidal.
+            
+        Single Point:
+		Creates one point along the sinusoidal that will display values.
+            
+    Value Style:
+        #id: valStyle
+	
+	When in the "Single Point" Visualization Style, this will control where the point is created along the sinusoidal.
+        
+        Explicit Value:
+		This mode will place the single point at the exact value specified.
+	
+		NOTE:
+    			When the sinusoidal is animated there is a chance that the value specified will not be on the current visualized range of the wave. In this case the single point may disappear until the animation brings it on screen.
+            
+        Normalized Value:
+		This mode will place a point at a set value along the normalized x-axis position of the sinusoidal.
+
+    Normalized Position:
+        #id: normPtPos
+
+	The normalized position along the x-axis at which to visualize the resulting values.
+        
+    Value (Rad):
+        #id: radVal
+
+	The position (in radians) at which to visualize the sinusoidal function's value.
+        
+    Value (Deg):
+        #id: degVal
+
+	The position (in degrees) at which to visualize the sinusoidal function's value.
+        
+    Segments/Wavelength:
+        #id: segPerWave
+	
+	The number of segments to visualize for each wavelength, when using the "Even Spacing" Visualization Style.
+        
+    Spheres:
+        #id: sphereOn
+
+	A toggle to switch on/off the spheres at each visualized value along the sinusoidal.
+        
+    Sphere Scale:
+        #id: sphereScale
+
+	The scale of the visualized spheres.
+        
+    Sphere Color:
+        #id: spherescolor
+
+	The color of the visualized spheres.
+        
+    == Digit Settings ==
+
+    Digit On:
+        #id: digitOn
+
+	A toggle to turn on/off the visualized values for each point.
+
+	NOTE:
+		The visualization of digits is controlled by the Python View State of this HDA. By default, pressing ((Enter)) over the viewport will display the values. This toggle exists so that you can stop the digits from rendering, if desired. This toggle will not force the view state to activate.
+        
+    Decimal Places:
+        #id: decPlaces
+
+	The number of decimal places to render for the visualized values.
+        
+    Font Size:
+        #id: Font_Size
+
+	Sets the size of the font used to render the visualized values.
+    
+    
+@related
+- [What is a Vector | /nodes/sop/edu--what_is_vector-1.0]
+
