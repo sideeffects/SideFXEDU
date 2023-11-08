@@ -39,6 +39,27 @@ WARNING:
         #id: invert
         Inverts the tranformation matrix.
 
+
+NOTE:
+    Note that Houdini’s matrices are stored in *row-major order*, so the matrix’s contents are grouped by row.
+
+    To avoid any confusion within the software, we also use row-major based order in the EDU Tools. 
+    The labels around the displayed matrix are here as a reminder:
+    - Each line represents a vector: vec1, vec2, vec3
+    - Each column represents the X, Y, Z coordinates for each vector
+
+    :fig: [Image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Row_and_column_major_order.svg/800px-Row_and_column_major_order.svg.png]
+        #display: narrow left
+        If we refer to this image:  
+        - `vec1 = (a11, a12, a13)`
+        - `vec2 = (a21, a22, a23)`
+        - `vec3 = (a31, a32, a33)`
+
+    A consequence of the row-major order is that the *order of multiplication is left to right*. So, if you want to transform a vector with a matrix, you multiply the vector by the matrix, in other words: the vector is the left element of the multiplication operand, and the matrix the right element.
+    Be careful, as you may be used to column-major matrices where the order of multiplication is the opposite.
+
+    For more information, visit the [Wikipedia| https://en.wikipedia.org/wiki/Row-_and_column-major_order] page.
+
 @related
 - [EDU Base Vector | /nodes/sop/edu--base_vector-1.0 ]
 - [EDU Gnomon | /nodes/sop/edu--gnomon-1.0 ]
