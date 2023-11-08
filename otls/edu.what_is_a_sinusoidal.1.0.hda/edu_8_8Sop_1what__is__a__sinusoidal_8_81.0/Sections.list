@@ -1,0 +1,17 @@
+""
+DialogScript	DialogScript
+CreateScript	CreateScript
+InternalFileOptions	InternalFileOptions
+Contents.gz	Contents.gz
+TypePropertiesOptions	TypePropertiesOptions
+Tools.shelf	Tools.shelf
+Help	Help
+DefaultState	DefaultState
+ViewerStateModule	ViewerStateModule
+ViewerStateInstall	ViewerStateInstall
+ViewerStateUninstall	ViewerStateUninstall
+IconSVG	IconSVG
+ViewerStateName.orig	ViewerStateName.orig
+OnCreated	OnCreated
+PythonModule	PythonModule
+ExtraFileOptions	ExtraFileOptions

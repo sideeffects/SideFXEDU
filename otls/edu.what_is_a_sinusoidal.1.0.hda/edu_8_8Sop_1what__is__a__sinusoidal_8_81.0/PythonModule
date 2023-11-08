@@ -1,0 +1,55 @@
+import hou
+import math
+
+def deg_convert (kwargs, curNode):
+    curVal = float(kwargs['script_value'])
+    curParm = kwargs['parm_name']
+    
+    if(curParm=='degVal'):
+        degConv = hou.hmath.degToRad(curVal)
+        curNode.parm('radVal').set(degConv)
+        
+    if(curParm=='circDegVal'):
+        degConv = hou.hmath.degToRad(curVal)
+        curNode.parm('circRadVal').set(degConv)
+
+
+def rad_convert (kwargs, curNode):
+    curVal = float(kwargs['script_value'])
+    curParm = kwargs['parm_name']
+
+    if(curParm=='radVal'):
+        radConv = hou.hmath.radToDeg(curVal)
+        curNode.parm('degVal').set(radConv)
+        
+    if(curParm=='circRadVal'):
+        radConv = hou.hmath.radToDeg(curVal)
+        curNode.parm('circDegVal').set(radConv)
+    
+
+def matchVal (kwargs, curNode):
+    curVal = float(kwargs['script_value'])
+    curParm = kwargs['parm_name']
+    circleMatch = hou.evalParm('matchCut')
+    
+    if(circleMatch==1):
+        if(curParm=='normPtPos'):
+            curNode.parm('normCircPos').set(curVal)
+            
+        if(curParm=='radVal'):
+            curNode.parm('circRadVal').set(curVal)
+            
+        if(curParm=='degVal'):
+            curNode.parm('circDegVal').set(curVal)
+
+def matchAll (kwargs, curNode):
+    curVal = kwargs['script_value']
+    
+    if(curVal=='on'):
+        normMatch = hou.evalParm('normPtPos')
+        radMatch = hou.evalParm('radVal')
+        degMatch = hou.evalParm('degVal')
+        
+        curNode.parm('normCircPos').set(normMatch)
+        curNode.parm('circRadVal').set(radMatch)
+        curNode.parm('circDegVal').set(degMatch)

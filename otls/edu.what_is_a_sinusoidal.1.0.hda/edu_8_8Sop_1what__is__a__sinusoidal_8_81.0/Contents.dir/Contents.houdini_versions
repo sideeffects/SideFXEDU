@@ -1,0 +1,32 @@
+{
+	"values":["20.0.506.8","506"
+	],
+	"indexes":{
+		"hdaroot/label_switch.userdata":0,
+		"hdaroot/switchif2.userdata":0,
+		"hdaroot/min_max_average1.userdata":1,
+		"hdaroot/LQ_WAVE.userdata":0,
+		"hdaroot/normal1.userdata":0,
+		"hdaroot/CONTROLS.userdata":0,
+		"hdaroot/output0.userdata":0,
+		"hdaroot/EMPTY1.userdata":0,
+		"hdaroot/segment_vis_points.userdata":0,
+		"hdaroot/create_cutVals.userdata":0,
+		"hdaroot/pt_vis_switch.userdata":0,
+		"hdaroot/IN_SELECTED_PTS.userdata":0,
+		"hdaroot/extractallpoints1.userdata":0,
+		"hdaroot/sphere_geo_switch.userdata":0,
+		"hdaroot/EMPTY2.userdata":0,
+		"hdaroot/add_sphere_to_vis_pts.userdata":0,
+		"hdaroot/pt_vis_type_switch.userdata":0,
+		"hdaroot/sweep1.userdata":0,
+		"hdaroot/merge1.userdata":0,
+		"hdaroot/hq_resample.userdata":0,
+		"hdaroot/resample1.userdata":0,
+		"hdaroot/OUT_GEO.userdata":0,
+		"hdaroot/PT_LABELS.userdata":0,
+		"hdaroot/line1.userdata":0,
+		"hdaroot/sphere1.userdata":0,
+		"hdaroot/make_string_blank.userdata":0
+	}
+}

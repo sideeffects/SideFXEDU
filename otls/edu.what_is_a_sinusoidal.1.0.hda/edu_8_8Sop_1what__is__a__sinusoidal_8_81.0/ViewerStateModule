@@ -1,0 +1,114 @@
+"""
+State:          EDU - What is a Sinusoidal?
+State type:     edu::what_is_a_sinusoidal::1.0
+Description:    EDU - What is a Sinusoidal?
+Author:         peter arcara
+Date Created:   August 04, 2023 - 13:09:52
+"""
+
+
+import hou
+import viewerstate.utils as su
+
+class State(object):
+    def __init__(self, state_name, scene_viewer):
+        self.state_name = state_name
+        self.scene_viewer = scene_viewer
+
+        self.labels = hou.GeometryDrawable(self.scene_viewer, hou.drawableGeometryType.Face, "Labels")
+
+        self.font = hou.sopNodeTypeCategory().nodeVerb("font")
+
+    def show(self, visible):
+        """ Display or hide drawables.
+        """
+        self.labels.show(visible)
+
+    def onEnter(self,kwargs):
+        """ Called on node bound states when it starts
+        """
+        self.node = kwargs["node"]
+
+
+    def onExit(self,kwargs):
+        """ Called when the state terminates
+        """
+        state_parms = kwargs["state_parms"]
+
+
+    def onDraw(self, kwargs):
+        """ Called for rendering a state e.g. required for 
+        hou.AdvancedDrawable objects
+        """
+        handle = kwargs["draw_handle"]
+        
+        self.curPts = self.node.node("PT_LABELS").geometry()
+        self.ptLabels = self.curPts.pointStringAttribValues("pointLabel")
+        self.fontSizes = self.curPts.pointFloatAttribValues("fontSize")
+
+        geo = hou.Geometry()
+        buffer = hou.Geometry()
+        
+        offset = hou.Vector3(0.05,0,0.1)
+
+        for i in range(len(self.ptLabels)):
+
+            self.curPt = self.curPts.point(i)
+
+            self.font.setParms({
+                "t": self.curPt.position() + offset,
+                "text": self.ptLabels[i],
+                "fontsize": self.fontSizes[i],
+                "halign": 0
+            })
+            
+            self.font.execute(buffer, [])
+            geo.merge(buffer)
+
+        self.labels.setGeometry(geo)
+
+        self.labels.show(True)
+
+        self.labels.draw(handle)
+
+        #print(self.pt0FinalPos)
+
+
+    def onDrawInterrupt(self, kwargs):
+        """ Called for rendering an interrupted state e.g. required for 
+        hou.AdvancedDrawable objects
+        """
+        draw_handle = kwargs["draw_handle"]
+
+        """ Called when a bound selector has been terminated
+        """
+        state_parms = kwargs["state_parms"]
+
+
+    def onGenerate(self, kwargs):
+        """ Called when a nodeless state starts
+        """
+        state_parms = kwargs["state_parms"]
+        """ Called when a drawable component is located. 
+        """
+        state_parms = kwargs["state_parms"]
+
+
+def createViewerStateTemplate():
+    """ Mandatory entry point to create and return the viewer state 
+        template to register. """
+
+    state_typename = kwargs["type"].definition().sections()["DefaultState"].contents()
+    state_label = "EDU - What is a Sinusoidal?"
+    state_cat = hou.sopNodeTypeCategory()
+
+    template = hou.ViewerStateTemplate(state_typename, state_label, state_cat)
+    template.bindFactory(State)
+    template.bindIcon(kwargs["type"].icon())
+
+
+
+
+
+
+    return template
