@@ -1,0 +1,15 @@
+Operator:     edu::oscilloscope::1.0
+Label:        EDU Oscilloscope
+Path:         oplib:/edu::Sop/oscilloscope::1.0?edu::Sop/oscilloscope::1.0
+Icon:         opdef:/edu::Sop/oscilloscope::1.0?IconSVG
+Table:        Sop
+License:      
+Extra:        inputcolors='0 ' outputcolors='0 ' visibleoutputs=0 
+User:         
+Inputs:       0 to 0
+Outputs:      0
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Tue Dec  5 18:30:05 2023
+

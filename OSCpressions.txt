@@ -1,0 +1,11 @@
+# Lines starting with # are comments and ignored
+#
+# Each entry starts with no indentation and gives the key used
+# by the menu callback.  By convention, this is nodename/parmname.
+# Multiple keys can be given for the same entry.
+#
+# The next line gives the name of the expression.  Its indentation
+# level is then used for the remainder of the text.  All the
+# code until the next parameter are appended together to make
+# the snippet.  All preceeding indentation is removed.
+# Note that tabs == 8 is assumed.
