@@ -1,0 +1,35 @@
+#type:     node
+#context:  sop
+#internal: edu::oscilloscope::1.0
+#icon:     SOP/edu::oscilloscope::1.0
+#tags:     sidefxedu math
+
+= EDU Oscilloscope =
+
+"""This node helps visualizing a math equation in the viewport."""
+
+WARNING:
+    This node is made for education purposes only. 
+    You can use it for other things, but at your own risks.
+
+
+@parameters
+
+    Type:
+        #id: type
+        Choose if you want to visualize your equation on a line or a grid.
+
+    Equation:
+        #id: equation
+        The math equation you want to visualize in the viewport.  
+        
+        For example: `y = sin(x) + 2*x`
+        
+        NOTE:
+            You can use the drop down menu on the far right of the equation field to choose from some templates.
+
+    Snippet:
+        #id: snippet
+        This is the VEX code generated from the equation field.
+        VEX is the language Houdini uses to modify the line or grid in the viewport.
+        If you want to learn more about VEX, please visit [this page|https://www.sidefx.com/docs/houdini/vex/index.html].

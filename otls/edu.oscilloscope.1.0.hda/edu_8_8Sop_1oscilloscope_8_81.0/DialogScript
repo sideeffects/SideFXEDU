@@ -1,0 +1,94 @@
+# Dialog script for edu::oscilloscope::1.0 automatically generated
+
+{
+    name	edu::oscilloscope::1.0
+    script	edu::oscilloscope::1.0
+    label	"EDU Oscilloscope"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "message"
+        label   "Message"
+        type    label
+        invisible
+        default { "Message" }
+        parmtag { "sidefx::look" "block" }
+    }
+    parm {
+        name    "sepparm"
+        label   "Spacer"
+        type    separator
+        default { "" }
+        parmtag { "sidefx::layout_height" "small" }
+        parmtag { "sidefx::look" "blank" }
+    }
+    parm {
+        name    "type"
+        label   "Type"
+        type    ordinal
+        nolabel
+        default { "0" }
+        menu {
+            "0" "Line"
+            "1" "Grid"
+        }
+        range   { 0! 10 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "equation"
+        label   "Equation"
+        type    string
+        nolabel
+        default { "y = sin(x)" }
+        menureplace {
+            [ "from importlib import reload" ]
+            [ "import oscpressionmenu" ]
+            [ "reload(oscpressionmenu)" ]
+            [ "return oscpressionmenu.buildSnippetMenu('oscilloscope/snippet')" ]
+            language python
+        }
+        parmtag { "script_callback" "hou.phm().my_callback(kwargs, hou.pwd())" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "sepparm3"
+        label   "Spacer"
+        type    separator
+        default { "" }
+        parmtag { "sidefx::layout_height" "small" }
+        parmtag { "sidefx::look" "blank" }
+    }
+    parm {
+        name    "snippet"
+        label   "snippet"
+        type    string
+        default { "v@P.y = sin(v@P.x);" }
+        disablewhen "{ hasinput(999) == 0 }"
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "editor" "1" }
+        parmtag { "editorlang" "VEX" }
+        parmtag { "editorlines" "8-30" }
+    }
+    parm {
+        name    "vex_cwdpath"
+        label   "Evaluation Node Path"
+        type    oppath
+        invisible
+        default { "." }
+        disablewhen "{ hasinput(999) == 0 }"
+        range   { 0 1 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "oprelative" "." }
+    }
+}

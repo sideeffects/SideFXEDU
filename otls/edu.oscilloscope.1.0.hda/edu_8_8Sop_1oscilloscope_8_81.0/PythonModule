@@ -1,0 +1,81 @@
+import ast, re
+import oscpressionmenu
+from importlib import reload
+
+
+
+# Classes
+class VEXTranslator(ast.NodeTransformer):
+
+    def generic_visit(self, node):
+        # print(type(node).__name__)
+        ast.NodeTransformer.generic_visit(self, node)
+        return node
+
+    def visit_Call(self, node):
+        # print(type(node).__name__)
+        result = ast.Call(  func=node.func,
+                            args=node.args,
+                            keywords=node.keywords)
+        ast.NodeTransformer.generic_visit(self, node)
+        return result
+
+    def visit_Name(self, node):
+        ast.NodeTransformer.generic_visit(self, node)
+        node_id = node.id.lower()
+        if node_id in ['x', 'y', 'z']:
+            result = ast.Name(id="v@P."+node_id)
+            return result
+        else:
+            result = ast.Name(id="chf(\'"+node_id+"\')")
+            return result
+            
+    def toVEX(self, code):
+        ast_tree = ast.parse(code)
+        ast_obj = self.visit(ast_tree)
+        # Warning: only works for a one line equation!!
+        new_code = ast.unparse(ast_obj) + ";"
+        return new_code
+
+# Functions
+def catchErrors(kwargs, pwd):
+    node = pwd
+    # node.setOutputForViewFlag(0)
+
+    errors = node.errors()
+    if errors:
+        for error in errors:
+            pattern = re.compile(r'Error:(.*)(?=\().*$', re.DOTALL)
+            match = pattern.search(error)
+            if match:
+                error_message = "Error Message: " + match.group(1).strip()
+                print(error_message)
+                node.parm("message").set(error_message)
+                # node.setOutputForViewFlag(-1)
+    else:
+        node.parm("message").set("")
+
+def setWrangleSnippet(kwargs, pwd):
+    node = kwargs["node"]
+
+    # node.setOutputForViewFlag(0)
+
+    # translate code to VEX
+    translator = VEXTranslator()
+    code = node.parm("equation").eval()
+    new_code = translator.toVEX(code)
+    
+    # set snippet parameter
+    parmname = "snippet"
+    node.parm(parmname).set(new_code)
+    
+    # create spare parameters
+    reload(oscpressionmenu)
+    oscpressionmenu.createSpareParmsFromChCalls(node, parmname)
+
+    # @TODO: manage errors 
+    # catchErrors(kwargs, pwd)
+
+def my_callback(kwargs, pwd):
+    node = kwargs["node"]
+    setWrangleSnippet(kwargs, pwd)

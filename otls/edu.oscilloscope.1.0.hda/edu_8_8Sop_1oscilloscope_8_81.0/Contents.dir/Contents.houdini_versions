@@ -1,0 +1,20 @@
+{
+	"values":["20.0.546"
+	],
+	"indexes":{
+		"hdaroot/polywire1.userdata":0,
+		"hdaroot/SWITCH__line_or_grid.userdata":0,
+		"hdaroot/slave__line_or_grid2.userdata":0,
+		"hdaroot/grid_xy.userdata":0,
+		"hdaroot/line_z.userdata":0,
+		"hdaroot/line_y.userdata":0,
+		"hdaroot/null1.userdata":0,
+		"hdaroot/line_x.userdata":0,
+		"hdaroot/SWITCH__grid_orientation.userdata":0,
+		"hdaroot/output0.userdata":0,
+		"hdaroot/SWITCH__line_orientation.userdata":0,
+		"hdaroot/grid_yz.userdata":0,
+		"hdaroot/output1.userdata":0,
+		"hdaroot/grid_zx.userdata":0
+	}
+}
