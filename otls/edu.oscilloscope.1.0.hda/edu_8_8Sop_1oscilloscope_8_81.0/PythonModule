@@ -1,8 +1,6 @@
 import ast, re
 import oscpressionmenu
-from importlib import reload
-
-
+# from importlib import reload
 
 # Classes
 class VEXTranslator(ast.NodeTransformer):
@@ -70,7 +68,7 @@ def setWrangleSnippet(kwargs, pwd):
     node.parm(parmname).set(new_code)
     
     # create spare parameters
-    reload(oscpressionmenu)
+    # reload(oscpressionmenu)
     oscpressionmenu.createSpareParmsFromChCalls(node, parmname)
 
     # @TODO: manage errors 

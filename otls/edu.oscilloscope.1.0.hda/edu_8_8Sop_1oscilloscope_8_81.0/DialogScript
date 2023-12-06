@@ -39,6 +39,7 @@
         menu {
             "0" "Line"
             "1" "Grid"
+            "2" "Disk"
         }
         range   { 0! 10 }
         parmtag { "autoscope" "0000000000000000" }
