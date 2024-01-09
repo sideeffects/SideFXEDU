@@ -1,0 +1,107 @@
+#type:     node
+#context:  obj
+#internal: edu::geometry_explainer::1.0
+#icon:     /Object/edu::geometry_explainer::1.0
+#tags:     sidefxedu, education, geometry, explainer
+
+= EDU Geometry Explainer =
+
+"""Learn about Geometry Components / Attribute Classes, and other geometry related aspects."""
+
+
+WARNING:
+    This node is made for education purposes only. You can use it for other things, but at your own risks.
+[Image:/images/sidefxedu_full.png]
+
+Geometry Explainer visually illustrates common components of geometry.
+
+@setupparameters Setup Parameters
+
+== Setup ==
+Parameter ||
+    Description||
+
+Set Camera |
+    #id: setcam
+    Drag a Camera object into this parameter to have all text elements always face towards that camera. If empty, text defaults to facing along positive Z axis.
+
+Font Size Override |
+    #id: fontsizeoverride
+    Shrink all text elements.
+
+Unfold Geometry |
+    #id: expand
+    Unfold and flatten the geometry cube along predefined cut seams.
+
+Reveal Wireframe |
+    #id: fadewireframe
+    Fade out the primitive faces and reveal only the wireframe of geometry.
+
+Shared/Unshared |
+    #id: pointshared
+    Toggle the viewing of unshared points and the point count at each primitive intersection.
+
+Shrink Polygons |
+    #id: expandunshared
+    Shrink the primitive faces to better reveal how primitives are disconnected when unshared.
+    :tip:
+        Point and vertex associations can be easier to understand in this mode.
+
+@geocompparameters Geometry Components Parameters
+
+== Attribute Classes ==
+NOTE:
+* Attribute Classes are the geometry components that are able to have attributes assigned to them. These attributes are carried through your node stream, unless a destructive process is applied at any time that removes them.
+
+* Attribute Classes have a precedence over each other. This means that some attribute data, if applied to more than one class, will only appear on the highest precedence class. The order from highest to lowest is Vertex, Point, Primitive, then Detail.
+
+Parameter ||
+    Description||
+    
+Vertex |
+    #id: expandvertex
+    Vertex displays each vertex on the geometry associated with each primitive face.
+
+Point |
+    #id: expandpoint
+    Point displays each point on the geometry associated with each vertex and primitive face.
+    :tip:
+        When geometry is shared (connected), a single point will be used. When Unshared is used, each vertex will get it's own unique point.
+
+Primitive |
+    #id: expandprimitive
+    Primitive displays and highlights each polygon face of the geometry.
+
+    NOTE:
+        The term *Primitive* is used to describe many things in Houdini. It can be a Polygonal Curve, Metaball, Alembic, primitive objects like a circle, sphere, tetrahedron, tube, etc.. It can also mean a VDB, or a volume, it can also mean a packed primitive, packed disk primitive, packed disk sequence primitive, and polygon soup. Because of this it tends to be a very confusing term to grasp.
+
+Detail |
+    #id: expanddetail
+    Detail is the entire geometry object.
+
+== Extra Components ==
+NOTE:
+    * These extra components relate to geometry, but are unable to carry attributes.
+
+Parameter ||
+    Description||
+
+UV Seam |
+    #id: expandseam
+    UV Seam is a group of edges used to define how to flatten a polygon model in UV space. This same group can be used to cut the polygons apart along the same seam.
+
+Edge |
+    #id: expandedge
+    Edges are undirected and shared between primitive faces.
+
+Half-Edge |
+    #id: expandhalfedge
+    Half-edges are a directed edge, and have a start vertex and an end vertex. Each boundary edge will have only one half-edge, and shared primitive edges will have two Half-Edges.
+
+Normal |
+    #id: expandnormal
+    Normal is the facing direction of a polygon face. Normal vector value is normalized to a unit length of 1. The direction is determined by the winding order of the vertices of the polygon.
+
+Reverse Winding |
+    #id: reversewinding
+    Invert the normal direction.

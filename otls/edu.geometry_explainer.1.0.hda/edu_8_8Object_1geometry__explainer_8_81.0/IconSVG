@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 400 401" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Primitives" transform="matrix(0.826911,0,0,0.826911,79.6394,80.6394)">
+        <g transform="matrix(-7.19697,0,0,-7.36434,372.727,380.426)">
+            <path d="M1.768,2.774L46.232,2.774L46.232,46.226L1.768,2.774Z" style="fill:rgb(254,255,111);stroke:rgb(255,166,52);stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(7.19697,0,0,7.36434,27.2727,19.5736)">
+            <path d="M1.768,2.774L46.232,2.774L46.232,46.226L1.768,2.774Z" style="fill:rgb(254,255,111);stroke:rgb(255,166,52);stroke-width:1px;"/>
+        </g>
+    </g>
+    <g id="Vertices" transform="matrix(0.826911,0,0,0.826911,79.6394,80.6394)">
+        <g transform="matrix(-0.707107,-0.707107,0.707107,-0.707107,-44.1385,690.919)">
+            <path d="M174.5,308.433L200,359.433L149,359.433L174.5,308.433Z" style="fill:rgb(230,111,255);stroke:rgb(146,3,255);stroke-width:3.87px;"/>
+        </g>
+        <g transform="matrix(0.707107,0.707107,-0.707107,0.707107,444.705,-291.485)">
+            <path d="M174.5,308.433L200,359.433L149,359.433L174.5,308.433Z" style="fill:rgb(230,111,255);stroke:rgb(146,3,255);stroke-width:3.87px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-101.433,-248.433)">
+            <path d="M149,308.433L200,359.433L149,359.433L149,308.433Z" style="fill:rgb(230,111,255);stroke:rgb(146,3,255);stroke-width:3.87px;"/>
+        </g>
+        <g transform="matrix(-1,0,0,-1,260.567,407.433)">
+            <path d="M149,308.433L200,359.433L149,359.433L149,308.433Z" style="fill:rgb(230,111,255);stroke:rgb(146,3,255);stroke-width:3.87px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,139,-8)">
+            <path d="M149,308.433L200,359.433L149,359.433L149,308.433Z" style="fill:rgb(230,111,255);stroke:rgb(146,3,255);stroke-width:3.87px;"/>
+        </g>
+        <g transform="matrix(-1,0,0,-1,501,647.867)">
+            <path d="M149,308.433L200,359.433L149,359.433L149,308.433Z" style="fill:rgb(230,111,255);stroke:rgb(146,3,255);stroke-width:3.87px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,46.9362,-292.402)">
+            <text x="42.324px" y="362.902px" style="font-family:'Verdana-Bold', 'Verdana', sans-serif;font-weight:700;font-size:20px;fill:white;">2</text>
+        </g>
+        <g transform="matrix(1,0,0,1,251.603,-21.0689)">
+            <text x="42.324px" y="362.902px" style="font-family:'Verdana-Bold', 'Verdana', sans-serif;font-weight:700;font-size:20px;fill:white;">2</text>
+        </g>
+        <g transform="matrix(1,0,0,1,275.725,-281.565)">
+            <text x="42.324px" y="362.902px" style="font-family:'Verdana-Bold', 'Verdana', sans-serif;font-weight:700;font-size:20px;fill:white;">1</text>
+        </g>
+        <g transform="matrix(1,0,0,1,25.3916,-31.232)">
+            <text x="42.324px" y="362.902px" style="font-family:'Verdana-Bold', 'Verdana', sans-serif;font-weight:700;font-size:20px;fill:white;">1</text>
+        </g>
+        <g transform="matrix(1,0,0,1,285.567,-51.1073)">
+            <text x="42.324px" y="362.902px" style="font-family:'Verdana-Bold', 'Verdana', sans-serif;font-weight:700;font-size:20px;fill:white;">0</text>
+        </g>
+        <g transform="matrix(1,0,0,1,11.9001,-261.107)">
+            <text x="42.324px" y="362.902px" style="font-family:'Verdana-Bold', 'Verdana', sans-serif;font-weight:700;font-size:20px;fill:white;">0</text>
+        </g>
+    </g>
+    <g id="Points" transform="matrix(0.826911,0,0,0.826911,79.6394,80.6394)">
+        <g id="br-pnt" serif:id="br pnt" transform="matrix(16.6667,0,0,16.6667,-298.333,168.333)">
+            <circle cx="39.5" cy="11.5" r="1.5" style="fill:rgb(0,128,255);"/>
+        </g>
+        <g id="tr-pnt" serif:id="tr pnt" transform="matrix(16.6667,0,0,16.6667,-298.333,-151.667)">
+            <circle cx="39.5" cy="11.5" r="1.5" style="fill:rgb(0,128,255);"/>
+        </g>
+        <g id="bl-pnt" serif:id="bl pnt" transform="matrix(16.6667,0,0,16.6667,-617.767,168.333)">
+            <circle cx="39.5" cy="11.5" r="1.5" style="fill:rgb(0,128,255);"/>
+        </g>
+        <g id="tr-pnt1" serif:id="tr pnt" transform="matrix(16.6667,0,0,16.6667,-617.767,-151.667)">
+            <circle cx="39.5" cy="11.5" r="1.5" style="fill:rgb(0,128,255);"/>
+        </g>
+        <g id="tr-pnt-bevel" serif:id="tr pnt bevel" transform="matrix(1.02054e-15,-16.6667,16.6667,1.02054e-15,-151.1,698.333)">
+            <circle cx="39.5" cy="11.5" r="1.5" style="fill:none;stroke:rgb(0,64,128);stroke-width:0.23px;"/>
+        </g>
+        <g id="tr-pnt-bevel1" serif:id="tr pnt bevel" transform="matrix(1.02054e-15,-16.6667,16.6667,1.02054e-15,168.333,698.333)">
+            <circle cx="39.5" cy="11.5" r="1.5" style="fill:none;stroke:rgb(0,64,128);stroke-width:0.23px;"/>
+        </g>
+        <g id="tr-pnt-bevel2" serif:id="tr pnt bevel" transform="matrix(1.02054e-15,-16.6667,16.6667,1.02054e-15,168.333,1017.77)">
+            <circle cx="39.5" cy="11.5" r="1.5" style="fill:none;stroke:rgb(0,64,128);stroke-width:0.23px;"/>
+        </g>
+        <g id="tr-pnt-bevel3" serif:id="tr pnt bevel" transform="matrix(1.02054e-15,-16.6667,16.6667,1.02054e-15,-151.1,1017.77)">
+            <circle cx="39.5" cy="11.5" r="1.5" style="fill:none;stroke:rgb(0,64,128);stroke-width:0.23px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-8.86656,8.89274)">
+            <text x="38.769px" y="362.902px" style="font-family:'Verdana-Bold', 'Verdana', sans-serif;font-weight:700;font-size:30px;fill:white;">2</text>
+        </g>
+        <g transform="matrix(1,0,0,1,310.567,-310.302)">
+            <text x="38.769px" y="362.902px" style="font-family:'Verdana-Bold', 'Verdana', sans-serif;font-weight:700;font-size:30px;fill:white;">1</text>
+        </g>
+        <g transform="matrix(1,0,0,1,-9.43323,-310.302)">
+            <text x="38.769px" y="362.902px" style="font-family:'Verdana-Bold', 'Verdana', sans-serif;font-weight:700;font-size:30px;fill:white;">3</text>
+        </g>
+        <g transform="matrix(1,0,0,1,311.567,8.89274)">
+            <text x="38.769px" y="362.902px" style="font-family:'Verdana-Bold', 'Verdana', sans-serif;font-weight:700;font-size:30px;fill:white;">0</text>
+        </g>
+    </g>
+    <g id="sidefxedu.svg" transform="matrix(0.386979,0,0,0.386979,96.9963,60.1656)">
+        <g transform="matrix(1,0,0,1,-250.65,-155.475)">
+            <g id="uuid-ed91720d-63e6-434f-bbfe-556c03a98cf3">
+                <g id="uuid-4c5f5670-b68c-4b18-95ff-8765d0592ce9">
+                    <g>
+                        <path d="M70.09,138.92L69.23,259.31C66.77,259.55 63.12,262.93 62.62,265.7L57.98,291.49C57.63,293.44 56.58,295.19 55.03,296.41L53.43,297.67C51.31,299.33 51.88,302.71 54.43,303.57L74.14,310.21C76.51,311.01 79.08,309.8 80.01,307.46C82.87,300.24 83.79,292.94 84.34,284.77L84.34,275.39C84.34,269.63 82.29,261.94 78.37,260.35L79.45,140.36C77.51,138.58 72.44,137.74 70.1,138.93L70.09,138.92Z" style="fill:rgb(255,102,0);fill-rule:nonzero;"/>
+                        <ellipse cx="73.1" cy="258.99" rx="7.92" ry="8" style="fill:rgb(255,102,0);"/>
+                    </g>
+                    <path d="M102.56,114.14L248.79,177.15L395.01,114.14L395.01,203.98C395.01,208.64 393.19,213.17 389.85,216.83C317.92,295.59 179.65,295.59 107.72,216.83C104.38,213.17 102.56,208.65 102.56,203.98L102.56,114.14Z" style="fill:rgb(255,102,0);fill-rule:nonzero;"/>
+                    <path d="M499.78,106.97L252.9,0.96C251.46,0.34 249.83,0.34 248.4,0.96L1.52,106.97C0.16,107.55 0.16,109.47 1.52,110.05L248.4,216.06C249.84,216.68 251.47,216.68 252.9,216.06L499.78,110.05C501.14,109.47 501.14,107.55 499.78,106.97Z" style="fill:rgb(255,102,0);fill-rule:nonzero;"/>
+                    <path d="M334.36,139.92C350.51,122.54 349.78,98.6 324.81,78.43C309.02,65.65 282.53,43.77 213.66,35.56C213,35.49 197.84,33.42 175.52,32.7L142.87,46.72C166.03,46.44 186.04,48.16 197.89,49.22C238.45,52.85 259.16,61.88 283.53,78.19C306.91,93.9 303.58,118.58 283.34,131.96C256.3,149.83 222.94,157.54 171.63,157.01C124.43,156.53 87.03,136.31 80.4,122.23C73.71,108.12 72.38,97.01 105.16,85.59C139.78,73.54 187.12,80.43 206.45,90.25C229.57,101.96 221.47,115.29 201.98,119.05C179.68,123.38 153.73,119.45 153.74,111.54C153.67,100.17 174.33,100.41 174.33,100.41C174.33,100.41 127.62,85.45 110.06,108.63C93.91,129.96 163.55,147.01 212.97,138.6C240.46,133.93 298.86,118.4 247.04,81.49C216.69,59.85 152.72,56.29 103.3,63.71L39.57,91.08C33.08,101.28 34.73,112.48 39.1,121.79C39.94,123.58 41.13,125.52 42.57,127.55L150.54,173.91C153.71,174.28 156.87,174.65 160.21,174.95C240.17,181.88 315.6,160.15 334.38,139.92L334.36,139.92Z" style="fill:white;fill-rule:nonzero;"/>
+                    <path d="M499.78,106.97L252.9,0.96C251.46,0.34 249.83,0.34 248.4,0.96L1.52,106.97C0.16,107.55 0.16,109.47 1.52,110.05L248.4,216.06C249.84,216.68 251.47,216.68 252.9,216.06L499.78,110.05C501.14,109.47 501.14,107.55 499.78,106.97Z" style="fill:none;fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

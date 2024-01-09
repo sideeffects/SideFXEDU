@@ -1,0 +1,501 @@
+# Dialog script for edu::geometry_explainer::1.0 automatically generated
+
+{
+    name	edu::geometry_explainer::1.0
+    script	FFX_Geometry_Explainer
+    label	"EDU Geometry Explainer"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+    outputlabel	1	"Geometry Explainer Graphic"
+
+    group {
+        name    "stdswitcher3"
+        label   "Transform"
+        invisibletab
+
+        parm {
+            name    "xOrd"
+            baseparm
+            label   "Transform Order"
+            invisible
+            joinnext
+            export  none
+        }
+        parm {
+            name    "rOrd"
+            baseparm
+            label   "Rotate Order"
+            nolabel
+            invisible
+            export  none
+        }
+        parm {
+            name    "t"
+            baseparm
+            label   "Translate"
+            invisible
+            export  none
+        }
+        parm {
+            name    "r"
+            baseparm
+            label   "Rotate"
+            invisible
+            export  none
+        }
+        parm {
+            name    "s"
+            baseparm
+            label   "Scale"
+            invisible
+            export  none
+        }
+        parm {
+            name    "p"
+            baseparm
+            label   "Pivot Translate"
+            invisible
+            export  none
+        }
+        parm {
+            name    "pr"
+            baseparm
+            label   "Pivot Rotate"
+            invisible
+            export  none
+        }
+        parm {
+            name    "scale"
+            baseparm
+            label   "Uniform Scale"
+            invisible
+            export  none
+        }
+        parm {
+            name    "pre_xform"
+            baseparm
+            label   "Modify Pre-Transform"
+            invisible
+            export  none
+        }
+        parm {
+            name    "keeppos"
+            baseparm
+            label   "Keep Position When Parenting"
+            invisible
+            export  none
+        }
+        parm {
+            name    "childcomp"
+            baseparm
+            label   "Child Compensation"
+            invisible
+            export  none
+        }
+        parm {
+            name    "constraints_on"
+            baseparm
+            label   "Enable Constraints"
+            invisible
+            export  none
+        }
+        parm {
+            name    "constraints_path"
+            baseparm
+            label   "Constraints"
+            invisible
+            export  none
+        }
+        parm {
+            name    "lookatpath"
+            baseparm
+            label   "Look At"
+            invisible
+            export  none
+        }
+        parm {
+            name    "lookupobjpath"
+            baseparm
+            label   "Look Up Object"
+            invisible
+            export  none
+        }
+        parm {
+            name    "lookup"
+            baseparm
+            label   "Look At Up Vector"
+            invisible
+            export  none
+        }
+        parm {
+            name    "pathobjpath"
+            baseparm
+            label   "Path Object"
+            invisible
+            export  none
+        }
+        parm {
+            name    "roll"
+            baseparm
+            label   "Roll"
+            invisible
+            export  none
+        }
+        parm {
+            name    "pos"
+            baseparm
+            label   "Position"
+            invisible
+            export  none
+        }
+        parm {
+            name    "uparmtype"
+            baseparm
+            label   "Parameterization"
+            invisible
+            export  none
+        }
+        parm {
+            name    "pathorient"
+            baseparm
+            label   "Orient Along Path"
+            invisible
+            export  none
+        }
+        parm {
+            name    "up"
+            baseparm
+            label   "Orient Up Vector"
+            invisible
+            export  none
+        }
+        parm {
+            name    "bank"
+            baseparm
+            label   "Auto-Bank factor"
+            invisible
+            export  none
+        }
+    }
+
+    group {
+        name    "stdswitcher3_1"
+        label   "Subnet"
+        invisibletab
+        tabbreak
+
+        parm {
+            name    "label1"
+            baseparm
+            label   "Input #1 Label"
+            invisible
+            export  dialog
+        }
+        parm {
+            name    "label2"
+            baseparm
+            label   "Input #2 Label"
+            invisible
+            export  dialog
+        }
+        parm {
+            name    "label3"
+            baseparm
+            label   "Input #3 Label"
+            invisible
+            export  dialog
+        }
+        parm {
+            name    "label4"
+            baseparm
+            label   "Input #4 Label"
+            invisible
+            export  dialog
+        }
+        parm {
+            name    "tdisplay"
+            baseparm
+            label   "Display"
+            invisible
+            joinnext
+            export  all
+        }
+        parm {
+            name    "display"
+            baseparm
+            label   "Display"
+            invisible
+            export  all
+        }
+        parm {
+            name    "outputobj"
+            baseparm
+            label   "Output Transform"
+            invisible
+            export  all
+        }
+        parm {
+            name    "visibleobjects"
+            baseparm
+            label   "Visible Children"
+            invisible
+            export  none
+        }
+        parm {
+            name    "picking"
+            baseparm
+            label   "Viewport Selecting Enabled"
+            invisible
+            export  none
+        }
+        parm {
+            name    "pickscript"
+            baseparm
+            label   "Select Script"
+            invisible
+            export  none
+        }
+        parm {
+            name    "caching"
+            baseparm
+            label   "Cache Object Transform"
+            export  none
+        }
+        parm {
+            name    "use_dcolor"
+            baseparm
+            label   "Set Wireframe Color"
+            invisible
+            export  none
+        }
+        parm {
+            name    "dcolor"
+            baseparm
+            label   "Wireframe Color"
+            invisible
+            export  none
+        }
+    }
+
+    groupcollapsible {
+        name    "folder0"
+        label   "Setup"
+
+        parm {
+            name    "setcam"
+            label   "Set Camera"
+            type    string
+            default { "" }
+            help    "Point to a camera you want the text elements to always face towards."
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "fontsizeoverride"
+            label   "Font Size Override"
+            type    float
+            default { "1" }
+            range   { 0! 1! }
+            parmtag { "autoscope" "0000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "sepparm"
+            label   "Separator"
+            type    separator
+            default { "" }
+            parmtag { "sidefx::layout_height" "small" }
+            parmtag { "sidefx::look" "blank" }
+        }
+        parm {
+            name    "expand"
+            label   "Unfold Geometry"
+            type    float
+            default { "0" }
+            range   { 0! 1! }
+            parmtag { "autoscope" "1000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "fadewireframe"
+            label   "Reveal Wireframe"
+            type    float
+            default { "0" }
+            range   { 0! 1! }
+            parmtag { "autoscope" "1000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "adjoinedspacer1"
+            label   "Label"
+            type    label
+            nolabel
+            joinnext
+            default { "" }
+        }
+        parm {
+            name    "unsharedheading"
+            label   "unsharedheading"
+            type    label
+            default { "Unshared Points" }
+            parmtag { "sidefx::look" "heading" }
+        }
+        parm {
+            name    "pointshared"
+            label   "Shared/Unshared"
+            type    toggle
+            default { "1" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "expandunshared"
+            label   "Shrink Polygons"
+            type    float
+            default { "1" }
+            disablewhen "{ pointshared == 1 }"
+            range   { 0.2! 1! }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+    parm {
+        name    "labelparm3"
+        label   "Geometry Components"
+        type    label
+        default { "Geometry Components" }
+        parmtag { "sidefx::look" "heading" }
+    }
+    groupsimple {
+        name    "folder1"
+        label   "folder1"
+        grouptag { "sidefx::look" "blank" }
+
+        parm {
+            name    "adjoinedspacer2"
+            label   "Label"
+            type    label
+            nolabel
+            joinnext
+            default { "" }
+        }
+        parm {
+            name    "attribclassesheading"
+            label   "attribclassesheading"
+            type    label
+            default { "Attribute Classes [ in order of precedence ]" }
+            parmtag { "sidefx::look" "heading" }
+        }
+        parm {
+            name    "expandvertex"
+            label   "Vertex"
+            type    float
+            default { "0" }
+            help    "Vertex is highest priority attribute class. Vertex defines a polygon face, and the order defines the polygon face normal direction."
+            range   { 0! 1! }
+            parmtag { "autoscope" "1000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "expandpoint"
+            label   "Point"
+            type    float
+            default { "0" }
+            help    "Point is a location in 3D space."
+            range   { 0! 1! }
+            parmtag { "autoscope" "1000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "expandprimitive"
+            label   "Primitive"
+            type    float
+            default { "0" }
+            range   { 0! 1! }
+            parmtag { "autoscope" "1000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "expanddetail"
+            label   "Detail"
+            type    float
+            default { "0" }
+            range   { 0! 1! }
+            parmtag { "autoscope" "1000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+    groupsimple {
+        name    "folder2"
+        label   "folder2"
+        grouptag { "sidefx::look" "blank" }
+
+        parm {
+            name    "adjoinedspacer3"
+            label   "Label"
+            type    label
+            nolabel
+            joinnext
+            default { "" }
+        }
+        parm {
+            name    "extracompheading"
+            label   "extracompheading"
+            type    label
+            default { "Extra components" }
+            parmtag { "sidefx::look" "heading" }
+        }
+        parm {
+            name    "expandseam"
+            label   "UV Seam"
+            type    float
+            default { "0" }
+            range   { 0! 1! }
+            parmtag { "autoscope" "1000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "expandedge"
+            label   "Edge"
+            type    float
+            default { "0" }
+            range   { 0! 1! }
+            parmtag { "autoscope" "1000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "expandhalfedge"
+            label   "Half-Edge"
+            type    float
+            default { "0" }
+            range   { 0! 1! }
+            parmtag { "autoscope" "1000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "expandnormal"
+            label   "Normal"
+            type    float
+            joinnext
+            default { "0" }
+            range   { 0! 1! }
+            parmtag { "autoscope" "1000000000000000" }
+            parmtag { "script_callback_language" "python" }
+        }
+        parm {
+            name    "reversewinding"
+            label   "Reverse Winding"
+            type    toggle
+            default { "0" }
+            parmtag { "script_callback_language" "python" }
+        }
+    }
+
+}

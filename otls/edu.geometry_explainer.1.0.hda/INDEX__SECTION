@@ -1,0 +1,14 @@
+Operator:     edu::geometry_explainer::1.0
+Label:        EDU Geometry Explainer
+Path:         oplib:/edu::Object/geometry_explainer::1.0?edu::Object/geometry_explainer::1.0
+Icon:         opdef:/edu::Object/geometry_explainer::1.0?IconSVG
+Table:        Object
+License:      
+Extra:        
+User:         
+Inputs:       0 to 0
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Tue Aug 15 14:05:26 2023
+
