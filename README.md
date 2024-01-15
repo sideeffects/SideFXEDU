@@ -45,6 +45,9 @@ SideFX EDU *optionally* collects data about what tools are used through Google A
 - Peter Arcara
 - Kyle Lin
 
+### SideFX Team
+- Derrick Moser
+
 ### Instructors Community
 - Albert Szostkiewicz
 - David Torno
