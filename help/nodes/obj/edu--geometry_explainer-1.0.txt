@@ -11,9 +11,12 @@
 
 WARNING:
     This node is made for education purposes only. You can use it for other things, but at your own risks.
-[Image:/images/sidefxedu_full.png]
+
 
 Geometry Explainer visually illustrates common components of geometry.
+
+[Image:/images/edu_geometry_explainer_image.gif]
+
 
 @setupparameters Setup Parameters
 
