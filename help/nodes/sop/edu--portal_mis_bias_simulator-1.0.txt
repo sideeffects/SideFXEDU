@@ -14,7 +14,7 @@ WARNING:
 
 The Portal MIS Bias controls whether the dome light is more likely to sample from the environment map or the portal geometry.
 
-[Image:/images/portal_mis_bias_simulator.jpg]
+[Image:/images/edu_portal_mis_bias_simulator_image.gif]
 
 @parameters
 
