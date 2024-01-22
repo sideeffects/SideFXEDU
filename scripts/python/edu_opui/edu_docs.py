@@ -45,7 +45,7 @@ def writeHeader(helpfile, node, nodename, context):
     helpfile.write("\n\"\"\"Summary.\"\"\"\n\n")
     helpfile.write("\nWARNING:\n")
     helpfile.write(prefix + "This node is made for education purposes only. You can use it for other things, but at your own risks.\n")
-    # helpfile.write("[Image:/images/sidefxedu_full.png]\n\n")
+    # helpfile.write("[Image:/images/sidefxedu_banner.png]\n\n")
     helpfile.write(":video:\n")
     helpfile.write(prefix + "#src:/movies/edu_geometry_explainer_movie.mp4\n\n")
     helpfile.write("<Description goes here>\n\n\n")
