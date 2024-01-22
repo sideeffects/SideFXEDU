@@ -1,5 +1,5 @@
 = SideFX EDU | Education Driven Utilities =
-#icon: /images/sidefxedu.svg
+#icon: /icons/sidefxedu.svg
 
 """SideFX EDU gather tools designed to assist Houdini instructors in building pedagogical contents and teach Houdini."""
 
