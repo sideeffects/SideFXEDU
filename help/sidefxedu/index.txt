@@ -3,7 +3,7 @@
 
 """SideFX EDU gather tools designed to assist Houdini instructors in building pedagogical contents and teach Houdini."""
 
-[Image:/images/sidefxedu_full.png]
+[Image:/images/sidefxedu_banner.png]
 
 == Overview ==
 The SideFX EDU toolset regroups tools designed to assist Houdini instructors in building pedagogical contents and teach Houdini as well as other concepts such as CG algorithms, Math, Physics...
