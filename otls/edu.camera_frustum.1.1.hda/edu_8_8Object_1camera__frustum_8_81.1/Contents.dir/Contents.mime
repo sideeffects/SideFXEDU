@@ -33,7 +33,7 @@ Content-Type: text/plain
 objflags objflags =  origin off
 pretransform UT_DMatrix4 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1
 comment ""
-position -23.4572 26.8235
+position -1.94351e-17 -1
 connectornextid 1
 flags =  lock off model off template off footprint off xray off bypass off display on render off highlight off unload off savedata off compress on colordefault on exposed on selectable on
 outputsNamed3
@@ -51,7 +51,7 @@ stat
 {
   create -1
   modify -1
-  author sidefx@asterix
+  author sidefx@asterix.home
   access 0777
 }
 color UT_Color RGB 0.8 0.8 0.8 
