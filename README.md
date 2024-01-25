@@ -51,3 +51,4 @@ SideFX EDU *optionally* collects data about what tools are used through Google A
 ### Instructors Community
 - Albert Szostkiewicz
 - David Torno
+- Jeffy Mathew Philip
