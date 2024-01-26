@@ -3,13 +3,13 @@
 
 SideFX EDU is a completely free, open-source toolset geared towards assisting Houdini Instructors with a variety of tasks commonly used when teaching Houdini. It is an all-inclusive toolset that spans the shelf, digital assets, custom desktops and scripts and more. The toolset is currently maintained by the SideFX Education and Training team. It also receives a lot of contributions from the always active Houdini instructors community. This toolset originated from the SideFX Labs toolset, which inspired us. 
 
-# Requirements
-
-This toolset requires SideFX Labs to be installed. Please visit the [SideFX Labs page](https://www.sidefx.com/docs/houdini/labs/) for further instructions.
-
 # Installation
 
 The following instructions are based on the **Windows OS**. Please adapt them accordingly to your OS.
+
+## Requirements
+
+This toolset requires SideFX Labs to be installed. Please visit the [SideFX Labs page](https://www.sidefx.com/docs/houdini/labs/) for further instructions.
 
 ## Using GitHub
 
