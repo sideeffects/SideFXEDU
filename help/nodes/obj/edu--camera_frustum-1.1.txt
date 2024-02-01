@@ -8,10 +8,10 @@
 
 """ This OBJ sets up a camera frustum and padded frustum based on the input parent camera. """
 
-
 WARNING:
     This node is made for education purposes only. You can use it for other things, but at your own risks.
 
+    See the [SideFX EDU Documentation | /education] page for more information.
 
 This OBJ sets up a camera frustum and padded frustum based on the input parent camera.
 It uses the parent camera's parameter values to define it's near/far planes and view angle.

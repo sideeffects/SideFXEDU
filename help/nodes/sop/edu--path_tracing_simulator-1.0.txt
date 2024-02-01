@@ -9,8 +9,9 @@
 """This node simulates path tracing rendering method, generating primary and secondary rays and samples."""
 
 WARNING:
-    This node is made for education purposes only.  
-    You can use it for other things, but at your own risks.  
+    This node is made for education purposes only. You can use it for other things, but at your own risks.
+
+    See the [SideFX EDU Documentation | /education] page for more information.
 
 == Overview ==
 This node takes objects with special formatting and attributes as an input (see the [EDU Path Tracing Scene|edu--path_tracing_scene-1.0] as an example) and outputs primary and secondary rays and samples. This is useful to illustrate how a path tracer is working.

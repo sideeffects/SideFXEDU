@@ -9,8 +9,9 @@
 """This node visualizes the interpolation between two quaternions, as well as their effect on the input objects."""
 
 WARNING:
-    This node is made for education purposes only. 
-    You can use it for other things, but at your own risks.
+    This node is made for education purposes only. You can use it for other things, but at your own risks.
+
+    See the [SideFX EDU Documentation | /education] page for more information.
 
 NOTE:
     This HDA is a support tool for a quaternion course to be release in a near future on Houdini Insight.

@@ -8,9 +8,10 @@
 
 """This node helps visualizing the various layers of Pascal's Pyramid."""
 
-
 WARNING:
     This node is made for education purposes only. You can use it for other things, but at your own risks.
+
+    See the [SideFX EDU Documentation | /education] page for more information.
 
 
 [Image:/images/edu_pascal_pyramid_image.jpg]

@@ -9,8 +9,9 @@
 """This node creates a vector geometry to represent a vector value."""
 
 WARNING:
-    This node is made for education purposes only. 
-    You can use it for other things, but at your own risks.
+    This node is made for education purposes only. You can use it for other things, but at your own risks.
+
+    See the [SideFX EDU Documentation | /education] page for more information.
 
 @parameters
 

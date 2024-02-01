@@ -9,8 +9,9 @@
 """This node outputs a scene to use with the EDU Path Tracing Simulator HDA."""
 
 WARNING:
-    This node is made for education purposes only.  
-    You can use it for other things, but at your own risks.  
+    This node is made for education purposes only. You can use it for other things, but at your own risks.
+
+    See the [SideFX EDU Documentation | /education] page for more information.
 
 This node outputs a scene to use with the [EDU Path Tracing Simulator | edu--path_tracing_simulator-1.0] HDA. Objects are setup with needed attributes, names and groups especially for the EDU Path Tracing Simulator.
 

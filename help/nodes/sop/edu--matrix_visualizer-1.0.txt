@@ -9,8 +9,9 @@
 """This node visualizes a matrix detail attribute in the viewport, saving you from round tripping to the Geometry Spreadsheet."""
 
 WARNING:
-    This node is made for education purposes only. 
-    You can use it for other things, but at your own risks.
+    This node is made for education purposes only. You can use it for other things, but at your own risks.
+
+    See the [SideFX EDU Documentation | /education] page for more information.
 
 @parameters
 

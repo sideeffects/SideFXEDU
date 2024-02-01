@@ -9,8 +9,9 @@
 """This node illustrates how the Portal Multiple Importance Sampling (MIS) Bias works."""
 
 WARNING:
-    This node is made for education purposes only. 
-    You can use it for other things, but at your own risks.
+    This node is made for education purposes only. You can use it for other things, but at your own risks.
+
+    See the [SideFX EDU Documentation | /education] page for more information.
 
 The Portal MIS Bias controls whether the dome light is more likely to sample from the environment map or the portal geometry.
 

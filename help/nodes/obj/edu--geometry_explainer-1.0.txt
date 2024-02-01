@@ -8,10 +8,10 @@
 
 """Learn about Geometry Components / Attribute Classes, and other geometry related aspects."""
 
-
 WARNING:
     This node is made for education purposes only. You can use it for other things, but at your own risks.
 
+    See the [SideFX EDU Documentation | /education] page for more information.
 
 Geometry Explainer visually illustrates common components of geometry.
 
