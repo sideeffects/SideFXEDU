@@ -33,7 +33,7 @@ Content-Type: text/plain
 objflags objflags =  origin off
 pretransform UT_DMatrix4 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1
 comment "Education tool"
-position 0.0906218 4.09092
+position -1.97143 0.985714
 connectornextid 0
 flags =  lock off model off template off footprint off xray off bypass off display on render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on selectable on
 outputsNamed3
@@ -49,7 +49,7 @@ stat
 {
   create -1
   modify -1
-  author Pyro@Pyro1
+  author sidefx@asterix.home
   access 0777
 }
 color UT_Color RGB 0.8 0.8 0.8 
@@ -1170,7 +1170,7 @@ vm_rayshade	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 geo_velocityblur	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 geo_accelattribute	[ 0	locks=0	autoscope=0 ]	(	accel	)
 vm_shadingquality	[ 0	locks=0	autoscope=0 ]	(	1	)
-vm_flatness	[ 0	locks=0	autoscope=0 ]	(	0.050000000000000003	)
+vm_flatness	[ 0	locks=0	autoscope=0 ]	(	0.05	)
 vm_raypredice	[ 0	locks=0	autoscope=0 ]	(	0	)
 vm_curvesurface	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 vm_rmbackface	[ 0	locks=0	autoscope=0 ]	(	"off"	)
@@ -1227,12 +1227,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.52 0.52 0.52 ";
 	comment := ROTATIONS;
-	height := 5.8052000029802393;
+	height := 5.805200002980239;
 	minimized := 0;
 	owner := __netbox23;
-	width := 3.1805300000000001;
-	x_position := -19.236499999999999;
-	y_position := 28.772099999999998;
+	width := 3.18053;
+	x_position := -19.2365;
+	y_position := 28.7721;
 }
 {
   create -1
@@ -1251,11 +1251,11 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.52 0.52 0.52 ";
 	comment := "GEO SLICED";
-	height := 4.7000600029802317;
+	height := 4.700060002980232;
 	minimized := 0;
 	owner := __netbox23;
-	width := 2.7999999999999998;
-	x_position := -19.236499999999999;
+	width := 2.8;
+	x_position := -19.2365;
 	y_position := 34.89489999701977;
 }
 {
@@ -1275,12 +1275,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.52 0.52 0.52 ";
 	comment := DETAIL;
-	height := 21.228899999999999;
+	height := 21.2289;
 	minimized := 0;
 	owner := __netbox1;
-	width := 5.9290200029802334;
+	width := 5.929020002980233;
 	x_position := -20.928600002980232;
-	y_position := 18.922799999999999;
+	y_position := 18.9228;
 }
 {
   create -1
@@ -1302,7 +1302,7 @@ Content-Type: text/plain
 	height := 13.177800002980234;
 	minimized := 0;
 	owner := __netbox18;
-	width := 7.1842700029802362;
+	width := 7.184270002980236;
 	x_position := -33.203100002980236;
 	y_position := 25.9146;
 }
@@ -1327,8 +1327,8 @@ Content-Type: text/plain
 	minimized := 0;
 	owner := __netbox3;
 	width := 8.27346;
-	x_position := 0.55816399999999999;
-	y_position := 28.238399999999999;
+	x_position := 0.558164;
+	y_position := 28.2384;
 }
 {
   create -1
@@ -1347,12 +1347,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.89 0.412 0.761 ";
 	comment := "DETAIL TEXT";
-	height := 7.9056000029802362;
+	height := 7.905600002980236;
 	minimized := 0;
 	owner := __netbox1;
-	width := 5.7630900029802321;
+	width := 5.763090002980232;
 	x_position := -19.612700002980233;
-	y_position := 40.704599999999999;
+	y_position := 40.7046;
 }
 {
   create -1
@@ -1371,12 +1371,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.89 0.412 0.761 ";
 	comment := "POINT TEXT TITLE";
-	height := 8.4308399999999999;
+	height := 8.43084;
 	minimized := 0;
 	owner := __netbox3;
-	width := 6.0774300029802317;
-	x_position := 6.4999499970197681;
-	y_position := 40.146900000000002;
+	width := 6.077430002980232;
+	x_position := 6.499949997019768;
+	y_position := 40.1469;
 }
 {
   create -1
@@ -1446,8 +1446,8 @@ Content-Type: text/plain
 	height := 18.554000002980235;
 	minimized := 0;
 	owner := __netbox15;
-	width := 23.477500002980229;
-	x_position := 23.257300000000001;
+	width := 23.47750000298023;
+	x_position := 23.2573;
 	y_position := 30.473799997019768;
 }
 {
@@ -1467,10 +1467,10 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.52 0.52 0.52 ";
 	comment := VERTICES;
-	height := 8.3377700000000008;
+	height := 8.33777;
 	minimized := 0;
 	owner := __netbox4;
-	width := 5.9826899999999998;
+	width := 5.98269;
 	x_position := 23.5838;
 	y_position := 30.6738;
 }
@@ -1491,10 +1491,10 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.89 0.412 0.761 ";
 	comment := "VERTEX TEXT TITLE";
-	height := 7.9314099999999996;
+	height := 7.93141;
 	minimized := 0;
 	owner := __netbox4;
-	width := 6.3331400029802323;
+	width := 6.333140002980232;
 	x_position := 30.235999997019768;
 	y_position := 40.6464;
 }
@@ -1515,12 +1515,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.302 0.525 0.114 ";
 	comment := OUTPUT;
-	height := 7.8884999999999996;
+	height := 7.8885;
 	minimized := 0;
 	owner := __netbox15;
 	width := 32.969800002980236;
 	x_position := -37.559000002980234;
-	y_position := 9.7181300000000004;
+	y_position := 9.71813;
 }
 {
   create -1
@@ -1539,12 +1539,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.89 0.412 0.761 ";
 	comment := "PRIMITIVE TEXT";
-	height := 7.9056000029802291;
+	height := 7.905600002980229;
 	minimized := 0;
 	owner := __netbox9;
-	width := 6.2856900029802318;
-	x_position := -6.5692100029802321;
-	y_position := 40.695300000000003;
+	width := 6.285690002980232;
+	x_position := -6.569210002980232;
+	y_position := 40.6953;
 }
 {
   create -1
@@ -1563,12 +1563,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.52 0.52 0.52 ";
 	comment := "PRIMITIVE CENTROIDS FOR TEXT";
-	height := 3.9763500000000001;
+	height := 3.97635;
 	minimized := 0;
 	owner := __netbox9;
-	width := 3.7465999999999999;
-	x_position := -13.217499999999999;
-	y_position := 35.869500000000002;
+	width := 3.7466;
+	x_position := -13.2175;
+	y_position := 35.8695;
 }
 {
   create -1
@@ -1592,7 +1592,7 @@ Content-Type: text/plain
 	owner := __netbox15;
 	width := 13.333980005960465;
 	x_position := -13.417500002980232;
-	y_position := 29.078299999999999;
+	y_position := 29.0783;
 }
 {
   create -1
@@ -1611,12 +1611,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.52 0.52 0.52 ";
 	comment := EDGES;
-	height := 8.2231000029802352;
+	height := 8.223100002980235;
 	minimized := 0;
 	owner := __netbox11;
-	width := 4.2038900000000003;
-	x_position := 50.848199999999999;
-	y_position := 29.874199999999998;
+	width := 4.20389;
+	x_position := 50.8482;
+	y_position := 29.8742;
 }
 {
   create -1
@@ -1635,12 +1635,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.89 0.412 0.761 ";
 	comment := "EDGE TEXT";
-	height := 7.9056000029802291;
+	height := 7.905600002980229;
 	minimized := 0;
 	owner := __netbox11;
-	width := 6.7413600029802323;
-	x_position := 53.860399997019769;
-	y_position := 40.700200000000002;
+	width := 6.741360002980232;
+	x_position := 53.86039999701977;
+	y_position := 40.7002;
 }
 {
   create -1
@@ -1663,7 +1663,7 @@ Content-Type: text/plain
 	minimized := 0;
 	owner := __netbox15;
 	width := 13.678060002980232;
-	x_position := 47.123699999999999;
+	x_position := 47.1237;
 	y_position := 29.674199997019766;
 }
 {
@@ -1711,7 +1711,7 @@ Content-Type: text/plain
 	minimized := 0;
 	owner := __netbox12;
 	width := 6.5790600029802215;
-	x_position := 67.979499997019772;
+	x_position := 67.97949999701977;
 	y_position := 40.665099997019766;
 }
 {
@@ -1734,9 +1734,9 @@ Content-Type: text/plain
 	height := 22.8704;
 	minimized := 0;
 	owner := __netbox12;
-	width := 4.2676800000000004;
-	x_position := 68.028599999999997;
-	y_position := 17.273499999999999;
+	width := 4.26768;
+	x_position := 68.0286;
+	y_position := 17.2735;
 }
 {
   create -1
@@ -1758,9 +1758,9 @@ Content-Type: text/plain
 	height := 3.84613;
 	minimized := 0;
 	owner := __netbox12;
-	width := 5.2896000000000001;
-	x_position := 62.311599999999999;
-	y_position := 20.321100000000001;
+	width := 5.2896;
+	x_position := 62.3116;
+	y_position := 20.3211;
 }
 {
   create -1
@@ -1781,9 +1781,9 @@ Content-Type: text/plain
 	comment := "GRAPHIC BUILD";
 	height := 42.93410000298023;
 	minimized := 0;
-	width := 130.64779000894069;
-	x_position := -42.157300002980229;
-	y_position := 9.5181299970197681;
+	width := 130.6477900089407;
+	x_position := -42.15730000298023;
+	y_position := 9.518129997019768;
 }
 {
   create -1
@@ -1802,12 +1802,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.52 0.52 0.52 ";
 	comment := "ALL WIREFRAME RELATED ITEMS";
-	height := 6.9087000029802397;
+	height := 6.90870000298024;
 	minimized := 0;
 	owner := __netbox15;
 	width := 4.05349;
-	x_position := -41.957299999999996;
-	y_position := 41.972099999999998;
+	x_position := -41.9573;
+	y_position := 41.9721;
 }
 {
   create -1
@@ -1826,10 +1826,10 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.89 0.412 0.761 ";
 	comment := "SEAM TEXT";
-	height := 7.9834000029802326;
+	height := 7.983400002980233;
 	minimized := 0;
 	owner := __netbox18;
-	width := 5.1426100029802324;
+	width := 5.142610002980232;
 	x_position := -31.302200002980232;
 	y_position := 40.6267;
 }
@@ -1854,7 +1854,7 @@ Content-Type: text/plain
 	minimized := 0;
 	owner := __netbox15;
 	width := 11.724870005960462;
-	x_position := -37.543700002980231;
+	x_position := -37.54370000298023;
 	y_position := 25.714599997019768;
 }
 {
@@ -1874,12 +1874,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.384 0.184 0.329 ";
 	comment := "DESCRIPTION POINT TEXT";
-	height := 9.0526400000000002;
+	height := 9.05264;
 	minimized := 0;
 	owner := __netbox3;
-	width := 5.7872300029802322;
-	x_position := 0.50816399701976778;
-	y_position := 39.525100000000002;
+	width := 5.787230002980232;
+	x_position := 0.5081639970197678;
+	y_position := 39.5251;
 }
 {
   create -1
@@ -1898,12 +1898,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.384 0.184 0.329 ";
 	comment := "DESCRIPTION HALF-EDGE TEXT";
-	height := 9.0603000059604639;
+	height := 9.060300005960464;
 	minimized := 0;
 	owner := __netbox12;
 	width := 6.48264;
-	x_position := 61.281100000000002;
-	y_position := 39.545499997019768;
+	x_position := 61.2811;
+	y_position := 39.54549999701977;
 }
 {
   create -1
@@ -1922,12 +1922,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.52 0.52 0.52 ";
 	comment := PRIMITIVES;
-	height := 5.0571900000000003;
+	height := 5.05719;
 	minimized := 0;
 	owner := __netbox9;
-	width := 3.7465999999999999;
-	x_position := -13.217499999999999;
-	y_position := 29.940899999999999;
+	width := 3.7466;
+	x_position := -13.2175;
+	y_position := 29.9409;
 }
 {
   create -1
@@ -1946,12 +1946,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.384 0.184 0.329 ";
 	comment := "DESCRIPTION VERTEX TEXT";
-	height := 9.0252000029802346;
+	height := 9.025200002980235;
 	minimized := 0;
 	owner := __netbox4;
-	width := 6.6295500000000001;
+	width := 6.62955;
 	x_position := 23.5549;
-	y_position := 39.584899999999998;
+	y_position := 39.5849;
 }
 {
   create -1
@@ -1973,9 +1973,9 @@ Content-Type: text/plain
 	height := 10.006500002980232;
 	minimized := 0;
 	owner := __netbox11;
-	width := 6.1291399999999996;
-	x_position := 47.453899999999997;
-	y_position := 38.599299999999999;
+	width := 6.12914;
+	x_position := 47.4539;
+	y_position := 38.5993;
 }
 {
   create -1
@@ -1997,7 +1997,7 @@ Content-Type: text/plain
 	height := 10.3155;
 	minimized := 0;
 	owner := __netbox3;
-	width := 9.2610600029802317;
+	width := 9.261060002980232;
 	x_position := 12.806099997019768;
 	y_position := 38.2622;
 }
@@ -2018,12 +2018,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.89 0.412 0.761 ";
 	comment := "VERTEX TEXT PER VERTEX";
-	height := 9.1724800000000002;
+	height := 9.17248;
 	minimized := 0;
 	owner := __netbox4;
-	width := 9.7678000029802323;
-	x_position := 36.766999997019767;
-	y_position := 39.405299999999997;
+	width := 9.767800002980232;
+	x_position := 36.76699999701977;
+	y_position := 39.4053;
 }
 {
   create -1
@@ -2042,11 +2042,11 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.384 0.184 0.329 ";
 	comment := "DESCRIPTION PRIMITIVE TEXT";
-	height := 8.1208000029802321;
+	height := 8.120800002980232;
 	minimized := 0;
 	owner := __netbox9;
-	width := 6.1606899999999998;
-	x_position := -13.217499999999999;
+	width := 6.16069;
+	x_position := -13.2175;
 	y_position := 40.4801;
 }
 {
@@ -2066,12 +2066,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.384 0.184 0.329 ";
 	comment := "DESCRIPTION DETAIL TEXT";
-	height := 7.9056000029802362;
+	height := 7.905600002980236;
 	minimized := 0;
 	owner := __netbox1;
-	width := 5.7631900029802319;
+	width := 5.763190002980232;
 	x_position := -25.502700002980234;
-	y_position := 40.704599999999999;
+	y_position := 40.7046;
 }
 {
   create -1
@@ -2094,7 +2094,7 @@ Content-Type: text/plain
 	minimized := 0;
 	owner := __netbox15;
 	width := 13.33389000596047;
-	x_position := 74.956599997019765;
+	x_position := 74.95659999701977;
 	y_position := 24.977299997019767;
 }
 {
@@ -2114,12 +2114,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.89 0.412 0.761 ";
 	comment := "NORMAL TEXT";
-	height := 8.1492000029802298;
+	height := 8.14920000298023;
 	minimized := 0;
 	owner := __netbox38;
 	width := 6.41249;
-	x_position := 81.677999999999997;
-	y_position := 40.451700000000002;
+	x_position := 81.678;
+	y_position := 40.4517;
 }
 {
   create -1
@@ -2138,11 +2138,11 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.52 0.52 0.52 ";
 	comment := "NORMAL CENTROIDS FOR TEXT";
-	height := 3.9763500000000001;
+	height := 3.97635;
 	minimized := 0;
 	owner := __netbox38;
-	width := 3.7465999999999999;
-	x_position := 75.156599999999997;
+	width := 3.7466;
+	x_position := 75.1566;
 	y_position := 36.1753;
 }
 {
@@ -2165,9 +2165,9 @@ Content-Type: text/plain
 	height := 10.5459;
 	minimized := 0;
 	owner := __netbox38;
-	width := 3.7844799999999998;
-	x_position := 75.156599999999997;
-	y_position := 25.177299999999999;
+	width := 3.78448;
+	x_position := 75.1566;
+	y_position := 25.1773;
 }
 {
   create -1
@@ -2186,11 +2186,11 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.384 0.184 0.329 ";
 	comment := "DESCRIPTION NORMAL TEXT";
-	height := 7.8254999999999999;
+	height := 7.8255;
 	minimized := 0;
 	owner := __netbox38;
-	width := 6.1606899999999998;
-	x_position := 75.156599999999997;
+	width := 6.16069;
+	x_position := 75.1566;
 	y_position := 40.6952;
 }
 {
@@ -2213,9 +2213,9 @@ Content-Type: text/plain
 	height := 3.84613;
 	minimized := 0;
 	owner := __netbox38;
-	width := 5.2896000000000001;
-	x_position := 79.548199999999994;
-	y_position := 28.735399999999998;
+	width := 5.2896;
+	x_position := 79.5482;
+	y_position := 28.7354;
 }
 {
   create -1
@@ -2234,12 +2234,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.52 0.52 0.52 ";
 	comment := "GLOBAL SETTINGS";
-	height := 2.1426500000000002;
+	height := 2.14265;
 	minimized := 0;
 	owner := __netbox15;
-	width := 4.6504799999999999;
-	x_position := -41.957299999999996;
-	y_position := 49.709200000000003;
+	width := 4.65048;
+	x_position := -41.9573;
+	y_position := 49.7092;
 }
 {
   create -1
@@ -2258,12 +2258,12 @@ Content-Type: text/plain
 	autofit := 1;
 	color := "UT_Color RGB 0.384 0.184 0.329 ";
 	comment := "DESCRIPTION SEAM TEXT";
-	height := 7.9352000029802383;
+	height := 7.935200002980238;
 	minimized := 0;
 	owner := __netbox18;
-	width := 5.8899900000000001;
-	x_position := -37.343699999999998;
-	y_position := 40.674999999999997;
+	width := 5.88999;
+	x_position := -37.3437;
+	y_position := 40.675;
 }
 {
   create -1
@@ -2419,6 +2419,7 @@ nonplanar	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 nonplanartol	[ 0	locks=0	autoscope=0 ]	(	0.001	)
 dir	[ 0	locks=0	autoscope=0 ]	(	0	0	1	)
 angle	[ 0	locks=0	autoscope=0 ]	(	180	)
+oppositenormals	[ 0	locks=0 ]	(	"off"	)
 switcher5	[ 0	locks=0	autoscope=0 ]	(	0	)
 groupedges	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 dominedgeangle	[ 0	locks=0	autoscope=0 ]	(	"off"	)
@@ -2725,6 +2726,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -2831,6 +2833,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -2955,6 +2958,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -3017,7 +3021,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -3149,6 +3153,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -3255,6 +3260,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -3316,7 +3322,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -3381,7 +3387,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -3468,7 +3474,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -3558,7 +3564,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -3642,7 +3648,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -3709,7 +3715,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.573 0.353 0 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -3920,7 +3926,7 @@ doweight	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 metaweight	[ 0	locks=0	autoscope=0 ]	(	[ metaweight	0 ] 	)
 doprender	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 prtype	[ 0	locks=0	autoscope=0 ]	(	"sphere"	)
-prsize	[ 0	locks=0	autoscope=0 ]	(	0.050000000000000003	)
+prsize	[ 0	locks=0	autoscope=0 ]	(	0.05	)
 prblur	[ 0	locks=0	autoscope=0 ]	(	[ prblur	0 ] 	)
 dovolvis	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 volvis	[ 0	locks=0	autoscope=0 ]	(	"smoke"	)
@@ -3997,7 +4003,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -4253,6 +4259,7 @@ targetptattrib	[ 0	locks=0	autoscope=0 ]	(	snap_to	)
 targetclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
 usepositionsnapmethod	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 positionsnapmethod	[ 0	locks=0	autoscope=0 ]	(	"average"	)
+positionsnapweightname	[ 0	locks=0 ]	(	weight	)
 useradiusattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 radiusattrib	[ 0	locks=0	autoscope=0 ]	(	pscale	)
 usematchattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
@@ -4260,7 +4267,7 @@ matchattrib	[ 0	locks=0	autoscope=0 ]	(	name	)
 matchtype	[ 0	locks=0	autoscope=0 ]	(	"match"	)
 matchtol	[ 0	locks=0	autoscope=0 ]	(	0	)
 gridtype	[ 0	locks=0	autoscope=0 ]	(	"spacing"	)
-gridspacing	[ 0	locks=0	autoscope=0 ]	(	0.10000000000000001	0.10000000000000001	0.10000000000000001	)
+gridspacing	[ 0	locks=0	autoscope=0 ]	(	0.1	0.1	0.1	)
 gridlines	[ 0	locks=0	autoscope=0 ]	(	10	10	10	)
 gridpow2	[ 0	locks=0	autoscope=0 ]	(	3	3	3	)
 gridoffset	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
@@ -4345,7 +4352,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	DETAIL	)
 halign	[ 0	locks=0	autoscope=0 ]	(	"center"	)
 valign	[ 0	locks=0	autoscope=0 ]	(	"bottom"	)
@@ -4354,7 +4361,7 @@ t	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 r	[ 0	locks=0	autoscope=0 ]	(	0	180	0	)
 s	[ 0	locks=0	autoscope=0 ]	(	1	1	)
 tracking	[ 0	locks=0	autoscope=0 ]	(	0	0	)
-fontsize	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+fontsize	[ 0	locks=0	autoscope=0 ]	(	0.2	)
 oblique	[ 0	locks=0	autoscope=0 ]	(	0	)
 lod	[ 0	locks=0	autoscope=0 ]	(	1	)
 autokern	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -4416,7 +4423,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -4588,7 +4595,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -4655,7 +4662,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -4672,7 +4679,7 @@ deleteallcolorattribs	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 enable	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 class	[ 0	locks=0	autoscope=0 ]	(	2	)
 colortype	[ 0	locks=0	autoscope=0 ]	(	0	)
-color	[ 0	locks=0	autoscope=0 ]	(	0.075000002980232239	0.30000001192092896	0.1875	)
+color	[ 0	locks=0	autoscope=0 ]	(	0.07500000298023224	0.30000001192092896	0.1875	)
 seed	[ 0	locks=0	autoscope=0 ]	(	0	)
 rampattribute	[ 0	locks=0	autoscope=0 ]	(	""	)
 ramprange	[ 0	locks=0	autoscope=0 ]	(	0	1	)
@@ -4743,7 +4750,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -4828,7 +4835,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -4912,7 +4919,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -5025,7 +5032,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	POINT	)
 halign	[ 0	locks=0	autoscope=0 ]	(	"center"	)
 valign	[ 0	locks=0	autoscope=0 ]	(	"bottom"	)
@@ -5034,7 +5041,7 @@ t	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 r	[ 0	locks=0	autoscope=0 ]	(	0	180	0	)
 s	[ 0	locks=0	autoscope=0 ]	(	1	1	)
 tracking	[ 0	locks=0	autoscope=0 ]	(	0	0	)
-fontsize	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+fontsize	[ 0	locks=0	autoscope=0 ]	(	0.2	)
 oblique	[ 0	locks=0	autoscope=0 ]	(	0	)
 lod	[ 0	locks=0	autoscope=0 ]	(	1	)
 autokern	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -5138,6 +5145,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -5277,7 +5285,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -5346,7 +5354,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -5439,7 +5447,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -5524,7 +5532,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -5611,7 +5619,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -5881,6 +5889,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -6115,7 +6124,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -6209,7 +6218,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -6352,7 +6361,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -6449,7 +6458,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	VERTEX	)
 halign	[ 0	locks=0	autoscope=0 ]	(	"center"	)
 valign	[ 0	locks=0	autoscope=0 ]	(	"bottom"	)
@@ -6458,7 +6467,7 @@ t	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 r	[ 0	locks=0	autoscope=0 ]	(	0	180	0	)
 s	[ 0	locks=0	autoscope=0 ]	(	1	1	)
 tracking	[ 0	locks=0	autoscope=0 ]	(	0	0	)
-fontsize	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+fontsize	[ 0	locks=0	autoscope=0 ]	(	0.2	)
 oblique	[ 0	locks=0	autoscope=0 ]	(	0	)
 lod	[ 0	locks=0	autoscope=0 ]	(	1	)
 autokern	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -6517,7 +6526,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -6673,7 +6682,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -6804,6 +6813,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -6864,7 +6874,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -6951,7 +6961,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -6968,7 +6978,7 @@ deleteallcolorattribs	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 enable	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 class	[ 0	locks=0	autoscope=0 ]	(	2	)
 colortype	[ 0	locks=0	autoscope=0 ]	(	0	)
-color	[ 0	locks=0	autoscope=0 ]	(	1.1131666898727417	0.40266665816307068	0.14216665923595428	)
+color	[ 0	locks=0	autoscope=0 ]	(	1.1131666898727417	0.4026666581630707	0.14216665923595428	)
 seed	[ 0	locks=0	autoscope=0 ]	(	0	)
 rampattribute	[ 0	locks=0	autoscope=0 ]	(	""	)
 ramprange	[ 0	locks=0	autoscope=0 ]	(	0	1	)
@@ -7041,7 +7051,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -7141,7 +7151,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -7395,6 +7405,7 @@ targetptattrib	[ 0	locks=0	autoscope=0 ]	(	snap_to	)
 targetclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
 usepositionsnapmethod	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 positionsnapmethod	[ 0	locks=0	autoscope=0 ]	(	"average"	)
+positionsnapweightname	[ 0	locks=0 ]	(	weight	)
 useradiusattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 radiusattrib	[ 0	locks=0	autoscope=0 ]	(	pscale	)
 usematchattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
@@ -7402,7 +7413,7 @@ matchattrib	[ 0	locks=0	autoscope=0 ]	(	name	)
 matchtype	[ 0	locks=0	autoscope=0 ]	(	"match"	)
 matchtol	[ 0	locks=0	autoscope=0 ]	(	0	)
 gridtype	[ 0	locks=0	autoscope=0 ]	(	"spacing"	)
-gridspacing	[ 0	locks=0	autoscope=0 ]	(	0.10000000000000001	0.10000000000000001	0.10000000000000001	)
+gridspacing	[ 0	locks=0	autoscope=0 ]	(	0.1	0.1	0.1	)
 gridlines	[ 0	locks=0	autoscope=0 ]	(	10	10	10	)
 gridpow2	[ 0	locks=0	autoscope=0 ]	(	3	3	3	)
 gridoffset	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
@@ -7556,7 +7567,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -7783,7 +7794,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -7870,7 +7881,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.573 0.353 0 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -7959,6 +7970,9 @@ Content-Type: text/plain
 version 0.8
 deletions	[ 0	locks=0	autoscope=0 ]	(	1	)
 removegrp	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+selection_folder	[ 0	locks=0 ]	(	0	)
+selectiongroup	[ 0	locks=0 ]	(	""	)
+selectiongrouptype	[ 0	locks=0 ]	(	"guess"	)
 enable1	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 grouptype1	[ 0	locks=0	autoscope=0 ]	(	"any"	)
 group1	[ 0	locks=0	autoscope=0 ]	(	*	)
@@ -8035,8 +8049,8 @@ surfaceshape	[ 0	locks=0	autoscope=0 ]	(	"tube"	)
 surfacetype	[ 0	locks=0	autoscope=0 ]	(	"quads"	)
 scale	[ 0	locks=0	autoscope=0 ]	(	1	)
 cols	[ 0	locks=0	autoscope=0 ]	(	8	)
-radius	[ 0	locks=0	autoscope=0 ]	(	0.0080000000000000002	)
-width	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+radius	[ 0	locks=0	autoscope=0 ]	(	0.008	)
+width	[ 0	locks=0	autoscope=0 ]	(	0.2	)
 reversecrosssections	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 stretcharoundturns	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 maxstretcharoundturns	[ 0	locks=0	autoscope=0 ]	(	10	)
@@ -8207,14 +8221,23 @@ Content-Type: text/plain
 {
 version 0.8
 group	[ 0	locks=0	autoscope=0 ]	(	""	)
+arclen	[ 0	locks=0 ]	(	"off"	)
 firstu	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 domainu1	[ 0	locks=0	autoscope=0 ]	(	0	)
+usedomainu1attrib	[ 0	locks=0 ]	(	"constant"	)
+domainu1attrib	[ 0	locks=0 ]	(	""	)
 secondu	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 domainu2	[ 0	locks=0	autoscope=0 ]	(	[ domainu2	0.75 ] 	)
+usedomainu2attrib	[ 0	locks=0 ]	(	"constant"	)
+domainu2attrib	[ 0	locks=0 ]	(	""	)
 firstv	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 domainv1	[ 0	locks=0	autoscope=0 ]	(	0.25	)
+usedomainv1attrib	[ 0	locks=0 ]	(	"constant"	)
+domainv1attrib	[ 0	locks=0 ]	(	""	)
 secondv	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 domainv2	[ 0	locks=0	autoscope=0 ]	(	0.75	)
+usedomainv2attrib	[ 0	locks=0 ]	(	"constant"	)
+domainv2attrib	[ 0	locks=0 ]	(	""	)
 onlybreakpoints	[ 0	locks=0	autoscope=0 ]	(	"off"	"off"	)
 divsu	[ 0	locks=0	autoscope=0 ]	(	2	)
 divsv	[ 0	locks=0	autoscope=0 ]	(	2	)
@@ -8314,6 +8337,7 @@ nonplanar	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 nonplanartol	[ 0	locks=0	autoscope=0 ]	(	0.001	)
 dir	[ 0	locks=0	autoscope=0 ]	(	0	0	1	)
 angle	[ 0	locks=0	autoscope=0 ]	(	180	)
+oppositenormals	[ 0	locks=0 ]	(	"off"	)
 switcher5	[ 0	locks=0	autoscope=0 ]	(	0	)
 groupedges	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 dominedgeangle	[ 0	locks=0	autoscope=0 ]	(	"off"	)
@@ -8410,11 +8434,12 @@ snapgroup	[ 0	locks=0	autoscope=0 ]	(	0	)
 snaptype	[ 0	locks=0	autoscope=0 ]	(	"distancesnap"	)
 algorithm	[ 0	locks=0	autoscope=0 ]	(	"lowest"	)
 usetol3d	[ 0	locks=0	autoscope=0 ]	(	"on"	)
-tol3d	[ 0	locks=0	autoscope=0 ]	(	1.0000000000000001e-05	)
+tol3d	[ 0	locks=0	autoscope=0 ]	(	1e-5	)
 targetptattrib	[ 0	locks=0	autoscope=0 ]	(	snap_to	)
 targetclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
 usepositionsnapmethod	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 positionsnapmethod	[ 0	locks=0	autoscope=0 ]	(	"average"	)
+positionsnapweightname	[ 0	locks=0 ]	(	weight	)
 useradiusattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 radiusattrib	[ 0	locks=0	autoscope=0 ]	(	pscale	)
 usematchattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
@@ -8422,7 +8447,7 @@ matchattrib	[ 0	locks=0	autoscope=0 ]	(	name	)
 matchtype	[ 0	locks=0	autoscope=0 ]	(	"match"	)
 matchtol	[ 0	locks=0	autoscope=0 ]	(	0	)
 gridtype	[ 0	locks=0	autoscope=0 ]	(	"spacing"	)
-gridspacing	[ 0	locks=0	autoscope=0 ]	(	0.10000000000000001	0.10000000000000001	0.10000000000000001	)
+gridspacing	[ 0	locks=0	autoscope=0 ]	(	0.1	0.1	0.1	)
 gridlines	[ 0	locks=0	autoscope=0 ]	(	10	10	10	)
 gridpow2	[ 0	locks=0	autoscope=0 ]	(	3	3	3	)
 gridoffset	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
@@ -8510,6 +8535,7 @@ Content-Type: text/plain
 version 0.8
 group	[ 0	locks=0	autoscope=0 ]	(	seams	)
 sepparm2	[ 0	locks=0 ]	(	)
+keeporder	[ 0	locks=0 ]	(	"off"	)
 connectpath	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 closeloops	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 remove	[ 0	locks=0	autoscope=0 ]	(	"off"	)
@@ -8583,6 +8609,7 @@ Content-Type: text/plain
 version 0.8
 group	[ 0	locks=0	autoscope=0 ]	(	""	)
 sepparm2	[ 0	locks=0 ]	(	)
+keeporder	[ 0	locks=0 ]	(	"off"	)
 connectpath	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 closeloops	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 remove	[ 0	locks=0	autoscope=0 ]	(	"off"	)
@@ -8737,6 +8764,7 @@ Content-Type: text/plain
 version 0.8
 group	[ 0	locks=0	autoscope=0 ]	(	""	)
 sepparm2	[ 0	locks=0 ]	(	)
+keeporder	[ 0	locks=0 ]	(	"off"	)
 connectpath	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 closeloops	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 remove	[ 0	locks=0	autoscope=0 ]	(	"off"	)
@@ -8893,14 +8921,23 @@ Content-Type: text/plain
 {
 version 0.8
 group	[ 0	locks=0	autoscope=0 ]	(	""	)
+arclen	[ 0	locks=0 ]	(	"off"	)
 firstu	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 domainu1	[ 0	locks=0	autoscope=0 ]	(	0	)
+usedomainu1attrib	[ 0	locks=0 ]	(	"constant"	)
+domainu1attrib	[ 0	locks=0 ]	(	""	)
 secondu	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 domainu2	[ 0	locks=0	autoscope=0 ]	(	[ domainu2	0.75 ] 	)
+usedomainu2attrib	[ 0	locks=0 ]	(	"constant"	)
+domainu2attrib	[ 0	locks=0 ]	(	""	)
 firstv	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 domainv1	[ 0	locks=0	autoscope=0 ]	(	0.25	)
+usedomainv1attrib	[ 0	locks=0 ]	(	"constant"	)
+domainv1attrib	[ 0	locks=0 ]	(	""	)
 secondv	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 domainv2	[ 0	locks=0	autoscope=0 ]	(	0.75	)
+usedomainv2attrib	[ 0	locks=0 ]	(	"constant"	)
+domainv2attrib	[ 0	locks=0 ]	(	""	)
 onlybreakpoints	[ 0	locks=0	autoscope=0 ]	(	"off"	"off"	)
 divsu	[ 0	locks=0	autoscope=0 ]	(	2	)
 divsv	[ 0	locks=0	autoscope=0 ]	(	2	)
@@ -8990,6 +9027,7 @@ targetptattrib	[ 0	locks=0	autoscope=0 ]	(	snap_to	)
 targetclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
 usepositionsnapmethod	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 positionsnapmethod	[ 0	locks=0	autoscope=0 ]	(	"average"	)
+positionsnapweightname	[ 0	locks=0 ]	(	weight	)
 useradiusattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 radiusattrib	[ 0	locks=0	autoscope=0 ]	(	pscale	)
 usematchattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
@@ -8997,7 +9035,7 @@ matchattrib	[ 0	locks=0	autoscope=0 ]	(	name	)
 matchtype	[ 0	locks=0	autoscope=0 ]	(	"match"	)
 matchtol	[ 0	locks=0	autoscope=0 ]	(	0	)
 gridtype	[ 0	locks=0	autoscope=0 ]	(	"spacing"	)
-gridspacing	[ 0	locks=0	autoscope=0 ]	(	0.10000000000000001	0.10000000000000001	0.10000000000000001	)
+gridspacing	[ 0	locks=0	autoscope=0 ]	(	0.1	0.1	0.1	)
 gridlines	[ 0	locks=0	autoscope=0 ]	(	10	10	10	)
 gridpow2	[ 0	locks=0	autoscope=0 ]	(	3	3	3	)
 gridoffset	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
@@ -9070,7 +9108,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -9316,7 +9354,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -9404,7 +9442,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -9501,7 +9539,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	PRIMITIVE	)
 halign	[ 0	locks=0	autoscope=0 ]	(	"center"	)
 valign	[ 0	locks=0	autoscope=0 ]	(	"bottom"	)
@@ -9510,7 +9548,7 @@ t	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 r	[ 0	locks=0	autoscope=0 ]	(	0	180	0	)
 s	[ 0	locks=0	autoscope=0 ]	(	1	1	)
 tracking	[ 0	locks=0	autoscope=0 ]	(	0	0	)
-fontsize	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+fontsize	[ 0	locks=0	autoscope=0 ]	(	0.2	)
 oblique	[ 0	locks=0	autoscope=0 ]	(	0	)
 lod	[ 0	locks=0	autoscope=0 ]	(	1	)
 autokern	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -9569,7 +9607,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -9638,7 +9676,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -9777,6 +9815,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -9837,7 +9876,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -9997,7 +10036,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -10081,7 +10120,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -10173,6 +10212,7 @@ targetptattrib	[ 0	locks=0	autoscope=0 ]	(	snap_to	)
 targetclass	[ 0	locks=0	autoscope=0 ]	(	"point"	)
 usepositionsnapmethod	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 positionsnapmethod	[ 0	locks=0	autoscope=0 ]	(	"average"	)
+positionsnapweightname	[ 0	locks=0 ]	(	weight	)
 useradiusattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 radiusattrib	[ 0	locks=0	autoscope=0 ]	(	pscale	)
 usematchattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
@@ -10180,7 +10220,7 @@ matchattrib	[ 0	locks=0	autoscope=0 ]	(	name	)
 matchtype	[ 0	locks=0	autoscope=0 ]	(	"match"	)
 matchtol	[ 0	locks=0	autoscope=0 ]	(	0	)
 gridtype	[ 0	locks=0	autoscope=0 ]	(	"spacing"	)
-gridspacing	[ 0	locks=0	autoscope=0 ]	(	0.10000000000000001	0.10000000000000001	0.10000000000000001	)
+gridspacing	[ 0	locks=0	autoscope=0 ]	(	0.1	0.1	0.1	)
 gridlines	[ 0	locks=0	autoscope=0 ]	(	10	10	10	)
 gridpow2	[ 0	locks=0	autoscope=0 ]	(	3	3	3	)
 gridoffset	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
@@ -10255,7 +10295,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -10366,6 +10406,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -10428,7 +10469,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.573 0.353 0 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -10517,6 +10558,7 @@ Content-Type: text/plain
 version 0.8
 group	[ 0	locks=0	autoscope=0 ]	(	""	)
 sepparm2	[ 0	locks=0 ]	(	)
+keeporder	[ 0	locks=0 ]	(	"off"	)
 connectpath	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 closeloops	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 remove	[ 0	locks=0	autoscope=0 ]	(	"off"	)
@@ -10596,8 +10638,8 @@ surfaceshape	[ 0	locks=0	autoscope=0 ]	(	"tube"	)
 surfacetype	[ 0	locks=0	autoscope=0 ]	(	"quads"	)
 scale	[ 0	locks=0	autoscope=0 ]	(	1	)
 cols	[ 0	locks=0	autoscope=0 ]	(	8	)
-radius	[ 0	locks=0	autoscope=0 ]	(	0.0080000000000000002	)
-width	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+radius	[ 0	locks=0	autoscope=0 ]	(	0.008	)
+width	[ 0	locks=0	autoscope=0 ]	(	0.2	)
 reversecrosssections	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 stretcharoundturns	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 maxstretcharoundturns	[ 0	locks=0	autoscope=0 ]	(	10	)
@@ -10742,7 +10784,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -10888,7 +10930,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -11051,7 +11093,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -11148,7 +11190,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	EDGE	)
 halign	[ 0	locks=0	autoscope=0 ]	(	"center"	)
 valign	[ 0	locks=0	autoscope=0 ]	(	"top"	)
@@ -11157,7 +11199,7 @@ t	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 r	[ 0	locks=0	autoscope=0 ]	(	0	180	0	)
 s	[ 0	locks=0	autoscope=0 ]	(	1	1	)
 tracking	[ 0	locks=0	autoscope=0 ]	(	0	0	)
-fontsize	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+fontsize	[ 0	locks=0	autoscope=0 ]	(	0.2	)
 oblique	[ 0	locks=0	autoscope=0 ]	(	0	)
 lod	[ 0	locks=0	autoscope=0 ]	(	1	)
 autokern	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -11219,7 +11261,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -11358,6 +11400,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -11420,7 +11463,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -11437,7 +11480,7 @@ deleteallcolorattribs	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 enable	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 class	[ 0	locks=0	autoscope=0 ]	(	2	)
 colortype	[ 0	locks=0	autoscope=0 ]	(	0	)
-color	[ 0	locks=0	autoscope=0 ]	(	0.56319016218185425	0.27799999713897705	1	)
+color	[ 0	locks=0	autoscope=0 ]	(	0.5631901621818542	0.27799999713897705	1	)
 seed	[ 0	locks=0	autoscope=0 ]	(	0	)
 rampattribute	[ 0	locks=0	autoscope=0 ]	(	""	)
 ramprange	[ 0	locks=0	autoscope=0 ]	(	0	1	)
@@ -11509,7 +11552,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -11575,7 +11618,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -11714,7 +11757,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -11794,6 +11837,7 @@ Content-Type: text/plain
 version 0.8
 group	[ 0	locks=0	autoscope=0 ]	(	""	)
 sepparm2	[ 0	locks=0 ]	(	)
+keeporder	[ 0	locks=0 ]	(	"off"	)
 connectpath	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 closeloops	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 remove	[ 0	locks=0	autoscope=0 ]	(	"off"	)
@@ -11852,7 +11896,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -11938,7 +11982,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -12005,7 +12049,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -12217,6 +12261,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -12278,7 +12323,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -12344,7 +12389,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -12564,7 +12609,7 @@ doweight	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 metaweight	[ 0	locks=0	autoscope=0 ]	(	[ metaweight	0 ] 	)
 doprender	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 prtype	[ 0	locks=0	autoscope=0 ]	(	"sphere"	)
-prsize	[ 0	locks=0	autoscope=0 ]	(	0.050000000000000003	)
+prsize	[ 0	locks=0	autoscope=0 ]	(	0.05	)
 prblur	[ 0	locks=0	autoscope=0 ]	(	[ prblur	0 ] 	)
 dovolvis	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 volvis	[ 0	locks=0	autoscope=0 ]	(	"smoke"	)
@@ -12644,7 +12689,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -12771,8 +12816,8 @@ surfaceshape	[ 0	locks=0	autoscope=0 ]	(	"tube"	)
 surfacetype	[ 0	locks=0	autoscope=0 ]	(	"quads"	)
 scale	[ 0	locks=0	autoscope=0 ]	(	1	)
 cols	[ 0	locks=0	autoscope=0 ]	(	8	)
-radius	[ 0	locks=0	autoscope=0 ]	(	[ radius	0.10000000000000001 ] 	)
-width	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+radius	[ 0	locks=0	autoscope=0 ]	(	[ radius	0.1 ] 	)
+width	[ 0	locks=0	autoscope=0 ]	(	0.2	)
 reversecrosssections	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 stretcharoundturns	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 maxstretcharoundturns	[ 0	locks=0	autoscope=0 ]	(	10	)
@@ -12928,7 +12973,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	HALF-EDGE	)
 halign	[ 0	locks=0	autoscope=0 ]	(	"center"	)
 valign	[ 0	locks=0	autoscope=0 ]	(	"top"	)
@@ -12937,7 +12982,7 @@ t	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 r	[ 0	locks=0	autoscope=0 ]	(	0	180	0	)
 s	[ 0	locks=0	autoscope=0 ]	(	1	1	)
 tracking	[ 0	locks=0	autoscope=0 ]	(	0	0	)
-fontsize	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+fontsize	[ 0	locks=0	autoscope=0 ]	(	0.2	)
 oblique	[ 0	locks=0	autoscope=0 ]	(	0	)
 lod	[ 0	locks=0	autoscope=0 ]	(	1	)
 autokern	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -13070,7 +13115,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.573 0.353 0 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -13225,7 +13270,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -13311,7 +13356,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -13378,7 +13423,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -13445,7 +13490,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -13512,7 +13557,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -13579,7 +13624,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -13646,7 +13691,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -13713,7 +13758,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -13780,7 +13825,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -13937,14 +13982,23 @@ Content-Type: text/plain
 {
 version 0.8
 group	[ 0	locks=0	autoscope=0 ]	(	""	)
+arclen	[ 0	locks=0 ]	(	"off"	)
 firstu	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 domainu1	[ 0	locks=0	autoscope=0 ]	(	0.12	)
+usedomainu1attrib	[ 0	locks=0 ]	(	"constant"	)
+domainu1attrib	[ 0	locks=0 ]	(	""	)
 secondu	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 domainu2	[ 0	locks=0	autoscope=0 ]	(	0.75	)
+usedomainu2attrib	[ 0	locks=0 ]	(	"constant"	)
+domainu2attrib	[ 0	locks=0 ]	(	""	)
 firstv	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 domainv1	[ 0	locks=0	autoscope=0 ]	(	0.25	)
+usedomainv1attrib	[ 0	locks=0 ]	(	"constant"	)
+domainv1attrib	[ 0	locks=0 ]	(	""	)
 secondv	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 domainv2	[ 0	locks=0	autoscope=0 ]	(	0.75	)
+usedomainv2attrib	[ 0	locks=0 ]	(	"constant"	)
+domainv2attrib	[ 0	locks=0 ]	(	""	)
 onlybreakpoints	[ 0	locks=0	autoscope=0 ]	(	"off"	"off"	)
 divsu	[ 0	locks=0	autoscope=0 ]	(	2	)
 divsv	[ 0	locks=0	autoscope=0 ]	(	2	)
@@ -14252,7 +14306,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -14337,7 +14391,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -14748,7 +14802,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -14952,7 +15006,7 @@ t	[ 0	locks=0	autoscope=0 ]	(	0	0	[ tz	0 ] 	)
 r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 rad	[ 0	locks=0	autoscope=0 ]	(	0	1	)
 radscale	[ 0	locks=0	autoscope=0 ]	(	[ radscale	1 ] 	)
-height	[ 0	locks=0	autoscope=0 ]	(	0.040000000000000001	)
+height	[ 0	locks=0	autoscope=0 ]	(	0.04	)
 rows	[ 0	locks=0	autoscope=0 ]	(	2	)
 cols	[ 0	locks=0	autoscope=0 ]	(	12	)
 orderu	[ 0	locks=0	autoscope=0 ]	(	4	)
@@ -15181,7 +15235,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.996 0.933 0 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -15328,7 +15382,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -15475,6 +15529,7 @@ Content-Type: text/plain
 version 0.8
 group	[ 0	locks=0	autoscope=0 ]	(	""	)
 sepparm2	[ 0	locks=0 ]	(	)
+keeporder	[ 0	locks=0 ]	(	"off"	)
 connectpath	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 closeloops	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 remove	[ 0	locks=0	autoscope=0 ]	(	"off"	)
@@ -15534,7 +15589,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -15599,7 +15654,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -15686,7 +15741,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.573 0.353 0 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -15781,8 +15836,8 @@ surfaceshape	[ 0	locks=0	autoscope=0 ]	(	"tube"	)
 surfacetype	[ 0	locks=0	autoscope=0 ]	(	"quads"	)
 scale	[ 0	locks=0	autoscope=0 ]	(	1	)
 cols	[ 0	locks=0	autoscope=0 ]	(	8	)
-radius	[ 0	locks=0	autoscope=0 ]	(	0.0030000000000000001	)
-width	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+radius	[ 0	locks=0	autoscope=0 ]	(	0.003	)
+width	[ 0	locks=0	autoscope=0 ]	(	0.2	)
 reversecrosssections	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 stretcharoundturns	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 maxstretcharoundturns	[ 0	locks=0	autoscope=0 ]	(	10	)
@@ -15928,7 +15983,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -16074,7 +16129,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -16127,97 +16182,6 @@ Content-Type: text/plain
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/Geo_Explainer/font.init"
-Content-Type: text/plain
-
-type = null
-matchesdef = 1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/Geo_Explainer/font.def"
-Content-Type: text/plain
-
-sopflags sopflags = 
-comment ""
-position -41.7042 50.0019
-connectornextid 0
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
-outputsNamed3
-{
-}
-inputsNamed3
-{
-}
-inputs
-{
-}
-stat
-{
-  create -1
-  modify -1
-  author GFX@DESKTOP-1HSKGC8
-  access 0777
-}
-color UT_Color RGB 0.475 0.812 0.204 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/Geo_Explainer/font.spareparmdef"
-Content-Type: text/plain
-
-    parm {
-        name    "copyinput"
-        baseparm
-        label   "Copy Input (Note: Input will be still cooked if disabled)"
-        invisible
-        export  none
-    }
-    parm {
-        name    "cacheinput"
-        baseparm
-        label   "Cache Input"
-        invisible
-        export  none
-    }
-    parm {
-        name    "font"
-        label   "Font"
-        type    string
-        default { "Arial" }
-        parmtag { "script_callback_language" "python" }
-    }
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/Geo_Explainer/font.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-copyinput	[ 0	locks=0	autoscope=0 ]	(	"on"	)
-cacheinput	[ 0	locks=0	autoscope=0 ]	(	"off"	)
-font	[ 0	locks=0	autoscope=0 ]	(	Arial	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/Geo_Explainer/font.netbox"
-Content-Type: text/plain
-
-__netbox43
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/Geo_Explainer/font.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/Geo_Explainer/color2.init"
 Content-Type: text/plain
 
@@ -16252,7 +16216,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -16491,7 +16455,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -16852,6 +16816,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -16912,7 +16877,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -17009,7 +16974,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	"UV SEAM"	)
 halign	[ 0	locks=0	autoscope=0 ]	(	"center"	)
 valign	[ 0	locks=0	autoscope=0 ]	(	"top"	)
@@ -17018,7 +16983,7 @@ t	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 r	[ 0	locks=0	autoscope=0 ]	(	0	180	0	)
 s	[ 0	locks=0	autoscope=0 ]	(	1	1	)
 tracking	[ 0	locks=0	autoscope=0 ]	(	0	0	)
-fontsize	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+fontsize	[ 0	locks=0	autoscope=0 ]	(	0.2	)
 oblique	[ 0	locks=0	autoscope=0 ]	(	0	)
 lod	[ 0	locks=0	autoscope=0 ]	(	1	)
 autokern	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -17080,7 +17045,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -17174,7 +17139,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -17241,7 +17206,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -17453,6 +17418,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -17525,7 +17491,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	"Points are simply points
 in 3D space."	)
 halign	[ 0	locks=0	autoscope=0 ]	(	"center"	)
@@ -17594,7 +17560,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -17659,7 +17625,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -17748,7 +17714,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -17843,7 +17809,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -17908,7 +17874,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -18078,7 +18044,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -18171,7 +18137,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -18282,6 +18248,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -18343,7 +18310,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -18408,7 +18375,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -18664,7 +18631,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	"Half-edges are a directed edge,
 and have a start vertex and an
 end vertex.
@@ -18740,7 +18707,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -18979,7 +18946,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -19218,7 +19185,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -19455,7 +19422,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -19541,7 +19508,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -19608,7 +19575,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -19847,7 +19814,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -20132,7 +20099,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -20217,7 +20184,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -20300,7 +20267,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -20454,7 +20421,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -20540,7 +20507,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -20787,7 +20754,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -21034,7 +21001,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -21281,7 +21248,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -21528,7 +21495,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -21775,7 +21742,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -22022,7 +21989,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -22269,7 +22236,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -22516,7 +22483,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -22763,7 +22730,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -23010,7 +22977,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -23257,7 +23224,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -23575,7 +23542,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -23822,7 +23789,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -24157,7 +24124,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	"A vertex is a reference
 to a point.
 
@@ -24232,7 +24199,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -24325,7 +24292,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -24436,6 +24403,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -24497,7 +24465,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -24564,7 +24532,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -24809,7 +24777,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -24977,7 +24945,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -25216,7 +25184,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -25453,7 +25421,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -25519,7 +25487,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -25584,7 +25552,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -25749,7 +25717,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -25837,7 +25805,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -25976,6 +25944,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -26129,7 +26098,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	"Edges are undirected and
 shared between primitive faces."	)
 halign	[ 0	locks=0	autoscope=0 ]	(	"center"	)
@@ -26199,7 +26168,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -26438,7 +26407,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -26677,7 +26646,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -26742,7 +26711,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -26827,7 +26796,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -26984,7 +26953,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -27071,7 +27040,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -27202,6 +27171,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -27427,16 +27397,16 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	`points(\"../foreach_begin3\",0,\"ptText\")`	)
 halign	[ 0	locks=0	autoscope=0 ]	(	"center"	)
 valign	[ 0	locks=0	autoscope=0 ]	(	"middle"	)
 use_descender	[ 0	locks=0	autoscope=0 ]	(	"off"	)
-t	[ 0	locks=0	autoscope=0 ]	(	-0.059999999999999998	0.074999999999999997	0	)
+t	[ 0	locks=0	autoscope=0 ]	(	-0.06	0.075	0	)
 r	[ 0	locks=0	autoscope=0 ]	(	0	180	0	)
 s	[ 0	locks=0	autoscope=0 ]	(	1	1	)
 tracking	[ 0	locks=0	autoscope=0 ]	(	0	0	)
-fontsize	[ 0	locks=0	autoscope=0 ]	(	0.080000000000000002	)
+fontsize	[ 0	locks=0	autoscope=0 ]	(	0.08	)
 oblique	[ 0	locks=0	autoscope=0 ]	(	0	)
 lod	[ 0	locks=0	autoscope=0 ]	(	1	)
 autokern	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -27498,7 +27468,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -27591,7 +27561,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -27680,7 +27650,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -27767,7 +27737,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -28013,7 +27983,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -28171,7 +28141,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -28487,7 +28457,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -28598,6 +28568,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -28749,7 +28720,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -28846,16 +28817,16 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	`points(\"../foreach_begin4\",0,\"vtxText\")`	)
 halign	[ 0	locks=0	autoscope=0 ]	(	"left"	)
 valign	[ 0	locks=0	autoscope=0 ]	(	"middle"	)
 use_descender	[ 0	locks=0	autoscope=0 ]	(	"off"	)
-t	[ 0	locks=0	autoscope=0 ]	(	-0.040000000000000001	0.074999999999999997	0	)
+t	[ 0	locks=0	autoscope=0 ]	(	-0.04	0.075	0	)
 r	[ 0	locks=0	autoscope=0 ]	(	0	180	0	)
 s	[ 0	locks=0	autoscope=0 ]	(	1	1	)
 tracking	[ 0	locks=0	autoscope=0 ]	(	0	0	)
-fontsize	[ 0	locks=0	autoscope=0 ]	(	0.080000000000000002	)
+fontsize	[ 0	locks=0	autoscope=0 ]	(	0.08	)
 oblique	[ 0	locks=0	autoscope=0 ]	(	0	)
 lod	[ 0	locks=0	autoscope=0 ]	(	1	)
 autokern	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -28915,7 +28886,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -29000,7 +28971,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -29230,7 +29201,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -29325,7 +29296,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -29724,7 +29695,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -29973,7 +29944,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -30139,7 +30110,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -30216,7 +30187,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	"Unshared points are still just
 points in 3d space, but are
 unique per vertex."	)
@@ -30289,7 +30260,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -30394,7 +30365,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	"Polygons are shapes
 constructed from a series
 of straight edges."	)
@@ -30541,7 +30512,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -30672,6 +30643,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -30733,7 +30705,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -30797,7 +30769,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -30891,7 +30863,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -30978,7 +30950,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -31067,7 +31039,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -31161,7 +31133,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -31255,7 +31227,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -31351,7 +31323,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -31448,7 +31420,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -31539,7 +31511,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -31628,7 +31600,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -31717,7 +31689,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -31807,7 +31779,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -31907,7 +31879,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	"Detail is the whole
 geometry object."	)
 halign	[ 0	locks=0	autoscope=0 ]	(	"center"	)
@@ -32055,7 +32027,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -32072,7 +32044,7 @@ deleteallcolorattribs	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 enable	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 class	[ 0	locks=0	autoscope=0 ]	(	2	)
 colortype	[ 0	locks=0	autoscope=0 ]	(	0	)
-color	[ 0	locks=0	autoscope=0 ]	(	0.075000002980232239	0.30000001192092896	0.1875	)
+color	[ 0	locks=0	autoscope=0 ]	(	0.07500000298023224	0.30000001192092896	0.1875	)
 seed	[ 0	locks=0	autoscope=0 ]	(	0	)
 rampattribute	[ 0	locks=0	autoscope=0 ]	(	""	)
 ramprange	[ 0	locks=0	autoscope=0 ]	(	0	1	)
@@ -32189,6 +32161,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -32251,7 +32224,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -32338,7 +32311,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -32587,7 +32560,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -32681,7 +32654,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -32746,7 +32719,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -32986,7 +32959,7 @@ doweight	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 metaweight	[ 0	locks=0	autoscope=0 ]	(	[ metaweight	0 ] 	)
 doprender	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 prtype	[ 0	locks=0	autoscope=0 ]	(	"sphere"	)
-prsize	[ 0	locks=0	autoscope=0 ]	(	0.050000000000000003	)
+prsize	[ 0	locks=0	autoscope=0 ]	(	0.05	)
 prblur	[ 0	locks=0	autoscope=0 ]	(	[ prblur	0 ] 	)
 dovolvis	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 volvis	[ 0	locks=0	autoscope=0 ]	(	"smoke"	)
@@ -33323,7 +33296,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -33340,7 +33313,7 @@ deleteallcolorattribs	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 enable	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 class	[ 0	locks=0	autoscope=0 ]	(	2	)
 colortype	[ 0	locks=0	autoscope=0 ]	(	0	)
-color	[ 0	locks=0	autoscope=0 ]	(	2	0.40000000000000002	1	)
+color	[ 0	locks=0	autoscope=0 ]	(	2	0.4	1	)
 seed	[ 0	locks=0	autoscope=0 ]	(	0	)
 rampattribute	[ 0	locks=0	autoscope=0 ]	(	""	)
 ramprange	[ 0	locks=0	autoscope=0 ]	(	0	1	)
@@ -33411,7 +33384,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -33508,7 +33481,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	NORMAL	)
 halign	[ 0	locks=0	autoscope=0 ]	(	"center"	)
 valign	[ 0	locks=0	autoscope=0 ]	(	"top"	)
@@ -33517,7 +33490,7 @@ t	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 r	[ 0	locks=0	autoscope=0 ]	(	0	180	0	)
 s	[ 0	locks=0	autoscope=0 ]	(	1	1	)
 tracking	[ 0	locks=0	autoscope=0 ]	(	0	0	)
-fontsize	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+fontsize	[ 0	locks=0	autoscope=0 ]	(	0.2	)
 oblique	[ 0	locks=0	autoscope=0 ]	(	0	)
 lod	[ 0	locks=0	autoscope=0 ]	(	1	)
 autokern	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -33576,7 +33549,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -33645,7 +33618,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -33784,6 +33757,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -33844,7 +33818,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -34004,7 +33978,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -34088,7 +34062,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -34153,7 +34127,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -34239,7 +34213,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -34306,7 +34280,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -34545,7 +34519,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -34839,7 +34813,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -35088,7 +35062,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -35193,7 +35167,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	"Normal is the facing direction
 of a polygon face.
 
@@ -35348,7 +35322,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -35593,7 +35567,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -35724,6 +35698,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -35785,7 +35760,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -35852,7 +35827,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -36091,7 +36066,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -36183,7 +36158,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -36355,7 +36330,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -36420,7 +36395,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -36539,8 +36514,8 @@ surfaceshape	[ 0	locks=0	autoscope=0 ]	(	"tube"	)
 surfacetype	[ 0	locks=0	autoscope=0 ]	(	"quads"	)
 scale	[ 0	locks=0	autoscope=0 ]	(	1	)
 cols	[ 0	locks=0	autoscope=0 ]	(	8	)
-radius	[ 0	locks=0	autoscope=0 ]	(	[ radius	0.10000000000000001 ] 	)
-width	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+radius	[ 0	locks=0	autoscope=0 ]	(	[ radius	0.1 ] 	)
+width	[ 0	locks=0	autoscope=0 ]	(	0.2	)
 reversecrosssections	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 stretcharoundturns	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 maxstretcharoundturns	[ 0	locks=0	autoscope=0 ]	(	10	)
@@ -36686,7 +36661,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -36971,7 +36946,7 @@ t	[ 0	locks=0	autoscope=0 ]	(	0	0	[ tz	0 ] 	)
 r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 rad	[ 0	locks=0	autoscope=0 ]	(	0	1	)
 radscale	[ 0	locks=0	autoscope=0 ]	(	[ radscale	1 ] 	)
-height	[ 0	locks=0	autoscope=0 ]	(	0.080000000000000002	)
+height	[ 0	locks=0	autoscope=0 ]	(	0.08	)
 rows	[ 0	locks=0	autoscope=0 ]	(	2	)
 cols	[ 0	locks=0	autoscope=0 ]	(	12	)
 orderu	[ 0	locks=0	autoscope=0 ]	(	4	)
@@ -37122,7 +37097,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.996 0.933 0 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -37269,7 +37244,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -37405,7 +37380,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -37498,7 +37473,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -37707,6 +37682,7 @@ prexform_r	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 updatenmls	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0	autoscope=0 ]	(	"on"	)
@@ -37769,7 +37745,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -38015,7 +37991,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.6 0.7 0.77 
 delscript ""
 exprlanguage hscript
 end
@@ -38092,7 +38068,7 @@ Content-Type: text/plain
 {
 version 0.8
 type	[ 0	locks=0	autoscope=0 ]	(	"poly"	)
-file	[ 0	locks=0	autoscope=0 ]	(	`chs(\"../font/font\")`	)
+file	[ 0	locks=0	autoscope=0 ]	(	"Lato Bold"	)
 text	[ 0	locks=0	autoscope=0 ]	(	"UV Seam is a group of edges
 used to define how to flatten
 a polygon model in UV space.
@@ -38167,7 +38143,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -38254,7 +38230,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -38493,7 +38469,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -38732,7 +38708,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -39148,14 +39124,23 @@ Content-Type: text/plain
 {
 version 0.8
 group	[ 0	locks=0	autoscope=0 ]	(	""	)
+arclen	[ 0	locks=0 ]	(	"off"	)
 firstu	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 domainu1	[ 0	locks=0	autoscope=0 ]	(	0	)
+usedomainu1attrib	[ 0	locks=0 ]	(	"constant"	)
+domainu1attrib	[ 0	locks=0 ]	(	""	)
 secondu	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 domainu2	[ 0	locks=0	autoscope=0 ]	(	[ domainu2	0.75 ] 	)
+usedomainu2attrib	[ 0	locks=0 ]	(	"constant"	)
+domainu2attrib	[ 0	locks=0 ]	(	""	)
 firstv	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 domainv1	[ 0	locks=0	autoscope=0 ]	(	0.25	)
+usedomainv1attrib	[ 0	locks=0 ]	(	"constant"	)
+domainv1attrib	[ 0	locks=0 ]	(	""	)
 secondv	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 domainv2	[ 0	locks=0	autoscope=0 ]	(	0.75	)
+usedomainv2attrib	[ 0	locks=0 ]	(	"constant"	)
+domainv2attrib	[ 0	locks=0 ]	(	""	)
 onlybreakpoints	[ 0	locks=0	autoscope=0 ]	(	"off"	"off"	)
 divsu	[ 0	locks=0	autoscope=0 ]	(	2	)
 divsv	[ 0	locks=0	autoscope=0 ]	(	2	)
@@ -39222,7 +39207,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -39310,7 +39295,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.475 0.812 0.204 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -39376,7 +39361,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.839 0.839 0.839 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -39623,7 +39608,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.322 0.259 0.58 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -39860,7 +39845,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -39945,7 +39930,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -40030,7 +40015,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -40115,7 +40100,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -40200,7 +40185,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -40285,7 +40270,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -40370,7 +40355,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -40455,7 +40440,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -40540,7 +40525,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -40625,7 +40610,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -40710,7 +40695,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -40795,7 +40780,7 @@ stat
   author GFX@DESKTOP-1HSKGC8
   access 0777
 }
-color UT_Color RGB 0.29 0.565 0.886 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
@@ -40851,7 +40836,7 @@ Content-Type: text/plain
 Content-Disposition: attachment; filename="hdaroot/Geo_Explainer.order"
 Content-Type: text/plain
 
-366
+365
 box2
 group3
 uvflatten1
@@ -41010,7 +40995,6 @@ sweep4
 OUT_WIREFRAME
 switch11
 in_wireframe
-font
 color2
 color3
 normal11

@@ -1,5 +1,5 @@
 {
-	"values":["1.0","19.5.640","1"
+	"values":["1.0","20.0.605","2"
 	],
 	"indexes":{
 		"hdaroot/Geo_Explainer/detail_ref1.userdata":1,
@@ -143,7 +143,6 @@
 		"hdaroot/Geo_Explainer/OUT_HALFEDGE.userdata":1,
 		"hdaroot/Geo_Explainer/in_detail_attrib6.userdata":1,
 		"hdaroot/Geo_Explainer/OUT_POINT.userdata":1,
-		"hdaroot/Geo_Explainer/font.userdata":1,
 		"hdaroot/Geo_Explainer/in_detail_obj1.userdata":1,
 		"hdaroot/Geo_Explainer/switch9.userdata":1,
 		"hdaroot/Geo_Explainer/in_detail_attrib24.userdata":1,
@@ -223,9 +222,9 @@
 		"hdaroot/Geo_Explainer/merge4.userdata":1,
 		"hdaroot/Geo_Explainer/extractcentroid2.userdata":1,
 		"hdaroot/Geo_Explainer/normal9.userdata":1,
-		"hdaroot/Geo_Explainer/font6.userdata":1,
 		"hdaroot/Geo_Explainer/primitive1.userdata":1,
 		"hdaroot/Geo_Explainer/in_pre_divided_detail.userdata":1,
+		"hdaroot/Geo_Explainer/font6.userdata":1,
 		"hdaroot/Geo_Explainer/copytopoints1.userdata":1,
 		"hdaroot/Geo_Explainer/empty6.userdata":1,
 		"hdaroot/Geo_Explainer/in_cube.userdata":1,
