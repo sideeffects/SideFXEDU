@@ -1,0 +1,316 @@
+# Dialog script for edu::planet::1.0 automatically generated
+
+{
+    name	edu::planet::1.0
+    script	edu::planet::1.0
+    label	"EDU Planet"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    group {
+        name    "folder1"
+        label   "Planet"
+
+        parm {
+            name    "name"
+            label   "Name"
+            type    string
+            default { "$OS" }
+            parmtag { "script_callback_language" "python" }
+        }
+        group {
+            name    "folder2"
+            label   "Data"
+
+            parm {
+                name    "central_body"
+                label   "Central body"
+                type    oppath
+                default { "/obj/sun" }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "opfilter" "!!SOP!!" }
+                parmtag { "oprelative" "." }
+            }
+            parm {
+                name    "mass"
+                label   "Mass"
+                type    float
+                default { "5.97" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "diameter"
+                label   "Diameter"
+                type    float
+                default { "12756" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "density"
+                label   "Density"
+                type    float
+                default { "5514" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "gravity"
+                label   "Gravity"
+                type    float
+                default { "9.8" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "escape_velocity"
+                label   "Escape Velocity"
+                type    float
+                default { "11.2" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "rotation_period"
+                label   "Rotation Period"
+                type    float
+                default { "23.9" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "length_of_day"
+                label   "Length Of Day"
+                type    float
+                default { "24" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "distance_from_central_body"
+                label   "Distance from Central Body"
+                type    float
+                default { "149.6" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "perihelion"
+                label   "Perihelion"
+                type    float
+                default { "147.1" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "aphelion"
+                label   "Aphelion"
+                type    float
+                default { "152.1" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "orbital_period"
+                label   "Orbital Period"
+                type    float
+                default { "365.2" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "orbital_velocity"
+                label   "Orbital Velocity"
+                type    float
+                default { "29.8" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "orbital_inclination"
+                label   "Orbital Inclination"
+                type    float
+                default { "0" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "orbital_eccentricity"
+                label   "Orbital Eccentricity"
+                type    float
+                default { "0.017" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "obliquity_to_orbit"
+                label   "Obliquity To Orbit"
+                type    float
+                default { "23.4" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "mean_temperature"
+                label   "Mean Temperature"
+                type    float
+                default { "15" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "surface_pressure"
+                label   "Surface Pressure"
+                type    float
+                default { "1" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "number_of_moons"
+                label   "Number Of Moons"
+                type    integer
+                default { "1" }
+                range   { 0 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "ring_system"
+                label   "Ring System"
+                type    toggle
+                default { "0" }
+                range   { 0 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "global_magnetic_field"
+                label   "Global Magnetic Field"
+                type    toggle
+                default { "1" }
+                range   { 0 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+        }
+
+        group {
+            name    "folder2_1"
+            label   "Visualization"
+
+            parm {
+                name    "color"
+                label   "Color"
+                type    color
+                size    3
+                default { "0" "0.5" "1" }
+                range   { 0 1 }
+                parmtag { "autoscope" "0000000000000000" }
+            }
+            parm {
+                name    "vis_orbit"
+                label   "Display orbit"
+                type    toggle
+                default { "0" }
+                range   { 0! 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            group {
+                name    "textures"
+                label   "textures"
+
+                groupsimple {
+                    name    "texture_body"
+                    label   "Body"
+
+                    parm {
+                        name    "body_basecolor_texture"
+                        label   "Base color"
+                        type    image
+                        default { "" }
+                        parmtag { "autoscope" "0000000000000000" }
+                        parmtag { "ogl_specmap" "1" }
+                        parmtag { "ogl_tex1" "1" }
+                        parmtag { "parmvop" "1" }
+                        parmtag { "shaderparmcontexts" "surface" }
+                    }
+                    parm {
+                        name    "body_ior_texture"
+                        label   "Specular"
+                        type    image
+                        default { "" }
+                        parmtag { "autoscope" "0000000000000000" }
+                        parmtag { "parmvop" "1" }
+                        parmtag { "shaderparmcontexts" "surface" }
+                    }
+                    parm {
+                        name    "body_baseNormal_texture"
+                        label   "Normal"
+                        type    image
+                        default { "" }
+                        parmtag { "autoscope" "0000000000000000" }
+                        parmtag { "ogl_normalmap" "1" }
+                        parmtag { "parmvop" "1" }
+                        parmtag { "shaderparmcontexts" "surface" }
+                    }
+                }
+
+                groupcollapsible {
+                    name    "texture_atmosphere"
+                    label   "Atmosphere"
+                    parmtag { "sidefx::header_toggle" "use_atmos" }
+
+                    parm {
+                        name    "use_atmos"
+                        label   "Use Atmosphere"
+                        type    toggle
+                        default { "0" }
+                    }
+                    parm {
+                        name    "atmos_basecolor_texture"
+                        label   "Base color"
+                        type    image
+                        default { "" }
+                        disablewhen "{ use_atmos == 0 }"
+                        parmtag { "autoscope" "0000000000000000" }
+                        parmtag { "ogl_specmap" "1" }
+                        parmtag { "ogl_tex1" "1" }
+                        parmtag { "parmvop" "1" }
+                        parmtag { "shaderparmcontexts" "surface" }
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}

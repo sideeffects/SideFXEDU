@@ -1,0 +1,14 @@
+Operator:     edu::planet::1.0
+Label:        EDU Planet
+Path:         oplib:/edu::Sop/planet::1.0?edu::Sop/planet::1.0
+Icon:         SOP_subnet
+Table:        Sop
+License:      
+Extra:        inputcolors='1 "RGB 0.700195 0.700195 0.700195" ' outputcolors='1 "RGB 0.700195 0.700195 0.700195" ' 
+User:         
+Inputs:       0 to 1
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Tue Mar  5 18:13:31 2024
+
