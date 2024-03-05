@@ -1,0 +1,45 @@
+# Dialog script for edu::bezier_curve::1.0 automatically generated
+
+{
+    name	edu::bezier_curve::1.0
+    script	edu::bezier_curve::1.0
+    label	"EDU Bezier Curve"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Optional Points"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "use_input_points"
+        label   "Use Input Points"
+        type    toggle
+        default { "0" }
+        range   { 0! 10 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "use_anim_progress"
+        label   "Use Animated Progress"
+        type    toggle
+        default { "0" }
+        range   { 0! 10 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "progress"
+        label   "Progress"
+        type    float
+        default { "0.25" }
+        disablewhen "{ use_anim_progress == 1 }"
+        range   { 0! 1! }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+}
