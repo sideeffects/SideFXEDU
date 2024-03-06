@@ -32,17 +32,26 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment "Education tool"
-position 0 4.3885
-connectornextid 0
+position -1.05243 -0.935092
+connectornextid 8
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
 {
+0 "output1"
+2 "output2"
+3 "output3"
+4 "output4"
+5 "output5"
+6 "output6"
+7 "output7"
 }
 inputsNamed3
 {
+1 	edu_path_tracing_scene 0 1 "input1"
 }
 inputs
 {
+0 	edu_path_tracing_scene 0 1
 }
 stat
 {
@@ -89,11 +98,11 @@ Content-Type: text/plain
 	autofit := 0;
 	color := "UT_Color RGB 0.322 0.259 0.58 ";
 	comment := "!!! DO NOT DELETE !!!";
-	height := 7.1161538348682152;
+	height := 7.116153834868215;
 	minimized := 0;
-	width := 8.4936546046154042;
+	width := 8.493654604615404;
 	x_position := 41.218082572172094;
-	y_position := -4.9834800000000001;
+	y_position := -4.98348;
 }
 {
   create -1
@@ -114,8 +123,8 @@ Content-Type: text/plain
 	comment := "!!! DO NOT DELETE !!!";
 	height := 16.750835538876782;
 	minimized := 0;
-	width := 8.4936783358186503;
-	x_position := 41.218058840968851;
+	width := 8.49367833581865;
+	x_position := 41.21805884096885;
 	y_position := -23.866472296181236;
 }
 {
@@ -138,8 +147,8 @@ Content-Type: text/plain
 	height := 1.7000000119209302;
 	minimized := 0;
 	width := 2.8604999884963043;
-	x_position := 6.8396700057518496;
-	y_position := -2.6749200000000011;
+	x_position := 6.83967000575185;
+	y_position := -2.674920000000001;
 }
 {
   create -1
@@ -161,8 +170,8 @@ Content-Type: text/plain
 	height := 1.8295000119209277;
 	minimized := 0;
 	width := 2.8604999884963034;
-	x_position := 6.8431200008225437;
-	y_position := -20.827500000000001;
+	x_position := 6.843120000822544;
+	y_position := -20.8275;
 }
 {
   create -1
@@ -231,30 +240,7 @@ Content-Type: text/plain
 	minimized := 0;
 	width := 12.073758414918847;
 	x_position := -2.4756199999999997;
-	y_position := 9.2609500000000011;
-}
-{
-  create -1
-  modify -1
-  author sidefx@asterix.local
-  access 0777
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/__netbox8.netboxinit"
-Content-Type: text/plain
-
-2
-2
-{
-	autofit := 0;
-	color := "UT_Color RGB 0.98 0.275 0.275 ";
-	comment := "";
-	height := 4.3341500119209284;
-	minimized := 0;
-	width := 7.5210000008225393;
-	x_position := 16.752200000000002;
-	y_position := -11.191899999999999;
+	y_position := 9.260950000000001;
 }
 {
   create -1
@@ -393,39 +379,6 @@ Content-Disposition: attachment; filename="hdaroot/__stickynote3.postitnetbox"
 Content-Type: text/plain
 
 __netbox7
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/__stickynote4.postitinit"
-Content-Type: text/plain
-
-type = postitnote
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/__stickynote4.postitdef"
-Content-Type: text/plain
-
-text "THIS IS WRONG
-it should be 
-[Secondary Samples] * [Light Sample Quality]"
-position 17.5027 -9.78275
-size 5.3705 2.5
-flags = minimize off
-stat
-{
-  create 1689257612
-  modify 1689257656
-  author sidefx@asterix.local
-  access 0777
-}
-color UT_Color RGB 1 1 1 
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/__stickynote4.postitnetbox"
-Content-Type: text/plain
-
-__netbox8
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/matnet1.init"
@@ -1334,7 +1287,7 @@ filedef	[ 0	locks=0 ]	(	""	)
 imagedef	[ 0	locks=0 ]	(	""	)
 geometrydef	[ 0	locks=0 ]	(	""	)
 colordef	[ 0	locks=0 ]	(	1	1	1	)
-color4def	[ 0	locks=0 ]	(	0.89999997600000003	0	0	1	)
+color4def	[ 0	locks=0 ]	(	0.899999976	0	0	1	)
 bsdfdef	[ 0	locks=0 ]	(	""	)
 dictdef	[ 0	locks=0 ]	(	""	)
 coshaderdef	[ 0	locks=0 ]	(	""	)
@@ -4162,6 +4115,7 @@ srcgrouptype	[ 0	locks=0 ]	(	"points"	)
 destgroup	[ 0	locks=0 ]	(	""	)
 destgrouptype	[ 0	locks=0 ]	(	"points"	)
 matchbyattribute	[ 0	locks=0 ]	(	"on"	)
+matchbyattributemethod	[ 0	locks=0 ]	(	"byvalues"	)
 attributetomatch	[ 0	locks=0 ]	(	pixelId	)
 attrib	[ 0	locks=0 ]	(	"otherattrib"	)
 attribname	[ 0	locks=0 ]	(	Cd	)
@@ -4170,6 +4124,7 @@ usenewname	[ 0	locks=0 ]	(	"off"	)
 newname	[ 0	locks=0 ]	(	""	)
 class	[ 0	locks=0 ]	(	"guess"	)
 copyvariable	[ 0	locks=0 ]	(	"on"	)
+copydata	[ 0	locks=0 ]	(	"on"	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -4545,6 +4500,7 @@ dopointidx	[ 0	locks=0 ]	(	"off"	)
 spointidx	[ 0	locks=0 ]	(	pointidx	)
 docopyattribs	[ 0	locks=0 ]	(	"on"	)
 attribstocopy	[ 0	locks=0 ]	(	*	)
+detailstocopy	[ 0	locks=0 ]	(	""	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -5007,6 +4963,31 @@ Content-Type: text/plain
         parmtag { "opfilter" "!!SOP!!" }
         parmtag { "oprelative" "." }
     }
+    parm {
+        name    "usegeometricnormals"
+        baseparm
+        label   "Use Geometric Normals"
+        export  none
+    }
+    parm {
+        name    "useoutputidattrib"
+        baseparm
+        label   "Use Output ID Attribute"
+        nolabel
+        export  none
+    }
+    parm {
+        name    "outputidattrib"
+        baseparm
+        label   "Output ID Attribute"
+        export  none
+    }
+    parm {
+        name    "detailattribsasdetail"
+        baseparm
+        label   "Detail as Detail"
+        export  none
+    }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/scatter9.chn"
@@ -5045,13 +5026,14 @@ densitytexture	[ 0	locks=0 ]	(	default.pic	)
 uvattrib	[ 0	locks=0 ]	(	uv	)
 primcountattrib	[ 0	locks=0 ]	(	count	)
 useemergencylimit	[ 0	locks=0 ]	(	"on"	)
-emergencylimit	[ 0	locks=0 ]	(	1100000	)
+emergencylimit	[ 0	locks=0 ]	(	1.1e6	)
 seed	[ 8	locks=0 ]	(	0	)
 overrideprimseed	[ 0	locks=0 ]	(	"off"	)
 primseedattrib	[ 0	locks=0 ]	(	primid	)
 randomizeorder	[ 0	locks=0 ]	(	"on"	)
 relaxpoints	[ 0	locks=0 ]	(	"on"	)
 relaxiterations	[ 0	locks=0 ]	(	10	)
+usegeometricnormals	[ 0	locks=0 ]	(	"off"	)
 scaleradiiby	[ 0	locks=0 ]	(	2	)
 usemaxradius	[ 0	locks=0 ]	(	"on"	)
 maxradius	[ 0	locks=0 ]	(	10	)
@@ -5063,11 +5045,14 @@ useoutputdensityattrib	[ 0	locks=0 ]	(	"off"	)
 outputdensityattrib	[ 0	locks=0 ]	(	density	)
 useoutputradiusattrib	[ 0	locks=0 ]	(	"off"	)
 outputradiusattrib	[ 0	locks=0 ]	(	pscale	)
+useoutputidattrib	[ 0	locks=0 ]	(	"off"	)
+outputidattrib	[ 0	locks=0 ]	(	id	)
 radiusintexturespace	[ 0	locks=0 ]	(	"off"	)
 pointattribs	[ 0	locks=0 ]	(	*	)
 vertattribs	[ 0	locks=0 ]	(	"N uv*"	)
 primattribs	[ 0	locks=0 ]	(	texture	)
 detailattribs	[ 0	locks=0 ]	(	""	)
+detailattribsasdetail	[ 0	locks=0 ]	(	""	)
 stdswitcher3	[ 0	locks=0 ]	(	1	1	)
 spare_input0	[ 0	locks=0 ]	(	../NPOINTS1	)
 }
@@ -5219,6 +5204,7 @@ srcgrouptype	[ 0	locks=0 ]	(	"points"	)
 destgroup	[ 0	locks=0 ]	(	""	)
 destgrouptype	[ 0	locks=0 ]	(	"points"	)
 matchbyattribute	[ 0	locks=0 ]	(	"off"	)
+matchbyattributemethod	[ 0	locks=0 ]	(	"byvalues"	)
 attributetomatch	[ 0	locks=0 ]	(	lightId	)
 attrib	[ 0	locks=0 ]	(	"otherattrib"	)
 attribname	[ 0	locks=0 ]	(	P	)
@@ -5227,6 +5213,7 @@ usenewname	[ 0	locks=0 ]	(	"on"	)
 newname	[ 0	locks=0 ]	(	samplingPos	)
 class	[ 0	locks=0 ]	(	"guess"	)
 copyvariable	[ 0	locks=0 ]	(	"on"	)
+copydata	[ 0	locks=0 ]	(	"on"	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -5821,6 +5808,7 @@ unload	[ 0	locks=0 ]	(	"always"	)
 primarypath	[ 0	locks=0 ]	(	""	)
 forcerecompile	[ 0	locks=0 ]	(	0	)
 delayillegal	[ 0	locks=0 ]	(	"off"	)
+fallback	[ 0	locks=0 ]	(	"off"	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -6832,6 +6820,9 @@ Content-Type: text/plain
 version 0.8
 deletions	[ 0	locks=0 ]	(	1	)
 removegrp	[ 0	locks=0 ]	(	"on"	)
+selection_folder	[ 0	locks=0 ]	(	0	)
+selectiongroup	[ 0	locks=0 ]	(	""	)
+selectiongrouptype	[ 0	locks=0 ]	(	"guess"	)
 enable1	[ 0	locks=0 ]	(	"on"	)
 grouptype1	[ 0	locks=0 ]	(	"any"	)
 group1	[ 0	locks=0 ]	(	""	)
@@ -7051,7 +7042,7 @@ sopflags sopflags =
 comment ""
 position 7.26992 6.13918
 connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
 1 "output1"
@@ -8068,6 +8059,7 @@ dopointidx	[ 0	locks=0 ]	(	"off"	)
 spointidx	[ 0	locks=0 ]	(	pointidx	)
 docopyattribs	[ 0	locks=0 ]	(	"on"	)
 attribstocopy	[ 0	locks=0 ]	(	*	)
+detailstocopy	[ 0	locks=0 ]	(	""	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -8662,7 +8654,7 @@ vex_precision	[ 0	locks=0 ]	(	auto	)
 folder1	[ 0	locks=0 ]	(	0	0	)
 sepparm	[ 0	locks=0 ]	(	)
 sepparm2	[ 0	locks=0 ]	(	)
-maxangle	[ 0	locks=0 ]	(	0.10000000000000001	)
+maxangle	[ 0	locks=0 ]	(	0.1	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -8942,6 +8934,7 @@ nonplanar	[ 0	locks=0 ]	(	"off"	)
 nonplanartol	[ 0	locks=0 ]	(	0.001	)
 dir	[ 0	locks=0 ]	(	0	0	1	)
 angle	[ 0	locks=0 ]	(	180	)
+oppositenormals	[ 0	locks=0 ]	(	"off"	)
 switcher5	[ 0	locks=0 ]	(	0	)
 groupedges	[ 0	locks=0 ]	(	"off"	)
 dominedgeangle	[ 0	locks=0 ]	(	"off"	)
@@ -9329,7 +9322,7 @@ sopflags sopflags =
 comment ""
 position 17.1522 -10.9919
 connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault off exposed on
 outputsNamed3
 {
 1 "output1"
@@ -9378,7 +9371,7 @@ group	[ 0	locks=0 ]	(	""	)
 keep	[ 0	locks=0 ]	(	"off"	)
 ptsperpt	[ 0	locks=0 ]	(	"on"	)
 npts	[ 0	locks=0 ]	(	5000	)
-nptsperpt	[ 8	locks=0 ]	(	[ nptsperpt	10 ] 	)
+nptsperpt	[ 0	locks=0 ]	(	[ nptsperpt	10 ] 	)
 doattrib	[ 0	locks=0 ]	(	"off"	)
 attrib	[ 0	locks=0 ]	(	""	)
 seed	[ 0	locks=0 ]	(	0	)
@@ -9390,13 +9383,8 @@ dopointidx	[ 0	locks=0 ]	(	"off"	)
 spointidx	[ 0	locks=0 ]	(	pointidx	)
 docopyattribs	[ 0	locks=0 ]	(	"on"	)
 attribstocopy	[ 0	locks=0 ]	(	*	)
+detailstocopy	[ 0	locks=0 ]	(	""	)
 }
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/pointgenerate3.netbox"
-Content-Type: text/plain
-
-__netbox8
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/pointgenerate3.userdata"
@@ -10039,6 +10027,7 @@ apply_style_sheets	[ 0	locks=0 ]	(	"off"	)
 scene_style_sheet	[ 0	locks=0 ]	(	""	)
 obj_style_sheet	[ 0	locks=0 ]	(	""	)
 dotransform	[ 0	locks=0 ]	(	"on"	)
+convertpolysoup	[ 0	locks=0 ]	(	"off"	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -10324,6 +10313,7 @@ nonplanar	[ 0	locks=0 ]	(	"off"	)
 nonplanartol	[ 0	locks=0 ]	(	0.001	)
 dir	[ 0	locks=0 ]	(	0	0	1	)
 angle	[ 0	locks=0 ]	(	180	)
+oppositenormals	[ 0	locks=0 ]	(	"off"	)
 switcher5	[ 0	locks=0 ]	(	0	)
 groupedges	[ 0	locks=0 ]	(	"off"	)
 dominedgeangle	[ 0	locks=0 ]	(	"off"	)
@@ -10811,6 +10801,9 @@ Content-Type: text/plain
 version 0.8
 deletions	[ 0	locks=0 ]	(	1	)
 removegrp	[ 0	locks=0 ]	(	"on"	)
+selection_folder	[ 0	locks=0 ]	(	0	)
+selectiongroup	[ 0	locks=0 ]	(	""	)
+selectiongrouptype	[ 0	locks=0 ]	(	"guess"	)
 enable1	[ 0	locks=0 ]	(	"on"	)
 grouptype1	[ 0	locks=0 ]	(	"any"	)
 group1	[ 0	locks=0 ]	(	samples	)
@@ -11748,6 +11741,7 @@ prexform_r	[ 0	locks=0 ]	(	0	0	0	)
 prexform_s	[ 0	locks=0 ]	(	1	1	1	)
 prexform_shear	[ 0	locks=0 ]	(	0	0	0	)
 movecentroid	[ 0	locks=0 ]	(	0	)
+movepivot	[ 0	locks=0 ]	(	0	)
 attribs	[ 0	locks=0 ]	(	*	)
 updatenmls	[ 0	locks=0 ]	(	"off"	)
 updateaffectednmls	[ 0	locks=0 ]	(	"on"	)
@@ -12119,6 +12113,7 @@ unload	[ 0	locks=0 ]	(	"always"	)
 primarypath	[ 0	locks=0 ]	(	""	)
 forcerecompile	[ 0	locks=0 ]	(	0	)
 delayillegal	[ 0	locks=0 ]	(	"off"	)
+fallback	[ 0	locks=0 ]	(	"off"	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -12495,6 +12490,7 @@ nonplanar	[ 0	locks=0 ]	(	"off"	)
 nonplanartol	[ 0	locks=0 ]	(	0.001	)
 dir	[ 0	locks=0 ]	(	0	0	1	)
 angle	[ 0	locks=0 ]	(	180	)
+oppositenormals	[ 0	locks=0 ]	(	"off"	)
 switcher5	[ 0	locks=0 ]	(	0	)
 groupedges	[ 0	locks=0 ]	(	"off"	)
 dominedgeangle	[ 0	locks=0 ]	(	"off"	)
@@ -13151,6 +13147,7 @@ unload	[ 0	locks=0 ]	(	"always"	)
 primarypath	[ 0	locks=0 ]	(	""	)
 forcerecompile	[ 0	locks=0 ]	(	0	)
 delayillegal	[ 0	locks=0 ]	(	"off"	)
+fallback	[ 0	locks=0 ]	(	"off"	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -13375,6 +13372,9 @@ Content-Type: text/plain
 version 0.8
 deletions	[ 0	locks=0 ]	(	1	)
 removegrp	[ 0	locks=0 ]	(	"on"	)
+selection_folder	[ 0	locks=0 ]	(	0	)
+selectiongroup	[ 0	locks=0 ]	(	""	)
+selectiongrouptype	[ 0	locks=0 ]	(	"guess"	)
 enable1	[ 0	locks=0 ]	(	"on"	)
 grouptype1	[ 0	locks=0 ]	(	"any"	)
 group1	[ 0	locks=0 ]	(	samples	)
