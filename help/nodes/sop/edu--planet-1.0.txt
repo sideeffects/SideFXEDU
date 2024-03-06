@@ -1,0 +1,156 @@
+#type:     node
+#context:  sop
+#internal: edu::planet::1.0
+#icon:     SOP/edu::planet::1.0
+#tags:     sidefxedu
+
+= EDU Planet =
+
+"""This HDA helps defining a planet thanks to its physical data."""
+
+
+WARNING:
+    This node is made for education purposes only. You can use it for other things, but at your own risks.
+
+
+This HDA helps defining a planet thanks to its physical data. You can find such data on the [NASA Space Science Data Coordinated Archive (NSSDCA) website | https://nssdc.gsfc.nasa.gov/planetary/factsheet/].
+
+
+@parameters
+
+    == Planet ==
+
+    Name:
+        #id: name
+        The name of the planet.
+        
+    === Data ===
+
+    Central body:
+        #id: central_body
+        The body around which the planet is rotating.
+        
+    Mass:
+        #id: mass
+        expressed in 10^24 kg.
+
+    Diameter:
+        #id: diameter
+        expressed in km.
+        
+    Density:
+        #id: density
+        expressed in kg/m3.
+        
+    Gravity:
+        #id: gravity
+        expressed in m/s2.
+        
+    Escape Velocity:
+        #id: escape_velocity
+        expressed in km/s.
+
+    Rotation Period:
+        #id: rotation_period
+        expressed in hours.
+                
+    Length Of Day:
+        #id: length_of_day
+        expressed in hours.
+
+    Distance from Central Body:
+        #id: distance_from_central_body
+        expressed in 10^6 km.
+        
+    Perihelion:
+        #id: perihelion
+        expressed in 10^6 km.
+        
+    Aphelion:
+        #id: aphelion
+        expressed in 10^6 km.
+        
+    Orbital Period:
+        #id: orbital_period
+        expressed in days.
+        
+    Orbital Velocity:
+        #id: orbital_velocity
+        expressed in km/s.
+        
+    Orbital Inclination:
+        #id: orbital_inclination
+        expressed in degrees.
+        
+    Orbital Eccentricity:
+        #id: orbital_eccentricity
+        Orbital Eccentricity.
+        
+    Obliquity To Orbit:
+        #id: obliquity_to_orbit
+        expressed in degrees.
+        
+    Mean Temperature:
+        #id: mean_temperature
+        expressed in ˚C.
+        
+    Surface Pressure:
+        #id: surface_pressure
+        expressed in bars.
+
+    Number Of Moons:
+        #id: number_of_moons
+        Number of Moons of the planet.
+        
+    Ring System:
+        #id: ring_system
+        Whether it has a ring system or not.
+
+    Global Magnetic Field:
+        #id: global_magnetic_field
+        Whether it has a global magnetic field or not.
+
+
+    === Visualization ===
+
+    Color:
+        #id: color
+        The color to use for viewport visualization when no texture is defined.
+        
+    Display orbit:
+        #id: vis_orbit
+        Whether to display the orbit trajectory or not.
+        
+    ==== Textures ====
+
+    Planet textures are not distributed with the HDA but can be downloaded from the internet.
+    Here are a few examples:
+    - [Solar System Scope | https://www.solarsystemscope.com/textures/]
+    - [Planet Texture Maps Wiki | https://planet-texture-maps.fandom.com/wiki/Planet_Texture_Maps_Wiki]
+
+
+    The HDA uses a Principle Shader. Refer to the [Principle Shader help page | /nodes/vop/principledshader] for more information.
+
+    ==== Body ====
+
+    Base color:
+        #id: body_basecolor_texture
+        The overall color of the surface of the planet.
+        
+    Specular:
+        #id: body_ior_texture
+        How light is reflected of the surface of the planet.
+        
+    Normal:
+        #id: body_baseNormal_texture
+        The normal map for the planet's material.
+        
+    ==== Atmosphere ====
+
+    Use Atmosphere:
+        #id: use_atmos
+        Whether to display the planet's atmosphere or not.
+
+    Base color:
+        #id: atmos_basecolor_texture
+        The overall color of the atmosphere, with alpha.

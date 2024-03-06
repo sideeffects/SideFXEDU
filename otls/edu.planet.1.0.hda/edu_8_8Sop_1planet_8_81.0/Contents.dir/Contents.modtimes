@@ -72,7 +72,7 @@
 	"hdaroot/MAT/karmamaterial/material_properties.def":1702306519,
 	"hdaroot/MAT/karmamaterial/mtlxdisplacement.def":1702306602,
 	"hdaroot/MAT/karmamaterial1/inputs.def":1702309445,
-	"hdaroot/MAT/atmos_material.def":1709656605,
+	"hdaroot/MAT/atmos_material.def":1709735693,
 	"hdaroot/tube1.def":1702295698,
 	"hdaroot/MAT/karmamaterial/Material_Outputs_and_AOVs.def":1702306602,
 	"hdaroot/group5.def":1702295653,
@@ -91,11 +91,11 @@
 	"hdaroot/MAT/constant.def":1702306509,
 	"hdaroot/transform3.def":1702295627,
 	"hdaroot/set_point_attributes.def":1702396691,
-	"hdaroot/MAT/planet_material.def":1709658745,
+	"hdaroot/MAT/planet_material.def":1709735693,
 	"hdaroot/get_attributes.def":1702396691,
 	"hdaroot/MAT/karmamaterial.def":1702309228,
 	"hdaroot/MAT.def":1709655239,
 	"hdaroot/MAT/constant/inputs.def":1702304409,
-	"hdaroot.def":1709658797,
+	"hdaroot.def":1709735695,
 	"hdaroot/attribcopy1.def":1702276114
 }
