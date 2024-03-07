@@ -1,0 +1,14 @@
+Operator:     edu::camera_frustum::1.2
+Label:        EDU Camera Frustum
+Path:         oplib:/edu::Object/camera_frustum::1.2?edu::Object/camera_frustum::1.2
+Icon:         opdef:/edu::Object/camera_frustum::1.2?IconSVG
+Table:        Object
+License:      
+Extra:        
+User:         
+Inputs:       1 to 1
+Subnet:       false
+Python:       false
+Empty:        false
+Modified:     Thu Mar  7 15:45:26 2024
+
