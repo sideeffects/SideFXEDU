@@ -27,6 +27,6 @@ An HDA to visualize what is a velocity, what is speed, and what is acceleration.
 **Sampling Explainer**  
 An HDA to explain how sampling works and what conditions to meet to repdroduce a signal correctly.
 
-**Substeps Visualizer**
+**Substeps Visualizer**  
 An HDA that would help understand how substeps work and how they matter for simulations.
 
