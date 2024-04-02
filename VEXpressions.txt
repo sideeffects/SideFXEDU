@@ -52,7 +52,8 @@ attribwrangle/snippet
 	float atten = chf("Attenuation");//1
 	float amplitude = chf("Amplitude");//1
 
-	vector mynoise = anoise((pos*frequency)-offset, turbulence,  rough, atten);
+	vector mynoise = anoise((pos*frequency)-offset, turbulence,  rough, attend);
+	mynoise *= amplitude;
 
 	v@P += mynoise;
 
@@ -66,3 +67,16 @@ attribwrangle/snippet
 	vector camP = ptransform(cam, v@P);
 	float z = abs(camP.z);
 	f@pscale = 0.5 * (aperture/focal) * (z/resx);
+
+attribwrangle/snippet
+	EDU | Remove Point by Frustum
+	string cam = chs("cam");
+	vector ndcP = toNDC(cam, v@P);
+	float over = chf("overscan");
+	float far = -ch(cam+"/far");
+	float near = -ch(cam+"/near");
+	
+	if( ndcP.x>1+over | ndcP.x<0-over |
+	    ndcP.y>1+over | ndcP.y<0-over |
+	    ndcP.z<far | ndcP.z>near) removepoint(0, @ptnum);
+
