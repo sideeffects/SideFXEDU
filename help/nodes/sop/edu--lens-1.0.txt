@@ -1,0 +1,60 @@
+#type:     node
+#context:  sop
+#internal: edu::lens::1.0
+#icon:     SOP/edu::lens::1.0
+#tags:     sidefxedu
+
+= EDU Lens =
+
+"""Defines a thin lens with either some parameters or a profile curve."""
+
+
+WARNING:
+    This node is made for education purposes only. You can use it for other things, but at your own risks.
+
+This node defines a thin lens with either parameters or a profile curve.
+
+It is meant to be used in combination with the [EDU Lens Path Tracer | /nodes/sop/edu--lens_path_tracer-1.0] HDA.
+
+To define the lens with a profile curve, turn off the "Parametric" checkbox and dive in the HDA. Use the Curve SOP to draw the profile for your lens. The profile will be revolved around the Z axis, so make sure to draw your profile in the ZY plane. An Attribute Wrangle SOP is here to help you move the points close to the Z axis exactly on it, but double check everything is correctly drawn.
+
+
+@parameters
+
+    Refractive Index:
+        #id: refractive_index
+        The refractive index of the lens. Glass is usually 1.5. Refer to this [list|https://en.wikipedia.org/wiki/List_of_refractive_indices] for more information.
+        
+    Translate:
+        #id: t
+        Translate the lens in space.
+        
+    Parametric:
+        #id: switch_mode
+        If ON, the HDA will use the parameters below to build the lens. When OFF, it will use the curve profile defined in the dive target SOP network (./SOPNET)
+        
+    == Parametric ==
+
+    Lens type:
+        #id: lenstype
+        The type of optical lens geometry (see [this page|https://www.edmundoptics.com/knowledge-center/application-notes/optics/understanding-optical-lens-geometries/] for more information)
+            
+    Lens Diameter:
+        #id: lens_diameter
+        The physical size of the lens. Also know as the height of the lens. Not to confuse with the curvature radius.
+        
+    Curvature Radius:
+        #id: curvature_radius
+        The directed distance from the vertex of a surface to the center of curvature.
+        
+    Lens Thickness:
+        #id: lens_thickness
+        How thick the lens is going to be. Bear in mind that even if this value is 0, there is a minimum thickness due to the curvature of the lens.
+        
+    Subdivide:
+        #id: subd_depth
+        Turn this on if you want to subdivide the lens geometry and add some precision to the surface.
+
+@related
+- [EDU Lens Path Tracer | /nodes/sop/edu--lens_path_tracer-1.0]
+

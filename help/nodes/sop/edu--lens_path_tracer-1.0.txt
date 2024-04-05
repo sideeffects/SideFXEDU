@@ -1,0 +1,34 @@
+#type:     node
+#context:  sop
+#internal: edu::lens_path_tracer::1.0
+#icon:     SOP/edu::lens_path_tracer::1.0
+#tags:     sidefxedu
+
+= EDU Lens Path Tracer =
+
+"""Simulates the path of rays through an optical lens or a set of optical lenses."""
+
+
+WARNING:
+    This node is made for education purposes only. You can use it for other things, but at your own risks.
+
+This node simulates the path of rays through an optical lens or a set of optical lenses, using their geometry and index of refraction.
+Use it in combination with the [EDU Lens | /nodes/sop/edu--lens-1.0] HDA.
+
+
+@parameters
+
+    Sensor Scale:
+        #id: sensor_scale
+        The scale of the sensor geometry embedded in the HDA.
+        
+    At focal distance:
+        #id: sensor_at_fdist
+        If ON, the sensor is going to be positionned at the focal distance of the lens.
+        
+    Z pos:
+        #id: sensor_zpos
+        If `sensor_at_fdist` is OFF (see above), use this parameter to manualy define the poition of the sensor on the Z axis.    
+    
+@related
+- [EDU Lens | /nodes/sop/edu--lens-1.0]
