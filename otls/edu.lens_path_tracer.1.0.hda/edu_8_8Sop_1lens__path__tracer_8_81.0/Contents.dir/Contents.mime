@@ -32,7 +32,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment "Education tool"
-position 49.1981 -36.989
+position 54.9288 -39.6161
 connectornextid 5
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
@@ -85,6 +85,32 @@ Content-Type: text/plain
 2
 0 -4.7395300023460951 13.086146566881576 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
 1 -0.0049499588241291269 13.086146566881576 2 0 __NO_OWNER_NETWORK_BOX__ "FROMOUTPUT"
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote1.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote1.postitdef"
+Content-Type: text/plain
+
+text "Isolate any ray that goes through the optical center to compare the theorectical result to the practical result."
+position -3.73953 9.51835
+size 3.0155 1.57867
+textcolor UT_Color RGB 1 1 1 
+flags = minimize off
+stat
+{
+  create 1712162041
+  modify 1712162057
+  author sidefx@asterix.home
+  access 0777
+}
+color UT_Color RGB 0.518 0.561 0.741 
+end
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/foreach_end1.init"
@@ -3096,7 +3122,7 @@ Content-Type: text/plain
       default = 1
       flags = 0
       start = 41.666666666666664
-      segment { length = 0 value = 1 1 expr = ch(\"../scale\") }
+      segment { length = 0 value = 1 1 expr = ch(\"../sensor_scale\") }
     }
   }
 
@@ -3556,7 +3582,7 @@ sopflags sopflags =
 comment ""
 position -4.73953 11.5222
 connectornextid 3
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on
 outputsNamed3
 {
 1 "output1"
@@ -3577,7 +3603,7 @@ stat
   author sidefx@asterix.home
   access 0777
 }
-color UT_Color RGB 0.8 0.8 0.8 
+color UT_Color RGB 0.518 0.561 0.741 
 delscript ""
 exprlanguage hscript
 end

@@ -1,7 +1,7 @@
 Operator:     edu::lens::1.0
 Label:        EDU Lens
 Path:         oplib:/edu::Sop/lens::1.0?edu::Sop/lens::1.0
-Icon:         SOP_subnet
+Icon:         opdef:/edu::Sop/lens::1.0?IconSVG
 Table:        Sop
 License:      
 Extra:        inputcolors='0 ' outputcolors='1 "RGB 0.700195 0.700195 0.700195" ' 
@@ -10,5 +10,5 @@ Inputs:       0 to 0
 Subnet:       true
 Python:       false
 Empty:        false
-Modified:     Wed Apr  3 18:32:47 2024
+Modified:     Fri Apr  5 16:24:28 2024
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-6e7145c7-5761-4f47-983b-ba933a73d8af" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 492.35 422.96">
+  <defs>
+    <style>
+      .uuid-c35e25eb-6710-4613-9291-81f4c075bc86 {
+        fill: #fff;
+        stroke-width: .66px;
+      }
+
+      .uuid-c35e25eb-6710-4613-9291-81f4c075bc86, .uuid-b9f225a2-5538-4160-9f07-ef86f313836b, .uuid-50e07c33-b535-4837-ac8b-5d193920ea2d, .uuid-f240fd80-ffc6-449b-ac88-fa44878736b7 {
+        stroke: #fff;
+      }
+
+      .uuid-b9f225a2-5538-4160-9f07-ef86f313836b {
+        fill: url(#uuid-496a480a-3f68-42a5-ae65-946bef14661e);
+      }
+
+      .uuid-b9f225a2-5538-4160-9f07-ef86f313836b, .uuid-50e07c33-b535-4837-ac8b-5d193920ea2d, .uuid-f240fd80-ffc6-449b-ac88-fa44878736b7 {
+        stroke-width: .57px;
+      }
+
+      .uuid-decf5aff-6cfd-4a59-9cb4-5e96fadec9d2 {
+        fill: url(#uuid-ad8a2237-5d6f-4bdf-ba17-de6f7bf7c87b);
+        fill-rule: evenodd;
+        stroke: #8b6f00;
+        stroke-width: 1px;
+      }
+
+      .uuid-50e07c33-b535-4837-ac8b-5d193920ea2d {
+        fill: url(#uuid-3c3d24e4-b55d-4921-8157-d3cec047cae8);
+      }
+
+      .uuid-b19a39a9-c76d-4228-84fc-8e1b10562902 {
+        fill: url(#uuid-c9ebb8e4-69b3-4fe6-a466-c12b9bf990a6);
+      }
+
+      .uuid-f240fd80-ffc6-449b-ac88-fa44878736b7 {
+        fill: #559ae5;
+      }
+    </style>
+    <radialGradient id="uuid-ad8a2237-5d6f-4bdf-ba17-de6f7bf7c87b" cx="-822.48" cy="605.32" fx="-822.48" fy="605.32" r="153.09" gradientTransform="translate(1161.41 -1001.62) rotate(-92.01) scale(1.53 -1.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fcce1b"/>
+    </radialGradient>
+    <radialGradient id="uuid-496a480a-3f68-42a5-ae65-946bef14661e" cx="-1367.39" cy="1626.71" fx="-1367.39" fy="1626.71" r="172.01" gradientTransform="translate(-1762.27 -811.2) rotate(179.58) scale(1.59 -.67)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="uuid-3c3d24e4-b55d-4921-8157-d3cec047cae8" cx="8.97" cy="-47.94" fx="8.97" fy="-47.94" r="172" gradientTransform="translate(315.65 315.7) rotate(-.12) scale(1.46 -.9)" xlink:href="#uuid-496a480a-3f68-42a5-ae65-946bef14661e"/>
+    <radialGradient id="uuid-c9ebb8e4-69b3-4fe6-a466-c12b9bf990a6" cx="-174.68" cy="-297.89" fx="-174.68" fy="-297.89" r="132.97" gradientTransform="translate(467.09 519.21) rotate(88.16) scale(1.66 -.66) skewX(-1.38)" xlink:href="#uuid-496a480a-3f68-42a5-ae65-946bef14661e"/>
+  </defs>
+  <g id="uuid-426fa97e-5b40-4bdd-a14c-b205a53b34d0" data-name="lens path tracer">
+    <path id="uuid-eaa4c345-0ad7-4136-8a4e-ae1cd8c72836" data-name="path24826" class="uuid-f240fd80-ffc6-449b-ac88-fa44878736b7" d="m492.06,361.42c-.89,33.82-75.79,61.26-169.29,61.26s-169.29-27.43-169.29-61.26m0,0v-51.3c0,33.83,75.79,61.26,169.29,61.26s168.4-27.44,169.29-61.26v51.3"/>
+    <path id="uuid-1f0e9f74-7a4c-4bb0-91d5-b9aa9300899a" data-name="path24821" class="uuid-f240fd80-ffc6-449b-ac88-fa44878736b7" d="m492.06,311.33c-.89,33.82-75.79,61.26-169.29,61.26s-169.29-27.43-169.29-61.26c0-26.59,45.32-72.68,170.5-71.52,125.18,1.16,168.69,48.55,168.09,71.52Z"/>
+    <g id="uuid-b6861d64-f041-47a1-81bc-90356ee3a7bd" data-name="layer1">
+      <path id="uuid-4cdcdcab-5811-41f7-a859-1cbd2f00f310" data-name="path2393" class="uuid-decf5aff-6cfd-4a59-9cb4-5e96fadec9d2" d="m79.68.46l224.6,101.94c3,1.07,2.87,5.35-.19,6.23l-234.36,91.19,112.78,32.97,23.89-23.34,88.29,90.55-176.53-.75,26.94-27.99L14.49,214.05c-11.5-4.73-25.33-15.46,1.39-24.73l242.25-85.01L79.68.46"/>
+    </g>
+    <g id="uuid-39778de3-25da-4bc1-8045-31223f13d97b" data-name="g24871">
+      <path id="uuid-881b5acc-6484-4adb-8c1f-d8304ae861ed" data-name="path24821" class="uuid-b9f225a2-5538-4160-9f07-ef86f313836b" d="m492.06,311.33c-.89,33.82-75.79,61.26-169.29,61.26s-169.29-27.43-169.29-61.26c0-26.59,45.32-72.68,170.5-71.52,125.18,1.16,168.69,48.55,168.09,71.52Z"/>
+      <path id="uuid-4c2b52f5-5357-4c5f-a0dd-020e78b47afc" data-name="path24826" class="uuid-50e07c33-b535-4837-ac8b-5d193920ea2d" d="m492.06,361.42c-.89,33.82-75.79,61.26-169.29,61.26s-169.29-27.43-169.29-61.26m0,0v-51.3c0,33.83,75.79,61.26,169.29,61.26s168.4-27.44,169.29-61.26v51.3"/>
+      <ellipse id="uuid-3882ff0a-e031-49ad-9ce8-ca37f7d7f642" data-name="path24845" class="uuid-c35e25eb-6710-4613-9291-81f4c075bc86" cx="406.66" cy="263.95" rx="10.66" ry="25.27" transform="translate(36.77 577.36) rotate(-73.26)"/>
+      <ellipse id="uuid-95d011c5-f715-4f1c-a51e-17e60de95df5" data-name="path24847" class="uuid-b19a39a9-c76d-4228-84fc-8e1b10562902" cx="294.1" cy="351.16" rx="56.53" ry="130.43" transform="translate(-75.69 621.47) rotate(-86.22)"/>
+    </g>
+  </g>
+</svg>

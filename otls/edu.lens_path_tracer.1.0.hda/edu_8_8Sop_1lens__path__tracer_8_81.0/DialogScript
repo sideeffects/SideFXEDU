@@ -15,8 +15,8 @@
     inputlabel	4	"Sub-Network Input #4"
 
     parm {
-        name    "scale"
-        label   "Uniform Scale"
+        name    "sensor_scale"
+        label   "Sensor Scale"
         type    float
         default { "1" }
         range   { 0 10 }
