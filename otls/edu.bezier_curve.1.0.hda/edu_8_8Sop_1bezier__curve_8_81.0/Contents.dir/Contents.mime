@@ -32,15 +32,15 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment "Education tool"
-position 13.8542 -15.9621
+position 10.3615 4.44547
 connectornextid 1
-flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
 {
 }
 inputsNamed3
 {
-0 	add1 1 1 "input1"
+0 	add1 0 1 "input1"
 }
 inputs
 {
@@ -50,7 +50,7 @@ stat
 {
   create -1
   modify -1
-  author sidefx@asterix.local
+  author sidefx@asterix.home
   access 0777
 }
 color UT_Color RGB 0.8 0.8 0.8 
@@ -67,29 +67,6 @@ Content-Type: text/plain
 		"type":"string",
 		"value":""
 	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/__netbox1.netboxinit"
-Content-Type: text/plain
-
-2
-2
-{
-	autofit := 0;
-	color := "UT_Color RGB 0.52 0.52 0.52 ";
-	comment := "";
-	height := 0.7856999948620782;
-	minimized := 0;
-	width := 4.522974371678993;
-	x_position := 37.389549385175755;
-	y_position := -7.043871857226259;
-}
-{
-  create -1
-  modify -1
-  author sidefx@asterix.local
-  access 0777
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -111,7 +88,7 @@ Content-Disposition: attachment; filename="hdaroot/__stickynote3.postitdef"
 Content-Type: text/plain
 
 text "Generalization of the geometric method using SOP nodes."
-position 34.9655 -5.44493
+position 34.915 -3.28956
 size 9.472 2.5
 flags = minimize off
 stat
@@ -4900,7 +4877,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 37.7895 -9.07414
+position 36.7536 -9.22521
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -5097,6 +5074,126 @@ exprlanguage hscript
 end
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/repeat_end1.spareparmdef"
+Content-Type: text/plain
+
+    parm {
+        name    "itermethod"
+        baseparm
+        label   "Iteration Method"
+        export  none
+    }
+    parm {
+        name    "method"
+        baseparm
+        label   "Gather Method"
+        export  none
+    }
+    parm {
+        name    "iterations"
+        baseparm
+        label   "Iterations"
+        export  none
+    }
+    parm {
+        name    "startvalue"
+        baseparm
+        label   "Start Value"
+        export  none
+    }
+    parm {
+        name    "increment"
+        baseparm
+        label   "Increment"
+        export  none
+    }
+    parm {
+        name    "class"
+        baseparm
+        label   "Piece Elements"
+        export  none
+    }
+    parm {
+        name    "useattrib"
+        baseparm
+        label   "Piece Attribute"
+        joinnext
+        export  none
+    }
+    parm {
+        name    "attrib"
+        baseparm
+        label   "Piece Attribute"
+        export  none
+    }
+    parm {
+        name    "usemaxiter"
+        baseparm
+        label   "Max Iterations"
+        joinnext
+        export  none
+    }
+    parm {
+        name    "maxiter"
+        baseparm
+        label   "Max Iterations"
+        export  none
+    }
+    parm {
+        name    "blockpath"
+        baseparm
+        label   "Default Block Path"
+        export  none
+    }
+    parm {
+        name    "templatepath"
+        baseparm
+        label   "Piece Block Path"
+        export  none
+    }
+    parm {
+        name    "resetcookpass"
+        baseparm
+        label   "Reset Cached Pass"
+        export  none
+    }
+    parm {
+        name    "dosinglepass"
+        baseparm
+        label   "Do Single Pass"
+        joinnext
+        export  none
+    }
+    parm {
+        name    "singlepass"
+        baseparm
+        label   "Single Pass"
+        export  none
+    }
+    parm {
+        name    "stopcondition"
+        baseparm
+        label   "Stop Condition"
+        export  none
+    }
+    parm {
+        name    "multithread"
+        baseparm
+        label   "Multithread when Compiled"
+        export  none
+    }
+    parm {
+        name    "spare_input0"
+        label   "Spare Input 0"
+        type    oppath
+        default { "" }
+        help    "Refer to this in expressions as -1, such as: npoints(-1)"
+        parmtag { "cook_dependent" "1" }
+        parmtag { "opfilter" "!!SOP!!" }
+        parmtag { "oprelative" "." }
+    }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/repeat_end1.chn"
 Content-Type: text/plain
 
@@ -5106,7 +5203,7 @@ Content-Type: text/plain
       righttype = extend
       default = 3
       flags = 0
-      segment { length = 0 value = 3 3 expr = npoints(\"../POINTS\")-1 }
+      segment { length = 0 value = 3 3 expr = npoints(-1)-1 }
     }
   }
 
@@ -5133,6 +5230,7 @@ dosinglepass	[ 0	locks=0 ]	(	"off"	)
 singlepass	[ 0	locks=0 ]	(	0	)
 stopcondition	[ 0	locks=0 ]	(	0	)
 multithread	[ 0	locks=0 ]	(	"off"	)
+spare_input0	[ 0	locks=0 ]	(	../compile_begin1	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -5234,7 +5332,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 40.6114 -14.1232
+position 42.2928 -19.4923
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -5322,7 +5420,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 40.6114 -11.6315
+position 42.2928 -17.0006
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -5331,11 +5429,11 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	repeat_end1 1 1 "input1"
+0 	compile_end1 1 1 "input1"
 }
 inputs
 {
-0 	repeat_end1 0 1
+0 	compile_end1 0 1
 }
 stat
 {
@@ -5387,7 +5485,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 40.6114 -15.2527
+position 42.2928 -20.6218
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -5462,7 +5560,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 40.6114 -12.7939
+position 42.2928 -18.163
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -5574,6 +5672,160 @@ exprlanguage hscript
 end
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribcreate1.spareparmdef"
+Content-Type: text/plain
+
+    parm {
+        name    "group"
+        baseparm
+        label   "Group"
+        export  all
+        bindselector uveditselect "Create Attributes"
+            "Select the geometry for which to create attribute and press Enter to complete."
+            0 1 0xffffffff 1 grouptype 0
+    }
+    parm {
+        name    "grouptype"
+        baseparm
+        label   "Group Type"
+        export  all
+    }
+    parm {
+        name    "encodenames"
+        baseparm
+        label   "Encode Invalid Attribute Names"
+        export  none
+    }
+    multiparm {
+        name    "numattr"
+        label    "Number of Attributes"
+        baseparm
+        default 1
+
+        parm {
+            name    "enable#"
+            baseparm
+            label   "Enable"
+            nolabel
+            joinnext
+            export  none
+        }
+        parm {
+            name    "name#"
+            baseparm
+            label   "Name"
+            export  none
+        }
+        parm {
+            name    "existing#"
+            baseparm
+            label   "Existing Name"
+            export  none
+        }
+        parm {
+            name    "createvarmap#"
+            baseparm
+            label   "Create Variable Mapping"
+            nolabel
+            joinnext
+            export  none
+        }
+        parm {
+            name    "varname#"
+            baseparm
+            label   "Local Variable"
+            export  none
+        }
+        parm {
+            name    "class#"
+            baseparm
+            label   "Class"
+            joinnext
+            export  none
+        }
+        parm {
+            name    "savetoinfo#"
+            baseparm
+            label   "Save to Info Block"
+            export  none
+        }
+        parm {
+            name    "type#"
+            baseparm
+            label   "Type"
+            joinnext
+            export  none
+        }
+        parm {
+            name    "typeinfo#"
+            baseparm
+            label   "Type Qualifier"
+            nolabel
+            export  none
+        }
+        parm {
+            name    "precision#"
+            baseparm
+            label   "Precision"
+            export  none
+        }
+        parm {
+            name    "size#"
+            baseparm
+            label   "Size"
+            export  none
+        }
+        parm {
+            name    "default#v"
+            baseparm
+            label   "Default"
+            export  none
+        }
+        parm {
+            name    "writevalues#"
+            baseparm
+            label   "Write Values"
+            joinnext
+            export  none
+        }
+        parm {
+            name    "uselocal#"
+            baseparm
+            label   "Allow Local Vars"
+            export  none
+        }
+        parm {
+            name    "value#v"
+            baseparm
+            label   "Value"
+            export  none
+        }
+        parm {
+            name    "string#"
+            baseparm
+            label   "String"
+            export  none
+        }
+        parm {
+            name    "numattr_spacerparm#"
+            baseparm
+            label   "Spacer"
+            export  none
+        }
+    }
+
+    parm {
+        name    "spare_input0"
+        label   "Spare Input 0"
+        type    oppath
+        default { "" }
+        help    "Refer to this in expressions as -1, such as: npoints(-1)"
+        parmtag { "cook_dependent" "1" }
+        parmtag { "opfilter" "!!SOP!!" }
+        parmtag { "oprelative" "." }
+    }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/attribcreate1.chn"
 Content-Type: text/plain
 
@@ -5582,7 +5834,7 @@ Content-Type: text/plain
       lefttype = extend
       righttype = extend
       flags = 0
-      segment { length = 0 expr = "detail(\"../repeat_begin1_metadata1/\", \"iteration\", 0)" }
+      segment { length = 0 expr = "detail(-1, \"iteration\", 0)" }
     }
   }
 
@@ -5613,6 +5865,7 @@ uselocal1	[ 0	locks=0 ]	(	"on"	)
 value1v	[ 8	locks=0 ]	(	[ value1v1	0 ] 	0	0	0	)
 string1	[ 0	locks=0 ]	(	""	)
 numattr_spacerparm1	[ 0	locks=0 ]	(	)
+spare_input0	[ 0	locks=0 ]	(	../repeat_begin1_metadata1	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -5866,7 +6119,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 39.1994 -16.6834
+position 37.7846 -22.7845
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -5876,13 +6129,13 @@ outputsNamed3
 inputsNamed3
 {
 2 	OUT_POINTS_P1 1 1 "input1"
-0 	repeat_end1 1 1 "input2"
+0 	compile_end1 1 1 "input2"
 1 	add11 1 1 "input3"
 }
 inputs
 {
 0 	OUT_POINTS_P1 0 1
-1 	repeat_end1 0 1
+1 	compile_end1 0 1
 2 	add11 0 1
 }
 stat
@@ -6041,6 +6294,91 @@ exprlanguage hscript
 end
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/color9.spareparmdef"
+Content-Type: text/plain
+
+    parm {
+        name    "group"
+        baseparm
+        label   "Group"
+        export  none
+        bindselector uveditselect "Assign Colors"
+            "Select the geometry to apply colors to and press Enter to complete"
+            0 1 all 0 grouptype 0
+    }
+    parm {
+        name    "grouptype"
+        baseparm
+        label   "Group Type"
+        export  none
+    }
+    parm {
+        name    "deleteallcolorattribs"
+        baseparm
+        label   "Delete All Existing Color Attributes"
+        joinnext
+        export  none
+    }
+    parm {
+        name    "enable"
+        baseparm
+        label   "Set Color Attribute"
+        export  none
+    }
+    parm {
+        name    "class"
+        baseparm
+        label   "Class"
+        export  all
+    }
+    parm {
+        name    "colortype"
+        baseparm
+        label   "Color Type"
+        export  all
+    }
+    parm {
+        name    "color"
+        baseparm
+        label   "Color"
+        export  all
+    }
+    parm {
+        name    "seed"
+        baseparm
+        label   "Seed"
+        export  none
+    }
+    parm {
+        name    "rampattribute"
+        baseparm
+        label   "Attribute"
+        export  none
+    }
+    parm {
+        name    "ramprange"
+        baseparm
+        label   "Range"
+        export  none
+    }
+    parm {
+        name    "ramp"
+        baseparm
+        label   "Attribute Ramp"
+        export  none
+    }
+    parm {
+        name    "spare_input0"
+        label   "Spare Input 0"
+        type    oppath
+        default { "" }
+        help    "Refer to this in expressions as -1, such as: npoints(-1)"
+        parmtag { "cook_dependent" "1" }
+        parmtag { "opfilter" "!!SOP!!" }
+        parmtag { "oprelative" "." }
+    }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/color9.chn"
 Content-Type: text/plain
 
@@ -6050,7 +6388,7 @@ Content-Type: text/plain
       righttype = extend
       default = 1
       flags = 0
-      segment { length = 0 value = 1 1 expr = ch(\"../repeat_end1/iterations\") }
+      segment { length = 0 value = 1 1 expr = "detail(-1, \"numiterations\", 0)" }
     }
   }
 
@@ -6086,6 +6424,7 @@ ramp4interp	[ 0	locks=0 ]	(	"catmull-rom"	)
 ramp5pos	[ 0	locks=0 ]	(	1	)
 ramp5c	[ 0	locks=0 ]	(	0.8689308762550354	0.9444158673286438	0.0012066683266311884	)
 ramp5interp	[ 0	locks=0 ]	(	"catmull-rom"	)
+spare_input0	[ 0	locks=0 ]	(	../repeat_begin1_metadata1	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -6680,7 +7019,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 43.4354 -15.7045
+position 45.6761 -20.6218
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -6765,7 +7104,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 39.1994 -19.0275
+position 37.7846 -25.1286
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -6826,7 +7165,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 43.4375 -14.1711
+position 45.6782 -19.0884
 connectornextid 1
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -7441,9 +7780,9 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 39.2006 -20.2182
+position 37.7858 -26.3193
 connectornextid 1
-flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
 }
@@ -7509,11 +7848,11 @@ outputsNamed3
 }
 inputsNamed3
 {
-1 	OUT_POINTS_P1 1 1 "input1"
+1 	compile_begin1 0 1 "input1"
 }
 inputs
 {
-0 	OUT_POINTS_P1 0 1
+0 	compile_begin1 0 1
 }
 stat
 {
@@ -7541,12 +7880,6 @@ label1	[ 0	locks=0 ]	(	"iteration, numiterations, value, ivalue"	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/repeat_begin1.netbox"
-Content-Type: text/plain
-
-__netbox1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/repeat_begin1.userdata"
 Content-Type: text/plain
 
@@ -7570,17 +7903,19 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 39.5141 -6.80387
-connectornextid 0
+position 40.2694 -6.80387
+connectornextid 1
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on
 outputsNamed3
 {
 }
 inputsNamed3
 {
+0 	compile_begin2 0 1 "input1"
 }
 inputs
 {
+0 	compile_begin2 0 1
 }
 stat
 {
@@ -7606,12 +7941,6 @@ resetcookpass	[ 0	locks=0 ]	(	0	)
 createmetablock	[ 0	locks=0 ]	(	0	)
 label1	[ 0	locks=0 ]	(	"iteration, numiterations, value, ivalue"	)
 }
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/repeat_begin1_metadata1.netbox"
-Content-Type: text/plain
-
-__netbox1
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/repeat_begin1_metadata1.userdata"
@@ -7787,7 +8116,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 39.5125 -9.47276
+position 39.195 -9.47276
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -8035,10 +8364,199 @@ Content-Type: text/plain
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/compile_end1.init"
+Content-Type: text/plain
+
+type = compile_end
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/compile_end1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 37.7874 -16.0028
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault off exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	repeat_end1 1 1 "input1"
+}
+inputs
+{
+0 	repeat_end1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.home
+  access 0777
+}
+color UT_Color RGB 0.75 0.75 0 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/compile_end1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+docompile	[ 0	locks=0 ]	(	"on"	)
+unload	[ 0	locks=0 ]	(	"always"	)
+primarypath	[ 0	locks=0 ]	(	""	)
+forcerecompile	[ 0	locks=0 ]	(	0	)
+delayillegal	[ 0	locks=0 ]	(	"off"	)
+fallback	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/compile_end1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/compile_begin1.init"
+Content-Type: text/plain
+
+type = compile_begin
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/compile_begin1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 37.7911 -5.81848
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+1 	OUT_POINTS_P1 1 1 "input1"
+}
+inputs
+{
+0 	OUT_POINTS_P1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.home
+  access 0777
+}
+color UT_Color RGB 0.75 0.75 0 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/compile_begin1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+blockpath	[ 0	locks=0 ]	(	../compile_end1	)
+name	[ 0	locks=0 ]	(	""	)
+optional	[ 0	locks=0 ]	(	"off"	)
+createbeginblock	[ 0	locks=0 ]	(	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/compile_begin1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/compile_begin2.init"
+Content-Type: text/plain
+
+type = compile_begin
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/compile_begin2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 40.2694 -5.81848
+connectornextid 1
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on
+outputsNamed3
+{
+0 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.home
+  access 0777
+}
+color UT_Color RGB 0.75 0.75 0 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/compile_begin2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+blockpath	[ 0	locks=0 ]	(	../compile_end1	)
+name	[ 0	locks=0 ]	(	""	)
+optional	[ 0	locks=0 ]	(	"off"	)
+createbeginblock	[ 0	locks=0 ]	(	0	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/compile_begin2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot.order"
 Content-Type: text/plain
 
-65
+68
 pointvop__full2
 add__P_POINTS
 resample1
@@ -8104,6 +8622,9 @@ SWITCH_CARVE_ANIM
 carve_animated
 blast2
 POINTS
+compile_end1
+compile_begin1
+compile_begin2
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot.net"
