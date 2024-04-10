@@ -13,6 +13,13 @@ WARNING:
 
     See the [SideFX EDU Documentation | /education] page for more information.
 
+This HDA does not add anything new.
+
+It's just a convenient way to gather in the same example the various ways we can use a matrix to transform geometry in Houdini.
+
+It's not designed to switch from one to another, though we could add this functionality. Instead unlock the HDA and explore the various options.
+
+
 @inputs
 
 Input 1:

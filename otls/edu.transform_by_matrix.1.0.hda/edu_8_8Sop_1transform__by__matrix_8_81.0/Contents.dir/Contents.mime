@@ -32,23 +32,28 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment "Education tool"
-position 0 -0.6115
-connectornextid 0
+position -5.6878 1.63373
+connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
 {
+2 "output1"
 }
 inputsNamed3
 {
+0 	color2 1 1 "input1"
+1 	transform1 1 1 "input2"
 }
 inputs
 {
+0 	color2 0 1
+1 	transform1 0 1
 }
 stat
 {
   create -1
   modify -1
-  author sidefx@asterix.local
+  author sidefx@asterix.lan
   access 0777
 }
 color UT_Color RGB 0.8 0.8 0.8 
@@ -89,11 +94,11 @@ Content-Type: text/plain
 	autofit := 0;
 	color := "UT_Color RGB 0.565 0.494 0.863 ";
 	comment := "";
-	height := 0.70000001192092931;
+	height := 0.7000000119209293;
 	minimized := 0;
 	width := 2.8000000000000003;
 	x_position := 3.3310518221787224;
-	y_position := -5.3147039495394832;
+	y_position := -5.314703949539483;
 }
 {
   create -1
@@ -112,11 +117,11 @@ Content-Type: text/plain
 	autofit := 0;
 	color := "UT_Color RGB 0.565 0.494 0.863 ";
 	comment := "";
-	height := 0.70000001192092931;
+	height := 0.7000000119209293;
 	minimized := 0;
 	width := 2.8000000000000007;
 	x_position := 14.889174115675058;
-	y_position := -9.5325187964594225;
+	y_position := -9.532518796459422;
 }
 {
   create -1
@@ -194,6 +199,36 @@ stat
   access 0777
 }
 color UT_Color RGB 0.635294 0.329412 1 
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote3.postitinit"
+Content-Type: text/plain
+
+type = postitnote
+matchesdef = 0
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/__stickynote3.postitdef"
+Content-Type: text/plain
+
+text "This HDA does not add anything new.
+
+It's just a convenient way to gather in the same example the various ways we can use a matrix to transform geometry in Houdini.
+
+It's not designed to switch from one to another, though we could add this functionality. Instead unlock the HDA and explore the various options.
+"
+position -3.66055 6.525
+size 6.74876 2.5
+flags = minimize off
+stat
+{
+  create 1712753003
+  modify 1712753180
+  author sidefx@asterix.home
+  access 0777
+}
+color UT_Color RGB 1 0.969 0.522 
 end
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -922,6 +957,7 @@ srcgrouptype	[ 0	locks=0 ]	(	"points"	)
 destgroup	[ 0	locks=0 ]	(	""	)
 destgrouptype	[ 0	locks=0 ]	(	"points"	)
 matchbyattribute	[ 0	locks=0 ]	(	"off"	)
+matchbyattributemethod	[ 0	locks=0 ]	(	"byvalues"	)
 attributetomatch	[ 0	locks=0 ]	(	piece	)
 attrib	[ 0	locks=0 ]	(	"otherattrib"	)
 attribname	[ 0	locks=0 ]	(	xform	)
@@ -930,6 +966,7 @@ usenewname	[ 0	locks=0 ]	(	"off"	)
 newname	[ 0	locks=0 ]	(	""	)
 class	[ 0	locks=0 ]	(	"guess"	)
 copyvariable	[ 0	locks=0 ]	(	"on"	)
+copydata	[ 0	locks=0 ]	(	"on"	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -1140,6 +1177,7 @@ srcgrouptype	[ 0	locks=0 ]	(	"points"	)
 destgroup	[ 0	locks=0 ]	(	""	)
 destgrouptype	[ 0	locks=0 ]	(	"points"	)
 matchbyattribute	[ 0	locks=0 ]	(	"off"	)
+matchbyattributemethod	[ 0	locks=0 ]	(	"byvalues"	)
 attributetomatch	[ 0	locks=0 ]	(	piece	)
 attrib	[ 0	locks=0 ]	(	"otherattrib"	)
 attribname	[ 0	locks=0 ]	(	xform	)
@@ -1148,213 +1186,11 @@ usenewname	[ 0	locks=0 ]	(	"off"	)
 newname	[ 0	locks=0 ]	(	""	)
 class	[ 0	locks=0 ]	(	"guess"	)
 copyvariable	[ 0	locks=0 ]	(	"off"	)
+copydata	[ 0	locks=0 ]	(	"on"	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/attribcopy3.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/CHECK_backup.init"
-Content-Type: text/plain
-
-type = error
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/CHECK_backup.def"
-Content-Type: text/plain
-
-sopflags sopflags = 
-comment ""
-position 6.25407 5.59499
-connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
-outputsNamed3
-{
-1 "output1"
-}
-inputsNamed3
-{
-0 	IN1 1 1 "input1"
-}
-inputs
-{
-0 	IN1 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author brunoebe@calvin.local
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/CHECK_backup.spareparmdef"
-Content-Type: text/plain
-
-    parm {
-        name    "name"
-        label   "Attribute Name"
-        type    string
-        default { "" }
-        parmtag { "script_callback_language" "python" }
-    }
-    parm {
-        name    "in1_matrix"
-        label   "input 1 matrix present"
-        type    integer
-        default { "0" }
-        range   { 0 10 }
-        parmtag { "script_callback_language" "python" }
-    }
-    parm {
-        name    "in2_matrix"
-        label   "input 2 matrix present"
-        type    integer
-        default { "0" }
-        range   { 0 10 }
-        parmtag { "script_callback_language" "python" }
-    }
-    parm {
-        name    "in2_plugged"
-        label   "input 2 plugged"
-        type    integer
-        default { "0" }
-        range   { 0 10 }
-        parmtag { "script_callback_language" "python" }
-    }
-    multiparm {
-        name    "numerror"
-        label    "Number of Errors"
-        baseparm
-        default 1
-
-        parm {
-            name    "errormsg#"
-            baseparm
-            label   "Error Message"
-            export  none
-        }
-        parm {
-            name    "severity#"
-            baseparm
-            label   "Severity"
-            export  none
-        }
-        parm {
-            name    "enable#"
-            baseparm
-            label   "Report This Error"
-            export  none
-        }
-    }
-
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/CHECK_backup.chn"
-Content-Type: text/plain
-
-{
-    channel enable1 {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = "ch(\"in1_matrix\") && ch(\"in2_plugged\")" }
-    }
-    channel name {
-      lefttype = extend
-      righttype = extend
-      default = 1
-      flags = 0
-      segment { length = 0 value = 1 1 expr = chs(\"../matrix_attribute\") }
-    }
-    channel in1_matrix {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = "hasdetailattrib( opinputpath(\"../IN1\", 0), chs(\"name\") )" }
-    }
-    channel in2_matrix {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = "hasdetailattrib( opinputpath(\"../IN3\", 0), chs(\"name\") )" }
-    }
-    channel in2_plugged {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = "(strcmp(opinputpath(\"../IN2\", 0), \"\") != 0)" }
-    }
-    channel enable2 {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = "!ch(\"in1_matrix\") && !ch(\"in2_plugged\")" }
-    }
-    channel enable3 {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = "!ch(\"in1_matrix\") && ch(\"in2_plugged\") && ch(\"in2_matrix\")" }
-    }
-    channel enable4 {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = "!ch(\"in1_matrix\") && ch(\"in2_plugged\") && !ch(\"in2_matrix\")" }
-    }
-    channel enable5 {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = "ch(\"in1_matrix\") && !ch(\"in2_plugged\") && !ch(\"in2_matrix\")" }
-    }
-  }
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/CHECK_backup.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-numerror	[ 0	locks=0 ]	(	5	)
-errormsg1	[ 8	locks=0	autoscope=0	autosel=4294967295 ]	(	"Both on input 1 and input 2 are plugged. Using input 1."	)
-severity1	[ 0	locks=0	autoscope=0	autosel=4294967295 ]	(	"warn"	)
-enable1	[ 8	locks=0	autoscope=0	autosel=4294967295 ]	(	[ enable1	0 ] 	)
-name	[ 8	locks=0	autoscope=1	autosel=4294967295 ]	(	[ name	"" ] 	)
-in1_matrix	[ 8	locks=0 ]	(	[ in1_matrix	0 ] 	)
-in2_matrix	[ 8	locks=0 ]	(	[ in2_matrix	0 ] 	)
-in2_plugged	[ 8	locks=0 ]	(	[ in2_plugged	0 ] 	)
-errormsg2	[ 0	locks=0	autoscope=0	autosel=4294967295 ]	(	"Missing matrix detail attribute \"`chs(\"name\")`\" on input 1, and no input 2. Using identity matrix instead."	)
-severity2	[ 0	locks=0	autoscope=0	autosel=4294967295 ]	(	"warn"	)
-enable2	[ 8	locks=0	autoscope=0	autosel=4294967295 ]	(	[ enable2	0 ] 	)
-errormsg3	[ 0	locks=0	autoscope=0	autosel=4294967295 ]	(	"Missing matrix detail attribute \"`chs(\"name\")`\" on input 1. Using input 2 instead."	)
-severity3	[ 0	locks=0	autoscope=0	autosel=4294967295 ]	(	"warn"	)
-enable3	[ 8	locks=0	autoscope=0	autosel=4294967295 ]	(	[ enable3	0 ] 	)
-errormsg4	[ 0	locks=0	autoscope=0	autosel=4294967295 ]	(	"Missing matrix detail attribute \"`chs(\"name\")`\". Using identity matrix instead."	)
-severity4	[ 0	locks=0	autoscope=0	autosel=4294967295 ]	(	"warn"	)
-enable4	[ 8	locks=0	autoscope=0	autosel=4294967295 ]	(	[ enable4	0 ] 	)
-errormsg5	[ 8	locks=0	autoscope=0	autosel=4294967295 ]	(	"Using \"`chs(\"name\")`\" from input 1."	)
-severity5	[ 0	locks=0	autoscope=0	autosel=4294967295 ]	(	"message"	)
-enable5	[ 8	locks=0	autoscope=0	autosel=4294967295 ]	(	[ enable5	0 ] 	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/CHECK_backup.userdata"
 Content-Type: text/plain
 
 {
@@ -1769,6 +1605,8 @@ pointvels	[ 0	locks=0 ]	(	1	)
 integrateovertime	[ 0	locks=0 ]	(	[ integrateovertime	0 ] 	)
 docopyattribs	[ 0	locks=0 ]	(	"off"	)
 attribstocopy	[ 0	locks=0 ]	(	""	)
+docopygroups	[ 0	locks=0 ]	(	"off"	)
+groupstocopy	[ 0	locks=0 ]	(	""	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -1831,7 +1669,7 @@ Content-Type: text/plain
 Content-Disposition: attachment; filename="hdaroot.order"
 Content-Type: text/plain
 
-16
+15
 OUT0
 transformbyattrib1
 build_4x4_matrix
@@ -1842,7 +1680,6 @@ attribcopy2
 add2
 attribpromote1
 attribcopy3
-CHECK_backup
 switch4
 switch1
 attribwrangle1
