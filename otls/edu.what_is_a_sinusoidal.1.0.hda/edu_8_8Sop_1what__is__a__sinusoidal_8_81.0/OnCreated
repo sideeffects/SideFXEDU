@@ -1,3 +1,11 @@
+# This code changes the name of the node and adds a comment 
+# So the user is well aware this is an Educational tool
+node = kwargs['node']
+name = node.name()
+node.setName('edu_'+name, unique_name=True)
+node.setComment("Education tool")
+node.setGenericFlag(hou.nodeFlag.DisplayComment, True)
+
 from viewerstate.utils import findSceneViewer
 scene_viewer = findSceneViewer()
 scene_viewer.setCurrentState("edu::what_is_a_sinusoidal::1.0")
