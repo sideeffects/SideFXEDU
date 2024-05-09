@@ -1,0 +1,118 @@
+"""
+State:          Edu::triangle properties::1.0
+State type:     edu::triangle_properties::1.0
+Description:    Edu::triangle properties::1.0
+Author:         brunoe
+Date Created:   May 09, 2024 - 16:36:24
+"""
+
+# Usage: Make sure to add 6 float parameters to the node:
+# newparameter, newparameter2, newparameter3, newparameter4, newparameter5, newparameter6.
+# Select node and hit enter in the viewer.
+
+import hou
+import viewerstate.utils as su
+
+from math import hypot
+
+
+class State(object):
+    def __init__(self, state_name, scene_viewer):
+        self.state_name = state_name
+        self.scene_viewer = scene_viewer
+
+        self.translate_handle = hou.Handle(self.scene_viewer, "Translate")
+        
+    def onEnter(self, kwargs):
+        self.translate_handle.show(True)
+        self.translate_handle.update()
+
+    def onHandleToState(self, kwargs):
+        """ Used with bound dynamic handles to implement the state 
+        action when a handle is modified.
+        """
+
+        handle = kwargs["handle"]
+        parms = kwargs["parms"]
+        node = kwargs["node"]
+        mod_parms = kwargs["mod_parms"]
+        prev_parms = kwargs["prev_parms"]
+        ui_event = kwargs["ui_event"]
+        
+        constraint = node.parm("constraint").eval()
+        if(constraint == 0):
+            node.parm("tx").set(parms["tx"])
+            node.parm("ty").set(parms["ty"])
+            
+        elif(constraint == 1):
+            # constraint the handle to move on the Y axis only
+            node.parm("tx").set(0)
+            node.parm("ty").set(parms["ty"])
+
+        elif(constraint == 2):
+            # constraint the handle to move on the unit circle
+            # compute the length of the position vector
+            l = hypot(parms["tx"], parms["ty"])
+            # set the corresponding parm with the handle value, divided by that length 
+            node.parm("tx").set(parms["tx"]/l)
+            node.parm("ty").set(parms["ty"]/l)
+        
+        # update the handle so its position matches the new parameter values
+        self.translate_handle.update()
+
+    def onStateToHandle(self, kwargs):
+        """ Used with bound dynamic handles to implement the handle 
+        action when a state node parm is modified.
+        """
+
+        handle = kwargs["handle"]
+        parms = kwargs["parms"]
+        node = kwargs["node"]
+        
+
+        
+        if handle == self.translate_handle.name():
+            constraint = node.parm("constraint").eval()
+            if(constraint == 0):
+                parms["tx"] = node.evalParm("tx")
+                parms["ty"] = node.evalParm("ty")
+                
+            elif(constraint == 1):
+                # constraint the handle to move on the Y axis only
+                valx = 0
+                valy = node.evalParm("ty")
+                node.parm("tx").set(valx)
+                node.parm("ty").set(valy)
+                parms["tx"] = valx
+                parms["ty"] = valy
+
+            elif(constraint == 2):
+                # constraint the handle to move on the unit circle
+                # compute the length of the position vector
+                l = hypot(node.evalParm("tx"), node.evalParm("ty"))
+                # set the corresponding handle with the parm value, divided by that length 
+                valx = node.evalParm("tx")/l
+                valy = node.evalParm("ty")/l
+                node.parm("tx").set(valx)
+                node.parm("ty").set(valy)
+                parms["tx"] = valx
+                parms["ty"] = valy
+            self.translate_handle.update()
+
+
+def createViewerStateTemplate():
+    """ Mandatory entry point to create and return the viewer state 
+        template to register. """
+
+    state_typename = kwargs["type"].definition().sections()["DefaultState"].contents()
+    state_label = "Edu::triangle properties::1.0"
+    state_cat = hou.sopNodeTypeCategory()
+
+    template = hou.ViewerStateTemplate(state_typename, state_label, state_cat)
+    template.bindFactory(State)
+    template.bindIcon(kwargs["type"].icon())
+
+    # add a dynamic distance handle
+    template.bindHandle( "translate", "Translate" )
+
+    return template

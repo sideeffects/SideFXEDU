@@ -1,0 +1,14 @@
+Operator:     edu::triangle_properties::1.0
+Label:        EDU Triangle Properties
+Path:         oplib:/edu::Sop/triangle_properties::1.0?edu::Sop/triangle_properties::1.0
+Icon:         SOP_subnet
+Table:        Sop
+License:      
+Extra:        inputcolors='1 "RGB 0.700195 0.700195 0.700195" ' outputcolors='1 "RGB 0.700195 0.700195 0.700195" ' 
+User:         
+Inputs:       0 to 1
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Thu May  9 19:36:16 2024
+
