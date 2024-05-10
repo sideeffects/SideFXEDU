@@ -11,4 +11,6 @@ ViewerStateModule	ViewerStateModule
 ViewerStateInstall	ViewerStateInstall
 ViewerStateUninstall	ViewerStateUninstall
 ViewerStateName.orig	ViewerStateName.orig
+OnCreated	OnCreated
+PythonModule	PythonModule
 ExtraFileOptions	ExtraFileOptions

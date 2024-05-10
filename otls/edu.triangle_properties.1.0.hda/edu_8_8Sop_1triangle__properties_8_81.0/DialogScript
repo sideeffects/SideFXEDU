@@ -24,6 +24,7 @@
             "1" "Isosceles"
             "2" "Circle"
         }
+        parmtag { "script_callback" "hou.phm().update(kwargs, hou.pwd())" }
         parmtag { "script_callback_language" "python" }
     }
     parm {
@@ -31,8 +32,9 @@
         label   "Position"
         type    vector2
         size    2
-        default { "0" "0" }
+        default { "0.242536" "0.970143" }
         range   { -1 1 }
+        parmtag { "script_callback" "hou.phm().update(kwargs, hou.pwd())" }
         parmtag { "script_callback_language" "python" }
     }
 }
