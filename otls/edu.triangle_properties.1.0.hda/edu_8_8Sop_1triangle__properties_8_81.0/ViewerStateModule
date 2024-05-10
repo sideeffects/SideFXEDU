@@ -45,17 +45,22 @@ class State(object):
             node.parm("ty").set(parms["ty"])
             
         elif(constraint == 1):
+            posy = parms["ty"]
             # constraint the handle to move on the Y axis only
             node.parm("tx").set(0)
-            node.parm("ty").set(parms["ty"])
+            node.parm("ty").set(posy)
 
         elif(constraint == 2):
+            posx = parms["tx"]
+            posy = parms["ty"]
             # constraint the handle to move on the unit circle
             # compute the length of the position vector
-            l = hypot(parms["tx"], parms["ty"])
+            l = hypot(posx, posy)
+            posx = posx/l
+            posy = posy/l
             # set the corresponding parm with the handle value, divided by that length 
-            node.parm("tx").set(parms["tx"]/l)
-            node.parm("ty").set(parms["ty"]/l)
+            node.parm("tx").set(posx)
+            node.parm("ty").set(posy)
         
         # update the handle so its position matches the new parameter values
         self.translate_handle.update()
@@ -68,8 +73,6 @@ class State(object):
         handle = kwargs["handle"]
         parms = kwargs["parms"]
         node = kwargs["node"]
-        
-
         
         if handle == self.translate_handle.name():
             constraint = node.parm("constraint").eval()

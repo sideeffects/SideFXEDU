@@ -1,0 +1,5 @@
+def update(kwargs, pwd):
+    node = hou.node("./TRIANGLE")
+    pos = node.geometry().point(2).position()
+    pwd.parm("tx").set(pos.x())
+    pwd.parm("ty").set(pos.y())
