@@ -40,27 +40,24 @@ class State(object):
         ui_event = kwargs["ui_event"]
         
         constraint = node.parm("constraint").eval()
-        if(constraint == 0):
-            node.parm("tx").set(parms["tx"])
-            node.parm("ty").set(parms["ty"])
-            
-        elif(constraint == 1):
-            posy = parms["ty"]
+        
+        # initialize pos x, y and z (turns out this is also what Free mode should be)
+        posx = parms["tx"]
+        posy = parms["ty"]
+        # in the following if statement, I will add posx, y and z but comment out the lines that don't change compared to this initialization step
+        if(constraint == 1):
             # constraint the handle to move on the Y axis only
-            node.parm("tx").set(0)
-            node.parm("ty").set(posy)
-
+            posx = 0
+            # posy = parms["ty"]
         elif(constraint == 2):
-            posx = parms["tx"]
-            posy = parms["ty"]
-            # constraint the handle to move on the unit circle
-            # compute the length of the position vector
-            l = hypot(posx, posy)
-            posx = posx/l
-            posy = posy/l
-            # set the corresponding parm with the handle value, divided by that length 
-            node.parm("tx").set(posx)
-            node.parm("ty").set(posy)
+            # constraint the handle to move on the unit circle (Note: that's because the triangle base is one unit. If we want the user to be abble to change it, we'll need to update that portion of the code.)
+            l = hypot(posx, posy) # compute the length of the position vector
+            posx = posx/l # divide by l to constraint to the unit circle (it's like normalizing the vector)
+            posy = posy/l # divide by l to constraint to the unit circle (it's like normalizing the vector)
+
+        # set the node parameters accordingly
+        node.parm("tx").set(posx)
+        node.parm("ty").set(posy)
         
         # update the handle so its position matches the new parameter values
         self.translate_handle.update()
@@ -76,33 +73,9 @@ class State(object):
         
         if handle == self.translate_handle.name():
             constraint = node.parm("constraint").eval()
-            if(constraint == 0):
-                parms["tx"] = node.evalParm("tx")
-                parms["ty"] = node.evalParm("ty")
+            parms["tx"] = node.evalParm("tx")
+            parms["ty"] = node.evalParm("ty")
                 
-            elif(constraint == 1):
-                # constraint the handle to move on the Y axis only
-                valx = 0
-                valy = node.evalParm("ty")
-                node.parm("tx").set(valx)
-                node.parm("ty").set(valy)
-                parms["tx"] = valx
-                parms["ty"] = valy
-
-            elif(constraint == 2):
-                # constraint the handle to move on the unit circle
-                # compute the length of the position vector
-                l = hypot(node.evalParm("tx"), node.evalParm("ty"))
-                # set the corresponding handle with the parm value, divided by that length 
-                valx = node.evalParm("tx")/l
-                valy = node.evalParm("ty")/l
-                node.parm("tx").set(valx)
-                node.parm("ty").set(valy)
-                parms["tx"] = valx
-                parms["ty"] = valy
-            self.translate_handle.update()
-
-
 def createViewerStateTemplate():
     """ Mandatory entry point to create and return the viewer state 
         template to register. """
