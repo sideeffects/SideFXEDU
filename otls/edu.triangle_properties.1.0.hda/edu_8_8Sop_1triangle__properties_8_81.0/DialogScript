@@ -47,11 +47,22 @@
         parmtag { "script_callback_language" "python" }
     }
     parm {
-        name    "show_length"
-        label   "Show length values"
+        name    "show_names"
+        label   "Show Names"
         type    toggle
-        default { "0" }
-        range   { 0! 10 }
+        default { "1" }
+        hidewhen "{ show_side_info == 0 }"
+        range   { 0 10 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "show_length"
+        label   "Show Length"
+        type    toggle
+        default { "1" }
+        hidewhen "{ show_side_info == 0 }"
+        range   { 0 10 }
         parmtag { "autoscope" "0000000000000000" }
         parmtag { "script_callback_language" "python" }
     }
