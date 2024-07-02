@@ -1,0 +1,46 @@
+#type:     node
+#context:  sop
+#internal: edu::triangle_properties::1.0
+#icon:     SOP/edu::triangle_properties::1.0
+#tags:     sidefxedu
+
+= EDU Triangle Properties =
+
+"""Shows the usual triangle properties while the user moves their tip."""
+
+
+
+WARNING:
+    This node is made for education purposes only. You can use it for other things, but at your own risks.
+
+The user can move the top point of the triangle while seeing the different values ​​evolve on the screen.
+Three modes are available when moving the point, each showing different properties of the triangle.
+
+To enter manipulation mode, move the mouse over the viewport and press ((Enter))
+
+@parameters
+
+    Constraint:
+        #id: constraint
+        
+        *Free*: The user can move the point freely.  
+            
+        *Isosceles*: The user can only move the point along the Y axis, equidistant from the two other points. See how the two base angles are identical.
+            
+        *Circle*: The user can only move the point on the circle containing the triangle. See how the angle at the point running on the circle is always 90 degrees.
+            
+    Position:
+        #id: t
+        The position of the point at the tip of the triangle.
+        
+    Center of Mass:
+        #id: show_center_of_mass
+        Check this box to display the medians as well as the centroid of the triangle, a.k.a. its center of mass.
+        
+    Show length values:
+        #id: show_length
+        Check this box to display the length of the triangle sides.    
+    
+@related
+- [item | /link ]
+
