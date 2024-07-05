@@ -1120,903 +1120,6 @@ Content-Type: text/plain
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant.init"
-Content-Type: text/plain
-
-type = subnet
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant.def"
-Content-Type: text/plain
-
-language MaterialX
-comment ""
-position -11.3451 -16.6787
-connectornextid 0
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material on
-outputsNamed3
-{
-}
-inputsNamed3
-{
-}
-inputs
-{
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant.spareparmdef"
-Content-Type: text/plain
-
-    groupcollapsible {
-        name    "folder1"
-        label   "Karma Material Builder"
-        grouptag { "sidefx::shader_isparm" "0" }
-
-        parm {
-            name    "inherit_ctrl"
-            label   "Inherit from Class"
-            type    integer
-            default { "2" }
-            menu {
-                "0" "Never"
-                "1" "Always"
-                "2" "Material Flag"
-            }
-            range   { 0 10 }
-        }
-        parm {
-            name    "shader_referencetype"
-            label   "Class Arc"
-            type    string
-            default { [ "n = hou.pwd()\nn_hasFlag = n.isMaterialFlagSet()\ni = n.evalParm('inherit_ctrl')\nr = 'none'\nif i == 1 or (n_hasFlag and i == 2):\n    r = 'inherit'\nreturn r" python ] }
-            menu {
-                "none"          "None"
-                "reference"     "Reference"
-                "inherit"       "Inherit"
-                "specialize"    "Specialize"
-                "represent"     "Represent"
-            }
-            parmtag { "sidefx::shader_isparm" "0" }
-            parmtag { "spare_category" "Shader" }
-        }
-        parm {
-            name    "shader_baseprimpath"
-            label   "Class Prim Path"
-            type    string
-            default { "/__class_mtl__/`$OS`" }
-            parmtag { "script_action" "import loputils\nloputils.selectPrimsInParm(kwargs, False)" }
-            parmtag { "script_action_help" "Select a primitive in the Scene Viewer or Scene Graph Tree pane.\nCtrl-click to select using the primitive picker dialog." }
-            parmtag { "script_action_icon" "BUTTONS_reselect" }
-            parmtag { "sidefx::shader_isparm" "0" }
-            parmtag { "sidefx::usdpathtype" "prim" }
-            parmtag { "spare_category" "Shader" }
-        }
-        parm {
-            name    "separator1"
-            label   "separator1"
-            type    separator
-            default { "" }
-        }
-        parm {
-            name    "tabmenumask"
-            label   "Tab Menu Mask"
-            type    string
-            default { "karma USD ^mtlxramp* ^hmtlxramp* ^hmtlxcubicramp* MaterialX parameter constant collect null genericshader subnet subnetconnector suboutput subinput" }
-            parmtag { "spare_category" "Tab Menu" }
-        }
-        parm {
-            name    "shader_rendercontextname"
-            label   "Render Context Name"
-            type    string
-            default { "kma" }
-            parmtag { "sidefx::shader_isparm" "0" }
-            parmtag { "spare_category" "Shader" }
-        }
-        parm {
-            name    "shader_forcechildren"
-            label   "Force Translation of Children"
-            type    toggle
-            default { "1" }
-            parmtag { "sidefx::shader_isparm" "0" }
-            parmtag { "spare_category" "Shader" }
-        }
-    }
-
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant.chn"
-Content-Type: text/plain
-
-{
-    channel shader_referencetype {
-      lefttype = extend
-      righttype = extend
-      defaultString = \"\"
-      flags = 0
-      segment { length = 0 expr = "n = hou.pwd()
-n_hasFlag = n.isMaterialFlagSet()
-i = n.evalParm('inherit_ctrl')
-r = 'none'
-if i == 1 or (n_hasFlag and i == 2):
-    r = 'inherit'
-return r" language = python }
-    }
-  }
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-folder1	[ 0	locks=0 ]	(	0	)
-inherit_ctrl	[ 0	locks=0 ]	(	2	)
-shader_referencetype	[ 0	locks=0 ]	(	[ shader_referencetype	"n = hou.pwd()
-n_hasFlag = n.isMaterialFlagSet()
-i = n.evalParm('inherit_ctrl')
-r = 'none'
-if i == 1 or (n_hasFlag and i == 2):
-    r = 'inherit'
-return r" ] 	)
-shader_baseprimpath	[ 0	locks=0 ]	(	/__class_mtl__/`$OS`	)
-separator1	[ 0	locks=0 ]	(	)
-tabmenumask	[ 0	locks=0 ]	(	"karma USD ^mtlxramp* ^hmtlxramp* ^hmtlxcubicramp* MaterialX parameter constant collect null genericshader subnet subnetconnector suboutput subinput"	)
-shader_rendercontextname	[ 0	locks=0 ]	(	kma	)
-shader_forcechildren	[ 0	locks=0 ]	(	"on"	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/inputs.init"
-Content-Type: text/plain
-
-type = subinput
-matchesdef = 1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/inputs.def"
-Content-Type: text/plain
-
-comment ""
-position -4.53993 0.0376
-connectornextid 0
-flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-}
-inputsNamed3
-{
-}
-inputs
-{
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/inputs.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/inputs.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/mtlxstandard_surface.init"
-Content-Type: text/plain
-
-type = mtlxstandard_surface
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/mtlxstandard_surface.def"
-Content-Type: text/plain
-
-comment ""
-position -0.2883 0.0376
-connectornextid 43
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-42 "out"
-}
-inputsNamed3
-{
-0 	"" "" 1 "base"
-1 	"" "" 1 "base_color"
-2 	"" "" 1 "diffuse_roughness"
-3 	"" "" 1 "metalness"
-4 	"" "" 1 "specular"
-5 	"" "" 1 "specular_color"
-6 	"" "" 1 "specular_roughness"
-7 	"" "" 1 "specular_IOR"
-8 	"" "" 1 "specular_anisotropy"
-9 	"" "" 1 "specular_rotation"
-10 	"" "" 1 "transmission"
-11 	"" "" 1 "transmission_color"
-12 	"" "" 1 "transmission_depth"
-13 	"" "" 1 "transmission_scatter"
-14 	"" "" 1 "transmission_scatter_anisotropy"
-15 	"" "" 1 "transmission_dispersion"
-16 	"" "" 1 "transmission_extra_roughness"
-17 	"" "" 1 "subsurface"
-18 	"" "" 1 "subsurface_color"
-19 	"" "" 1 "subsurface_radius"
-20 	"" "" 1 "subsurface_scale"
-21 	"" "" 1 "subsurface_anisotropy"
-22 	"" "" 1 "sheen"
-23 	"" "" 1 "sheen_color"
-24 	"" "" 1 "sheen_roughness"
-25 	"" "" 1 "coat"
-26 	"" "" 1 "coat_color"
-27 	"" "" 1 "coat_roughness"
-28 	"" "" 1 "coat_anisotropy"
-29 	"" "" 1 "coat_rotation"
-30 	"" "" 1 "coat_IOR"
-31 	"" "" 1 "coat_normal"
-32 	"" "" 1 "coat_affect_color"
-33 	"" "" 1 "coat_affect_roughness"
-34 	"" "" 1 "thin_film_thickness"
-35 	"" "" 1 "thin_film_IOR"
-36 	"" "" 1 "emission"
-37 	mtlxgeompropvalue1 2 1 "emission_color"
-38 	"" "" 1 "opacity"
-39 	"" "" 1 "thin_walled"
-40 	"" "" 1 "normal"
-41 	"" "" 1 "tangent"
-}
-inputs
-{
-0 	"" 0 1
-1 	"" 0 1
-2 	"" 0 1
-3 	"" 0 1
-4 	"" 0 1
-5 	"" 0 1
-6 	"" 0 1
-7 	"" 0 1
-8 	"" 0 1
-9 	"" 0 1
-10 	"" 0 1
-11 	"" 0 1
-12 	"" 0 1
-13 	"" 0 1
-14 	"" 0 1
-15 	"" 0 1
-16 	"" 0 1
-17 	"" 0 1
-18 	"" 0 1
-19 	"" 0 1
-20 	"" 0 1
-21 	"" 0 1
-22 	"" 0 1
-23 	"" 0 1
-24 	"" 0 1
-25 	"" 0 1
-26 	"" 0 1
-27 	"" 0 1
-28 	"" 0 1
-29 	"" 0 1
-30 	"" 0 1
-31 	"" 0 1
-32 	"" 0 1
-33 	"" 0 1
-34 	"" 0 1
-35 	"" 0 1
-36 	"" 0 1
-37 	mtlxgeompropvalue1 0 1
-38 	"" 0 1
-39 	"" 0 1
-40 	"" 0 1
-41 	"" 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/mtlxstandard_surface.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-signature	[ 0	locks=0 ]	(	default	)
-folder0	[ 0	locks=0 ]	(	1	)
-base	[ 0	locks=0 ]	(	0	)
-base_color	[ 0	locks=0 ]	(	0.8	0.8	0.8	)
-diffuse_roughness	[ 0	locks=0 ]	(	0	)
-metalness	[ 0	locks=0 ]	(	0	)
-folder0_1	[ 0	locks=0 ]	(	1	)
-specular	[ 0	locks=0 ]	(	0	)
-specular_color	[ 0	locks=0 ]	(	1	1	1	)
-specular_roughness	[ 0	locks=0 ]	(	0.2	)
-specular_IOR	[ 0	locks=0 ]	(	1.5	)
-specular_anisotropy	[ 0	locks=0 ]	(	0	)
-specular_rotation	[ 0	locks=0 ]	(	0	)
-folder0_5	[ 0	locks=0 ]	(	0	)
-coat	[ 0	locks=0 ]	(	0	)
-coat_color	[ 0	locks=0 ]	(	1	1	1	)
-coat_roughness	[ 0	locks=0 ]	(	0.1	)
-coat_anisotropy	[ 0	locks=0 ]	(	0	)
-coat_rotation	[ 0	locks=0 ]	(	0	)
-coat_IOR	[ 0	locks=0 ]	(	1.5	)
-coat_normal	[ 0	locks=0 ]	(	0	0	0	)
-coat_affect_color	[ 0	locks=0 ]	(	0	)
-coat_affect_roughness	[ 0	locks=0 ]	(	0	)
-folder0_2	[ 0	locks=0 ]	(	0	)
-transmission	[ 0	locks=0 ]	(	0	)
-transmission_color	[ 0	locks=0 ]	(	1	1	1	)
-transmission_depth	[ 0	locks=0 ]	(	0	)
-transmission_scatter	[ 0	locks=0 ]	(	0	0	0	)
-transmission_scatter_anisotropy	[ 0	locks=0 ]	(	0	)
-transmission_dispersion	[ 0	locks=0 ]	(	0	)
-transmission_extra_roughness	[ 0	locks=0 ]	(	0	)
-folder0_4	[ 0	locks=0 ]	(	0	)
-sheen	[ 0	locks=0 ]	(	0	)
-sheen_color	[ 0	locks=0 ]	(	1	1	1	)
-sheen_roughness	[ 0	locks=0 ]	(	0.3	)
-folder0_3	[ 0	locks=0 ]	(	0	)
-subsurface	[ 0	locks=0 ]	(	0	)
-subsurface_color	[ 0	locks=0 ]	(	1	1	1	)
-subsurface_radius	[ 0	locks=0 ]	(	1	1	1	)
-subsurface_scale	[ 0	locks=0 ]	(	1	)
-subsurface_anisotropy	[ 0	locks=0 ]	(	0	)
-folder0_7	[ 0	locks=0 ]	(	1	)
-emission	[ 0	locks=0 ]	(	0.5	)
-emission_color	[ 0	locks=0 ]	(	1	1	1	)
-folder0_6	[ 0	locks=0 ]	(	0	)
-thin_film_thickness	[ 0	locks=0 ]	(	0	)
-thin_film_IOR	[ 0	locks=0 ]	(	1.5	)
-folder0_8	[ 0	locks=0 ]	(	0	)
-opacity	[ 0	locks=0 ]	(	1	1	1	)
-thin_walled	[ 0	locks=0 ]	(	"off"	)
-normal	[ 0	locks=0 ]	(	0	0	0	)
-tangent	[ 0	locks=0 ]	(	0	0	0	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/mtlxstandard_surface.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":""
-	},
-	"__inputgroup_":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Base":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Coat":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Emission":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Geometry":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Sheen":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Specular":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Subsurface":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Thin Film":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Transmission":{
-		"type":"string",
-		"value":"collapsed"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/mtlxdisplacement.init"
-Content-Type: text/plain
-
-type = mtlxdisplacement
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/mtlxdisplacement.def"
-Content-Type: text/plain
-
-comment ""
-position -0.2883 -2.4334
-connectornextid 3
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-2 "out"
-}
-inputsNamed3
-{
-0 	"" "" 1 "displacement"
-1 	"" "" 1 "scale"
-}
-inputs
-{
-0 	"" 0 1
-1 	"" 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/mtlxdisplacement.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-signature	[ 0	locks=0 ]	(	default	)
-displacement	[ 0	locks=0 ]	(	0	)
-displacement_vector3	[ 0	locks=0 ]	(	0	0	0	)
-scale	[ 0	locks=0 ]	(	1	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/mtlxdisplacement.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":""
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/Material_Outputs_and_AOVs.init"
-Content-Type: text/plain
-
-type = suboutput
-matchesdef = 1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/Material_Outputs_and_AOVs.def"
-Content-Type: text/plain
-
-comment ""
-position 2.4426 -3.8725
-connectornextid 3
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-}
-inputsNamed3
-{
-0 	mtlxstandard_surface 42 1 "surface"
-1 	mtlxdisplacement 2 1 "displacement"
-2 	material_properties 0 1 "properties"
-}
-inputs
-{
-0 	mtlxstandard_surface 0 1
-1 	mtlxdisplacement 0 1
-2 	material_properties 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/Material_Outputs_and_AOVs.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-name1	[ 0	locks=0 ]	(	surface	)
-label1	[ 0	locks=0 ]	(	""	)
-name2	[ 0	locks=0 ]	(	displacement	)
-label2	[ 0	locks=0 ]	(	""	)
-name3	[ 0	locks=0 ]	(	""	)
-label3	[ 0	locks=0 ]	(	""	)
-name4	[ 0	locks=0 ]	(	""	)
-label4	[ 0	locks=0 ]	(	""	)
-name5	[ 0	locks=0 ]	(	""	)
-label5	[ 0	locks=0 ]	(	""	)
-name6	[ 0	locks=0 ]	(	""	)
-label6	[ 0	locks=0 ]	(	""	)
-name7	[ 0	locks=0 ]	(	""	)
-label7	[ 0	locks=0 ]	(	""	)
-name8	[ 0	locks=0 ]	(	""	)
-label8	[ 0	locks=0 ]	(	""	)
-name9	[ 0	locks=0 ]	(	""	)
-label9	[ 0	locks=0 ]	(	""	)
-name10	[ 0	locks=0 ]	(	""	)
-label10	[ 0	locks=0 ]	(	""	)
-name11	[ 0	locks=0 ]	(	""	)
-label11	[ 0	locks=0 ]	(	""	)
-name12	[ 0	locks=0 ]	(	""	)
-label12	[ 0	locks=0 ]	(	""	)
-name13	[ 0	locks=0 ]	(	""	)
-label13	[ 0	locks=0 ]	(	""	)
-name14	[ 0	locks=0 ]	(	""	)
-label14	[ 0	locks=0 ]	(	""	)
-name15	[ 0	locks=0 ]	(	""	)
-label15	[ 0	locks=0 ]	(	""	)
-name16	[ 0	locks=0 ]	(	""	)
-label16	[ 0	locks=0 ]	(	""	)
-name17	[ 0	locks=0 ]	(	""	)
-label17	[ 0	locks=0 ]	(	""	)
-name18	[ 0	locks=0 ]	(	""	)
-label18	[ 0	locks=0 ]	(	""	)
-name19	[ 0	locks=0 ]	(	""	)
-label19	[ 0	locks=0 ]	(	""	)
-name20	[ 0	locks=0 ]	(	""	)
-label20	[ 0	locks=0 ]	(	""	)
-name21	[ 0	locks=0 ]	(	""	)
-label21	[ 0	locks=0 ]	(	""	)
-name22	[ 0	locks=0 ]	(	""	)
-label22	[ 0	locks=0 ]	(	""	)
-name23	[ 0	locks=0 ]	(	""	)
-label23	[ 0	locks=0 ]	(	""	)
-name24	[ 0	locks=0 ]	(	""	)
-label24	[ 0	locks=0 ]	(	""	)
-name25	[ 0	locks=0 ]	(	""	)
-label25	[ 0	locks=0 ]	(	""	)
-name26	[ 0	locks=0 ]	(	""	)
-label26	[ 0	locks=0 ]	(	""	)
-name27	[ 0	locks=0 ]	(	""	)
-label27	[ 0	locks=0 ]	(	""	)
-name28	[ 0	locks=0 ]	(	""	)
-label28	[ 0	locks=0 ]	(	""	)
-name29	[ 0	locks=0 ]	(	""	)
-label29	[ 0	locks=0 ]	(	""	)
-name30	[ 0	locks=0 ]	(	""	)
-label30	[ 0	locks=0 ]	(	""	)
-name31	[ 0	locks=0 ]	(	""	)
-label31	[ 0	locks=0 ]	(	""	)
-name32	[ 0	locks=0 ]	(	""	)
-label32	[ 0	locks=0 ]	(	""	)
-name33	[ 0	locks=0 ]	(	""	)
-label33	[ 0	locks=0 ]	(	""	)
-name34	[ 0	locks=0 ]	(	""	)
-label34	[ 0	locks=0 ]	(	""	)
-name35	[ 0	locks=0 ]	(	""	)
-label35	[ 0	locks=0 ]	(	""	)
-name36	[ 0	locks=0 ]	(	""	)
-label36	[ 0	locks=0 ]	(	""	)
-name37	[ 0	locks=0 ]	(	""	)
-label37	[ 0	locks=0 ]	(	""	)
-name38	[ 0	locks=0 ]	(	""	)
-label38	[ 0	locks=0 ]	(	""	)
-name39	[ 0	locks=0 ]	(	""	)
-label39	[ 0	locks=0 ]	(	""	)
-name40	[ 0	locks=0 ]	(	""	)
-label40	[ 0	locks=0 ]	(	""	)
-name41	[ 0	locks=0 ]	(	""	)
-label41	[ 0	locks=0 ]	(	""	)
-name42	[ 0	locks=0 ]	(	""	)
-label42	[ 0	locks=0 ]	(	""	)
-name43	[ 0	locks=0 ]	(	""	)
-label43	[ 0	locks=0 ]	(	""	)
-name44	[ 0	locks=0 ]	(	""	)
-label44	[ 0	locks=0 ]	(	""	)
-name45	[ 0	locks=0 ]	(	""	)
-label45	[ 0	locks=0 ]	(	""	)
-name46	[ 0	locks=0 ]	(	""	)
-label46	[ 0	locks=0 ]	(	""	)
-name47	[ 0	locks=0 ]	(	""	)
-label47	[ 0	locks=0 ]	(	""	)
-name48	[ 0	locks=0 ]	(	""	)
-label48	[ 0	locks=0 ]	(	""	)
-name49	[ 0	locks=0 ]	(	""	)
-label49	[ 0	locks=0 ]	(	""	)
-name50	[ 0	locks=0 ]	(	""	)
-label50	[ 0	locks=0 ]	(	""	)
-name51	[ 0	locks=0 ]	(	""	)
-label51	[ 0	locks=0 ]	(	""	)
-name52	[ 0	locks=0 ]	(	""	)
-label52	[ 0	locks=0 ]	(	""	)
-name53	[ 0	locks=0 ]	(	""	)
-label53	[ 0	locks=0 ]	(	""	)
-name54	[ 0	locks=0 ]	(	""	)
-label54	[ 0	locks=0 ]	(	""	)
-name55	[ 0	locks=0 ]	(	""	)
-label55	[ 0	locks=0 ]	(	""	)
-name56	[ 0	locks=0 ]	(	""	)
-label56	[ 0	locks=0 ]	(	""	)
-name57	[ 0	locks=0 ]	(	""	)
-label57	[ 0	locks=0 ]	(	""	)
-name58	[ 0	locks=0 ]	(	""	)
-label58	[ 0	locks=0 ]	(	""	)
-name59	[ 0	locks=0 ]	(	""	)
-label59	[ 0	locks=0 ]	(	""	)
-name60	[ 0	locks=0 ]	(	""	)
-label60	[ 0	locks=0 ]	(	""	)
-name61	[ 0	locks=0 ]	(	""	)
-label61	[ 0	locks=0 ]	(	""	)
-name62	[ 0	locks=0 ]	(	""	)
-label62	[ 0	locks=0 ]	(	""	)
-name63	[ 0	locks=0 ]	(	""	)
-label63	[ 0	locks=0 ]	(	""	)
-name64	[ 0	locks=0 ]	(	""	)
-label64	[ 0	locks=0 ]	(	""	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/Material_Outputs_and_AOVs.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/material_properties.init"
-Content-Type: text/plain
-
-type = kma_material_properties
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/material_properties.def"
-Content-Type: text/plain
-
-comment ""
-position -0.2883 -3.87213
-connectornextid 1
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-0 "properties"
-}
-inputsNamed3
-{
-}
-inputs
-{
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/material_properties.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-signature	[ 0	locks=0 ]	(	0	)
-folder1	[ 0	locks=0 ]	(	0	)
-xn____activate__karmadiffusequality_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmadiffusequality_z6a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmareflectquality_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmareflectquality_z6a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmarefractquality_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmarefractquality_z6a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmavolumequality_8pb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumequality_d5a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmasssquality_dlb	[ 0	locks=0 ]	(	0	)
-xn__karmasssquality_h0a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmavolumesteprate_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumesteprate_z6a	[ 0	locks=0 ]	(	0.25	)
-xn____activate__karmalightsource_samplingquality_1dc	[ 0	locks=0 ]	(	0	)
-xn__karmalightsource_samplingquality_5sb	[ 0	locks=0 ]	(	1	)
-folder2	[ 0	locks=0 ]	(	0	)
-xn____activate__karmadiffuselimit_mob	[ 0	locks=0 ]	(	0	)
-xn__karmadiffuselimit_q3a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmareflectlimit_mob	[ 0	locks=0 ]	(	0	)
-xn__karmareflectlimit_q3a	[ 0	locks=0 ]	(	4	)
-xn____activate__karmarefractlimit_mob	[ 0	locks=0 ]	(	0	)
-xn__karmarefractlimit_q3a	[ 0	locks=0 ]	(	4	)
-xn____activate__karmavolumelimit_zmb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumelimit_31a	[ 0	locks=0 ]	(	0	)
-xn____activate__karmassslimit_3hb	[ 0	locks=0 ]	(	0	)
-xn__karmassslimit_7wa	[ 0	locks=0 ]	(	0	)
-folder3	[ 0	locks=0 ]	(	0	)
-xn____activate__karmavolumeuniform_8pb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumeuniform_d5a	[ 0	locks=0 ]	(	"off"	)
-xn____activate__karmavolumeuniformdensity_n1b	[ 0	locks=0 ]	(	0	)
-xn__karmavolumeuniformdensity_rhb	[ 0	locks=0 ]	(	1	)
-xn____activate__karmavolumeuniformsamples_n1b	[ 0	locks=0 ]	(	0	)
-xn__karmavolumeuniformsamples_rhb	[ 0	locks=0 ]	(	4	)
-folder4	[ 0	locks=0 ]	(	0	)
-xn____activate__karmalpetag_ueb	[ 0	locks=0 ]	(	0	)
-xn__karmalpetag_yta	[ 0	locks=0 ]	(	""	)
-xn____activate__karmadielectricpriority_eyb	[ 0	locks=0 ]	(	0	)
-xn__karmadielectricpriority_ieb	[ 0	locks=0 ]	(	0	)
-xn____activate__karmacausticsenable_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmacausticsenable_z6a	[ 0	locks=0 ]	(	"off"	)
-xn____activate__karmacausticsroughnessclamp_w4b	[ 0	locks=0 ]	(	0	)
-xn__karmacausticsroughnessclamp_0kb	[ 0	locks=0 ]	(	0.2	)
-xn____activate__karmafakecausticsbsdfenable_w4b	[ 0	locks=0 ]	(	0	)
-xn__karmafakecausticsbsdfenable_0kb	[ 0	locks=0 ]	(	"on"	)
-xn____activate__karmafakecausticscolor_rwb	[ 0	locks=0 ]	(	0	)
-xn__karmafakecausticscolor_vcb	[ 0	locks=0 ]	(	1	1	1	)
-xn____activate__karmafakecausticsopacity_0zb	[ 0	locks=0 ]	(	0	)
-xn__karmafakecausticsopacity_4fb	[ 0	locks=0 ]	(	1	1	1	)
-xn____activate__karmamtlx_imagewidth_itb	[ 0	locks=0 ]	(	0	)
-xn__karmamtlx_imagewidth_m8a	[ 0	locks=0 ]	(	0	)
-xn____activate__karmamtlx_imageblur_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmamtlx_imageblur_z6a	[ 0	locks=0 ]	(	0	)
-folder5	[ 0	locks=0 ]	(	0	)
-xn____activate__karmatreat_as_lightsource_n1b	[ 0	locks=0 ]	(	0	)
-xn__karmatreat_as_lightsource_rhb	[ 0	locks=0 ]	(	"No"	)
-xn____activate__karmalightsource_diffusescale_57b	[ 0	locks=0 ]	(	0	)
-xn__karmalightsource_diffusescale_9nb	[ 0	locks=0 ]	(	1	)
-xn____activate__karmalightsource_specularscale_s9b	[ 0	locks=0 ]	(	0	)
-xn__karmalightsource_specularscale_wpb	[ 0	locks=0 ]	(	1	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/material_properties.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":""
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/mtlxgeompropvalue1.init"
-Content-Type: text/plain
-
-type = mtlxgeompropvalue
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/mtlxgeompropvalue1.def"
-Content-Type: text/plain
-
-comment ""
-position -3.06547 -0.908489
-connectornextid 3
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-2 "out"
-}
-inputsNamed3
-{
-0 	"" "" 1 "geomprop"
-1 	"" "" 1 "default"
-}
-inputs
-{
-0 	"" 0 1
-1 	"" 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/mtlxgeompropvalue1.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-signature	[ 0	locks=0 ]	(	color3	)
-geomprop	[ 0	locks=0 ]	(	displayColor	)
-default	[ 0	locks=0 ]	(	0	)
-default_boolean	[ 0	locks=0 ]	(	"off"	)
-default_color3	[ 0	locks=0 ]	(	0	0	0	)
-default_color4	[ 0	locks=0 ]	(	0	0	0	0	)
-default_integer	[ 0	locks=0 ]	(	0	)
-default_string	[ 0	locks=0 ]	(	""	)
-default_vector2	[ 0	locks=0 ]	(	0	0	)
-default_vector3	[ 0	locks=0 ]	(	0	0	0	)
-default_vector4	[ 0	locks=0 ]	(	0	0	0	0	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant/mtlxgeompropvalue1.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":""
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/MAT/atmos_material.init"
 Content-Type: text/plain
 
@@ -2567,20 +1670,6 @@ Content-Type: text/plain
       flags = 0
       segment { length = 0 expr = "1.01*ch(\"dispInput_enable\")*ch(\"dispInput_max\") + ch(\"dispTex_enable\")*max(abs((1.0+ch(\"dispTex_offset\"))*ch(\"dispTex_scale\")), abs(ch(\"dispTex_offset\")*ch(\"dispTex_scale\"))) + ch(\"dispNoise_enable\")*abs(ch(\"dispNoise_amp\"))" }
     }
-    channel ior_texture {
-      lefttype = extend
-      righttype = extend
-      defaultString = \"\"
-      flags = 0
-      segment { length = 0 expr = chs(\"../../atmos_ior_texture\") }
-    }
-    channel baseNormal_texture {
-      lefttype = extend
-      righttype = extend
-      defaultString = \"\"
-      flags = 0
-      segment { length = 0 expr = chs(\"../../atmos_baseNormal_texture\") }
-    }
     channel basecolor_texture {
       lefttype = extend
       righttype = extend
@@ -2599,7 +1688,7 @@ version 0.8
 specmodel	[ 0	locks=0 ]	(	ggx	)
 coatspecmodel	[ 0	locks=0 ]	(	ggx	)
 specular_tint	[ 0	locks=0 ]	(	[ specular_tint	0 ] 	)
-diffuse_folder_15	[ 0	locks=0 ]	(	2	2	2	2	2	2	)
+diffuse_folder_15	[ 0	locks=0 ]	(	0	0	0	0	0	0	)
 folder7	[ 0	locks=0 ]	(	1	)
 basecolor	[ 0	locks=0 ]	(	1	1	1	)
 albedomult	[ 0	locks=0 ]	(	1	)
@@ -2660,8 +1749,8 @@ basecolor_textureWrap	[ 0	locks=0 ]	(	repeat	)
 basecolor_textureColorSpace	[ 0	locks=0 ]	(	auto	)
 basecolor_useTextureAlpha	[ 0	locks=0 ]	(	"off"	)
 folder1	[ 0	locks=0 ]	(	0	)
-ior_useTexture	[ 0	locks=0 ]	(	"on"	)
-ior_texture	[ 8	locks=0 ]	(	[ ior_texture	"" ] 	)
+ior_useTexture	[ 0	locks=0 ]	(	"off"	)
+ior_texture	[ 8	locks=0 ]	(	""	)
 ior_monoChannel	[ 0	locks=0 ]	(	0	)
 ior_textureWrap	[ 0	locks=0 ]	(	repeat	)
 ior_textureColorSpace	[ 0	locks=0 ]	(	linear	)
@@ -2804,8 +1893,8 @@ baseBump_channel	[ 0	locks=0 ]	(	0	)
 baseBump_imagePlane	[ 0	locks=0 ]	(	""	)
 baseNormal_colorspace	[ 0	locks=0 ]	(	linear	)
 baseNormal_vectorSpace	[ 0	locks=0 ]	(	uvtangent	)
-baseNormal_scale	[ 0	locks=0 ]	(	100	)
-baseNormal_texture	[ 8	locks=0 ]	(	[ baseNormal_texture	"" ] 	)
+baseNormal_scale	[ 0	locks=0 ]	(	1	)
+baseNormal_texture	[ 8	locks=0 ]	(	""	)
 baseNormal_wrap	[ 0	locks=0 ]	(	repeat	)
 baseNormal_filter	[ 0	locks=0 ]	(	gauss	)
 baseNormal_filterWidth	[ 0	locks=0 ]	(	1	)
@@ -2974,1835 +2063,20 @@ Content-Type: text/plain
 	"__inputgroup_Textures":{
 		"type":"string",
 		"value":"collapsed"
+	},
+	"sidefx::parm_filter_text_pattern":{
+		"type":"string",
+		"value":"base"
 	}
 }
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial.init"
-Content-Type: text/plain
-
-type = subnet
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial.def"
-Content-Type: text/plain
-
-language MaterialX
-comment ""
-position -11.3451 -9.49828
-connectornextid 0
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material on
-outputsNamed3
-{
-}
-inputsNamed3
-{
-}
-inputs
-{
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial.spareparmdef"
-Content-Type: text/plain
-
-    groupcollapsible {
-        name    "folder1"
-        label   "Karma Material Builder"
-        grouptag { "sidefx::shader_isparm" "0" }
-
-        parm {
-            name    "inherit_ctrl"
-            label   "Inherit from Class"
-            type    integer
-            default { "2" }
-            menu {
-                "0" "Never"
-                "1" "Always"
-                "2" "Material Flag"
-            }
-            range   { 0 10 }
-        }
-        parm {
-            name    "shader_referencetype"
-            label   "Class Arc"
-            type    string
-            default { [ "n = hou.pwd()\nn_hasFlag = n.isMaterialFlagSet()\ni = n.evalParm('inherit_ctrl')\nr = 'none'\nif i == 1 or (n_hasFlag and i == 2):\n    r = 'inherit'\nreturn r" python ] }
-            menu {
-                "none"          "None"
-                "reference"     "Reference"
-                "inherit"       "Inherit"
-                "specialize"    "Specialize"
-                "represent"     "Represent"
-            }
-            parmtag { "sidefx::shader_isparm" "0" }
-            parmtag { "spare_category" "Shader" }
-        }
-        parm {
-            name    "shader_baseprimpath"
-            label   "Class Prim Path"
-            type    string
-            default { "/__class_mtl__/`$OS`" }
-            parmtag { "script_action" "import loputils\nloputils.selectPrimsInParm(kwargs, False)" }
-            parmtag { "script_action_help" "Select a primitive in the Scene Viewer or Scene Graph Tree pane.\nCtrl-click to select using the primitive picker dialog." }
-            parmtag { "script_action_icon" "BUTTONS_reselect" }
-            parmtag { "sidefx::shader_isparm" "0" }
-            parmtag { "sidefx::usdpathtype" "prim" }
-            parmtag { "spare_category" "Shader" }
-        }
-        parm {
-            name    "separator1"
-            label   "separator1"
-            type    separator
-            default { "" }
-        }
-        parm {
-            name    "tabmenumask"
-            label   "Tab Menu Mask"
-            type    string
-            default { "karma USD ^mtlxramp* ^hmtlxramp* ^hmtlxcubicramp* MaterialX parameter constant collect null genericshader subnet subnetconnector suboutput subinput" }
-            parmtag { "spare_category" "Tab Menu" }
-        }
-        parm {
-            name    "shader_rendercontextname"
-            label   "Render Context Name"
-            type    string
-            default { "kma" }
-            parmtag { "sidefx::shader_isparm" "0" }
-            parmtag { "spare_category" "Shader" }
-        }
-        parm {
-            name    "shader_forcechildren"
-            label   "Force Translation of Children"
-            type    toggle
-            default { "1" }
-            parmtag { "sidefx::shader_isparm" "0" }
-            parmtag { "spare_category" "Shader" }
-        }
-    }
-
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial.chn"
-Content-Type: text/plain
-
-{
-    channel shader_referencetype {
-      lefttype = extend
-      righttype = extend
-      defaultString = \"\"
-      flags = 0
-      segment { length = 0 expr = "n = hou.pwd()
-n_hasFlag = n.isMaterialFlagSet()
-i = n.evalParm('inherit_ctrl')
-r = 'none'
-if i == 1 or (n_hasFlag and i == 2):
-    r = 'inherit'
-return r" language = python }
-    }
-  }
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-folder1	[ 0	locks=0 ]	(	0	)
-inherit_ctrl	[ 0	locks=0 ]	(	2	)
-shader_referencetype	[ 0	locks=0 ]	(	[ shader_referencetype	"n = hou.pwd()
-n_hasFlag = n.isMaterialFlagSet()
-i = n.evalParm('inherit_ctrl')
-r = 'none'
-if i == 1 or (n_hasFlag and i == 2):
-    r = 'inherit'
-return r" ] 	)
-shader_baseprimpath	[ 0	locks=0 ]	(	/__class_mtl__/`$OS`	)
-separator1	[ 0	locks=0 ]	(	)
-tabmenumask	[ 0	locks=0 ]	(	"karma USD ^mtlxramp* ^hmtlxramp* ^hmtlxcubicramp* MaterialX parameter constant collect null genericshader subnet subnetconnector suboutput subinput"	)
-shader_rendercontextname	[ 0	locks=0 ]	(	kma	)
-shader_forcechildren	[ 0	locks=0 ]	(	"on"	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/inputs.init"
-Content-Type: text/plain
-
-type = subinput
-matchesdef = 1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/inputs.def"
-Content-Type: text/plain
-
-comment ""
-position -4.36443 -2.4334
-connectornextid 0
-flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-}
-inputsNamed3
-{
-}
-inputs
-{
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/inputs.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/inputs.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/mtlxstandard_surface.init"
-Content-Type: text/plain
-
-type = mtlxstandard_surface
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/mtlxstandard_surface.def"
-Content-Type: text/plain
-
-comment ""
-position -0.2883 1.0526
-connectornextid 43
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-42 "out"
-}
-inputsNamed3
-{
-0 	"" "" 1 "base"
-1 	"" "" 1 "base_color"
-2 	"" "" 1 "diffuse_roughness"
-3 	"" "" 1 "metalness"
-4 	"" "" 1 "specular"
-5 	"" "" 1 "specular_color"
-6 	"" "" 1 "specular_roughness"
-7 	"" "" 1 "specular_IOR"
-8 	"" "" 1 "specular_anisotropy"
-9 	"" "" 1 "specular_rotation"
-10 	"" "" 1 "transmission"
-11 	"" "" 1 "transmission_color"
-12 	"" "" 1 "transmission_depth"
-13 	"" "" 1 "transmission_scatter"
-14 	"" "" 1 "transmission_scatter_anisotropy"
-15 	"" "" 1 "transmission_dispersion"
-16 	"" "" 1 "transmission_extra_roughness"
-17 	"" "" 1 "subsurface"
-18 	"" "" 1 "subsurface_color"
-19 	"" "" 1 "subsurface_radius"
-20 	"" "" 1 "subsurface_scale"
-21 	"" "" 1 "subsurface_anisotropy"
-22 	"" "" 1 "sheen"
-23 	"" "" 1 "sheen_color"
-24 	"" "" 1 "sheen_roughness"
-25 	"" "" 1 "coat"
-26 	"" "" 1 "coat_color"
-27 	"" "" 1 "coat_roughness"
-28 	"" "" 1 "coat_anisotropy"
-29 	"" "" 1 "coat_rotation"
-30 	"" "" 1 "coat_IOR"
-31 	"" "" 1 "coat_normal"
-32 	"" "" 1 "coat_affect_color"
-33 	"" "" 1 "coat_affect_roughness"
-34 	"" "" 1 "thin_film_thickness"
-35 	"" "" 1 "thin_film_IOR"
-36 	"" "" 1 "emission"
-37 	"" "" 1 "emission_color"
-38 	"" "" 1 "opacity"
-39 	"" "" 1 "thin_walled"
-40 	"" "" 1 "normal"
-41 	"" "" 1 "tangent"
-}
-inputs
-{
-0 	"" 0 1
-1 	"" 0 1
-2 	"" 0 1
-3 	"" 0 1
-4 	"" 0 1
-5 	"" 0 1
-6 	"" 0 1
-7 	"" 0 1
-8 	"" 0 1
-9 	"" 0 1
-10 	"" 0 1
-11 	"" 0 1
-12 	"" 0 1
-13 	"" 0 1
-14 	"" 0 1
-15 	"" 0 1
-16 	"" 0 1
-17 	"" 0 1
-18 	"" 0 1
-19 	"" 0 1
-20 	"" 0 1
-21 	"" 0 1
-22 	"" 0 1
-23 	"" 0 1
-24 	"" 0 1
-25 	"" 0 1
-26 	"" 0 1
-27 	"" 0 1
-28 	"" 0 1
-29 	"" 0 1
-30 	"" 0 1
-31 	"" 0 1
-32 	"" 0 1
-33 	"" 0 1
-34 	"" 0 1
-35 	"" 0 1
-36 	"" 0 1
-37 	"" 0 1
-38 	"" 0 1
-39 	"" 0 1
-40 	"" 0 1
-41 	"" 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/mtlxstandard_surface.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-signature	[ 0	locks=0 ]	(	default	)
-folder0	[ 0	locks=0 ]	(	1	)
-base	[ 0	locks=0 ]	(	1	)
-base_color	[ 0	locks=0 ]	(	0.8	0.8	0.8	)
-diffuse_roughness	[ 0	locks=0 ]	(	0	)
-metalness	[ 0	locks=0 ]	(	0	)
-folder0_1	[ 0	locks=0 ]	(	0	)
-specular	[ 0	locks=0 ]	(	1	)
-specular_color	[ 0	locks=0 ]	(	1	1	1	)
-specular_roughness	[ 0	locks=0 ]	(	0.2	)
-specular_IOR	[ 0	locks=0 ]	(	1.5	)
-specular_anisotropy	[ 0	locks=0 ]	(	0	)
-specular_rotation	[ 0	locks=0 ]	(	0	)
-folder0_5	[ 0	locks=0 ]	(	0	)
-coat	[ 0	locks=0 ]	(	0	)
-coat_color	[ 0	locks=0 ]	(	1	1	1	)
-coat_roughness	[ 0	locks=0 ]	(	0.1	)
-coat_anisotropy	[ 0	locks=0 ]	(	0	)
-coat_rotation	[ 0	locks=0 ]	(	0	)
-coat_IOR	[ 0	locks=0 ]	(	1.5	)
-coat_normal	[ 0	locks=0 ]	(	0	0	0	)
-coat_affect_color	[ 0	locks=0 ]	(	0	)
-coat_affect_roughness	[ 0	locks=0 ]	(	0	)
-folder0_2	[ 0	locks=0 ]	(	0	)
-transmission	[ 0	locks=0 ]	(	0	)
-transmission_color	[ 0	locks=0 ]	(	1	1	1	)
-transmission_depth	[ 0	locks=0 ]	(	0	)
-transmission_scatter	[ 0	locks=0 ]	(	0	0	0	)
-transmission_scatter_anisotropy	[ 0	locks=0 ]	(	0	)
-transmission_dispersion	[ 0	locks=0 ]	(	0	)
-transmission_extra_roughness	[ 0	locks=0 ]	(	0	)
-folder0_4	[ 0	locks=0 ]	(	0	)
-sheen	[ 0	locks=0 ]	(	0	)
-sheen_color	[ 0	locks=0 ]	(	1	1	1	)
-sheen_roughness	[ 0	locks=0 ]	(	0.3	)
-folder0_3	[ 0	locks=0 ]	(	0	)
-subsurface	[ 0	locks=0 ]	(	0	)
-subsurface_color	[ 0	locks=0 ]	(	1	1	1	)
-subsurface_radius	[ 0	locks=0 ]	(	1	1	1	)
-subsurface_scale	[ 0	locks=0 ]	(	1	)
-subsurface_anisotropy	[ 0	locks=0 ]	(	0	)
-folder0_7	[ 0	locks=0 ]	(	0	)
-emission	[ 0	locks=0 ]	(	0	)
-emission_color	[ 0	locks=0 ]	(	1	1	1	)
-folder0_6	[ 0	locks=0 ]	(	0	)
-thin_film_thickness	[ 0	locks=0 ]	(	0	)
-thin_film_IOR	[ 0	locks=0 ]	(	1.5	)
-folder0_8	[ 0	locks=0 ]	(	0	)
-opacity	[ 0	locks=0 ]	(	1	1	1	)
-thin_walled	[ 0	locks=0 ]	(	"off"	)
-normal	[ 0	locks=0 ]	(	0	0	0	)
-tangent	[ 0	locks=0 ]	(	0	0	0	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/mtlxstandard_surface.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":""
-	},
-	"__inputgroup_":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Coat":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Emission":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Geometry":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Sheen":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Specular":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Subsurface":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Thin Film":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Transmission":{
-		"type":"string",
-		"value":"collapsed"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/mtlxdisplacement.init"
-Content-Type: text/plain
-
-type = mtlxdisplacement
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/mtlxdisplacement.def"
-Content-Type: text/plain
-
-comment ""
-position -0.2883 -2.4334
-connectornextid 3
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-2 "out"
-}
-inputsNamed3
-{
-0 	"" "" 1 "displacement"
-1 	"" "" 1 "scale"
-}
-inputs
-{
-0 	"" 0 1
-1 	"" 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/mtlxdisplacement.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-signature	[ 0	locks=0 ]	(	default	)
-displacement	[ 0	locks=0 ]	(	0	)
-displacement_vector3	[ 0	locks=0 ]	(	0	0	0	)
-scale	[ 0	locks=0 ]	(	1	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/mtlxdisplacement.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":""
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/Material_Outputs_and_AOVs.init"
-Content-Type: text/plain
-
-type = suboutput
-matchesdef = 1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/Material_Outputs_and_AOVs.def"
-Content-Type: text/plain
-
-comment ""
-position 2.4426 -3.8725
-connectornextid 3
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-}
-inputsNamed3
-{
-0 	mtlxstandard_surface 42 1 "surface"
-1 	mtlxdisplacement 2 1 "displacement"
-2 	material_properties 0 1 "properties"
-}
-inputs
-{
-0 	mtlxstandard_surface 0 1
-1 	mtlxdisplacement 0 1
-2 	material_properties 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/Material_Outputs_and_AOVs.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-name1	[ 0	locks=0 ]	(	surface	)
-label1	[ 0	locks=0 ]	(	""	)
-name2	[ 0	locks=0 ]	(	displacement	)
-label2	[ 0	locks=0 ]	(	""	)
-name3	[ 0	locks=0 ]	(	""	)
-label3	[ 0	locks=0 ]	(	""	)
-name4	[ 0	locks=0 ]	(	""	)
-label4	[ 0	locks=0 ]	(	""	)
-name5	[ 0	locks=0 ]	(	""	)
-label5	[ 0	locks=0 ]	(	""	)
-name6	[ 0	locks=0 ]	(	""	)
-label6	[ 0	locks=0 ]	(	""	)
-name7	[ 0	locks=0 ]	(	""	)
-label7	[ 0	locks=0 ]	(	""	)
-name8	[ 0	locks=0 ]	(	""	)
-label8	[ 0	locks=0 ]	(	""	)
-name9	[ 0	locks=0 ]	(	""	)
-label9	[ 0	locks=0 ]	(	""	)
-name10	[ 0	locks=0 ]	(	""	)
-label10	[ 0	locks=0 ]	(	""	)
-name11	[ 0	locks=0 ]	(	""	)
-label11	[ 0	locks=0 ]	(	""	)
-name12	[ 0	locks=0 ]	(	""	)
-label12	[ 0	locks=0 ]	(	""	)
-name13	[ 0	locks=0 ]	(	""	)
-label13	[ 0	locks=0 ]	(	""	)
-name14	[ 0	locks=0 ]	(	""	)
-label14	[ 0	locks=0 ]	(	""	)
-name15	[ 0	locks=0 ]	(	""	)
-label15	[ 0	locks=0 ]	(	""	)
-name16	[ 0	locks=0 ]	(	""	)
-label16	[ 0	locks=0 ]	(	""	)
-name17	[ 0	locks=0 ]	(	""	)
-label17	[ 0	locks=0 ]	(	""	)
-name18	[ 0	locks=0 ]	(	""	)
-label18	[ 0	locks=0 ]	(	""	)
-name19	[ 0	locks=0 ]	(	""	)
-label19	[ 0	locks=0 ]	(	""	)
-name20	[ 0	locks=0 ]	(	""	)
-label20	[ 0	locks=0 ]	(	""	)
-name21	[ 0	locks=0 ]	(	""	)
-label21	[ 0	locks=0 ]	(	""	)
-name22	[ 0	locks=0 ]	(	""	)
-label22	[ 0	locks=0 ]	(	""	)
-name23	[ 0	locks=0 ]	(	""	)
-label23	[ 0	locks=0 ]	(	""	)
-name24	[ 0	locks=0 ]	(	""	)
-label24	[ 0	locks=0 ]	(	""	)
-name25	[ 0	locks=0 ]	(	""	)
-label25	[ 0	locks=0 ]	(	""	)
-name26	[ 0	locks=0 ]	(	""	)
-label26	[ 0	locks=0 ]	(	""	)
-name27	[ 0	locks=0 ]	(	""	)
-label27	[ 0	locks=0 ]	(	""	)
-name28	[ 0	locks=0 ]	(	""	)
-label28	[ 0	locks=0 ]	(	""	)
-name29	[ 0	locks=0 ]	(	""	)
-label29	[ 0	locks=0 ]	(	""	)
-name30	[ 0	locks=0 ]	(	""	)
-label30	[ 0	locks=0 ]	(	""	)
-name31	[ 0	locks=0 ]	(	""	)
-label31	[ 0	locks=0 ]	(	""	)
-name32	[ 0	locks=0 ]	(	""	)
-label32	[ 0	locks=0 ]	(	""	)
-name33	[ 0	locks=0 ]	(	""	)
-label33	[ 0	locks=0 ]	(	""	)
-name34	[ 0	locks=0 ]	(	""	)
-label34	[ 0	locks=0 ]	(	""	)
-name35	[ 0	locks=0 ]	(	""	)
-label35	[ 0	locks=0 ]	(	""	)
-name36	[ 0	locks=0 ]	(	""	)
-label36	[ 0	locks=0 ]	(	""	)
-name37	[ 0	locks=0 ]	(	""	)
-label37	[ 0	locks=0 ]	(	""	)
-name38	[ 0	locks=0 ]	(	""	)
-label38	[ 0	locks=0 ]	(	""	)
-name39	[ 0	locks=0 ]	(	""	)
-label39	[ 0	locks=0 ]	(	""	)
-name40	[ 0	locks=0 ]	(	""	)
-label40	[ 0	locks=0 ]	(	""	)
-name41	[ 0	locks=0 ]	(	""	)
-label41	[ 0	locks=0 ]	(	""	)
-name42	[ 0	locks=0 ]	(	""	)
-label42	[ 0	locks=0 ]	(	""	)
-name43	[ 0	locks=0 ]	(	""	)
-label43	[ 0	locks=0 ]	(	""	)
-name44	[ 0	locks=0 ]	(	""	)
-label44	[ 0	locks=0 ]	(	""	)
-name45	[ 0	locks=0 ]	(	""	)
-label45	[ 0	locks=0 ]	(	""	)
-name46	[ 0	locks=0 ]	(	""	)
-label46	[ 0	locks=0 ]	(	""	)
-name47	[ 0	locks=0 ]	(	""	)
-label47	[ 0	locks=0 ]	(	""	)
-name48	[ 0	locks=0 ]	(	""	)
-label48	[ 0	locks=0 ]	(	""	)
-name49	[ 0	locks=0 ]	(	""	)
-label49	[ 0	locks=0 ]	(	""	)
-name50	[ 0	locks=0 ]	(	""	)
-label50	[ 0	locks=0 ]	(	""	)
-name51	[ 0	locks=0 ]	(	""	)
-label51	[ 0	locks=0 ]	(	""	)
-name52	[ 0	locks=0 ]	(	""	)
-label52	[ 0	locks=0 ]	(	""	)
-name53	[ 0	locks=0 ]	(	""	)
-label53	[ 0	locks=0 ]	(	""	)
-name54	[ 0	locks=0 ]	(	""	)
-label54	[ 0	locks=0 ]	(	""	)
-name55	[ 0	locks=0 ]	(	""	)
-label55	[ 0	locks=0 ]	(	""	)
-name56	[ 0	locks=0 ]	(	""	)
-label56	[ 0	locks=0 ]	(	""	)
-name57	[ 0	locks=0 ]	(	""	)
-label57	[ 0	locks=0 ]	(	""	)
-name58	[ 0	locks=0 ]	(	""	)
-label58	[ 0	locks=0 ]	(	""	)
-name59	[ 0	locks=0 ]	(	""	)
-label59	[ 0	locks=0 ]	(	""	)
-name60	[ 0	locks=0 ]	(	""	)
-label60	[ 0	locks=0 ]	(	""	)
-name61	[ 0	locks=0 ]	(	""	)
-label61	[ 0	locks=0 ]	(	""	)
-name62	[ 0	locks=0 ]	(	""	)
-label62	[ 0	locks=0 ]	(	""	)
-name63	[ 0	locks=0 ]	(	""	)
-label63	[ 0	locks=0 ]	(	""	)
-name64	[ 0	locks=0 ]	(	""	)
-label64	[ 0	locks=0 ]	(	""	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/Material_Outputs_and_AOVs.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/material_properties.init"
-Content-Type: text/plain
-
-type = kma_material_properties
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/material_properties.def"
-Content-Type: text/plain
-
-comment ""
-position -0.2883 -3.87213
-connectornextid 1
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-0 "properties"
-}
-inputsNamed3
-{
-}
-inputs
-{
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/material_properties.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-signature	[ 0	locks=0 ]	(	0	)
-folder1	[ 0	locks=0 ]	(	0	)
-xn____activate__karmadiffusequality_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmadiffusequality_z6a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmareflectquality_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmareflectquality_z6a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmarefractquality_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmarefractquality_z6a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmavolumequality_8pb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumequality_d5a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmasssquality_dlb	[ 0	locks=0 ]	(	0	)
-xn__karmasssquality_h0a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmavolumesteprate_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumesteprate_z6a	[ 0	locks=0 ]	(	0.25	)
-xn____activate__karmalightsource_samplingquality_1dc	[ 0	locks=0 ]	(	0	)
-xn__karmalightsource_samplingquality_5sb	[ 0	locks=0 ]	(	1	)
-folder2	[ 0	locks=0 ]	(	0	)
-xn____activate__karmadiffuselimit_mob	[ 0	locks=0 ]	(	0	)
-xn__karmadiffuselimit_q3a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmareflectlimit_mob	[ 0	locks=0 ]	(	0	)
-xn__karmareflectlimit_q3a	[ 0	locks=0 ]	(	4	)
-xn____activate__karmarefractlimit_mob	[ 0	locks=0 ]	(	0	)
-xn__karmarefractlimit_q3a	[ 0	locks=0 ]	(	4	)
-xn____activate__karmavolumelimit_zmb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumelimit_31a	[ 0	locks=0 ]	(	0	)
-xn____activate__karmassslimit_3hb	[ 0	locks=0 ]	(	0	)
-xn__karmassslimit_7wa	[ 0	locks=0 ]	(	0	)
-folder3	[ 0	locks=0 ]	(	0	)
-xn____activate__karmavolumeuniform_8pb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumeuniform_d5a	[ 0	locks=0 ]	(	"off"	)
-xn____activate__karmavolumeuniformdensity_n1b	[ 0	locks=0 ]	(	0	)
-xn__karmavolumeuniformdensity_rhb	[ 0	locks=0 ]	(	1	)
-xn____activate__karmavolumeuniformsamples_n1b	[ 0	locks=0 ]	(	0	)
-xn__karmavolumeuniformsamples_rhb	[ 0	locks=0 ]	(	4	)
-folder4	[ 0	locks=0 ]	(	0	)
-xn____activate__karmalpetag_ueb	[ 0	locks=0 ]	(	0	)
-xn__karmalpetag_yta	[ 0	locks=0 ]	(	""	)
-xn____activate__karmadielectricpriority_eyb	[ 0	locks=0 ]	(	0	)
-xn__karmadielectricpriority_ieb	[ 0	locks=0 ]	(	0	)
-xn____activate__karmacausticsenable_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmacausticsenable_z6a	[ 0	locks=0 ]	(	"off"	)
-xn____activate__karmacausticsroughnessclamp_w4b	[ 0	locks=0 ]	(	0	)
-xn__karmacausticsroughnessclamp_0kb	[ 0	locks=0 ]	(	0.2	)
-xn____activate__karmafakecausticsbsdfenable_w4b	[ 0	locks=0 ]	(	0	)
-xn__karmafakecausticsbsdfenable_0kb	[ 0	locks=0 ]	(	"on"	)
-xn____activate__karmafakecausticscolor_rwb	[ 0	locks=0 ]	(	0	)
-xn__karmafakecausticscolor_vcb	[ 0	locks=0 ]	(	1	1	1	)
-xn____activate__karmafakecausticsopacity_0zb	[ 0	locks=0 ]	(	0	)
-xn__karmafakecausticsopacity_4fb	[ 0	locks=0 ]	(	1	1	1	)
-xn____activate__karmamtlx_imagewidth_itb	[ 0	locks=0 ]	(	0	)
-xn__karmamtlx_imagewidth_m8a	[ 0	locks=0 ]	(	0	)
-xn____activate__karmamtlx_imageblur_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmamtlx_imageblur_z6a	[ 0	locks=0 ]	(	0	)
-folder5	[ 0	locks=0 ]	(	0	)
-xn____activate__karmatreat_as_lightsource_n1b	[ 0	locks=0 ]	(	0	)
-xn__karmatreat_as_lightsource_rhb	[ 0	locks=0 ]	(	"No"	)
-xn____activate__karmalightsource_diffusescale_57b	[ 0	locks=0 ]	(	0	)
-xn__karmalightsource_diffusescale_9nb	[ 0	locks=0 ]	(	1	)
-xn____activate__karmalightsource_specularscale_s9b	[ 0	locks=0 ]	(	0	)
-xn__karmalightsource_specularscale_wpb	[ 0	locks=0 ]	(	1	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/material_properties.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":""
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/kma_material_properties1.init"
-Content-Type: text/plain
-
-type = kma_material_properties
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/kma_material_properties1.def"
-Content-Type: text/plain
-
-comment ""
-position -2.31907 -0.794065
-connectornextid 0
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-}
-inputsNamed3
-{
-}
-inputs
-{
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/kma_material_properties1.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-signature	[ 0	locks=0 ]	(	0	)
-folder1	[ 0	locks=0 ]	(	1	)
-xn____activate__karmadiffusequality_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmadiffusequality_z6a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmareflectquality_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmareflectquality_z6a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmarefractquality_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmarefractquality_z6a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmavolumequality_8pb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumequality_d5a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmasssquality_dlb	[ 0	locks=0 ]	(	0	)
-xn__karmasssquality_h0a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmavolumesteprate_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumesteprate_z6a	[ 0	locks=0 ]	(	0.25	)
-xn____activate__karmalightsource_samplingquality_1dc	[ 0	locks=0 ]	(	0	)
-xn__karmalightsource_samplingquality_5sb	[ 0	locks=0 ]	(	1	)
-folder2	[ 0	locks=0 ]	(	1	)
-xn____activate__karmadiffuselimit_mob	[ 0	locks=0 ]	(	0	)
-xn__karmadiffuselimit_q3a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmareflectlimit_mob	[ 0	locks=0 ]	(	0	)
-xn__karmareflectlimit_q3a	[ 0	locks=0 ]	(	4	)
-xn____activate__karmarefractlimit_mob	[ 0	locks=0 ]	(	0	)
-xn__karmarefractlimit_q3a	[ 0	locks=0 ]	(	4	)
-xn____activate__karmavolumelimit_zmb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumelimit_31a	[ 0	locks=0 ]	(	0	)
-xn____activate__karmassslimit_3hb	[ 0	locks=0 ]	(	0	)
-xn__karmassslimit_7wa	[ 0	locks=0 ]	(	0	)
-folder3	[ 0	locks=0 ]	(	1	)
-xn____activate__karmavolumeuniform_8pb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumeuniform_d5a	[ 0	locks=0 ]	(	"off"	)
-xn____activate__karmavolumeuniformdensity_n1b	[ 0	locks=0 ]	(	0	)
-xn__karmavolumeuniformdensity_rhb	[ 0	locks=0 ]	(	1	)
-xn____activate__karmavolumeuniformsamples_n1b	[ 0	locks=0 ]	(	0	)
-xn__karmavolumeuniformsamples_rhb	[ 0	locks=0 ]	(	4	)
-folder4	[ 0	locks=0 ]	(	1	)
-xn____activate__karmalpetag_ueb	[ 0	locks=0 ]	(	0	)
-xn__karmalpetag_yta	[ 0	locks=0 ]	(	""	)
-xn____activate__karmadielectricpriority_eyb	[ 0	locks=0 ]	(	0	)
-xn__karmadielectricpriority_ieb	[ 0	locks=0 ]	(	0	)
-xn____activate__karmacausticsenable_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmacausticsenable_z6a	[ 0	locks=0 ]	(	"off"	)
-xn____activate__karmacausticsroughnessclamp_w4b	[ 0	locks=0 ]	(	0	)
-xn__karmacausticsroughnessclamp_0kb	[ 0	locks=0 ]	(	0.2	)
-xn____activate__karmafakecausticsbsdfenable_w4b	[ 0	locks=0 ]	(	0	)
-xn__karmafakecausticsbsdfenable_0kb	[ 0	locks=0 ]	(	"on"	)
-xn____activate__karmafakecausticscolor_rwb	[ 0	locks=0 ]	(	0	)
-xn__karmafakecausticscolor_vcb	[ 0	locks=0 ]	(	1	1	1	)
-xn____activate__karmafakecausticsopacity_0zb	[ 0	locks=0 ]	(	0	)
-xn__karmafakecausticsopacity_4fb	[ 0	locks=0 ]	(	1	1	1	)
-xn____activate__karmamtlx_imagewidth_itb	[ 0	locks=0 ]	(	0	)
-xn__karmamtlx_imagewidth_m8a	[ 0	locks=0 ]	(	0	)
-xn____activate__karmamtlx_imageblur_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmamtlx_imageblur_z6a	[ 0	locks=0 ]	(	0	)
-folder5	[ 0	locks=0 ]	(	1	)
-xn____activate__karmatreat_as_lightsource_n1b	[ 0	locks=0 ]	(	0	)
-xn__karmatreat_as_lightsource_rhb	[ 0	locks=0 ]	(	"No"	)
-xn____activate__karmalightsource_diffusescale_57b	[ 0	locks=0 ]	(	0	)
-xn__karmalightsource_diffusescale_9nb	[ 0	locks=0 ]	(	1	)
-xn____activate__karmalightsource_specularscale_s9b	[ 0	locks=0 ]	(	0	)
-xn__karmalightsource_specularscale_wpb	[ 0	locks=0 ]	(	1	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial/kma_material_properties1.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":""
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1.init"
-Content-Type: text/plain
-
-type = subnet
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1.def"
-Content-Type: text/plain
-
-language MaterialX
-comment ""
-position -8.95393 -9.49828
-connectornextid 0
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material on
-outputsNamed3
-{
-}
-inputsNamed3
-{
-}
-inputs
-{
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1.spareparmdef"
-Content-Type: text/plain
-
-    groupcollapsible {
-        name    "folder1"
-        label   "Karma Material Builder"
-        grouptag { "sidefx::shader_isparm" "0" }
-
-        parm {
-            name    "inherit_ctrl"
-            label   "Inherit from Class"
-            type    integer
-            default { "2" }
-            menu {
-                "0" "Never"
-                "1" "Always"
-                "2" "Material Flag"
-            }
-            range   { 0 10 }
-        }
-        parm {
-            name    "shader_referencetype"
-            label   "Class Arc"
-            type    string
-            default { [ "n = hou.pwd()\nn_hasFlag = n.isMaterialFlagSet()\ni = n.evalParm('inherit_ctrl')\nr = 'none'\nif i == 1 or (n_hasFlag and i == 2):\n    r = 'inherit'\nreturn r" python ] }
-            menu {
-                "none"          "None"
-                "reference"     "Reference"
-                "inherit"       "Inherit"
-                "specialize"    "Specialize"
-                "represent"     "Represent"
-            }
-            parmtag { "sidefx::shader_isparm" "0" }
-            parmtag { "spare_category" "Shader" }
-        }
-        parm {
-            name    "shader_baseprimpath"
-            label   "Class Prim Path"
-            type    string
-            default { "/__class_mtl__/`$OS`" }
-            parmtag { "script_action" "import loputils\nloputils.selectPrimsInParm(kwargs, False)" }
-            parmtag { "script_action_help" "Select a primitive in the Scene Viewer or Scene Graph Tree pane.\nCtrl-click to select using the primitive picker dialog." }
-            parmtag { "script_action_icon" "BUTTONS_reselect" }
-            parmtag { "sidefx::shader_isparm" "0" }
-            parmtag { "sidefx::usdpathtype" "prim" }
-            parmtag { "spare_category" "Shader" }
-        }
-        parm {
-            name    "separator1"
-            label   "separator1"
-            type    separator
-            default { "" }
-        }
-        parm {
-            name    "tabmenumask"
-            label   "Tab Menu Mask"
-            type    string
-            default { "karma USD ^mtlxramp* ^hmtlxramp* ^hmtlxcubicramp* MaterialX parameter constant collect null genericshader subnet subnetconnector suboutput subinput" }
-            parmtag { "spare_category" "Tab Menu" }
-        }
-        parm {
-            name    "shader_rendercontextname"
-            label   "Render Context Name"
-            type    string
-            default { "kma" }
-            parmtag { "sidefx::shader_isparm" "0" }
-            parmtag { "spare_category" "Shader" }
-        }
-        parm {
-            name    "shader_forcechildren"
-            label   "Force Translation of Children"
-            type    toggle
-            default { "1" }
-            parmtag { "sidefx::shader_isparm" "0" }
-            parmtag { "spare_category" "Shader" }
-        }
-    }
-
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1.chn"
-Content-Type: text/plain
-
-{
-    channel shader_referencetype {
-      lefttype = extend
-      righttype = extend
-      defaultString = \"\"
-      flags = 0
-      segment { length = 0 expr = "n = hou.pwd()
-n_hasFlag = n.isMaterialFlagSet()
-i = n.evalParm('inherit_ctrl')
-r = 'none'
-if i == 1 or (n_hasFlag and i == 2):
-    r = 'inherit'
-return r" language = python }
-    }
-  }
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-folder1	[ 0	locks=0 ]	(	0	)
-inherit_ctrl	[ 0	locks=0 ]	(	2	)
-shader_referencetype	[ 0	locks=0 ]	(	[ shader_referencetype	"n = hou.pwd()
-n_hasFlag = n.isMaterialFlagSet()
-i = n.evalParm('inherit_ctrl')
-r = 'none'
-if i == 1 or (n_hasFlag and i == 2):
-    r = 'inherit'
-return r" ] 	)
-shader_baseprimpath	[ 0	locks=0 ]	(	/__class_mtl__/`$OS`	)
-separator1	[ 0	locks=0 ]	(	)
-tabmenumask	[ 0	locks=0 ]	(	"karma USD ^mtlxramp* ^hmtlxramp* ^hmtlxcubicramp* MaterialX parameter constant collect null genericshader subnet subnetconnector suboutput subinput"	)
-shader_rendercontextname	[ 0	locks=0 ]	(	kma	)
-shader_forcechildren	[ 0	locks=0 ]	(	"on"	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/inputs.init"
-Content-Type: text/plain
-
-type = subinput
-matchesdef = 1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/inputs.def"
-Content-Type: text/plain
-
-comment ""
-position -4.53993 0.0376
-connectornextid 0
-flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-}
-inputsNamed3
-{
-}
-inputs
-{
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/inputs.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/inputs.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/mtlxstandard_surface.init"
-Content-Type: text/plain
-
-type = mtlxstandard_surface
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/mtlxstandard_surface.def"
-Content-Type: text/plain
-
-comment ""
-position -0.2883 0.0376
-connectornextid 43
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-42 "out"
-}
-inputsNamed3
-{
-0 	"" "" 1 "base"
-1 	"" "" 1 "base_color"
-2 	"" "" 1 "diffuse_roughness"
-3 	"" "" 1 "metalness"
-4 	"" "" 1 "specular"
-5 	"" "" 1 "specular_color"
-6 	"" "" 1 "specular_roughness"
-7 	"" "" 1 "specular_IOR"
-8 	"" "" 1 "specular_anisotropy"
-9 	"" "" 1 "specular_rotation"
-10 	"" "" 1 "transmission"
-11 	"" "" 1 "transmission_color"
-12 	"" "" 1 "transmission_depth"
-13 	"" "" 1 "transmission_scatter"
-14 	"" "" 1 "transmission_scatter_anisotropy"
-15 	"" "" 1 "transmission_dispersion"
-16 	"" "" 1 "transmission_extra_roughness"
-17 	"" "" 1 "subsurface"
-18 	"" "" 1 "subsurface_color"
-19 	"" "" 1 "subsurface_radius"
-20 	"" "" 1 "subsurface_scale"
-21 	"" "" 1 "subsurface_anisotropy"
-22 	"" "" 1 "sheen"
-23 	"" "" 1 "sheen_color"
-24 	"" "" 1 "sheen_roughness"
-25 	"" "" 1 "coat"
-26 	"" "" 1 "coat_color"
-27 	"" "" 1 "coat_roughness"
-28 	"" "" 1 "coat_anisotropy"
-29 	"" "" 1 "coat_rotation"
-30 	"" "" 1 "coat_IOR"
-31 	"" "" 1 "coat_normal"
-32 	"" "" 1 "coat_affect_color"
-33 	"" "" 1 "coat_affect_roughness"
-34 	"" "" 1 "thin_film_thickness"
-35 	"" "" 1 "thin_film_IOR"
-36 	"" "" 1 "emission"
-37 	"" "" 1 "emission_color"
-38 	"" "" 1 "opacity"
-39 	"" "" 1 "thin_walled"
-40 	"" "" 1 "normal"
-41 	"" "" 1 "tangent"
-}
-inputs
-{
-0 	"" 0 1
-1 	"" 0 1
-2 	"" 0 1
-3 	"" 0 1
-4 	"" 0 1
-5 	"" 0 1
-6 	"" 0 1
-7 	"" 0 1
-8 	"" 0 1
-9 	"" 0 1
-10 	"" 0 1
-11 	"" 0 1
-12 	"" 0 1
-13 	"" 0 1
-14 	"" 0 1
-15 	"" 0 1
-16 	"" 0 1
-17 	"" 0 1
-18 	"" 0 1
-19 	"" 0 1
-20 	"" 0 1
-21 	"" 0 1
-22 	"" 0 1
-23 	"" 0 1
-24 	"" 0 1
-25 	"" 0 1
-26 	"" 0 1
-27 	"" 0 1
-28 	"" 0 1
-29 	"" 0 1
-30 	"" 0 1
-31 	"" 0 1
-32 	"" 0 1
-33 	"" 0 1
-34 	"" 0 1
-35 	"" 0 1
-36 	"" 0 1
-37 	"" 0 1
-38 	"" 0 1
-39 	"" 0 1
-40 	"" 0 1
-41 	"" 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/mtlxstandard_surface.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-signature	[ 0	locks=0 ]	(	default	)
-folder0	[ 0	locks=0 ]	(	1	)
-base	[ 0	locks=0 ]	(	1	)
-base_color	[ 0	locks=0 ]	(	0.8	0.8	0.8	)
-diffuse_roughness	[ 0	locks=0 ]	(	0	)
-metalness	[ 0	locks=0 ]	(	0	)
-folder0_1	[ 0	locks=0 ]	(	0	)
-specular	[ 0	locks=0 ]	(	1	)
-specular_color	[ 0	locks=0 ]	(	1	1	1	)
-specular_roughness	[ 0	locks=0 ]	(	0.2	)
-specular_IOR	[ 0	locks=0 ]	(	1.5	)
-specular_anisotropy	[ 0	locks=0 ]	(	0	)
-specular_rotation	[ 0	locks=0 ]	(	0	)
-folder0_5	[ 0	locks=0 ]	(	0	)
-coat	[ 0	locks=0 ]	(	0	)
-coat_color	[ 0	locks=0 ]	(	1	1	1	)
-coat_roughness	[ 0	locks=0 ]	(	0.1	)
-coat_anisotropy	[ 0	locks=0 ]	(	0	)
-coat_rotation	[ 0	locks=0 ]	(	0	)
-coat_IOR	[ 0	locks=0 ]	(	1.5	)
-coat_normal	[ 0	locks=0 ]	(	0	0	0	)
-coat_affect_color	[ 0	locks=0 ]	(	0	)
-coat_affect_roughness	[ 0	locks=0 ]	(	0	)
-folder0_2	[ 0	locks=0 ]	(	0	)
-transmission	[ 0	locks=0 ]	(	0	)
-transmission_color	[ 0	locks=0 ]	(	1	1	1	)
-transmission_depth	[ 0	locks=0 ]	(	0	)
-transmission_scatter	[ 0	locks=0 ]	(	0	0	0	)
-transmission_scatter_anisotropy	[ 0	locks=0 ]	(	0	)
-transmission_dispersion	[ 0	locks=0 ]	(	0	)
-transmission_extra_roughness	[ 0	locks=0 ]	(	0	)
-folder0_4	[ 0	locks=0 ]	(	0	)
-sheen	[ 0	locks=0 ]	(	0	)
-sheen_color	[ 0	locks=0 ]	(	1	1	1	)
-sheen_roughness	[ 0	locks=0 ]	(	0.3	)
-folder0_3	[ 0	locks=0 ]	(	0	)
-subsurface	[ 0	locks=0 ]	(	0	)
-subsurface_color	[ 0	locks=0 ]	(	1	1	1	)
-subsurface_radius	[ 0	locks=0 ]	(	1	1	1	)
-subsurface_scale	[ 0	locks=0 ]	(	1	)
-subsurface_anisotropy	[ 0	locks=0 ]	(	0	)
-folder0_7	[ 0	locks=0 ]	(	0	)
-emission	[ 0	locks=0 ]	(	0	)
-emission_color	[ 0	locks=0 ]	(	1	1	1	)
-folder0_6	[ 0	locks=0 ]	(	0	)
-thin_film_thickness	[ 0	locks=0 ]	(	0	)
-thin_film_IOR	[ 0	locks=0 ]	(	1.5	)
-folder0_8	[ 0	locks=0 ]	(	0	)
-opacity	[ 0	locks=0 ]	(	1	1	1	)
-thin_walled	[ 0	locks=0 ]	(	"off"	)
-normal	[ 0	locks=0 ]	(	0	0	0	)
-tangent	[ 0	locks=0 ]	(	0	0	0	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/mtlxstandard_surface.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":""
-	},
-	"__inputgroup_":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Base":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Coat":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Emission":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Geometry":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Sheen":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Specular":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Subsurface":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Thin Film":{
-		"type":"string",
-		"value":"collapsed"
-	},
-	"__inputgroup_Transmission":{
-		"type":"string",
-		"value":"collapsed"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/mtlxdisplacement.init"
-Content-Type: text/plain
-
-type = mtlxdisplacement
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/mtlxdisplacement.def"
-Content-Type: text/plain
-
-comment ""
-position -0.2883 -2.4334
-connectornextid 3
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-2 "out"
-}
-inputsNamed3
-{
-0 	"" "" 1 "displacement"
-1 	"" "" 1 "scale"
-}
-inputs
-{
-0 	"" 0 1
-1 	"" 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/mtlxdisplacement.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-signature	[ 0	locks=0 ]	(	default	)
-displacement	[ 0	locks=0 ]	(	0	)
-displacement_vector3	[ 0	locks=0 ]	(	0	0	0	)
-scale	[ 0	locks=0 ]	(	1	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/mtlxdisplacement.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":""
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/Material_Outputs_and_AOVs.init"
-Content-Type: text/plain
-
-type = suboutput
-matchesdef = 1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/Material_Outputs_and_AOVs.def"
-Content-Type: text/plain
-
-comment ""
-position 2.4426 -3.8725
-connectornextid 3
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-}
-inputsNamed3
-{
-0 	mtlxstandard_surface 42 1 "surface"
-1 	mtlxdisplacement 2 1 "displacement"
-2 	material_properties 0 1 "properties"
-}
-inputs
-{
-0 	mtlxstandard_surface 0 1
-1 	mtlxdisplacement 0 1
-2 	material_properties 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/Material_Outputs_and_AOVs.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-name1	[ 0	locks=0 ]	(	surface	)
-label1	[ 0	locks=0 ]	(	""	)
-name2	[ 0	locks=0 ]	(	displacement	)
-label2	[ 0	locks=0 ]	(	""	)
-name3	[ 0	locks=0 ]	(	""	)
-label3	[ 0	locks=0 ]	(	""	)
-name4	[ 0	locks=0 ]	(	""	)
-label4	[ 0	locks=0 ]	(	""	)
-name5	[ 0	locks=0 ]	(	""	)
-label5	[ 0	locks=0 ]	(	""	)
-name6	[ 0	locks=0 ]	(	""	)
-label6	[ 0	locks=0 ]	(	""	)
-name7	[ 0	locks=0 ]	(	""	)
-label7	[ 0	locks=0 ]	(	""	)
-name8	[ 0	locks=0 ]	(	""	)
-label8	[ 0	locks=0 ]	(	""	)
-name9	[ 0	locks=0 ]	(	""	)
-label9	[ 0	locks=0 ]	(	""	)
-name10	[ 0	locks=0 ]	(	""	)
-label10	[ 0	locks=0 ]	(	""	)
-name11	[ 0	locks=0 ]	(	""	)
-label11	[ 0	locks=0 ]	(	""	)
-name12	[ 0	locks=0 ]	(	""	)
-label12	[ 0	locks=0 ]	(	""	)
-name13	[ 0	locks=0 ]	(	""	)
-label13	[ 0	locks=0 ]	(	""	)
-name14	[ 0	locks=0 ]	(	""	)
-label14	[ 0	locks=0 ]	(	""	)
-name15	[ 0	locks=0 ]	(	""	)
-label15	[ 0	locks=0 ]	(	""	)
-name16	[ 0	locks=0 ]	(	""	)
-label16	[ 0	locks=0 ]	(	""	)
-name17	[ 0	locks=0 ]	(	""	)
-label17	[ 0	locks=0 ]	(	""	)
-name18	[ 0	locks=0 ]	(	""	)
-label18	[ 0	locks=0 ]	(	""	)
-name19	[ 0	locks=0 ]	(	""	)
-label19	[ 0	locks=0 ]	(	""	)
-name20	[ 0	locks=0 ]	(	""	)
-label20	[ 0	locks=0 ]	(	""	)
-name21	[ 0	locks=0 ]	(	""	)
-label21	[ 0	locks=0 ]	(	""	)
-name22	[ 0	locks=0 ]	(	""	)
-label22	[ 0	locks=0 ]	(	""	)
-name23	[ 0	locks=0 ]	(	""	)
-label23	[ 0	locks=0 ]	(	""	)
-name24	[ 0	locks=0 ]	(	""	)
-label24	[ 0	locks=0 ]	(	""	)
-name25	[ 0	locks=0 ]	(	""	)
-label25	[ 0	locks=0 ]	(	""	)
-name26	[ 0	locks=0 ]	(	""	)
-label26	[ 0	locks=0 ]	(	""	)
-name27	[ 0	locks=0 ]	(	""	)
-label27	[ 0	locks=0 ]	(	""	)
-name28	[ 0	locks=0 ]	(	""	)
-label28	[ 0	locks=0 ]	(	""	)
-name29	[ 0	locks=0 ]	(	""	)
-label29	[ 0	locks=0 ]	(	""	)
-name30	[ 0	locks=0 ]	(	""	)
-label30	[ 0	locks=0 ]	(	""	)
-name31	[ 0	locks=0 ]	(	""	)
-label31	[ 0	locks=0 ]	(	""	)
-name32	[ 0	locks=0 ]	(	""	)
-label32	[ 0	locks=0 ]	(	""	)
-name33	[ 0	locks=0 ]	(	""	)
-label33	[ 0	locks=0 ]	(	""	)
-name34	[ 0	locks=0 ]	(	""	)
-label34	[ 0	locks=0 ]	(	""	)
-name35	[ 0	locks=0 ]	(	""	)
-label35	[ 0	locks=0 ]	(	""	)
-name36	[ 0	locks=0 ]	(	""	)
-label36	[ 0	locks=0 ]	(	""	)
-name37	[ 0	locks=0 ]	(	""	)
-label37	[ 0	locks=0 ]	(	""	)
-name38	[ 0	locks=0 ]	(	""	)
-label38	[ 0	locks=0 ]	(	""	)
-name39	[ 0	locks=0 ]	(	""	)
-label39	[ 0	locks=0 ]	(	""	)
-name40	[ 0	locks=0 ]	(	""	)
-label40	[ 0	locks=0 ]	(	""	)
-name41	[ 0	locks=0 ]	(	""	)
-label41	[ 0	locks=0 ]	(	""	)
-name42	[ 0	locks=0 ]	(	""	)
-label42	[ 0	locks=0 ]	(	""	)
-name43	[ 0	locks=0 ]	(	""	)
-label43	[ 0	locks=0 ]	(	""	)
-name44	[ 0	locks=0 ]	(	""	)
-label44	[ 0	locks=0 ]	(	""	)
-name45	[ 0	locks=0 ]	(	""	)
-label45	[ 0	locks=0 ]	(	""	)
-name46	[ 0	locks=0 ]	(	""	)
-label46	[ 0	locks=0 ]	(	""	)
-name47	[ 0	locks=0 ]	(	""	)
-label47	[ 0	locks=0 ]	(	""	)
-name48	[ 0	locks=0 ]	(	""	)
-label48	[ 0	locks=0 ]	(	""	)
-name49	[ 0	locks=0 ]	(	""	)
-label49	[ 0	locks=0 ]	(	""	)
-name50	[ 0	locks=0 ]	(	""	)
-label50	[ 0	locks=0 ]	(	""	)
-name51	[ 0	locks=0 ]	(	""	)
-label51	[ 0	locks=0 ]	(	""	)
-name52	[ 0	locks=0 ]	(	""	)
-label52	[ 0	locks=0 ]	(	""	)
-name53	[ 0	locks=0 ]	(	""	)
-label53	[ 0	locks=0 ]	(	""	)
-name54	[ 0	locks=0 ]	(	""	)
-label54	[ 0	locks=0 ]	(	""	)
-name55	[ 0	locks=0 ]	(	""	)
-label55	[ 0	locks=0 ]	(	""	)
-name56	[ 0	locks=0 ]	(	""	)
-label56	[ 0	locks=0 ]	(	""	)
-name57	[ 0	locks=0 ]	(	""	)
-label57	[ 0	locks=0 ]	(	""	)
-name58	[ 0	locks=0 ]	(	""	)
-label58	[ 0	locks=0 ]	(	""	)
-name59	[ 0	locks=0 ]	(	""	)
-label59	[ 0	locks=0 ]	(	""	)
-name60	[ 0	locks=0 ]	(	""	)
-label60	[ 0	locks=0 ]	(	""	)
-name61	[ 0	locks=0 ]	(	""	)
-label61	[ 0	locks=0 ]	(	""	)
-name62	[ 0	locks=0 ]	(	""	)
-label62	[ 0	locks=0 ]	(	""	)
-name63	[ 0	locks=0 ]	(	""	)
-label63	[ 0	locks=0 ]	(	""	)
-name64	[ 0	locks=0 ]	(	""	)
-label64	[ 0	locks=0 ]	(	""	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/Material_Outputs_and_AOVs.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/material_properties.init"
-Content-Type: text/plain
-
-type = kma_material_properties
-matchesdef = 0
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/material_properties.def"
-Content-Type: text/plain
-
-comment ""
-position -0.2883 -3.87213
-connectornextid 1
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on lowdetail off mediumdetail off highdetail on material off
-outputsNamed3
-{
-0 "properties"
-}
-inputsNamed3
-{
-}
-inputs
-{
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/material_properties.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-signature	[ 0	locks=0 ]	(	0	)
-folder1	[ 0	locks=0 ]	(	0	)
-xn____activate__karmadiffusequality_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmadiffusequality_z6a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmareflectquality_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmareflectquality_z6a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmarefractquality_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmarefractquality_z6a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmavolumequality_8pb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumequality_d5a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmasssquality_dlb	[ 0	locks=0 ]	(	0	)
-xn__karmasssquality_h0a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmavolumesteprate_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumesteprate_z6a	[ 0	locks=0 ]	(	0.25	)
-xn____activate__karmalightsource_samplingquality_1dc	[ 0	locks=0 ]	(	0	)
-xn__karmalightsource_samplingquality_5sb	[ 0	locks=0 ]	(	1	)
-folder2	[ 0	locks=0 ]	(	0	)
-xn____activate__karmadiffuselimit_mob	[ 0	locks=0 ]	(	0	)
-xn__karmadiffuselimit_q3a	[ 0	locks=0 ]	(	1	)
-xn____activate__karmareflectlimit_mob	[ 0	locks=0 ]	(	0	)
-xn__karmareflectlimit_q3a	[ 0	locks=0 ]	(	4	)
-xn____activate__karmarefractlimit_mob	[ 0	locks=0 ]	(	0	)
-xn__karmarefractlimit_q3a	[ 0	locks=0 ]	(	4	)
-xn____activate__karmavolumelimit_zmb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumelimit_31a	[ 0	locks=0 ]	(	0	)
-xn____activate__karmassslimit_3hb	[ 0	locks=0 ]	(	0	)
-xn__karmassslimit_7wa	[ 0	locks=0 ]	(	0	)
-folder3	[ 0	locks=0 ]	(	0	)
-xn____activate__karmavolumeuniform_8pb	[ 0	locks=0 ]	(	0	)
-xn__karmavolumeuniform_d5a	[ 0	locks=0 ]	(	"off"	)
-xn____activate__karmavolumeuniformdensity_n1b	[ 0	locks=0 ]	(	0	)
-xn__karmavolumeuniformdensity_rhb	[ 0	locks=0 ]	(	1	)
-xn____activate__karmavolumeuniformsamples_n1b	[ 0	locks=0 ]	(	0	)
-xn__karmavolumeuniformsamples_rhb	[ 0	locks=0 ]	(	4	)
-folder4	[ 0	locks=0 ]	(	0	)
-xn____activate__karmalpetag_ueb	[ 0	locks=0 ]	(	0	)
-xn__karmalpetag_yta	[ 0	locks=0 ]	(	""	)
-xn____activate__karmadielectricpriority_eyb	[ 0	locks=0 ]	(	0	)
-xn__karmadielectricpriority_ieb	[ 0	locks=0 ]	(	0	)
-xn____activate__karmacausticsenable_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmacausticsenable_z6a	[ 0	locks=0 ]	(	"off"	)
-xn____activate__karmacausticsroughnessclamp_w4b	[ 0	locks=0 ]	(	0	)
-xn__karmacausticsroughnessclamp_0kb	[ 0	locks=0 ]	(	0.2	)
-xn____activate__karmafakecausticsbsdfenable_w4b	[ 0	locks=0 ]	(	0	)
-xn__karmafakecausticsbsdfenable_0kb	[ 0	locks=0 ]	(	"on"	)
-xn____activate__karmafakecausticscolor_rwb	[ 0	locks=0 ]	(	0	)
-xn__karmafakecausticscolor_vcb	[ 0	locks=0 ]	(	1	1	1	)
-xn____activate__karmafakecausticsopacity_0zb	[ 0	locks=0 ]	(	0	)
-xn__karmafakecausticsopacity_4fb	[ 0	locks=0 ]	(	1	1	1	)
-xn____activate__karmamtlx_imagewidth_itb	[ 0	locks=0 ]	(	0	)
-xn__karmamtlx_imagewidth_m8a	[ 0	locks=0 ]	(	0	)
-xn____activate__karmamtlx_imageblur_vrb	[ 0	locks=0 ]	(	0	)
-xn__karmamtlx_imageblur_z6a	[ 0	locks=0 ]	(	0	)
-folder5	[ 0	locks=0 ]	(	0	)
-xn____activate__karmatreat_as_lightsource_n1b	[ 0	locks=0 ]	(	0	)
-xn__karmatreat_as_lightsource_rhb	[ 0	locks=0 ]	(	"No"	)
-xn____activate__karmalightsource_diffusescale_57b	[ 0	locks=0 ]	(	0	)
-xn__karmalightsource_diffusescale_9nb	[ 0	locks=0 ]	(	1	)
-xn____activate__karmalightsource_specularscale_s9b	[ 0	locks=0 ]	(	0	)
-xn__karmalightsource_specularscale_wpb	[ 0	locks=0 ]	(	1	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1/material_properties.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":""
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant.order"
-Content-Type: text/plain
-
-6
-inputs
-mtlxstandard_surface
-mtlxdisplacement
-Material_Outputs_and_AOVs
-material_properties
-mtlxgeompropvalue1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/constant.net"
-Content-Type: text/plain
-
-1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial.order"
-Content-Type: text/plain
-
-6
-inputs
-mtlxstandard_surface
-mtlxdisplacement
-Material_Outputs_and_AOVs
-material_properties
-kma_material_properties1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial.net"
-Content-Type: text/plain
-
-1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1.order"
-Content-Type: text/plain
-
-5
-inputs
-mtlxstandard_surface
-mtlxdisplacement
-Material_Outputs_and_AOVs
-material_properties
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/MAT/karmamaterial1.net"
-Content-Type: text/plain
-
-1
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/MAT.order"
 Content-Type: text/plain
 
-5
+2
 planet_material
-constant
 atmos_material
-karmamaterial
-karmamaterial1
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/MAT.net"
@@ -4823,7 +2097,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -16.7622 -2.65008
+position -15.5427 -5.98713
 connectornextid 1
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -4896,7 +2170,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 6.51703 0.18538
+position 6.51703 -0.03202
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -5458,19 +2732,19 @@ Content-Type: text/plain
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/get_attributes.init"
+Content-Disposition: attachment; filename="hdaroot/set_point_attributes1.init"
 Content-Type: text/plain
 
 type = attribwrangle
 matchesdef = 1
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/get_attributes.def"
+Content-Disposition: attachment; filename="hdaroot/set_point_attributes1.def"
 Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 2.73047 -7.95777
+position 4.14292 -8.50998
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -5498,7 +2772,7 @@ exprlanguage hscript
 end
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/get_attributes.parm"
+Content-Disposition: attachment; filename="hdaroot/set_point_attributes1.parm"
 Content-Type: text/plain
 
 {
@@ -5509,16 +2783,25 @@ grouptype	[ 0	locks=0 ]	(	"guess"	)
 class	[ 0	locks=0 ]	(	"point"	)
 vex_numcount	[ 0	locks=0 ]	(	10	)
 vex_threadjobsize	[ 0	locks=0 ]	(	1024	)
-snippet	[ 0	locks=0 ]	(	"f@mass = detail(0, \"mass\");
+snippet	[ 0	locks=0 ]	(	"// Initialize
+matrix3 m = ident();
+v@N = set(0, 0, 1);
+v@up = set(0, 1, 0);
+f@mass = detail(0, \"mass\");
 f@pscale = detail(0, \"diameter\");
 
-v@w = set(0, 1, 0)*detail(0, \"rotation_period\");
+// Rotation period: 1 hour = 1 frame
+// Rotation period is expressed in hours on this page: https://nssdc.gsfc.nasa.gov/planetary/factsheet/
+float rotation_period = detail(0, \"rotation_period\");
+float angle = efit(@Frame, 1, rotation_period, 0, 360);
+rotate(m, radians(angle), v@up);
 
 // Angle of the planet's axis 
-matrix3 m = ident();
 rotate(m, radians(detail(0, \"obliquity_to_orbit\")), set(1, 0, 0));
-v@N = set(0, 0, 1);
+
+// Apply the rotation matrix
 v@N *= m;
+v@up *= m;
 "	)
 exportlist	[ 0	locks=0 ]	(	*	)
 vex_strict	[ 0	locks=0 ]	(	"off"	)
@@ -5536,7 +2819,7 @@ vex_precision	[ 0	locks=0 ]	(	auto	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/get_attributes.userdata"
+Content-Disposition: attachment; filename="hdaroot/set_point_attributes1.userdata"
 Content-Type: text/plain
 
 {
@@ -5632,7 +2915,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -8.13056 -12.941
+position -8.85611 -15.8307
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -5642,12 +2925,12 @@ outputsNamed3
 inputsNamed3
 {
 1 	merge8 1 1 "input1"
-0 	material4 1 1 "input2"
+0 	name8 1 1 "input2"
 }
 inputs
 {
 0 	merge8 0 1
-1 	material4 0 1
+1 	name8 0 1
 }
 stat
 {
@@ -5859,7 +3142,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -0.38869 -17.9936
+position -0.147647 -21.1611
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -5868,13 +3151,13 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	DEBUG_quick_scale_change 1 1 "input1"
-1 	get_attributes 0 1 "input2"
+0 	merge9 1 1 "input1"
+1 	set_point_attributes1 0 1 "input2"
 }
 inputs
 {
-0 	DEBUG_quick_scale_change 0 1
-1 	get_attributes 0 1
+0 	merge9 0 1
+1 	set_point_attributes1 0 1
 }
 stat
 {
@@ -5899,7 +3182,7 @@ sourcegrouptype	[ 0	locks=0 ]	(	"guess"	)
 targetgroup	[ 0	locks=0 ]	(	0	)
 useidattrib	[ 0	locks=0 ]	(	"off"	)
 idattrib	[ 0	locks=0 ]	(	name	)
-pack	[ 0	locks=0 ]	(	"on"	)
+pack	[ 0	locks=0 ]	(	"off"	)
 pivot	[ 0	locks=0 ]	(	"centroid"	)
 viewportlod	[ 0	locks=0 ]	(	"full"	)
 transform	[ 0	locks=0 ]	(	"on"	)
@@ -6067,7 +3350,7 @@ t	[ 0	locks=0 ]	(	0	0	0	)
 r	[ 0	locks=0 ]	(	0	0	0	)
 scale	[ 0	locks=0 ]	(	1	)
 order	[ 0	locks=0 ]	(	4	)
-divs	[ 0	locks=0 ]	(	100	)
+divs	[ 0	locks=0 ]	(	200	)
 arc	[ 0	locks=0 ]	(	"closed"	)
 angle	[ 0	locks=0 ]	(	0	360	)
 imperfect	[ 0	locks=0 ]	(	"on"	)
@@ -6097,7 +3380,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 6.51703 -1.11692
+position 7.63156 -1.33273
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -6136,23 +3419,29 @@ grouptype	[ 0	locks=0 ]	(	"guess"	)
 class	[ 0	locks=0 ]	(	"point"	)
 vex_numcount	[ 0	locks=0 ]	(	10	)
 vex_threadjobsize	[ 0	locks=0 ]	(	1024	)
-snippet	[ 0	locks=0 ]	(	"// Diameter of the orbit
+snippet	[ 0	locks=0 ]	(	"// Initialize
+matrix3 m = ident();
+v@N = set(0, 0, 1);
+v@up = set(0, 1, 0);
+f@mass = detail(0, \"mass\");
+f@pscale = detail(0, \"diameter\");
+
+// Diameter of the orbit
 // @TODO: currently using a circle, but should be an ellipse
 f@pscale = detail(0, \"distance_from_central_body\");
 
-// Angle of the orbital plane's axis 
-matrix3 m = ident();
-rotate(m, radians(detail(0, \"orbital_inclination\")), set(1, 0, 0));
-v@N = set(0, 0, 1);
-v@up = set(0, 1, 0);
-v@N *= m;
-v@up *= m;
-
-// Orbital period
-float orbital_period = detail(0, \"orbital_period\");
+// Orbital period: 1 hour = 1 frame
+// Orbital period is expressed in days on this page: https://nssdc.gsfc.nasa.gov/planetary/factsheet/
+// so we multiply by 24
+float orbital_period = detail(0, \"orbital_period\")*24.0;
+f@debug = orbital_period;
 float angle = efit(@Frame, 1, orbital_period, 0, 360);
-m = ident();
 rotate(m, radians(angle), v@up);
+
+// Angle of the orbital plane's axis 
+rotate(m, radians(detail(0, \"orbital_inclination\")), set(1, 0, 0));
+
+// Apply the rotation matrix
 v@N *= m;
 v@up *= m;
 "	)
@@ -6368,7 +3657,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 2.73047 -6.82827
+position 4.14247 -6.8973
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -6378,12 +3667,12 @@ outputsNamed3
 inputsNamed3
 {
 0 	copytopoints2 2 1 "input1"
-1 	(__dot1) "" 1 "input2"
+1 	define_detail_attributes 0 1 "input2"
 }
 inputs
 {
 0 	copytopoints2 0 1
-1 	(__dot1) 0 1
+1 	define_detail_attributes 0 1
 }
 stat
 {
@@ -6444,7 +3733,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -8.12941 -14.0457
+position -8.85496 -16.9354
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass on display off render off highlight off unload off savedata off compress on colordefault off exposed on
 outputsNamed3
@@ -6532,7 +3821,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -15.3502 -7.46928
+position -15.5427 -8.24613
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on
 outputsNamed3
@@ -6643,7 +3932,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 2.73487 -22.1472
+position 2.73487 -24.1899
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -6652,12 +3941,12 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	group1 1 1 "input1"
+0 	copytopoints1 2 1 "input1"
 1 	material3 1 1 "input2"
 }
 inputs
 {
-0 	group1 0 1
+0 	copytopoints1 0 1
 1 	material3 0 1
 }
 stat
@@ -6704,7 +3993,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 7.33683 -9.71227
+position 10.2425 -10.7841
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -6809,7 +4098,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 2.73602 -33.0175
+position 2.73602 -35.0602
 connectornextid 1
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -6868,7 +4157,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 7.33683 -6.32377
+position 10.2425 -7.39555
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -6877,11 +4166,11 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	copytopoints2 2 1 "input1"
+0 	resample1 1 1 "input1"
 }
 inputs
 {
-0 	copytopoints2 0 1
+0 	resample1 0 1
 }
 stat
 {
@@ -6936,9 +4225,9 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 7.33683 -7.45327
+position 10.2425 -8.52505
 connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
 1 "output1"
@@ -7040,7 +4329,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 6.51873 3.42824
+position 6.51878 4.01098
 connectornextid 1
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -7133,7 +4422,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 6.52003 1.22528
+position 6.52003 1.00788
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -7142,11 +4431,11 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	blast1 1 1 "input1"
+0 	add5 1 1 "input1"
 }
 inputs
 {
-0 	blast1 0 1
+0 	add5 0 1
 }
 stat
 {
@@ -7188,112 +4477,6 @@ Content-Type: text/plain
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/group1.init"
-Content-Type: text/plain
-
-type = groupcreate
-matchesdef = 1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/group1.def"
-Content-Type: text/plain
-
-sopflags sopflags = 
-comment ""
-position -0.38869 -19.0854
-connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass on display off render off highlight on unload off savedata off compress on colordefault on exposed on
-outputsNamed3
-{
-1 "output1"
-}
-inputsNamed3
-{
-0 	copytopoints1 2 1 "input1"
-}
-inputs
-{
-0 	copytopoints1 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/group1.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-groupname	[ 0	locks=0 ]	(	body	)
-grouptype	[ 0	locks=0 ]	(	"primitive"	)
-mergeop	[ 0	locks=0 ]	(	"replace"	)
-folder0	[ 0	locks=0 ]	(	0	)
-groupbase	[ 0	locks=0 ]	(	"on"	)
-basegroup	[ 0	locks=0 ]	(	""	)
-ordered	[ 0	locks=0 ]	(	"off"	)
-geotype	[ 0	locks=0 ]	(	"all"	)
-switcher3	[ 0	locks=0 ]	(	0	)
-groupbounding	[ 0	locks=0 ]	(	"off"	)
-boundtype	[ 0	locks=0 ]	(	"usebbox"	)
-size	[ 0	locks=0 ]	(	1	1	1	)
-t	[ 0	locks=0 ]	(	0	0	0	)
-initbounds	[ 0	locks=0 ]	(	0	)
-includenotwhollycontained	[ 0	locks=0 ]	(	"off"	)
-iso	[ 0	locks=0 ]	(	0	)
-invertvolume	[ 0	locks=0 ]	(	"off"	)
-switcher4	[ 0	locks=0 ]	(	0	)
-groupnormal	[ 0	locks=0 ]	(	"off"	)
-camerapath	[ 0	locks=0 ]	(	""	)
-nonplanar	[ 0	locks=0 ]	(	"off"	)
-nonplanartol	[ 0	locks=0 ]	(	0.001	)
-dir	[ 0	locks=0 ]	(	0	0	1	)
-angle	[ 0	locks=0 ]	(	180	)
-oppositenormals	[ 0	locks=0 ]	(	"off"	)
-switcher5	[ 0	locks=0 ]	(	0	)
-groupedges	[ 0	locks=0 ]	(	"off"	)
-dominedgeangle	[ 0	locks=0 ]	(	"off"	)
-minedgeangle	[ 0	locks=0 ]	(	20	)
-domaxedgeangle	[ 0	locks=0 ]	(	"off"	)
-maxedgeangle	[ 0	locks=0 ]	(	20	)
-edgeanglebetweenedges	[ 0	locks=0 ]	(	"off"	)
-dominedgelen	[ 0	locks=0 ]	(	"off"	)
-minedgelen	[ 0	locks=0 ]	(	0	)
-domaxedgelen	[ 0	locks=0 ]	(	"off"	)
-maxedgelen	[ 0	locks=0 ]	(	0	)
-dodepth	[ 0	locks=0 ]	(	"off"	)
-edgestep	[ 0	locks=0 ]	(	0	)
-edgeptgrp	[ 0	locks=0 ]	(	0	)
-unshared	[ 0	locks=0 ]	(	"off"	)
-boundarygroups	[ 0	locks=0 ]	(	"off"	)
-switcher6	[ 0	locks=0 ]	(	0	)
-grouprandom	[ 0	locks=0 ]	(	"off"	)
-globalseed	[ 0	locks=0 ]	(	1	)
-useseedattrib	[ 0	locks=0 ]	(	"off"	)
-seedattrib	[ 0	locks=0 ]	(	id	)
-percent	[ 0	locks=0 ]	(	50	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/group1.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/pack1.init"
 Content-Type: text/plain
 
@@ -7306,7 +4489,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 7.33683 -10.8418
+position 10.2425 -11.9136
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -7374,20 +4557,20 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 6.52003 2.34676
+position 9.86996 2.00788
 connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass on display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
 1 "output1"
 }
 inputsNamed3
 {
-0 	CENTRAL_BODY 0 1 "input1"
+0 	unpack1 1 1 "input1"
 }
 inputs
 {
-0 	CENTRAL_BODY 0 1
+0 	unpack1 0 1
 }
 stat
 {
@@ -7439,7 +4622,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 6.20723 -14.9502
+position 9.1129 -15.1515
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -7514,7 +4697,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 5.07759 -12.649
+position 7.9833 -13.7208
 connectornextid 1
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -7573,7 +4756,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 7.33683 -8.58277
+position 10.2425 -9.65455
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -7789,7 +4972,11 @@ grouptype	[ 0	locks=0 ]	(	"guess"	)
 class	[ 0	locks=0 ]	(	"point"	)
 vex_numcount	[ 0	locks=0 ]	(	10	)
 vex_threadjobsize	[ 0	locks=0 ]	(	1024	)
-snippet	[ 0	locks=0 ]	(	"f@wireradius = min(10, max(1, 0.07*detail(-1, \"diameter\")));"	)
+snippet	[ 0	locks=0 ]	(	"// f@wireradius = min(10, max(1, 0.07*detail(-1, \"diameter\")));
+
+float ratio_distance = 0.003* detail(-1, \"distance_from_central_body\");
+float ratio_diameter = 0.01*detail(-1, \"diameter\");
+f@wireradius = min(ratio_distance, ratio_diameter);"	)
 exportlist	[ 0	locks=0 ]	(	*	)
 vex_strict	[ 0	locks=0 ]	(	"off"	)
 autobind	[ 0	locks=0 ]	(	"on"	)
@@ -7831,7 +5018,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 6.52003 -2.25042
+position 7.63456 -2.47333
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -9166,7 +6353,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 7.33683 -11.9713
+position 10.2425 -13.0431
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on
 outputsNamed3
@@ -9277,7 +6464,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -15.3502 -6.33978
+position -15.5427 -7.11663
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -9286,11 +6473,11 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	merge7 2 1 "input1"
+0 	sphere1 0 1 "input1"
 }
 inputs
 {
-0 	merge7 0 1
+0 	sphere1 0 1
 }
 stat
 {
@@ -9346,7 +6533,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -13.5146 -8.89998
+position -14.4131 -9.67683
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -10125,7 +7312,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 4.22814 -30.654
+position 4.22814 -32.6967
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -10334,73 +7521,6 @@ Content-Type: text/plain
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/name1.init"
-Content-Type: text/plain
-
-type = name
-matchesdef = 1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/name1.def"
-Content-Type: text/plain
-
-sopflags sopflags = 
-comment ""
-position -16.7622 -3.77958
-connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
-outputsNamed3
-{
-1 "output1"
-}
-inputsNamed3
-{
-0 	sphere1 0 1 "input1"
-}
-inputs
-{
-0 	sphere1 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/name1.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-attribname	[ 0	locks=0 ]	(	name	)
-class	[ 0	locks=0 ]	(	"primitive"	)
-donamefromgroup	[ 0	locks=0 ]	(	"off"	)
-namefromgroupmask	[ 0	locks=0 ]	(	piece*	)
-numnames	[ 0	locks=0 ]	(	1	)
-numrenames	[ 0	locks=0 ]	(	0	)
-group1	[ 0	locks=0 ]	(	""	)
-name1	[ 0	locks=0 ]	(	geo/render/body	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/name1.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/name2.init"
 Content-Type: text/plain
 
@@ -10468,351 +7588,6 @@ Content-Type: text/plain
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/name3.init"
-Content-Type: text/plain
-
-type = name
-matchesdef = 1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/name3.def"
-Content-Type: text/plain
-
-sopflags sopflags = 
-comment ""
-position -13.9382 -4.23138
-connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
-outputsNamed3
-{
-1 "output1"
-}
-inputsNamed3
-{
-0 	sphere3 0 1 "input1"
-}
-inputs
-{
-0 	sphere3 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/name3.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-attribname	[ 0	locks=0 ]	(	name	)
-class	[ 0	locks=0 ]	(	"primitive"	)
-donamefromgroup	[ 0	locks=0 ]	(	"off"	)
-namefromgroupmask	[ 0	locks=0 ]	(	piece*	)
-numnames	[ 0	locks=0 ]	(	1	)
-numrenames	[ 0	locks=0 ]	(	0	)
-group1	[ 0	locks=0 ]	(	""	)
-name1	[ 0	locks=0 ]	(	geo/proxy/body	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/name3.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/merge7.init"
-Content-Type: text/plain
-
-type = merge
-matchesdef = 1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/merge7.def"
-Content-Type: text/plain
-
-sopflags sopflags = 
-comment ""
-position -15.3502 -5.21028
-connectornextid 3
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
-outputsNamed3
-{
-2 "output1"
-}
-inputsNamed3
-{
-0 	name1 1 1 "input1"
-1 	name3 1 1 "input2"
-}
-inputs
-{
-0 	name1 0 1
-1 	name3 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.home
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/merge7.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/merge7.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/sphere3.init"
-Content-Type: text/plain
-
-type = sphere
-matchesdef = 1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/sphere3.def"
-Content-Type: text/plain
-
-sopflags sopflags = 
-comment "Referenced from sphere1"
-position -13.9382 -3.10188
-connectornextid 1
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
-outputsNamed3
-{
-0 "output1"
-}
-inputsNamed3
-{
-}
-inputs
-{
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/sphere3.chn"
-Content-Type: text/plain
-
-{
-    channel triangularpoles {
-      lefttype = extend
-      righttype = extend
-      default = 1
-      flags = 0
-      segment { length = 0 value = 1 1 expr = ch(\"../sphere1/triangularpoles\") }
-    }
-    channel accurate {
-      lefttype = extend
-      righttype = extend
-      default = 1
-      flags = 0
-      segment { length = 0 value = 1 1 expr = ch(\"../sphere1/accurate\") }
-    }
-    channel upole {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = ch(\"../sphere1/upole\") }
-    }
-    channel imperfect {
-      lefttype = extend
-      righttype = extend
-      default = 1
-      flags = 0
-      segment { length = 0 value = 1 1 expr = ch(\"../sphere1/imperfect\") }
-    }
-    channel orderv {
-      lefttype = extend
-      righttype = extend
-      default = 4
-      flags = 0
-      segment { length = 0 value = 4 4 expr = ch(\"../sphere1/orderv\") }
-    }
-    channel orderu {
-      lefttype = extend
-      righttype = extend
-      default = 4
-      flags = 0
-      segment { length = 0 value = 4 4 expr = ch(\"../sphere1/orderu\") }
-    }
-    channel freq {
-      lefttype = extend
-      righttype = extend
-      default = 7
-      flags = 0
-      segment { length = 0 value = 7 7 expr = ch(\"../sphere1/freq\") }
-    }
-    channel orient {
-      lefttype = extend
-      righttype = extend
-      default = 1
-      flags = 0
-      segment { length = 0 value = 1 1 expr = ch(\"../sphere1/orient\") }
-    }
-    channel scale {
-      lefttype = extend
-      righttype = extend
-      default = 1
-      flags = 0
-      segment { length = 0 value = 1 1 expr = ch(\"../sphere1/scale\") }
-    }
-    channel rz {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = ch(\"../sphere1/rz\") }
-    }
-    channel ry {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = ch(\"../sphere1/ry\") }
-    }
-    channel rx {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = ch(\"../sphere1/rx\") }
-    }
-    channel tz {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = ch(\"../sphere1/tz\") }
-    }
-    channel ty {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = ch(\"../sphere1/ty\") }
-    }
-    channel tx {
-      lefttype = extend
-      righttype = extend
-      flags = 0
-      segment { length = 0 expr = ch(\"../sphere1/tx\") }
-    }
-    channel radz {
-      lefttype = extend
-      righttype = extend
-      default = 0.5
-      flags = 0
-      segment { length = 0 value = 0.5 0.5 expr = ch(\"../sphere1/radz\") }
-    }
-    channel rady {
-      lefttype = extend
-      righttype = extend
-      default = 0.5
-      flags = 0
-      segment { length = 0 value = 0.5 0.5 expr = ch(\"../sphere1/rady\") }
-    }
-    channel radx {
-      lefttype = extend
-      righttype = extend
-      default = 0.5
-      flags = 0
-      segment { length = 0 value = 0.5 0.5 expr = ch(\"../sphere1/radx\") }
-    }
-    channel surftype {
-      lefttype = extend
-      righttype = extend
-      default = 4
-      flags = 0
-      segment { length = 0 value = 4 4 expr = ch(\"../sphere1/surftype\") }
-    }
-    channel type {
-      lefttype = extend
-      righttype = extend
-      default = 2
-      flags = 0
-      segment { length = 0 value = 2 2 expr = ch(\"../sphere1/type\") }
-    }
-  }
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/sphere3.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-type	[ 0	locks=0 ]	(	[ type	0 ] 	)
-surftype	[ 0	locks=0 ]	(	[ surftype	4 ] 	)
-rad	[ 0	locks=0 ]	(	[ radx	1 ] 	[ rady	1 ] 	[ radz	1 ] 	)
-t	[ 0	locks=0 ]	(	[ tx	0 ] 	[ ty	0 ] 	[ tz	0 ] 	)
-r	[ 0	locks=0 ]	(	[ rx	0 ] 	[ ry	0 ] 	[ rz	0 ] 	)
-scale	[ 0	locks=0 ]	(	[ scale	1 ] 	)
-orient	[ 0	locks=0 ]	(	[ orient	1 ] 	)
-freq	[ 0	locks=0 ]	(	[ freq	2 ] 	)
-rows	[ 0	locks=0 ]	(	9	)
-cols	[ 0	locks=0 ]	(	12	)
-orderu	[ 0	locks=0 ]	(	[ orderu	4 ] 	)
-orderv	[ 0	locks=0 ]	(	[ orderv	4 ] 	)
-imperfect	[ 0	locks=0 ]	(	[ imperfect	1 ] 	)
-upole	[ 0	locks=0 ]	(	[ upole	0 ] 	)
-accurate	[ 0	locks=0 ]	(	[ accurate	1 ] 	)
-triangularpoles	[ 0	locks=0 ]	(	[ triangularpoles	1 ] 	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/sphere3.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	},
-	"referenced_from":{
-		"type":"string",
-		"value":"../sphere1"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/material1.init"
 Content-Type: text/plain
 
@@ -10825,7 +7600,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -11.679 -7.92108
+position -13.2835 -8.69793
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -10894,7 +7669,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -4.1603 -8.69074
+position -4.15685 -8.31881
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -10974,7 +7749,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 7.33683 -12.9713
+position 10.2425 -14.1726
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -11041,7 +7816,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -8.85496 -7.09278
+position -8.20029 -8.02023
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -11129,7 +7904,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -8.85496 -8.22228
+position -9.32989 -12.3876
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -11138,11 +7913,11 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	transform4 1 1 "input1"
+0 	pack4 1 1 "input1"
 }
 inputs
 {
-0 	transform4 0 1
+0 	pack4 0 1
 }
 stat
 {
@@ -11166,12 +7941,10 @@ attribname	[ 0	locks=0 ]	(	name	)
 class	[ 0	locks=0 ]	(	"primitive"	)
 donamefromgroup	[ 0	locks=0 ]	(	"off"	)
 namefromgroupmask	[ 0	locks=0 ]	(	piece*	)
-numnames	[ 0	locks=0 ]	(	0	)
-numrenames	[ 0	locks=0 ]	(	1	)
-enable1	[ 0	locks=0 ]	(	"on"	)
-global1	[ 0	locks=0 ]	(	"off"	)
-from1	[ 0	locks=0 ]	(	*body*	)
-to1	[ 0	locks=0 ]	(	*atmosphere*	)
+numnames	[ 0	locks=0 ]	(	1	)
+numrenames	[ 0	locks=0 ]	(	0	)
+group1	[ 0	locks=0 ]	(	""	)
+name1	[ 0	locks=0 ]	(	atmosphere	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -11198,22 +7971,22 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -11.6801 -11.7219
+position -11.8715 -13.3665
 connectornextid 3
-flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
 1 "output1"
 }
 inputsNamed3
 {
-0 	switch1 2 1 "input1"
-2 	switch2 1 1 "input2"
+0 	name7 1 1 "input1"
+2 	name5 1 1 "input2"
 }
 inputs
 {
-0 	switch1 0 1
-1 	switch2 0 1
+0 	name7 0 1
+1 	name5 0 1
 }
 stat
 {
@@ -11259,7 +8032,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -8.85496 -9.35178
+position -8.20029 -9.14973
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -11268,11 +8041,11 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	name5 1 1 "input1"
+0 	transform4 1 1 "input1"
 }
 inputs
 {
-0 	name5 0 1
+0 	transform4 0 1
 }
 stat
 {
@@ -11328,7 +8101,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 6.20723 -16.4178
+position 9.1129 -16.281
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -11397,7 +8170,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -4.15685 -9.97394
+position -4.15685 -9.44831
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -11466,7 +8239,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -9.90465 -10.4118
+position -9.32989 -10.1286
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -11541,7 +8314,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position -10.9042 -9.35178
+position -10.4595 -8.69793
 connectornextid 1
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -11588,27 +8361,857 @@ Content-Type: text/plain
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/__dot1.networkdotinit"
+Content-Disposition: attachment; filename="hdaroot/unpack1.init"
+Content-Type: text/plain
+
+type = unpack
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/unpack1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 9.86996 3.00788
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass on display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	CENTRAL_BODY 0 1 "input1"
+}
+inputs
+{
+0 	CENTRAL_BODY 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.local
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/unpack1.parm"
 Content-Type: text/plain
 
 {
-	"version":1,
-	"posx":5.60899285866422659,
-	"posy":-5.11257372826003298,
-	"pinned":false,
-	"color":"FROMOUTPUT",
-	"input":"define_detail_attributes 0 1"
+version 0.8
+group	[ 0	locks=0 ]	(	""	)
+limit_iterations	[ 0	locks=0 ]	(	"on"	)
+iterations	[ 0	locks=0 ]	(	1	)
+detail_attributes	[ 0	locks=0 ]	(	"detail"	)
+transfer_attributes	[ 0	locks=0 ]	(	""	)
+transfer_groups	[ 0	locks=0 ]	(	""	)
+apply_style_sheets	[ 0	locks=0 ]	(	"off"	)
+scene_style_sheet	[ 0	locks=0 ]	(	""	)
+obj_style_sheet	[ 0	locks=0 ]	(	""	)
+dotransform	[ 0	locks=0 ]	(	"on"	)
+convertpolysoup	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/unpack1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/edu_gnomon1.init"
+Content-Type: text/plain
+
+type = edu::gnomon::1.0
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/edu_gnomon1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment "Education tool"
+position -2.33396 -15.0807
+connectornextid 0
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+}
+inputs
+{
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.local
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/edu_gnomon1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+matrix_attribute	[ 0	locks=0 ]	(	xform	)
+unit	[ 0	locks=0 ]	(	1	)
+axis_scale	[ 0	locks=0 ]	(	1	)
+pack	[ 0	locks=0 ]	(	"on"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/edu_gnomon1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":""
+	},
+	"___toolcount___":{
+		"type":"string",
+		"value":"5"
+	},
+	"___toolid___":{
+		"type":"string",
+		"value":"createEDUTools"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge9.init"
+Content-Type: text/plain
+
+type = merge
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge9.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -4.158 -19.0631
+connectornextid 3
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	DEBUG_quick_scale_change 1 1 "input1"
+2 	name6 1 1 "input2"
+}
+inputs
+{
+0 	DEBUG_quick_scale_change 0 1
+1 	name6 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.local
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge9.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/merge9.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/name6.init"
+Content-Type: text/plain
+
+type = name
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/name6.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -2.33396 -16.0807
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	edu_gnomon1 1 1 "input1"
+}
+inputs
+{
+0 	edu_gnomon1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.home
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/name6.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+attribname	[ 0	locks=0 ]	(	name	)
+class	[ 0	locks=0 ]	(	"primitive"	)
+donamefromgroup	[ 0	locks=0 ]	(	"off"	)
+namefromgroupmask	[ 0	locks=0 ]	(	piece*	)
+numnames	[ 0	locks=0 ]	(	1	)
+numrenames	[ 0	locks=0 ]	(	0	)
+group1	[ 0	locks=0 ]	(	""	)
+name1	[ 0	locks=0 ]	(	gnomon	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/name6.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/name7.init"
+Content-Type: text/plain
+
+type = name
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/name7.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -14.4131 -11.9358
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	pack2 1 1 "input1"
+}
+inputs
+{
+0 	pack2 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.home
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/name7.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+attribname	[ 0	locks=0 ]	(	name	)
+class	[ 0	locks=0 ]	(	"primitive"	)
+donamefromgroup	[ 0	locks=0 ]	(	"off"	)
+namefromgroupmask	[ 0	locks=0 ]	(	piece*	)
+numnames	[ 0	locks=0 ]	(	1	)
+numrenames	[ 0	locks=0 ]	(	0	)
+group1	[ 0	locks=0 ]	(	""	)
+name1	[ 0	locks=0 ]	(	body	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/name7.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack2.init"
+Content-Type: text/plain
+
+type = pack
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -14.4131 -10.8063
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	switch1 2 1 "input1"
+}
+inputs
+{
+0 	switch1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.local
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+viewportlod	[ 0	locks=0 ]	(	"full"	)
+createpath	[ 0	locks=0 ]	(	"off"	)
+path	[ 0	locks=0 ]	(	op:`opfullpath('.')`	)
+packbyname	[ 0	locks=0 ]	(	"off"	)
+nameattribute	[ 0	locks=0 ]	(	name	)
+packedfragments	[ 0	locks=0 ]	(	"on"	)
+pivot	[ 0	locks=0 ]	(	"centroid"	)
+transfer_attributes	[ 0	locks=0 ]	(	""	)
+transfer_groups	[ 0	locks=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/name8.init"
+Content-Type: text/plain
+
+type = name
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/name8.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -4.15685 -11.7073
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	pack3 1 1 "input1"
+}
+inputs
+{
+0 	pack3 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.home
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/name8.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+attribname	[ 0	locks=0 ]	(	name	)
+class	[ 0	locks=0 ]	(	"primitive"	)
+donamefromgroup	[ 0	locks=0 ]	(	"off"	)
+namefromgroupmask	[ 0	locks=0 ]	(	piece*	)
+numnames	[ 0	locks=0 ]	(	1	)
+numrenames	[ 0	locks=0 ]	(	0	)
+group1	[ 0	locks=0 ]	(	""	)
+name1	[ 0	locks=0 ]	(	axis	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/name8.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack3.init"
+Content-Type: text/plain
+
+type = pack
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack3.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -4.15685 -10.5778
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	material4 1 1 "input1"
+}
+inputs
+{
+0 	material4 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.local
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack3.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+viewportlod	[ 0	locks=0 ]	(	"full"	)
+createpath	[ 0	locks=0 ]	(	"off"	)
+path	[ 0	locks=0 ]	(	op:`opfullpath('.')`	)
+packbyname	[ 0	locks=0 ]	(	"off"	)
+nameattribute	[ 0	locks=0 ]	(	name	)
+packedfragments	[ 0	locks=0 ]	(	"on"	)
+pivot	[ 0	locks=0 ]	(	"centroid"	)
+transfer_attributes	[ 0	locks=0 ]	(	""	)
+transfer_groups	[ 0	locks=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack3.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/blast2.init"
+Content-Type: text/plain
+
+type = blast
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/blast2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 6.52003 3.00788
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	CENTRAL_BODY 0 1 "input1"
+}
+inputs
+{
+0 	CENTRAL_BODY 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.local
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/blast2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+group	[ 0	locks=0 ]	(	@name=body	)
+grouptype	[ 0	locks=0 ]	(	"guess"	)
+computenorms	[ 0	locks=0 ]	(	"off"	)
+negate	[ 0	locks=0 ]	(	"on"	)
+fillhole	[ 0	locks=0 ]	(	"off"	)
+removegrp	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/blast2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/add5.init"
+Content-Type: text/plain
+
+type = add
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/add5.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 6.52003 2.00788
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	blast2 1 1 "input1"
+}
+inputs
+{
+0 	blast2 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.local
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/add5.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+stdswitcher	[ 0	locks=0 ]	(	0	0	0	)
+keep	[ 0	locks=0 ]	(	"on"	)
+points	[ 0	locks=0 ]	(	0	)
+remove	[ 0	locks=0 ]	(	"off"	)
+switcher	[ 0	locks=0 ]	(	0	0	)
+prims	[ 0	locks=0 ]	(	1	)
+group	[ 0	locks=0 ]	(	""	)
+add	[ 0	locks=0 ]	(	"all"	)
+inc	[ 0	locks=0 ]	(	2	)
+attrname	[ 0	locks=0 ]	(	""	)
+closedall	[ 0	locks=0 ]	(	"off"	)
+addparticlesystem	[ 0	locks=0 ]	(	"off"	)
+particlegroup	[ 0	locks=0 ]	(	""	)
+appendunusedtoparticlesystem	[ 0	locks=0 ]	(	"off"	)
+prim0	[ 0	locks=0 ]	(	""	)
+closed0	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/add5.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/resample1.init"
+Content-Type: text/plain
+
+type = resample
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/resample1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 10.2425 -6.26605
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	copytopoints2 2 1 "input1"
+}
+inputs
+{
+0 	copytopoints2 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.local
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/resample1.chn"
+Content-Type: text/plain
+
+{
+    channel length {
+      lefttype = extend
+      righttype = extend
+      default = 2
+      flags = 0
+      segment { length = 0 value = 2 2 expr = "0.2*detail(\"../CENTRAL_BODY_POINT\", \"diameter\", 0)" }
+    }
+  }
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/resample1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+group	[ 0	locks=0 ]	(	""	)
+maintainprimorder	[ 0	locks=0 ]	(	"off"	)
+lod	[ 0	locks=0 ]	(	1	)
+edge	[ 0	locks=0 ]	(	"off"	)
+method	[ 0	locks=0 ]	(	"dist"	)
+measure	[ 0	locks=0 ]	(	"arc"	)
+dolength	[ 0	locks=0 ]	(	"on"	)
+length	[ 8	locks=0 ]	(	[ length	0.1 ] 	)
+dosegs	[ 0	locks=0 ]	(	"off"	)
+segs	[ 0	locks=0 ]	(	10	)
+useattribs	[ 0	locks=0 ]	(	"on"	)
+allequal	[ 0	locks=0 ]	(	"on"	)
+last	[ 0	locks=0 ]	(	"off"	)
+randomshift	[ 0	locks=0 ]	(	"off"	)
+onlypoints	[ 0	locks=0 ]	(	"off"	)
+treatpolysas	[ 0	locks=0 ]	(	"straight"	)
+outputsubdpoly	[ 0	locks=0 ]	(	"off"	)
+doptdistattr	[ 0	locks=0 ]	(	"off"	)
+ptdistattr	[ 0	locks=0 ]	(	ptdist	)
+dotangentattr	[ 0	locks=0 ]	(	"off"	)
+tangentattr	[ 0	locks=0 ]	(	tangentu	)
+docurveuattr	[ 0	locks=0 ]	(	"off"	)
+curveuattr	[ 0	locks=0 ]	(	curveu	)
+docurvenumattr	[ 0	locks=0 ]	(	"off"	)
+curvenumattr	[ 0	locks=0 ]	(	curvenum	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/resample1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack4.init"
+Content-Type: text/plain
+
+type = pack
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack4.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -9.32989 -11.2581
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	switch2 1 1 "input1"
+}
+inputs
+{
+0 	switch2 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix.local
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack4.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+viewportlod	[ 0	locks=0 ]	(	"full"	)
+createpath	[ 0	locks=0 ]	(	"off"	)
+path	[ 0	locks=0 ]	(	op:`opfullpath('.')`	)
+packbyname	[ 0	locks=0 ]	(	"off"	)
+nameattribute	[ 0	locks=0 ]	(	name	)
+packedfragments	[ 0	locks=0 ]	(	"on"	)
+pivot	[ 0	locks=0 ]	(	"centroid"	)
+transfer_attributes	[ 0	locks=0 ]	(	""	)
+transfer_groups	[ 0	locks=0 ]	(	""	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/pack4.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot.order"
 Content-Type: text/plain
 
-76
+83
 MAT
 sphere1
 define_detail_attributes
-get_attributes
+set_point_attributes1
 tube1
 merge1
 polyfill1
@@ -11629,7 +9232,6 @@ convertline1
 delete1
 CENTRAL_BODY
 extractcentroid1
-group1
 pack1
 blast1
 VIS_ORBIT
@@ -11665,11 +9267,7 @@ merge5
 merge6
 render_purpose
 render_purpose1
-name1
 name2
-name3
-merge7
-sphere3
 material1
 attribcreate2
 name4
@@ -11681,6 +9279,18 @@ material3
 material4
 switch2
 null2
+unpack1
+edu_gnomon1
+merge9
+name6
+name7
+pack2
+name8
+pack3
+blast2
+add5
+resample1
+pack4
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot.net"
