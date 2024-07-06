@@ -237,7 +237,16 @@
                 name    "vis_orbit"
                 label   "Display orbit"
                 type    toggle
-                default { "0" }
+                default { "1" }
+                range   { 0! 10 }
+                parmtag { "autoscope" "0000000000000000" }
+                parmtag { "script_callback_language" "python" }
+            }
+            parm {
+                name    "vis_gnomon"
+                label   "Display gnomon"
+                type    toggle
+                default { "1" }
                 range   { 0! 10 }
                 parmtag { "autoscope" "0000000000000000" }
                 parmtag { "script_callback_language" "python" }
