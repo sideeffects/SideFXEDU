@@ -316,6 +316,37 @@
                     }
                 }
 
+                groupsimple {
+                    name    "folder54"
+                    label   "Ring"
+                    grouptag { "group_type" "simple" }
+                    grouptag { "group_type:0" "simple" }
+                    grouptag { "visibletabs" "1" }
+
+                    parm {
+                        name    "use_ring"
+                        label   "Use Ring"
+                        type    toggle
+                        default { "0" }
+                        parmtag { "autoscope" "0000000000000000" }
+                        parmtag { "ogl_use_tex1" "1" }
+                        parmtag { "parmvop" "1" }
+                        parmtag { "shaderparmcontexts" "surface" }
+                    }
+                    parm {
+                        name    "ring_basecolor_texture"
+                        label   "Base Color"
+                        type    image
+                        default { [ "" hscript-expr ] }
+                        hidewhen "{ basecolor_useTexture == 0 }"
+                        parmtag { "autoscope" "0000000000000000" }
+                        parmtag { "ogl_specmap" "1" }
+                        parmtag { "ogl_tex1" "1" }
+                        parmtag { "parmvop" "1" }
+                        parmtag { "shaderparmcontexts" "surface" }
+                    }
+                }
+
             }
 
         }
