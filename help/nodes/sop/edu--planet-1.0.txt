@@ -17,7 +17,7 @@ This HDA helps defining a planet thanks to its physical data. You can find such 
 
 We built an example to show how to use the Planet HDA in order to build our Solar System inside Houdini.  
 
-The example file is located here: `$SIDEFXEDU/hip/solar_system_demoscene.hip`.
+The example file is located in the SideFX EDU package folder, at `hip/solar_system_demoscene.hip`.
 
 If you load this example for the first time, do not forget to download the textures (see [textures|#textures]).
 
@@ -138,27 +138,19 @@ If you load this example for the first time, do not forget to download the textu
     The HDA uses a Principle Shader. Refer to the [Principle Shader help page | /nodes/vop/principledshader] for more information.
 
 
-    To help you download and convert the textures to the correct format, we added a utility script which you can find here:  
-    `$SIDEFXEDU/hip/python/solar_system_download.py`
+    To help you download and convert the textures to the correct format, we added a utility script which you can find in the SideFX EDU package folder, at `hip/python/solar_system_download.py`.  
 
     You can run this script from a terminal like so:  
     {{{
     #!shell
-    python3 $SIDEFXEDU/hip/python/solar_system_download.py
+    python3 solar_system_download.py
     }}}
 
     The script will download the textures in a subfolder named `solar_system/` and then convert them to `.rat` format, an optimized Houdini texture format (for more information about `.rat` files, refer to [Image file formats | https://www.sidefx.com/docs/houdini/io/formats/image_formats.html].   
     For more information about how to convert image files, head to [Converting image files | https://www.sidefx.com/docs/houdini/shade/convert.html].   
 
-    Best is to run the script directly from within the `$SIDEFXEDU/hip/tex` folder.
+    Best is to run the script directly from within the `hip/tex` folder inside the SideFX EDU package folder.
 
-    Here is a shell script to help you do just that:
-
-    {{{
-    #!shell
-    cd $SIDEFXEDU/hip/tex  
-    python3 $SIDEFXEDU/hip/python/solar_system_download.py
-    }}}
 
     ==== Body ====
 
