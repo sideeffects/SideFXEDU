@@ -14,10 +14,13 @@ otls/backup
 .DS_Store
 
 #ignore other files
+help/OFF_*/
 hip/backup/
-tests/hip/export/
 hip/export/
+hip/flip/
+hip/tex/
 hip/render/
+tests/hip/export/
 forum_post.txt
 log.log
 log_parser.py
