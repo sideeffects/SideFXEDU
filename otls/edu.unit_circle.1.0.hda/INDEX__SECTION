@@ -1,0 +1,14 @@
+Operator:     edu::unit_circle::1.0
+Label:        EDU Unit Circle
+Path:         oplib:/edu::Sop/unit_circle::1.0?edu::Sop/unit_circle::1.0
+Icon:         opdef:/edu::Sop/unit_circle::1.0?IconSVG
+Table:        Sop
+License:      
+Extra:        inputcolors='1 "RGB 0.700195 0.700195 0.700195" ' outputcolors='1 "RGB 0.700195 0.700195 0.700195" ' 
+User:         
+Inputs:       0 to 1
+Subnet:       true
+Python:       false
+Empty:        false
+Modified:     Tue Jul 16 17:46:54 2024
+

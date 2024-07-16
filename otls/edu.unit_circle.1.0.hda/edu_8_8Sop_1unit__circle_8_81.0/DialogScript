@@ -1,0 +1,67 @@
+# Dialog script for edu::unit_circle::1.0 automatically generated
+
+{
+    name	edu::unit_circle::1.0
+    script	edu::triangle_properties::1.0
+    label	"EDU Unit Circle"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "constraint"
+        label   "Constraint"
+        type    ordinal
+        default { "0" }
+        menu {
+            "2" "Circle"
+        }
+        parmtag { "script_callback" "hou.phm().update(kwargs, hou.pwd())" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "t"
+        label   "Position"
+        type    vector2
+        size    2
+        default { "0.852036" "0.5" }
+        range   { -1 1 }
+        parmtag { "script_callback" "hou.phm().update(kwargs, hou.pwd())" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "show_center_of_mass"
+        label   "Center of Mass"
+        type    toggle
+        default { "0" }
+        range   { 0! 10 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "show_names"
+        label   "Show Names"
+        type    toggle
+        default { "1" }
+        hidewhen "{ show_side_info == 0 }"
+        range   { 0 10 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "show_length"
+        label   "Show Length"
+        type    toggle
+        default { "1" }
+        hidewhen "{ show_side_info == 0 }"
+        range   { 0 10 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+}
