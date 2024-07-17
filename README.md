@@ -13,15 +13,25 @@ This toolset requires SideFX Labs to be installed. Please visit the [SideFX Labs
 
 ## Using GitHub
 
-Step 1. Click on the top-right **Code** button on the main page of this repository and select **Download ZIP**. This allows you to get the latest update.
+**Step 1**. Click on the top-right **Code** button on the main page of this repository and select **Download ZIP**. 
 
-Step 2. If you have downloaded a zipped version of the package in Step 1, unzip it into a custom SideFXEDU directory of your choosing.
+Or you can use this link :
+```
+https://github.com/sideeffects/SideFXEDU/archive/refs/heads/Development.zip
+```
+This allows you to get the latest update.
 
-Step 3. Go to your custom SideFXEDU directory that now contains the unzipped contents, copy the package definition template file `SideFXEDU.json` to `C:\Users\...\Documents\houdini19.5\packages`. 
-Note: the default Houdini installation does not create a 'packages' folder, so you might have to create it if it does not exist. 
-Rename the destination copy to `SideFXEDU19.5.json`. Open this file and replace `"$HOUDINI_PACKAGE_PATH/SideFXEDU19.5"` (line 8) with the path to your own SideFXEDU directory. When Houdini launches, it relies on this file to discover the location of your SideFX EDU package.
+**Step 2**. Unzip it into a custom directory of your choosing on your computer. Consider something accessible to all users.
 
-(Step 3 only needs to be done once for every major Houdini X.Y release. To update SideFX EDU for the same Houdini X.Y version, simply delete the existing contents of your custom SideFXEDU directory and unzip the updated package into that folder.)
+**Step 3**. Inside this unzipped directory, copy the `SideFXEDU.json` template file to `C:\Users\...\Documents\houdiniX.Y\packages`. 
+
+`X.Y being the version of your Houdini installation.
+
+**Note**: the default Houdini installation does not create a `packages` folder, so you might have to create it. 
+
+Open this template file and replace `"$HOUDINI_PACKAGE_DIR/sidefxedu"` (line 8) with the path to your custom SideFXEDU directory from step 2. When Houdini launches, it relies on this file to discover the location of your SideFX EDU package.
+
+**Note**: Step 3 needs to be done once for every major Houdini X.Y release. To update SideFX EDU for the same Houdini X.Y version, simply delete the existing contents of your custom SideFXEDU directory and unzip the updated package into that folder.
 
 For more on how to manage Houdini packages, please visit [here](https://www.sidefx.com/docs/houdini/ref/plugins.html).
 

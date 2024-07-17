@@ -7,6 +7,9 @@ We are awaiting feedback from users to know which direction we should go with th
 An HDA to visualize the principles behind the building of a bezier curve.
 
 # WIP
+**Unit Circle**
+An HDA to visualize angle properties in the Unit Circle.
+
 **Camera Lens**  
 An HDA to visualize how rays travel inside a camera lens. The goal is to be able to understand in/out of focus, zoom, and hopefully aberations.
 
