@@ -26,7 +26,14 @@ This allows you to get the latest update.
 
 **Step 2**. Unzip it into a custom directory on your computer. Consider something accessible to all users.
 
-**Step 3**. Inside this unzipped directory, copy the `SideFXEDU.json` template file to `C:\Users\...\Documents\houdiniX.Y\packages`. `X.Y being the version of your Houdini installation. 
+**Step 3**. Inside this unzipped directory, copy the `SideFXEDU.json` template file to `$HOUDINI_USER_PREF_DIR\packages`. 
+
+Where `$HOUDINI_USER_PREF_DIR` is one of the following, depending on your operating system:
+- `%HOME%/houdiniX.Y/`
+- `~/Library/Preferences/houdini/X.Y/`
+- `~/houdiniX.Y/`
+
+and `X.Y` being the version of your Houdini installation. 
 
 **Note**: the default Houdini installation does not create a `packages` folder, so you might have to create it. 
 
