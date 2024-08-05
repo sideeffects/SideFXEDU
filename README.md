@@ -26,7 +26,14 @@ This allows you to get the latest update.
 
 **Step 2**. Unzip it into a custom directory on your computer. Consider something accessible to all users.
 
-**Step 3**. Inside this unzipped directory, copy the `SideFXEDU.json` template file to `C:\Users\...\Documents\houdiniX.Y\packages`. `X.Y being the version of your Houdini installation. 
+**Step 3**. Inside this unzipped directory, copy the `SideFXEDU.json` template file to `$HOUDINI_USER_PREF_DIR\packages`. 
+
+Where `$HOUDINI_USER_PREF_DIR` is one of the following, depending on your operating system:
+- `%HOME%/houdiniX.Y/`
+- `~/Library/Preferences/houdini/X.Y/`
+- `~/houdiniX.Y/`
+
+and `X.Y` being the version of your Houdini installation. 
 
 **Note**: the default Houdini installation does not create a `packages` folder, so you might have to create it. 
 
@@ -43,7 +50,7 @@ If SideFX EDU is successfully installed, launch Houdini and you should see a **E
 
 You should also be able to do the following:
 1. Add the Education shelf to the shelf bar. For more information visit the [Customize the shelf page](https://www.sidefx.com/docs/houdini/shelf/customize.html#adding-to-and-editing-the-shelf).
-2. At the object level (/obj), in the network view, press TAB then type `EDU, you should see a list of tools starting with EDU prefix: EDU Camera Frustum, EDU Geometry Explainer...
+2. At the object level (/obj), in the network view, press TAB then type `EDU`, you should see a list of tools starting with EDU prefix: EDU Camera Frustum, EDU Geometry Explainer...
 
 # Additional Information
 
