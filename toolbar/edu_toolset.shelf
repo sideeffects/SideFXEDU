@@ -15,7 +15,7 @@
 
   <tool name="edu::sticky_notes" label="Sticky Notes" icon="$SIDEFXEDU/help/icons/stickynote.svg">
     <helpURL>tool:edu--sticky_notes</helpURL>
-    <script scriptType="python"><![CDATA[import sidefxedu as module
+    <script scriptType="python"><![CDATA[import edu_utils as module
 
 try:
   reload(module)
@@ -28,7 +28,7 @@ module.createNotes(kwargs)]]></script>
 
   <tool name="edu::number_items" label="Number Items" icon="$SIDEFXEDU/help/icons/number_items.svg">
     <helpURL>tool:edu--number_items</helpURL>
-    <script scriptType="python"><![CDATA[import sidefxedu as module
+    <script scriptType="python"><![CDATA[import edu_utils as module
 
 try:
   reload(module)
