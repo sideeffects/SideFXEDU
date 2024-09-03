@@ -15,17 +15,6 @@
     inputlabel	4	"Sub-Network Input #4"
 
     parm {
-        name    "constraint"
-        label   "Constraint"
-        type    ordinal
-        default { "0" }
-        menu {
-            "2" "Circle"
-        }
-        parmtag { "script_callback" "hou.phm().update(kwargs, hou.pwd())" }
-        parmtag { "script_callback_language" "python" }
-    }
-    parm {
         name    "t"
         label   "Position"
         type    vector2

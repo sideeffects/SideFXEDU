@@ -32,7 +32,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment "Education tool"
-position -0.607143 2.42143
+position -2.16429 0.407143
 connectornextid 0
 flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
@@ -48,7 +48,7 @@ stat
 {
   create -1
   modify -1
-  author sidefx@asterix.local
+  author sidefx@asterix
   access 0777
 }
 color UT_Color RGB 0.8 0.8 0.8 
@@ -63,7 +63,7 @@ Content-Type: text/plain
 {
 	"___Version___":{
 		"type":"string",
-		"value":""
+		"value":"___EXTERNAL___"
 	}
 }
 
@@ -2790,7 +2790,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 7.7674 -25.2434
+position 7.50193 -26.6023
 connectornextid 1
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -2938,7 +2938,7 @@ text	[ 0	locks=0 ]	(	"Area: `trunc(100*point(-1, 0, \"area\", 0))/100`"	)
 halign	[ 0	locks=0 ]	(	"left"	)
 valign	[ 0	locks=0 ]	(	"bottom"	)
 use_descender	[ 0	locks=0 ]	(	"off"	)
-t	[ 0	locks=0 ]	(	0.1	0	0	)
+t	[ 0	locks=0 ]	(	0.25	0	0	)
 r	[ 0	locks=0 ]	(	0	0	0	)
 s	[ 0	locks=0 ]	(	1	1	)
 tracking	[ 0	locks=0 ]	(	0	0	)
@@ -3227,8 +3227,8 @@ Content-Type: text/plain
             baseparm
             label   "Group"
             export  none
-            bindselector points "Modify Points"
-                "Select the points to affect and press Enter to complete."
+            bindselector uvselect "Modify Attribs"
+                "Select the geometry to affect and press Enter to complete."
                 0 1 0xffffffff 0 grouptype 0
         }
         parm {
@@ -6465,7 +6465,7 @@ sopflags sopflags =
 comment ""
 position 9.1794 -29.3835
 connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
 1 "output1"
@@ -7193,8 +7193,8 @@ Content-Type: text/plain
             baseparm
             label   "Group"
             export  none
-            bindselector points "Modify Points"
-                "Select the points to affect and press Enter to complete."
+            bindselector uvselect "Modify Attribs"
+                "Select the geometry to affect and press Enter to complete."
                 0 1 0xffffffff 0 grouptype 0
         }
         parm {
@@ -8295,8 +8295,8 @@ Content-Type: text/plain
             baseparm
             label   "Group"
             export  none
-            bindselector points "Modify Points"
-                "Select the points to affect and press Enter to complete."
+            bindselector uvselect "Modify Attribs"
+                "Select the geometry to affect and press Enter to complete."
                 0 1 0xffffffff 0 grouptype 0
         }
         parm {
@@ -9112,7 +9112,7 @@ sopflags sopflags =
 comment ""
 position 28.6864 -27.5805
 connectornextid 3
-flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
 1 "output1"

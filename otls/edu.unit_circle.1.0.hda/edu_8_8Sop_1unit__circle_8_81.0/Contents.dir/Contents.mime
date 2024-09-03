@@ -32,7 +32,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment "Education tool"
-position -0.658824 5.74015
+position -1.36429 1.95
 connectornextid 0
 flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
@@ -48,7 +48,7 @@ stat
 {
   create -1
   modify -1
-  author sidefx@asterix.local
+  author sidefx@asterix
   access 0777
 }
 color UT_Color RGB 0.8 0.8 0.8 
@@ -63,7 +63,7 @@ Content-Type: text/plain
 {
 	"___Version___":{
 		"type":"string",
-		"value":""
+		"value":"___EXTERNAL___"
 	}
 }
 
@@ -4004,8 +4004,8 @@ Content-Type: text/plain
             baseparm
             label   "Group"
             export  none
-            bindselector points "Modify Points"
-                "Select the points to affect and press Enter to complete."
+            bindselector uvselect "Modify Attribs"
+                "Select the geometry to affect and press Enter to complete."
                 0 1 0xffffffff 0 grouptype 0
         }
         parm {

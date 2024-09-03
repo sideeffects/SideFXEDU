@@ -1,7 +1,7 @@
 """
-State:          Edu::triangle properties::1.0
-State type:     edu::triangle_properties::1.0
-Description:    Edu::triangle properties::1.0
+State:          Edu::unit circle::1.0
+State type:     edu::unit_circle::1.0
+Description:    Edu::unit circle::1.0
 Author:         brunoe
 Date Created:   May 09, 2024 - 16:36:24
 """
@@ -39,15 +39,13 @@ class State(object):
         prev_parms = kwargs["prev_parms"]
         ui_event = kwargs["ui_event"]
         
-        constraint = node.parm("constraint").eval()
-        
         # initialize pos x, y and z (turns out this is also what Free mode should be)
         posx = parms["tx"]
         posy = parms["ty"]
-        # constraint the handle to move on the unit circle (Note: that's because the triangle base is one unit. If we want the user to be abble to change it, we'll need to update that portion of the code.)
+        # constrain the handle to move on the unit circle (Note: that's because the triangle base is one unit. If we want the user to be abble to change it, we'll need to update that portion of the code.)
         l = hypot(posx, posy) # compute the length of the position vector
-        posx = posx/l # divide by l to constraint to the unit circle (it's like normalizing the vector)
-        posy = posy/l # divide by l to constraint to the unit circle (it's like normalizing the vector)
+        posx = posx/l # divide by l to constrain to the unit circle (it's like normalizing the vector)
+        posy = posy/l # divide by l to constrain to the unit circle (it's like normalizing the vector)
 
         # set the node parameters accordingly
         node.parm("tx").set(posx)
@@ -66,16 +64,16 @@ class State(object):
         node = kwargs["node"]
         
         if handle == self.translate_handle.name():
-            constraint = node.parm("constraint").eval()
             parms["tx"] = node.evalParm("tx")
             parms["ty"] = node.evalParm("ty")
+            parms["tz"] = 0
                 
 def createViewerStateTemplate():
     """ Mandatory entry point to create and return the viewer state 
         template to register. """
 
     state_typename = kwargs["type"].definition().sections()["DefaultState"].contents()
-    state_label = "Edu::triangle properties::1.0"
+    state_label = "Edu::unit circle::1.0"
     state_cat = hou.sopNodeTypeCategory()
 
     template = hou.ViewerStateTemplate(state_typename, state_label, state_cat)
