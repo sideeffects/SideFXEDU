@@ -13,7 +13,7 @@
 WARNING:
     This node is made for education purposes only. You can use it for other things, but at your own risks.
 
-The user can move the top point of the triangle while seeing the different values ​​evolve on the screen.
+The user can move the top point of the triangle while seeing the different values evolve on the screen.
 Three modes are available when moving the point, each showing different properties of the triangle.
 
 To enter manipulation mode, move the mouse over the viewport and press ((Enter))
@@ -42,5 +42,4 @@ To enter manipulation mode, move the mouse over the viewport and press ((Enter))
         Check this box to display the length of the triangle sides.    
     
 @related
-- [item | /link ]
-
+- [EDU Unit Circle | /nodes/sop/edu--unit_circle-1.0 ]
