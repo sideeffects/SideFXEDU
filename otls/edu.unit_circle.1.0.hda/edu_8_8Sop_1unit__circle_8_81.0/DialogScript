@@ -24,33 +24,4 @@
         parmtag { "script_callback" "hou.phm().update(kwargs, hou.pwd())" }
         parmtag { "script_callback_language" "python" }
     }
-    parm {
-        name    "show_center_of_mass"
-        label   "Center of Mass"
-        type    toggle
-        default { "0" }
-        range   { 0! 10 }
-        parmtag { "autoscope" "0000000000000000" }
-        parmtag { "script_callback_language" "python" }
-    }
-    parm {
-        name    "show_names"
-        label   "Show Names"
-        type    toggle
-        default { "1" }
-        hidewhen "{ show_side_info == 0 }"
-        range   { 0 10 }
-        parmtag { "autoscope" "0000000000000000" }
-        parmtag { "script_callback_language" "python" }
-    }
-    parm {
-        name    "show_length"
-        label   "Show Length"
-        type    toggle
-        default { "1" }
-        hidewhen "{ show_side_info == 0 }"
-        range   { 0 10 }
-        parmtag { "autoscope" "0000000000000000" }
-        parmtag { "script_callback_language" "python" }
-    }
 }

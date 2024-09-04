@@ -10,8 +10,8 @@ DefaultState	DefaultState
 ViewerStateModule	ViewerStateModule
 ViewerStateInstall	ViewerStateInstall
 ViewerStateUninstall	ViewerStateUninstall
-IconSVG	IconSVG
 Version	Version
+IconSVG	IconSVG
 ViewerStateName.orig	ViewerStateName.orig
 OnCreated	OnCreated
 PythonModule	PythonModule

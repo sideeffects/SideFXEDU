@@ -1,32 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="uuid-d1d892de-3c4f-419c-855d-004531f078b3" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496.33 496.33">
+<svg id="uuid-ec5f3857-75a9-4cca-b0ca-070ca4b4a4c3" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490.15 490.15">
   <defs>
     <style>
-      .uuid-74f7a23c-681a-4423-95fd-9a8cef52c589 {
-        stroke-dasharray: 0 0 10 20.01;
+      .uuid-7a431ab3-556f-4b7f-840a-001c638418a3 {
+        fill: #c6c6c6;
       }
 
-      .uuid-74f7a23c-681a-4423-95fd-9a8cef52c589, .uuid-ac670acc-d9d6-4949-be26-2a386f886407 {
-        fill: none;
-        stroke: #646464;
+      .uuid-41eb7e4a-bfbf-4447-a135-a240663015c0, .uuid-bdf2be4a-7a87-45f7-a968-3afc212b0aee, .uuid-4582849f-9a37-4820-9cca-19e480c08290, .uuid-a08c6cf0-867d-4079-8f95-414fec36f5db, .uuid-ed41ac94-c95a-42c7-a26a-8e053719919b, .uuid-1929b5e0-c5e5-45af-bd30-e86839647209, .uuid-5be4c361-9a3b-4a6c-9bbb-4ea51952ec51, .uuid-ffd95fff-3529-43cf-ac22-8374da6c182a {
         stroke-linecap: round;
+      }
+
+      .uuid-41eb7e4a-bfbf-4447-a135-a240663015c0, .uuid-bdf2be4a-7a87-45f7-a968-3afc212b0aee, .uuid-4582849f-9a37-4820-9cca-19e480c08290, .uuid-a08c6cf0-867d-4079-8f95-414fec36f5db, .uuid-5be4c361-9a3b-4a6c-9bbb-4ea51952ec51, .uuid-ffd95fff-3529-43cf-ac22-8374da6c182a {
+        stroke: #646464;
+      }
+
+      .uuid-41eb7e4a-bfbf-4447-a135-a240663015c0, .uuid-a08c6cf0-867d-4079-8f95-414fec36f5db {
         stroke-width: 10px;
       }
 
-      .uuid-34a9fa85-3a20-4258-b591-aaaa55522755 {
-        fill: #f60;
+      .uuid-bdf2be4a-7a87-45f7-a968-3afc212b0aee, .uuid-4582849f-9a37-4820-9cca-19e480c08290, .uuid-a08c6cf0-867d-4079-8f95-414fec36f5db, .uuid-ed41ac94-c95a-42c7-a26a-8e053719919b, .uuid-1929b5e0-c5e5-45af-bd30-e86839647209, .uuid-5be4c361-9a3b-4a6c-9bbb-4ea51952ec51, .uuid-ffd95fff-3529-43cf-ac22-8374da6c182a {
+        fill: none;
+      }
+
+      .uuid-bdf2be4a-7a87-45f7-a968-3afc212b0aee, .uuid-4582849f-9a37-4820-9cca-19e480c08290, .uuid-5be4c361-9a3b-4a6c-9bbb-4ea51952ec51, .uuid-ffd95fff-3529-43cf-ac22-8374da6c182a {
+        stroke-width: 4px;
+      }
+
+      .uuid-4582849f-9a37-4820-9cca-19e480c08290 {
+        stroke-dasharray: 0 0 9.73 19.46;
+      }
+
+      .uuid-ed41ac94-c95a-42c7-a26a-8e053719919b {
+        stroke: lime;
+      }
+
+      .uuid-ed41ac94-c95a-42c7-a26a-8e053719919b, .uuid-1929b5e0-c5e5-45af-bd30-e86839647209 {
+        stroke-width: 5px;
+      }
+
+      .uuid-1929b5e0-c5e5-45af-bd30-e86839647209 {
+        stroke: red;
+      }
+
+      .uuid-5be4c361-9a3b-4a6c-9bbb-4ea51952ec51 {
+        stroke-dasharray: 0 0 9.7 19.4;
+      }
+
+      .uuid-ffd95fff-3529-43cf-ac22-8374da6c182a {
+        stroke-dasharray: 0 0 10.16 20.31;
       }
     </style>
   </defs>
-  <g id="uuid-651f66de-2cac-4ab3-a128-5b1e89a20621" data-name="triangle properties">
-    <path class="uuid-34a9fa85-3a20-4258-b591-aaaa55522755" d="m292.09,99.03L248.17,11.18l-43.92,87.85c13.22,6.62,28.13,10.37,43.92,10.37s30.7-3.75,43.92-10.37Z"/>
-    <path class="uuid-34a9fa85-3a20-4258-b591-aaaa55522755" d="m444.32,403.48c-32.19,16.13-54.3,49.4-54.3,87.85h98.22l-43.92-87.85Z"/>
-    <path class="uuid-34a9fa85-3a20-4258-b591-aaaa55522755" d="m52.01,403.48l-43.92,87.85h98.22c0-38.45-22.11-71.72-54.3-87.85Z"/>
+  <g id="uuid-b189e411-b951-4465-a3b0-fadc0fa49573" data-name="unit circle">
+    <path class="uuid-7a431ab3-556f-4b7f-840a-001c638418a3" d="m311.67,192.32l-66.02,52.66h84.47c0-22.08-5.93-39.54-18.45-52.66Z"/>
     <g>
-      <line class="uuid-ac670acc-d9d6-4949-be26-2a386f886407" x1="248.17" y1="491.33" x2="248.17" y2="486.33"/>
-      <line class="uuid-74f7a23c-681a-4423-95fd-9a8cef52c589" x1="248.17" y1="466.32" x2="248.17" y2="26.18"/>
-      <line class="uuid-ac670acc-d9d6-4949-be26-2a386f886407" x1="248.17" y1="16.18" x2="248.17" y2="11.18"/>
+      <line class="uuid-bdf2be4a-7a87-45f7-a968-3afc212b0aee" x1="245.07" y1="101.15" x2="250.07" y2="101.1"/>
+      <line class="uuid-ffd95fff-3529-43cf-ac22-8374da6c182a" x1="270.39" y1="100.88" x2="412.57" y2="99.36"/>
+      <line class="uuid-bdf2be4a-7a87-45f7-a968-3afc212b0aee" x1="422.73" y1="99.25" x2="427.73" y2="99.2"/>
     </g>
-    <polygon class="uuid-ac670acc-d9d6-4949-be26-2a386f886407" points="248.17 11.18 8.09 491.33 488.24 491.33 248.17 11.18"/>
+    <g>
+      <line class="uuid-bdf2be4a-7a87-45f7-a968-3afc212b0aee" x1="427.52" y1="244.99" x2="427.52" y2="239.99"/>
+      <line class="uuid-5be4c361-9a3b-4a6c-9bbb-4ea51952ec51" x1="427.55" y1="220.59" x2="427.71" y2="113.9"/>
+      <line class="uuid-bdf2be4a-7a87-45f7-a968-3afc212b0aee" x1="427.72" y1="104.2" x2="427.73" y2="99.2"/>
+    </g>
+    <line class="uuid-1929b5e0-c5e5-45af-bd30-e86839647209" x1="485.15" y1="245.2" x2="5" y2="245.2"/>
+    <line class="uuid-ed41ac94-c95a-42c7-a26a-8e053719919b" x1="245.08" y1="5.12" x2="245.07" y2="485.27"/>
+    <g>
+      <line class="uuid-bdf2be4a-7a87-45f7-a968-3afc212b0aee" x1="245.07" y1="245.2" x2="248.98" y2="242.08"/>
+      <line class="uuid-4582849f-9a37-4820-9cca-19e480c08290" x1="264.18" y1="229.92" x2="416.22" y2="108.4"/>
+      <line class="uuid-bdf2be4a-7a87-45f7-a968-3afc212b0aee" x1="423.82" y1="102.32" x2="427.73" y2="99.2"/>
+    </g>
+    <circle class="uuid-a08c6cf0-867d-4079-8f95-414fec36f5db" cx="245.07" cy="245.07" r="240.07"/>
   </g>
 </svg>
