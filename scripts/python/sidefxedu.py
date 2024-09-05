@@ -23,7 +23,7 @@ from hutil.Qt.QtWidgets import *
 ########################################################################################################################
 # GLOBAL VARIABLES #####################################################################################################
 
-REPO_URL = 'https://raw.githubusercontent.com/sideeffects/SideFXEDU/Development/releases/releases.json'
+REPO_URL = 'https://raw.githubusercontent.com/sideeffects/SideFXEDU/Experimental/releases/releases.json'
 
 # store the major and minor version of Houdini (aka XX.YY)
 APP_VERSION = ".".join(map(str, hou.applicationVersion()[:2]))
