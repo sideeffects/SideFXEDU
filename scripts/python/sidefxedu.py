@@ -394,7 +394,6 @@ class SideFXEDUUpdater(object):
         return local_path
 
     def unzip_file(self, zip_file, destination_path):
-        print(zip_file)
         zipf = zipfile.ZipFile(zip_file, 'r', zipfile.ZIP_DEFLATED)
         zipf.extractall(destination_path)
         zipf.close()
