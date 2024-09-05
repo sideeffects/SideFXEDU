@@ -15,7 +15,7 @@
         {
             "name": "SideFXEDU21.0",
             "display_name": "SideFX EDU 21.0 Production Build",
-            "url": "http://localhost:8000/edu_build/SideFXEDU21.0.zip",
+            "url": "https://github.com/sideeffects/SideFXEDU/raw/Experimental/releases/SideFXEDU21.0.zip",
             "file_size": 839156712,
             "uncompressed_size": 888529519,
             "checksum": "efd3fcf637422df6898e9eb336f7c8294eaf20d715ee927cf73c3065dd3a80de",
