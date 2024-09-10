@@ -63,6 +63,9 @@ class State(object):
         parms = kwargs["parms"]
         node = kwargs["node"]
         
+        print(node)
+        print(parms)
+        
         if handle == self.translate_handle.name():
             parms["tx"] = node.evalParm("tx")
             parms["ty"] = node.evalParm("ty")
@@ -73,7 +76,7 @@ def createViewerStateTemplate():
         template to register. """
 
     state_typename = kwargs["type"].definition().sections()["DefaultState"].contents()
-    state_label = "Edu::unit circle::1.0"
+    state_label = "EDU Unit Circle"
     state_cat = hou.sopNodeTypeCategory()
 
     template = hou.ViewerStateTemplate(state_typename, state_label, state_cat)

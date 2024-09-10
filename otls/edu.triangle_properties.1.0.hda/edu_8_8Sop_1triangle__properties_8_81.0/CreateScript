@@ -11,4 +11,4 @@ endif
 
 # Node $arg1 (edu::Sop/triangle_properties::1.0)
 opexprlanguage -s hscript $arg1
-opuserdata -n '___Version___' -v '20.5' $arg1
+opuserdata -n '___Version___' -v '21.0' $arg1

@@ -11,4 +11,4 @@ endif
 
 # Node $arg1 (edu::Sop/what_is_a_sinusoidal::1.0)
 opexprlanguage -s hscript $arg1
-opuserdata -n '___Version___' -v '' $arg1
+opuserdata -n '___Version___' -v '20.5' $arg1

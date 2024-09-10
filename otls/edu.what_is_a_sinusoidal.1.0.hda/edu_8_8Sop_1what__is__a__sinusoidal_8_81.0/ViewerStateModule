@@ -52,9 +52,7 @@ class State(object):
         offset = hou.Vector3(0.05,0,0.1)
 
         for i in range(len(self.ptLabels)):
-
             self.curPt = self.curPts.point(i)
-
             self.font.setParms({
                 "t": self.curPt.position() + offset,
                 "text": self.ptLabels[i],
@@ -66,12 +64,8 @@ class State(object):
             geo.merge(buffer)
 
         self.labels.setGeometry(geo)
-
         self.labels.show(True)
-
         self.labels.draw(handle)
-
-        #print(self.pt0FinalPos)
 
 
     def onDrawInterrupt(self, kwargs):
@@ -79,17 +73,11 @@ class State(object):
         hou.AdvancedDrawable objects
         """
         draw_handle = kwargs["draw_handle"]
-
-        """ Called when a bound selector has been terminated
-        """
         state_parms = kwargs["state_parms"]
 
 
     def onGenerate(self, kwargs):
         """ Called when a nodeless state starts
-        """
-        state_parms = kwargs["state_parms"]
-        """ Called when a drawable component is located. 
         """
         state_parms = kwargs["state_parms"]
 
@@ -99,16 +87,11 @@ def createViewerStateTemplate():
         template to register. """
 
     state_typename = kwargs["type"].definition().sections()["DefaultState"].contents()
-    state_label = "EDU - What is a Sinusoidal?"
+    state_label = "EDU What is a Sinusoidal?"
     state_cat = hou.sopNodeTypeCategory()
 
     template = hou.ViewerStateTemplate(state_typename, state_label, state_cat)
     template.bindFactory(State)
     template.bindIcon(kwargs["type"].icon())
-
-
-
-
-
 
     return template
