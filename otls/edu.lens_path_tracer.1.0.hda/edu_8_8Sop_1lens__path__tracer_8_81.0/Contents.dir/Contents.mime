@@ -32,9 +32,9 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment "Education tool"
-position 54.9288 -39.6161
+position 49.2997 -38.8671
 connectornextid 5
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on displaycomment on
 outputsNamed3
 {
 2 "output1"
@@ -43,12 +43,12 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	attribdelete2 1 1 "input1"
+0 	attribdelete4 1 1 "input1"
 1 	null1 1 1 "input2"
 }
 inputs
 {
-0 	attribdelete2 0 1
+0 	attribdelete4 0 1
 1 	null1 0 1
 }
 stat
@@ -58,7 +58,7 @@ stat
   author sidefx@asterix.local
   access 0777
 }
-color UT_Color RGB 0.8 0.8 0.8 
+color UT_Color RGB 0.98 0.275 0.275 
 delscript ""
 exprlanguage hscript
 end
@@ -70,7 +70,7 @@ Content-Type: text/plain
 {
 	"___Version___":{
 		"type":"string",
-		"value":""
+		"value":"___EXTERNAL___"
 	},
 	"wirestyle":{
 		"type":"string",
@@ -791,7 +791,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 2.99048 -6.22508
+position 4.65649 -3.98244
 connectornextid 1
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -1632,7 +1632,7 @@ sopflags sopflags =
 comment ""
 position 0.739465 -10.5702
 connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
 1 "output1"
@@ -2380,7 +2380,7 @@ sopflags sopflags =
 comment ""
 position -0.775251 -21.2664
 connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
 1 "output1"
@@ -2498,7 +2498,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 4.40248 -11.611
+position 6.63329 -10.0651
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -2507,11 +2507,11 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	switch1 1 1 "input1"
+0 	copytopoints1 0 1 "input1"
 }
 inputs
 {
-0 	switch1 0 1
+0 	copytopoints1 0 1
 }
 stat
 {
@@ -2855,11 +2855,11 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	(1) "" 1 "input1"
+0 	unpack2 1 1 "input1"
 }
 inputs
 {
-0 	(1) 0 1
+0 	unpack2 0 1
 }
 stat
 {
@@ -3084,7 +3084,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 2.99048 -7.35458
+position 4.65649 -5.06844
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -3252,7 +3252,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 5.81448 -7.50518
+position 8.61009 -6.82718
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -3261,11 +3261,11 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	assemble1 1 1 "input1"
+0 	null1 1 1 "input1"
 }
 inputs
 {
-0 	assemble1 0 1
+0 	null1 0 1
 }
 stat
 {
@@ -3317,7 +3317,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 5.81448 -8.93588
+position 6.63329 -8.93558
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -3326,13 +3326,13 @@ outputsNamed3
 }
 inputsNamed3
 {
-1 	transform1 1 1 "input1"
-2 	blast_focal_points1 1 1 "input2"
+1 	switch1 1 1 "input1"
+2 	attribswap1 1 1 "input2"
 }
 inputs
 {
-0 	transform1 0 1
-1 	blast_focal_points1 0 1
+0 	switch1 0 1
+1 	attribswap1 0 1
 }
 stat
 {
@@ -3402,7 +3402,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 4.40248 -9.91478
+position 4.65649 -7.50488
 connectornextid 3
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -3412,12 +3412,12 @@ outputsNamed3
 inputsNamed3
 {
 0 	transform2 1 1 "input1"
-2 	copytopoints1 0 1 "input2"
+2 	transform1 1 1 "input2"
 }
 inputs
 {
 0 	transform2 0 1
-1 	copytopoints1 0 1
+1 	transform1 0 1
 }
 stat
 {
@@ -3478,7 +3478,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 2.99048 -8.48408
+position 3.52689 -6.07418
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -3693,10 +3693,207 @@ Content-Type: text/plain
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/unpack2.init"
+Content-Type: text/plain
+
+type = unpack
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/unpack2.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position -0.00494996 11.7199
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	(1) "" 1 "input1"
+}
+inputs
+{
+0 	(1) 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/unpack2.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+group	[ 0	locks=0 ]	(	""	)
+limit_iterations	[ 0	locks=0 ]	(	"on"	)
+iterations	[ 0	locks=0 ]	(	1	)
+detail_attributes	[ 0	locks=0 ]	(	"detail"	)
+transfer_attributes	[ 0	locks=0 ]	(	optical_axis	)
+transfer_groups	[ 0	locks=0 ]	(	""	)
+apply_style_sheets	[ 0	locks=0 ]	(	"off"	)
+scene_style_sheet	[ 0	locks=0 ]	(	""	)
+obj_style_sheet	[ 0	locks=0 ]	(	""	)
+dotransform	[ 0	locks=0 ]	(	"on"	)
+convertpolysoup	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/unpack2.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null1.init"
+Content-Type: text/plain
+
+type = null
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 8.61009 -5.69768
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	assemble1 1 1 "input1"
+}
+inputs
+{
+0 	assemble1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix
+  access 0777
+}
+color UT_Color RGB 0.6 0.7 0.77 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+copyinput	[ 0	locks=0 ]	(	"on"	)
+cacheinput	[ 0	locks=0 ]	(	"off"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/null1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribswap1.init"
+Content-Type: text/plain
+
+type = attribswap
+matchesdef = 1
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribswap1.def"
+Content-Type: text/plain
+
+sopflags sopflags = 
+comment ""
+position 8.61009 -7.95668
+connectornextid 2
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+outputsNamed3
+{
+1 "output1"
+}
+inputsNamed3
+{
+0 	blast_focal_points1 1 1 "input1"
+}
+inputs
+{
+0 	blast_focal_points1 0 1
+}
+stat
+{
+  create -1
+  modify -1
+  author sidefx@asterix
+  access 0777
+}
+color UT_Color RGB 0.8 0.8 0.8 
+delscript ""
+exprlanguage hscript
+end
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribswap1.parm"
+Content-Type: text/plain
+
+{
+version 0.8
+numswaps	[ 0	locks=0 ]	(	1	)
+enable1	[ 0	locks=0 ]	(	"on"	)
+method1	[ 0	locks=0 ]	(	"swap"	)
+class1	[ 0	locks=0 ]	(	"point"	)
+srcattribs1	[ 0	locks=0 ]	(	optical_axis	)
+dstattribs1	[ 0	locks=0 ]	(	N	)
+typeinfo1	[ 0	locks=0 ]	(	"dest"	)
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename="hdaroot/attribswap1.userdata"
+Content-Type: text/plain
+
+{
+	"___Version___":{
+		"type":"string",
+		"value":"___EXTERNAL___"
+	}
+}
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot.order"
 Content-Type: text/plain
 
-42
+45
 foreach_end1
 foreach_begin1
 merge13
@@ -3739,6 +3936,9 @@ switch1
 transform2
 split1
 merge1
+unpack2
+null1
+attribswap1
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot.net"
