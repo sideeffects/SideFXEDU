@@ -94,10 +94,6 @@ def createViewerStateTemplate():
     state_typename = kwargs["type"].definition().sections()["DefaultState"].contents()
     state_label = "EDU Triangle Properties"
     state_cat = hou.sopNodeTypeCategory()
-    
-    print(state_typename)
-    print(state_label)
-    print(state_cat)
 
     template = hou.ViewerStateTemplate(state_typename, state_label, state_cat)
     template.bindFactory(State)

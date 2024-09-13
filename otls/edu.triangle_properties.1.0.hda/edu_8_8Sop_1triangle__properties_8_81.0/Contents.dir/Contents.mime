@@ -32,7 +32,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment "Education tool"
-position -1.23805 0.0579002
+position -1.49286 -0.55
 connectornextid 0
 flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
@@ -48,7 +48,7 @@ stat
 {
   create -1
   modify -1
-  author sidefx@asterix
+  author sidefx@asterix.local.sidefx.com
   access 0777
 }
 color UT_Color RGB 0.8 0.8 0.8 
