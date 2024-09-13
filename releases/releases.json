@@ -44,7 +44,7 @@
             "uncompressed_size": 888529519,
             "checksum": "efd3fcf637422df6898e9eb336f7c8294eaf20d715ee927cf73c3065dd3a80de",
             "content_type": "application/zip",
-            "version": "21.0.100",
+            "version": "21.0.104",
             "info_url": "https://www.sidefx.com/docs/houdini/education",
             "description": "SideFX EDU gather tools designed to assist instructors in building and teaching pedagogical contents and with Houdini."
         },
