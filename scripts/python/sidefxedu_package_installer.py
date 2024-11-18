@@ -37,6 +37,17 @@ class Downloader(QThread):
         super().__init__()
         self._url = url
         self._filename = os.path.expanduser(filename)
+        self._filename = self.uniquify(self._filename)
+
+    def uniquify(self, path):
+        filename, extension = os.path.splitext(path)
+        counter = 1
+
+        while os.path.exists(path):
+            path = filename + " (" + str(counter) + ")" + extension
+            counter += 1
+
+        return path
 
     def run(self):
         url = self._url
@@ -48,7 +59,7 @@ class Downloader(QThread):
         with urlopen(url) as r:
             # Tell the window the amount of bytes to be downloaded.
             self.setTotalProgress.emit(int(r.info()["Content-Length"]))
-            with open(filename, "ab") as f:
+            with open(filename, "wb") as f:
                 while True:
                     # Read a piece of the file we are downloading.
                     chunk = r.read(chunkSize)
