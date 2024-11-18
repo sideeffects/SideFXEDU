@@ -10,7 +10,7 @@ from hutil.Qt.QtCore import *
 from hutil.Qt.QtGui import *
 from hutil.Qt.QtWidgets import *
 
-RELEASE_URL = "https://github.com/sideeffects/SideFXEDU/releases/latest/download/SideFXEDU20.5.zip"
+RELEASE_URL = "https://github.com/sideeffects/SideFXEDU/releases/download/20.5.421/SideFXEDU20.5.zip"
 PACKAGE_FILE_PATH = "~/Downloads/SideFXEDU20.5.zip"
 
 # --- begin
@@ -80,15 +80,30 @@ class UpdateDialog(QDialog):
         layout = QVBoxLayout()
         self.label = QLabel("Press the button to start downloading.", self)
         self.label.setGeometry(20, 20, 200, 25)
-        self.button = QPushButton("Start download", self)
+        self.button = QPushButton("Download and Install", self)
         self.button.pressed.connect(self.initDownload)
         self.progressBar = QProgressBar(self)
         self.progressBar.setGeometry(20, 115, 300, 25)
+        self.cancel_button = QPushButton("Cancel")
+        self.cancel_button.clicked.connect(self.on_cancelbtn_press)
+
+        button_layout = QHBoxLayout()
+        # button_layout.addWidget(spacer)
+        button_layout.addWidget(self.button)
+        button_layout.addWidget(self.cancel_button)
+
+
         layout.addWidget(self.label)
-        layout.addWidget(self.button)
         layout.addWidget(self.progressBar)
+        # layout.addWidget(self.button)
+        # layout.addWidget(self.cancel_button)
+        layout.addLayout(button_layout)
+
 
         self.setLayout(layout)
+
+    def on_cancelbtn_press(self):
+        self.close()
 
     def initDownload(self):
         self.label.setText("Downloading file...")
