@@ -47,6 +47,7 @@ def get_launcher_bin_file_path(launcher_path):
         bin_path = os.path.join(launcher_path, "bin", "houdini_launcher.exe")
     return bin_path
 
+# LAUCHER DIALOG #######################################################################################################
 class LauncherDialog(QDialog):
     def __init__(self, launcher_path, settings, parent=None):
         super(LauncherDialog, self).__init__(parent)
@@ -101,7 +102,6 @@ class LauncherDialog(QDialog):
 
     def on_cancelbtn_press(self):
         self.close()
-
 
 # UPDATE DIALOG ########################################################################################################
 class UpdateDialog(QDialog):
@@ -282,7 +282,6 @@ class UpdateDialog(QDialog):
         else:
             dialog = LauncherDialog(launcher_path, self.settings, self)
             dialog.show()
-
 
 # UPDATER ##############################################################################################################
 class SideFXEDUUpdater(object):
@@ -516,23 +515,26 @@ class SideFXEDUUpdater(object):
         self.current_version = target_version
 
 
-def main(argv):
-    try:
-        updater = SideFXEDUUpdater()
-        optlist, args = getopt.getopt(argv, "pdev:u", ['latestproduction', 'latestdevelopment', 'embedded', 'version=', 'uninstall'])
-        for opt, arg in optlist:
-            if opt in ["--latestproduction", "-p"]:
-                updater.install_latest_production_toolset()
-            if opt in ["--latestdevelopment", "-d"]:
-                updater.install_latest_development_toolset()
-            if opt in ["--embedded", "-e"]:
-                updater.install_embedded_toolset()
-            if opt in ["--version", "-v"]:
-                updater.update_toolset_version(arg)
-            if opt in ["--uninstall", "-u"]:
-                updater.uninstall_toolset()
-    except:
-        pass
+# def main(argv):
+#     try:
+#         updater = SideFXEDUUpdater()
+#         optlist, args = getopt.getopt(argv, "pdev:u", ['latestproduction', 'latestdevelopment', 'embedded', 'version=', 'uninstall'])
+#         for opt, arg in optlist:
+#             if opt in ["--latestproduction", "-p"]:
+#                 updater.install_latest_production_toolset()
+#             if opt in ["--latestdevelopment", "-d"]:
+#                 updater.install_latest_development_toolset()
+#             if opt in ["--embedded", "-e"]:
+#                 updater.install_embedded_toolset()
+#             if opt in ["--version", "-v"]:
+#                 updater.update_toolset_version(arg)
+#             if opt in ["--uninstall", "-u"]:
+#                 updater.uninstall_toolset()
+#     except:
+#         pass
 
-if __name__ == "__main__":
-    main(sys.argv[1:])
+# if __name__ == "__main__":
+#     main(sys.argv[1:])
+
+########################################################################################################################
+
