@@ -1,0 +1,29 @@
+#type:     node
+#context:  sop
+#internal: edu::unit_circle::1.0
+#icon:     SOP/edu::unit_circle::1.0
+#tags:     sidefxedu
+
+= EDU Unit Circle =
+
+"""Shows the usual unit circle properties while the user moves a point attached to it."""
+
+
+
+WARNING:
+    This node is made for education purposes only. You can use it for other things, but at your own risks.
+
+The user can move a point attached to the unit circle while seeing the different values evolve on the screen.
+
+To enter manipulation mode, move the mouse over the viewport and press ((Enter))
+
+@parameters
+
+    Position:
+        #id: t
+        The position of the point on the circle.
+                
+        
+    
+@related
+- [EDU Triangle Properties | /nodes/sop/edu--triangle_properties-1.0 ]

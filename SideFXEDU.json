@@ -4,7 +4,7 @@
     "version": "20.5",
     "env": [
         {
-            "SIDEFXEDU": "$HOUDINI_PACKAGE_PATH/SIDEFXEDU-1.0"
+            "SIDEFXEDU": "$HOUDINI_PACKAGE_PATH/SideFXEDU20.5"
         }
     ],
     "path": "$SIDEFXEDU"

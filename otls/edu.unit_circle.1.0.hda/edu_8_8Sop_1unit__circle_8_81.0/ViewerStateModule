@@ -1,0 +1,89 @@
+"""
+State:          Edu::unit circle::1.0
+State type:     edu::unit_circle::1.0
+Description:    Edu::unit circle::1.0
+Author:         brunoe
+Date Created:   May 09, 2024 - 16:36:24
+"""
+
+# Usage: Make sure to add 6 float parameters to the node:
+# newparameter, newparameter2, newparameter3, newparameter4, newparameter5, newparameter6.
+# Select node and hit enter in the viewer.
+
+import hou
+import viewerstate.utils as su
+
+from math import hypot
+
+
+class State(object):
+    def __init__(self, state_name, scene_viewer):
+        self.state_name = state_name
+        self.scene_viewer = scene_viewer
+
+        self.translate_handle = hou.Handle(self.scene_viewer, "Translate")
+        
+    def onEnter(self, kwargs):
+        self.translate_handle.show(True)
+        self.translate_handle.update()
+
+    def onHandleToState(self, kwargs):
+        """ Used with bound dynamic handles to implement the state 
+        action when a handle is modified.
+        """
+
+        handle = kwargs["handle"]
+        parms = kwargs["parms"]
+        node = kwargs["node"]
+        mod_parms = kwargs["mod_parms"]
+        prev_parms = kwargs["prev_parms"]
+        ui_event = kwargs["ui_event"]
+        
+        # initialize pos x, y and z (turns out this is also what Free mode should be)
+        posx = parms["tx"]
+        posy = parms["ty"]
+        # constrain the handle to move on the unit circle (Note: that's because the triangle base is one unit. If we want the user to be abble to change it, we'll need to update that portion of the code.)
+        l = hypot(posx, posy) # compute the length of the position vector
+        posx = posx/l # divide by l to constrain to the unit circle (it's like normalizing the vector)
+        posy = posy/l # divide by l to constrain to the unit circle (it's like normalizing the vector)
+
+        # set the node parameters accordingly
+        node.parm("tx").set(posx)
+        node.parm("ty").set(posy)
+        
+        # update the handle so its position matches the new parameter values
+        self.translate_handle.update()
+
+    def onStateToHandle(self, kwargs):
+        """ Used with bound dynamic handles to implement the handle 
+        action when a state node parm is modified.
+        """
+
+        handle = kwargs["handle"]
+        parms = kwargs["parms"]
+        node = kwargs["node"]
+        
+        print(node)
+        print(parms)
+        
+        if handle == self.translate_handle.name():
+            parms["tx"] = node.evalParm("tx")
+            parms["ty"] = node.evalParm("ty")
+            parms["tz"] = 0
+                
+def createViewerStateTemplate():
+    """ Mandatory entry point to create and return the viewer state 
+        template to register. """
+
+    state_typename = kwargs["type"].definition().sections()["DefaultState"].contents()
+    state_label = "EDU Unit Circle"
+    state_cat = hou.sopNodeTypeCategory()
+
+    template = hou.ViewerStateTemplate(state_typename, state_label, state_cat)
+    template.bindFactory(State)
+    template.bindIcon(kwargs["type"].icon())
+
+    # add a dynamic distance handle
+    template.bindHandle( "translate", "Translate" )
+
+    return template

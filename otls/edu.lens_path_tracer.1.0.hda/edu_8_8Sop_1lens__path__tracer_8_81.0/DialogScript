@@ -1,0 +1,44 @@
+# Dialog script for edu::lens_path_tracer::1.0 automatically generated
+
+{
+    name	edu::lens_path_tracer::1.0
+    script	edu::lens_path_tracer::1.0
+    label	"EDU Lens Path Tracer"
+
+    help {
+	""
+    }
+
+    inputlabel	1	"Sub-Network Input #1"
+    inputlabel	2	"Sub-Network Input #2"
+    inputlabel	3	"Sub-Network Input #3"
+    inputlabel	4	"Sub-Network Input #4"
+
+    parm {
+        name    "sensor_scale"
+        label   "Sensor Scale"
+        type    float
+        default { "1" }
+        range   { 0 10 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "sensor_at_fdist"
+        label   "At focal distance"
+        type    toggle
+        default { "0" }
+        range   { 0! 10 }
+        parmtag { "autoscope" "0000000000000000" }
+        parmtag { "script_callback_language" "python" }
+    }
+    parm {
+        name    "sensor_zpos"
+        label   "Z pos"
+        type    float
+        default { "0" }
+        disablewhen "{ sensor_at_fdist == 1 }"
+        range   { -1 1 }
+        parmtag { "autoscope" "1110000000000000" }
+    }
+}

@@ -1,0 +1,32 @@
+#type:     node
+#context:  sop
+#internal: edu::bezier_curve::1.0
+#icon:     SOP/edu::bezier_curve::1.0
+#tags:     sidefxedu
+
+= EDU Bezier Curve =
+
+"""This HDA demonstrate how a bezier curve is built."""
+
+
+WARNING:
+    This node is made for education purposes only. You can use it for other things, but at your own risks.
+
+This HDA demonstrate how a bezier curve is built visualizing intermediate points and traversals.
+
+For more information, please visit this [Wikipedia page | https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Constructing_B.C3.A9zier_curves].
+
+@parameters
+
+    Use Input Points:
+        #id: use_input_points
+        If a geometry is plugged in, it uses its points as control points to build the bezier curve. If not, it uses the points defined inside the HDA.
+        
+    Use Animated Progress:
+        #id: use_anim_progress
+        If checked-on, the HDA uses the timeline to build the curve. If OFF, it uses the next parameter.
+        Note: currently the curve is only visible when this parameter is ON. When it's OFF, only the point on the final curve is visible.
+        
+    Progress:
+        #id: progress
+        When "Use Animated Curve" is OFF, use this parameter to show the progression of the building of the curve.
