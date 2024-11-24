@@ -7,6 +7,12 @@ import os
 import hou
 import importlib
 
+from hutil.Qt.QtCore import *
+from hutil.Qt.QtGui import *
+from hutil.Qt.QtWidgets import *
+
+import labutils
+
 from past.utils import old_div
 import nodegraphutils
 
@@ -89,6 +95,53 @@ def createNotes(kwargs, stickytype="info"):
     sticky.setText(("#%s" % stickytype))
     sticky.setColor(hou.Color(normalize_color(COLOR_BG[stickytype])))
     sticky.setTextColor(hou.Color(normalize_color(COLOR_TXT[stickytype])))
+
+
+# add a background image to the current network editor with the option to embbed it
+def addBackgroundImage():
+    dialog = BackgroundImages(hou.qt.mainWindow())
+    dialog.show()
+
+class BackgroundImages(QDialog):
+    def __init__(self, parent):
+        super(BackgroundImages, self).__init__(parent)
+        self.setWindowTitle("Add Background Image")
+        self.build_ui()
+
+    def build_ui(self):
+        self.cbx_embbed = QCheckBox("Embbed image")
+        self.btn_choose = QPushButton("Choose Image")
+        self.btn_cancel = QPushButton("Cancel")
+        self.btn_choose.clicked.connect(self.on_choosebtn_press)
+        self.btn_cancel.clicked.connect(self.on_cancelbtn_press)
+
+        button_layout = QHBoxLayout()
+        button_layout.addWidget(self.cbx_embbed)
+        button_layout.addWidget(self.btn_choose)
+        button_layout.addWidget(self.btn_cancel)
+
+        layout = QVBoxLayout()
+        layout.addLayout(button_layout)
+
+        self.setLayout(layout)
+
+    def on_choosebtn_press(self):
+        home_folder = os.path.expanduser("~")
+
+        for ptab in hou.ui.currentPaneTabs():
+            if ptab.type() == hou.paneTabType.NetworkEditor:
+                network_editor = ptab
+        fileName, selectedFilter = QFileDialog.getOpenFileName(self, str("Open Image"), home_folder, str("Image Files (*.png *.jpg *.bmp)"))
+        scale = 1
+        embedded = self.cbx_embbed.isChecked()
+        relativeto_path = None
+        bounds = None
+
+        labutils.add_network_image(network_editor, fileName, scale, embedded, relativeto_path=None, bounds=None)
+        self.close()
+
+    def on_cancelbtn_press(self):
+        self.close()
 
 
 class Quickmarks(object):
@@ -239,3 +292,5 @@ class Quickmarks(object):
         nodegraphview.createUndoQuickMark(self._pane)
         if quickmark is not None:
             quickmark.jump(self._pane)
+
+
