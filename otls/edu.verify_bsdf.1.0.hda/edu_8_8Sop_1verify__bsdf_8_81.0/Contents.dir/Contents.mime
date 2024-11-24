@@ -2,6 +2,18 @@ MIME-Version: 1.0
 Content-Type: multipart/mixed; boundary="HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY"
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename=".OPfallbacks"
+Content-Type: application/external-reference
+
+.OPfallbacks
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
+Content-Disposition: attachment; filename=".OPdummydefs"
+Content-Type: application/external-reference
+
+.OPdummydefs
+
+--HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="node_type"
 Content-Type: text/plain
 
@@ -20,9 +32,9 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment "Education tool"
-position 0 2.3885
+position 2.78189 -1.3064
 connectornextid 0
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
 {
 }
@@ -36,7 +48,7 @@ stat
 {
   create -1
   modify -1
-  author sidefx@asterix.local
+  author sidefx@asterix.lan
   access 0777
 }
 color UT_Color RGB 0.8 0.8 0.8 
@@ -51,7 +63,7 @@ Content-Type: text/plain
 {
 	"___Version___":{
 		"type":"string",
-		"value":""
+		"value":"___EXTERNAL___"
 	}
 }
 
@@ -137,8 +149,8 @@ Content-Type: text/plain
 text "BSDF Function definition
 
 The verify_bsdf node internally defines the bsdf to verify. To change the bsdf, enter the verify_bsdf VOP network and modify the connection to the 'f' input to the sample_and_eval inline VOP."
-position -3.33705 -4.16654
-size 5.40059 2.03364
+position -3.33705 -4.62542
+size 5.40059 2.49252
 flags = minimize off
 stat
 {
@@ -165,18 +177,18 @@ sopflags sopflags =
 comment ""
 position 2.44401 -3.3374
 connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
 {
 1 "output1"
 }
 inputsNamed3
 {
-0 	switch2 2 1 "input1"
+0 	samples 1 1 "input1"
 }
 inputs
 {
-0 	switch2 0 1
+0 	samples 0 1
 }
 stat
 {
@@ -542,7 +554,7 @@ Content-Type: text/plain
 	minimized := 0;
 	width := 14.09787917599445;
 	x_position := -10.256479217717702;
-	y_position := -4.1482245422768687;
+	y_position := -4.148224542276869;
 }
 {
   create -1
@@ -660,7 +672,7 @@ Content-Type: text/plain
 version 0.8
 label	[ 0	locks=0	autoscope=0 ]	(	""	)
 r_clr	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
-r_size	[ 0	locks=0	autoscope=0 ]	(	[ r_size	0.59999999999999998 ] 	)
+r_size	[ 0	locks=0	autoscope=0 ]	(	[ r_size	0.6 ] 	)
 r_shift	[ 0	locks=0	autoscope=0 ]	(	[ r_shift	0 ] 	)
 }
 
@@ -706,14 +718,14 @@ outputsNamed3
 }
 inputsNamed3
 {
-0 	pbrhair_SECONDARY_REFLECTION 9 1 "f"
+0 	pbrhair_PRIMARY_REFLECTION 6 1 "f"
 1 	normalize1 1 1 "nvec"
 14 	normalize2 1 1 "nvec_tolight"
 2 	bind2 0 1 "P"
 }
 inputs
 {
-0 	pbrhair_SECONDARY_REFLECTION 0 1
+0 	pbrhair_PRIMARY_REFLECTION 0 1
 1 	normalize1 0 1
 2 	normalize2 0 1
 3 	bind2 0 1
@@ -1257,7 +1269,7 @@ parmlabel	[ 0	locks=0	autoscope=0 ]	(	"Reflection Size"	)
 showlabel	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 parmtype	[ 0	locks=0	autoscope=0 ]	(	"float"	)
 parmtypename	[ 0	locks=0	autoscope=0 ]	(	""	)
-floatdef	[ 0	locks=0	autoscope=0 ]	(	0.59999999999999998	)
+floatdef	[ 0	locks=0	autoscope=0 ]	(	0.6	)
 intdef	[ 0	locks=0	autoscope=0 ]	(	0	)
 toggledef	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 angledef	[ 0	locks=0	autoscope=0 ]	(	0	)
@@ -2972,7 +2984,7 @@ Content-Type: text/plain
 version 0.8
 label	[ 0	locks=0	autoscope=0 ]	(	""	)
 tt_clr	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
-tt_size	[ 0	locks=0	autoscope=0 ]	(	0.050000000000000003	)
+tt_size	[ 0	locks=0	autoscope=0 ]	(	0.05	)
 tt_shift	[ 0	locks=0	autoscope=0 ]	(	0	)
 }
 
@@ -3050,11 +3062,11 @@ Content-Type: text/plain
 version 0.8
 label	[ 0	locks=0	autoscope=0 ]	(	""	)
 trt_clr	[ 0	locks=0	autoscope=0 ]	(	1	1	1	)
-trt_size	[ 0	locks=0	autoscope=0 ]	(	0.050000000000000003	)
+trt_size	[ 0	locks=0	autoscope=0 ]	(	0.05	)
 trt_shift	[ 0	locks=0	autoscope=0 ]	(	0	)
 g_intensity	[ 0	locks=0	autoscope=0 ]	(	1	)
-g_size	[ 0	locks=0	autoscope=0 ]	(	0.10000000000000001	)
-g_shift	[ 0	locks=0	autoscope=0 ]	(	0.20000000000000001	)
+g_size	[ 0	locks=0	autoscope=0 ]	(	0.1	)
+g_shift	[ 0	locks=0	autoscope=0 ]	(	0.2	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -3444,7 +3456,7 @@ deleteallcolorattribs	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 enable	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 class	[ 0	locks=0	autoscope=0 ]	(	2	)
 colortype	[ 0	locks=0	autoscope=0 ]	(	0	)
-color	[ 0	locks=0	autoscope=0 ]	(	0.26666668057441711	1	0	)
+color	[ 0	locks=0	autoscope=0 ]	(	0.2666666805744171	1	0	)
 seed	[ 0	locks=0	autoscope=0 ]	(	0	)
 rampattribute	[ 0	locks=0	autoscope=0 ]	(	""	)
 ramprange	[ 0	locks=0	autoscope=0 ]	(	0	1	)
@@ -3816,7 +3828,7 @@ sopflags sopflags =
 comment ""
 position 12.453 -8.13523
 connectornextid 2
-flags =  lock off model off template off footprint off xray off bypass off display on render on highlight off unload off savedata off compress off colordefault on exposed on
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress off colordefault on exposed on
 outputsNamed3
 {
 1 "output1"
@@ -4274,13 +4286,14 @@ densitytexture	[ 0	locks=0	autoscope=0 ]	(	default.pic	)
 uvattrib	[ 0	locks=0	autoscope=0 ]	(	uv	)
 primcountattrib	[ 0	locks=0	autoscope=0 ]	(	count	)
 useemergencylimit	[ 0	locks=0	autoscope=0 ]	(	"on"	)
-emergencylimit	[ 0	locks=0	autoscope=0 ]	(	1000000	)
+emergencylimit	[ 0	locks=0	autoscope=0 ]	(	1e6	)
 seed	[ 0	locks=0	autoscope=0 ]	(	0	)
 overrideprimseed	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 primseedattrib	[ 0	locks=0	autoscope=0 ]	(	primid	)
 randomizeorder	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 relaxpoints	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 relaxiterations	[ 0	locks=0	autoscope=0 ]	(	10	)
+usegeometricnormals	[ 0	locks=0 ]	(	"off"	)
 scaleradiiby	[ 0	locks=0	autoscope=0 ]	(	1	)
 usemaxradius	[ 0	locks=0	autoscope=0 ]	(	"on"	)
 maxradius	[ 0	locks=0	autoscope=0 ]	(	10	)
@@ -4292,11 +4305,14 @@ useoutputdensityattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 outputdensityattrib	[ 0	locks=0	autoscope=0 ]	(	density	)
 useoutputradiusattrib	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 outputradiusattrib	[ 0	locks=0	autoscope=0 ]	(	pscale	)
+useoutputidattrib	[ 0	locks=0 ]	(	"off"	)
+outputidattrib	[ 0	locks=0 ]	(	id	)
 radiusintexturespace	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 pointattribs	[ 0	locks=0	autoscope=0 ]	(	*	)
 vertattribs	[ 0	locks=0	autoscope=0 ]	(	""	)
 primattribs	[ 0	locks=0	autoscope=0 ]	(	""	)
 detailattribs	[ 0	locks=0	autoscope=0 ]	(	""	)
+detailattribsasdetail	[ 0	locks=0 ]	(	""	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
@@ -4382,7 +4398,7 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment ""
-position 2.25919 3.6363
+position 2.44746 3.6363
 connectornextid 2
 flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
 outputsNamed3
@@ -4593,87 +4609,12 @@ exteriorband	[ 0	locks=0	autoscope=0 ]	(	1	)
 interiorband	[ 0	locks=0	autoscope=0 ]	(	1	)
 fillinterior	[ 0	locks=0	autoscope=0 ]	(	"off"	)
 unsigneddist	[ 0	locks=0	autoscope=0 ]	(	"off"	)
+preserveholes	[ 0	locks=0 ]	(	"off"	)
 numattrib	[ 0	locks=0	autoscope=0 ]	(	0	)
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot/vdbfrompolygons1.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/single_point.init"
-Content-Type: text/plain
-
-type = add
-matchesdef = 1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/single_point.def"
-Content-Type: text/plain
-
-sopflags sopflags = 
-comment ""
-position 5.08444 0.668741
-connectornextid 1
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
-outputsNamed3
-{
-0 "output1"
-}
-inputsNamed3
-{
-}
-inputs
-{
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.lan
-  access 0777
-}
-color UT_Color RGB 0.8 0.8 0.8 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/single_point.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-stdswitcher	[ 0	locks=0	autoscope=0 ]	(	0	0	0	)
-keep	[ 0	locks=0	autoscope=0 ]	(	"off"	)
-points	[ 0	locks=0	autoscope=0 ]	(	1	)
-remove	[ 0	locks=0	autoscope=0 ]	(	"off"	)
-switcher	[ 0	locks=0	autoscope=0 ]	(	0	0	)
-prims	[ 0	locks=0	autoscope=0 ]	(	1	)
-group	[ 0	locks=0	autoscope=0 ]	(	""	)
-add	[ 0	locks=0	autoscope=0 ]	(	"all"	)
-inc	[ 0	locks=0	autoscope=0 ]	(	2	)
-attrname	[ 0	locks=0	autoscope=0 ]	(	""	)
-closedall	[ 0	locks=0	autoscope=0 ]	(	"off"	)
-addparticlesystem	[ 0	locks=0	autoscope=0 ]	(	"off"	)
-particlegroup	[ 0	locks=0	autoscope=0 ]	(	""	)
-appendunusedtoparticlesystem	[ 0	locks=0	autoscope=0 ]	(	"off"	)
-prim0	[ 0	locks=0	autoscope=0 ]	(	""	)
-closed0	[ 0	locks=0	autoscope=0 ]	(	"off"	)
-usept0	[ 0	locks=0	autoscope=0 ]	(	"on"	)
-pt0	[ 0	locks=0	autoscope=0 ]	(	0.34199577894175337	0	0.056160766728182709	)
-weight0	[ 0	locks=0	autoscope=0 ]	(	1	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/single_point.userdata"
 Content-Type: text/plain
 
 {
@@ -4991,72 +4932,10 @@ Content-Type: text/plain
 }
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/switch2.init"
-Content-Type: text/plain
-
-type = switch
-matchesdef = 1
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/switch2.def"
-Content-Type: text/plain
-
-sopflags sopflags = 
-comment ""
-position 2.44746 -0.354569
-connectornextid 3
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on
-outputsNamed3
-{
-2 "output1"
-}
-inputsNamed3
-{
-0 	samples 1 1 "input1"
-1 	single_point 0 1 "input2"
-}
-inputs
-{
-0 	samples 0 1
-1 	single_point 0 1
-}
-stat
-{
-  create -1
-  modify -1
-  author sidefx@asterix.lan
-  access 0777
-}
-color UT_Color RGB 0.8 1 0.7 
-delscript ""
-exprlanguage hscript
-end
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/switch2.parm"
-Content-Type: text/plain
-
-{
-version 0.8
-input	[ 0	locks=0	autoscope=0 ]	(	0	)
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
-Content-Disposition: attachment; filename="hdaroot/switch2.userdata"
-Content-Type: text/plain
-
-{
-	"___Version___":{
-		"type":"string",
-		"value":"___EXTERNAL___"
-	}
-}
-
---HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot.order"
 Content-Type: text/plain
 
-24
+22
 verify_bsdf
 color1
 color2
@@ -5075,12 +4954,10 @@ output1
 matchsize1
 box1
 vdbfrompolygons1
-single_point
 edu_base_vector1
 add2
 merge1
 switch1
-switch2
 
 --HOUDINIMIMEBOUNDARY0xD3ADD339-0x00000F49-0x56B122C9-0x00000001HOUDINIMIMEBOUNDARY
 Content-Disposition: attachment; filename="hdaroot.net"
