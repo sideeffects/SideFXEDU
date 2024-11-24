@@ -9,5 +9,6 @@ Tools.shelf	Tools.shelf
 EditableNodes	EditableNodes
 DiveTarget	DiveTarget
 IconSVG	IconSVG
+Version	Version
 OnCreated	OnCreated
 ExtraFileOptions	ExtraFileOptions

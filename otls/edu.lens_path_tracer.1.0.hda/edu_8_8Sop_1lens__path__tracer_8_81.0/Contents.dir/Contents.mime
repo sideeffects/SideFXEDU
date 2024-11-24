@@ -32,33 +32,26 @@ Content-Type: text/plain
 
 sopflags sopflags = 
 comment "Education tool"
-position 49.2997 -38.8671
-connectornextid 5
-flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault off exposed on displaycomment on
+position 3.28777 -3.58875
+connectornextid 0
+flags =  lock off model off template off footprint off xray off bypass off display off render off highlight off unload off savedata off compress on colordefault on exposed on displaycomment on
 outputsNamed3
 {
-2 "output1"
-3 "output2"
-4 "output3"
 }
 inputsNamed3
 {
-0 	attribdelete4 1 1 "input1"
-1 	null1 1 1 "input2"
 }
 inputs
 {
-0 	attribdelete4 0 1
-1 	null1 0 1
 }
 stat
 {
   create -1
   modify -1
-  author sidefx@asterix.local
+  author sidefx@asterix
   access 0777
 }
-color UT_Color RGB 0.98 0.275 0.275 
+color UT_Color RGB 0.8 0.8 0.8 
 delscript ""
 exprlanguage hscript
 end
