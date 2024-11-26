@@ -11,6 +11,18 @@
             "version": "20.5.421",
             "info_url": "https://www.sidefx.com/docs/houdini/education",
             "description": "SideFX EDU gather tools designed to assist instructors in building and teaching pedagogical contents and with Houdini."
+        },
+        {
+            "name": "SideFXEDU20.5",
+            "display_name": "SideFX EDU 20.5 Daily Build",
+            "url": "https://github.com/sideeffects/SideFXEDU/releases/download/20.5.429/SideFXEDU20.5.20.5.429.zip",
+            "file_size": 97661626,
+            "uncompressed_size": 102412988,
+            "checksum": "14c48343fafdb209e0f631823edeafba15c944b8cd4a0449ea1563864f5ce11b",
+            "content_type": "application/zip",
+            "version": "20.5.429",
+            "info_url": "https://www.sidefx.com/docs/houdini/education",
+            "description": "SideFX EDU gather tools designed to assist instructors in building and teaching pedagogical contents and with Houdini."
         }
     ]
 }
