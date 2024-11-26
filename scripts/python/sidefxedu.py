@@ -23,7 +23,7 @@ from hutil.Qt.QtWidgets import *
 ########################################################################################################################
 # GLOBAL VARIABLES #####################################################################################################
 
-REPO_URL = 'https://raw.githubusercontent.com/sideeffects/SideFXEDU/Experimental/releases/releases.json'
+REPO_URL = 'https://raw.githubusercontent.com/sideeffects/SideFXEDU/refs/heads/Development/releases/releases.json'
 
 # store the major and minor version of Houdini (aka XX.YY)
 APP_VERSION = ".".join(map(str, hou.applicationVersion()[:2]))
@@ -47,7 +47,6 @@ def get_launcher_bin_file_path(launcher_path):
         bin_path = os.path.join(launcher_path, "bin", "houdini_launcher.exe")
     return bin_path
 
-# LAUCHER DIALOG #######################################################################################################
 class LauncherDialog(QDialog):
     def __init__(self, launcher_path, settings, parent=None):
         super(LauncherDialog, self).__init__(parent)
@@ -102,6 +101,7 @@ class LauncherDialog(QDialog):
 
     def on_cancelbtn_press(self):
         self.close()
+
 
 # UPDATE DIALOG ########################################################################################################
 class UpdateDialog(QDialog):
@@ -166,7 +166,7 @@ class UpdateDialog(QDialog):
             self.version_combo.addItem(release)
 
         self.production_builds_check = QCheckBox("Production Builds Only")
-        self.production_builds_check.setChecked(True)
+        self.production_builds_check.setChecked(False)
         self.production_builds_check.stateChanged.connect(self.on_production_check)
 
         version_layout.addWidget(update_version_label)
@@ -177,11 +177,11 @@ class UpdateDialog(QDialog):
         changedgroup_layout.addLayout(version_layout)
         self.button = QPushButton("Update")
         self.uninstallButton = QPushButton("Uninstall")
-        self.launcherButton = QPushButton("Start Launcher")
+        # self.launcherButton = QPushButton("Start Launcher")
 
         self.button.clicked.connect(self.on_updatebtn_press)
         self.uninstallButton.clicked.connect(self.on_uninstallbtn_press)
-        self.launcherButton.clicked.connect(self.on_launcherbtn_press)
+        # self.launcherButton.clicked.connect(self.on_launcherbtn_press)
         layout = QVBoxLayout()
 
         layout.addWidget(installed_group)
@@ -201,8 +201,8 @@ class UpdateDialog(QDialog):
             self.uninstallButton.setEnabled(False)
 
         button_layout = QHBoxLayout()
-        button_layout.addWidget(self.launcherButton)
-        button_layout.addWidget(spacer)
+        # button_layout.addWidget(self.launcherButton)
+        # button_layout.addWidget(spacer)
         button_layout.addWidget(self.button)
         button_layout.addWidget(self.uninstallButton)
         
@@ -283,6 +283,7 @@ class UpdateDialog(QDialog):
             dialog = LauncherDialog(launcher_path, self.settings, self)
             dialog.show()
 
+
 # UPDATER ##############################################################################################################
 class SideFXEDUUpdater(object):
     """
@@ -310,7 +311,7 @@ class SideFXEDUUpdater(object):
 
         if updater_dialog:
             self.show_updater_dialog()
-            self.clean_old_installs()
+            # self.clean_old_installs()
 
 
     def clean_old_installs(self):
@@ -515,26 +516,23 @@ class SideFXEDUUpdater(object):
         self.current_version = target_version
 
 
-# def main(argv):
-#     try:
-#         updater = SideFXEDUUpdater()
-#         optlist, args = getopt.getopt(argv, "pdev:u", ['latestproduction', 'latestdevelopment', 'embedded', 'version=', 'uninstall'])
-#         for opt, arg in optlist:
-#             if opt in ["--latestproduction", "-p"]:
-#                 updater.install_latest_production_toolset()
-#             if opt in ["--latestdevelopment", "-d"]:
-#                 updater.install_latest_development_toolset()
-#             if opt in ["--embedded", "-e"]:
-#                 updater.install_embedded_toolset()
-#             if opt in ["--version", "-v"]:
-#                 updater.update_toolset_version(arg)
-#             if opt in ["--uninstall", "-u"]:
-#                 updater.uninstall_toolset()
-#     except:
-#         pass
+def main(argv):
+    try:
+        updater = SideFXEDUUpdater()
+        optlist, args = getopt.getopt(argv, "pdev:u", ['latestproduction', 'latestdevelopment', 'embedded', 'version=', 'uninstall'])
+        for opt, arg in optlist:
+            if opt in ["--latestproduction", "-p"]:
+                updater.install_latest_production_toolset()
+            if opt in ["--latestdevelopment", "-d"]:
+                updater.install_latest_development_toolset()
+            if opt in ["--embedded", "-e"]:
+                updater.install_embedded_toolset()
+            if opt in ["--version", "-v"]:
+                updater.update_toolset_version(arg)
+            if opt in ["--uninstall", "-u"]:
+                updater.uninstall_toolset()
+    except:
+        pass
 
-# if __name__ == "__main__":
-#     main(sys.argv[1:])
-
-########################################################################################################################
-
+if __name__ == "__main__":
+    main(sys.argv[1:])
