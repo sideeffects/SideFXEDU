@@ -161,13 +161,12 @@ class UpdateDialog(QDialog):
         version_layout = QHBoxLayout()
         update_version_label = QLabel("Release:")
 
-        self.version_combo = QComboBox(self)
-        for release in self.updater_object.production_releases[:10]:
-            self.version_combo.addItem(release)
-
         self.production_builds_check = QCheckBox("Production Builds Only")
         self.production_builds_check.setChecked(False)
         self.production_builds_check.stateChanged.connect(self.on_production_check)
+
+        self.version_combo = QComboBox(self)
+        self.on_production_check()
 
         version_layout.addWidget(update_version_label)
         version_layout.addWidget(self.version_combo)
@@ -177,11 +176,9 @@ class UpdateDialog(QDialog):
         changedgroup_layout.addLayout(version_layout)
         self.button = QPushButton("Update")
         self.uninstallButton = QPushButton("Uninstall")
-        # self.launcherButton = QPushButton("Start Launcher")
 
         self.button.clicked.connect(self.on_updatebtn_press)
         self.uninstallButton.clicked.connect(self.on_uninstallbtn_press)
-        # self.launcherButton.clicked.connect(self.on_launcherbtn_press)
         layout = QVBoxLayout()
 
         layout.addWidget(installed_group)
@@ -201,8 +198,6 @@ class UpdateDialog(QDialog):
             self.uninstallButton.setEnabled(False)
 
         button_layout = QHBoxLayout()
-        # button_layout.addWidget(self.launcherButton)
-        # button_layout.addWidget(spacer)
         button_layout.addWidget(self.button)
         button_layout.addWidget(self.uninstallButton)
         
