@@ -1,7 +1,9 @@
 ![SideFXEDU banner](https://github.com/sideeffects/SideFXEDU/blob/Development/help/images/sidefxedu_banner.png)
 # SideFX EDU | Education Driven Utilities
 
-SideFX EDU is a completely free, open-source toolset geared towards assisting Houdini Instructors with a variety of tasks commonly used when teaching Houdini. It is an all-inclusive toolset that spans the shelf, digital assets, custom desktops and scripts and more. The toolset is currently maintained by the SideFX Education and Training team. It also receives a lot of contributions from the always active Houdini instructors community. This toolset originated from the SideFX Labs toolset, which inspired us. 
+SideFX EDU is a completely free, open-source toolset geared towards assisting Houdini Instructors with a variety of tasks commonly used when teaching Houdini. The toolset can also be used by those wishing to use Houdini to visualize concepts in a vareaity of subjects like Phyisics, Chemistry and Mathematics. It is an all-inclusive toolset that spans the shelf, digital assets, custom desktops and scripts and more. The toolset is currently maintained by the SideFX Education and Training team. It also receives a lot of contributions from the always active Houdini instructors community. This toolset originated from the SideFX Labs toolset, which inspired us.
+
+If you would like to contribute to the toolset or have suggestions for more tools, please don't hesitate to contact us via email - education@sidefx.com .
 
 
 # Installation
