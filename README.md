@@ -18,13 +18,18 @@ This toolset requires SideFX Labs to be installed. Please visit the [SideFX Labs
 
 ## Using GitHub
 
-**Step 1**. Click on the top-right **Code** button on the main page of this repository and select **Download ZIP**. 
+**Step 1**. 
+
+If you are just interested in using to toolset you can go to the **Realeases** section on the right side of the main page of the repository. There you can download the named zip file.
+Example: SideFXEDU22.0.zip
+
+Or If you want to download the entire repository you can simply click on the top-right **Code** button on the main page of this repository and select **Download ZIP**. 
 
 Or you can use this link :
 ```
 https://github.com/sideeffects/SideFXEDU/archive/refs/heads/Development.zip
 ```
-This allows you to get the latest update.
+This allows you to get the latest development update.
 
 **Step 2**. Unzip it into a custom directory on your computer. Consider something accessible to all users.
 
@@ -57,7 +62,7 @@ You should also be able to do the following:
 # Additional Information
 
 ## Expanded HDAs
-All of the HDAs are using the expanded format that was introduced in H16. This allows better diffing of the tools so you can see what our changes are doing and choose to integrate them back into your production.
+All of the HDAs in the development repository are using the expanded format that was introduced in H16. The releases will use compressed HDAs for faster loading and will take up less disk space. Using expanded HDAs in the development branch allows better diffing of the tools so you can see what our changes are doing and choose to integrate them back into your production.
 
 ## Example Files
 Instead of tying the examples as HDAs, we will be generating separate hip files that show how the tools should work in context. These can be found [here](https://github.com/sideeffects/SideFXEDU/tree/Development/hip).
