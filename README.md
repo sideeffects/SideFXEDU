@@ -6,9 +6,9 @@ SideFX EDU is a completely free, open-source toolset geared towards assisting Ho
 If you would like to contribute to the toolset or have suggestions for more tools, please don't hesitate to contact us via email - education@sidefx.com .
 
 
-(https://www.youtube.com/watch?v=OglteHrtKaQ)
 
 
+[![Watch the demo](screenshot.png)](https://www.youtube.com/watch?v=OglteHrtKaQ)
 # Installation
 
 The following instructions are based on the **Windows OS**. Please adapt them accordingly to your OS.
